@@ -263,7 +263,7 @@
         <div class="panel-body">
           <div id="quiz"></div>
           <div style="margin-top:16px;display:flex;gap:10px;align-items:center;">
-            <button id="quiz-reset" onclick="resetQuiz()" style="padding:8px 18px;border:1px solid #334;border-radius:8px;background:#151520;color:inherit;cursor:pointer;">重答</button>
+            <button id="quiz-reset" onclick="resetQuiz()" style="padding:8px 18px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);cursor:pointer;">重答</button>
             <span id="quiz-hint" style="opacity:.6;">共 5 题，每题选 1 项</span>
           </div>
         </div>
@@ -304,7 +304,7 @@
         <div class="panel-head"><strong>139 个网站导航</strong><span id="site-meta"></span></div>
         <div class="panel-body">
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;">
-            <input id="site-keyword" placeholder="搜索网站：知乎 / 36氪 / 政府…" style="flex:1;min-width:200px;padding:8px 12px;border:1px solid #334;border-radius:8px;background:#151520;color:inherit;">
+            <input id="site-keyword" placeholder="搜索网站：知乎 / 36氪 / 政府…" style="flex:1;min-width:200px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);">
           </div>
           <div id="site-tabs" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;"></div>
           <div id="site-list"></div>
@@ -570,9 +570,9 @@
         <div class="panel-head"><strong>聚合器职场选题池（每天 19:10 自动更新）</strong><span id="topics-meta">加载中…</span></div>
         <div class="panel-body">
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;">
-            <input id="topics-keyword" placeholder="关键词筛选：裁员 / 涨薪 / 面试 / AI…" style="flex:1;min-width:220px;padding:8px 12px;border:1px solid #334;border-radius:8px;background:#151520;color:inherit;">
-            <select id="topics-cluster" style="padding:8px 12px;border:1px solid #334;border-radius:8px;background:#151520;color:inherit;"><option value="">全部问题簇</option></select>
-            <select id="topics-type" style="padding:8px 12px;border:1px solid #334;border-radius:8px;background:#151520;color:inherit;"><option value="">全部内容类</option></select>
+            <input id="topics-keyword" placeholder="关键词筛选：裁员 / 涨薪 / 面试 / AI…" style="flex:1;min-width:220px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);">
+            <select id="topics-cluster" style="padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);"><option value="">全部问题簇</option></select>
+            <select id="topics-type" style="padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);"><option value="">全部内容类</option></select>
           </div>
           <div id="topics-list" class="write-grid"></div>
         </div>
@@ -683,8 +683,8 @@
     document.getElementById('quiz').innerHTML = QUIZ.map((qq, qi) => {
       const opts = qq.options.map(o => {
         const sel = qq.multi ? (quizState[qq.key]||[]).includes(o.v) : quizState[qq.key]===o.v;
-        const border = sel ? '2px solid #22c55e' : '1px solid #334';
-        return `<button type="button" data-k="${qq.key}" data-v="${o.v}" style="padding:8px 14px;border:${border};border-radius:8px;background:#151520;color:inherit;cursor:pointer;text-align:left;">${o.label}</button>`;
+        const border = sel ? '2px solid var(--green)' : '1px solid var(--line)';
+        return `<button type="button" data-k="${qq.key}" data-v="${o.v}" style="padding:8px 14px;border:${border};border-radius:8px;background:${sel?'var(--green-soft)':'#fff'};color:var(--ink);cursor:pointer;text-align:left;font-size:13px;">${o.label}</button>`;
       }).join('');
       return `<div style="margin-bottom:18px;"><div style="margin-bottom:8px;font-weight:600;">Q${qi+1}. ${qq.q}${qq.multi?'（可多选）':''}</div><div style="display:flex;gap:8px;flex-wrap:wrap;">${opts}</div></div>`;
     }).join('');
@@ -730,7 +730,7 @@
     document.getElementById('match-top').innerHTML = scored.slice(0,3).map((s,i)=>{
       const t = s.t;
       const bar = Math.max(8, s.pct);
-      return `<article class="write-card"><div class="write-top"><h3>${i+1}. ${t.short}</h3><span class="hot-label" style="background:${i===0?'#22c55e':'#334'};color:${i===0?'#0b1220':'inherit'};">匹配 ${s.pct}%</span></div><p><strong>${t.summary}</strong></p><div class="write-tags"><span>${t.strength}</span><span>${t.money}</span><span>难度 ${'★'.repeat(t.difficulty)}</span><span>稳定 ${'★'.repeat(t.stability)}</span></div><div style="height:6px;background:#1e1e2e;border-radius:4px;margin-top:8px;overflow:hidden;"><div style="height:100%;width:${bar}%;background:${i===0?'#22c55e':'#4b5563'};"></div></div></article>`;
+      return `<article class="write-card"><div class="write-top"><h3>${i+1}. ${t.short}</h3><span class="hot-label" style="background:${i===0?'var(--green)':'var(--green-soft)'};color:${i===0?'#fff':'var(--ink)'};">匹配 ${s.pct}%</span></div><p><strong>${t.summary}</strong></p><div class="write-tags"><span>${t.strength}</span><span>${t.money}</span><span>难度 ${'★'.repeat(t.difficulty)}</span><span>稳定 ${'★'.repeat(t.stability)}</span></div><div style="height:6px;background:var(--line);border-radius:4px;margin-top:8px;overflow:hidden;"><div style="height:100%;width:${bar}%;background:${i===0?'var(--green)':'var(--muted)'};"></div></div></article>`;
     }).join('');
   }
   function resetQuiz(){
@@ -746,7 +746,7 @@
         <div class="write-top"><h3>${i+1}. ${t.name}</h3><span class="hot-label">难度 ${level}</span></div>
         <p><strong>${t.summary}</strong></p>
         <div class="write-tags"><span>${t.strength}</span><span>${t.money}</span><span>稳定性：${stab}</span></div>
-        <div class="track-detail" style="display:none;margin-top:12px;padding-top:12px;border-top:1px solid #26263a;">
+        <div class="track-detail" style="display:none;margin-top:12px;padding-top:12px;border-top:1px solid var(--line);">
           <div class="tip-box" style="margin-bottom:10px;"><strong>风险：</strong>${t.risk}</div>
           <div style="margin-bottom:10px;"><strong>选题方向：</strong><span class="write-tags" style="display:inline-flex;">${(t.topics||[]).map(x=>`<span>${x}</span>`).join('')}</span></div>
           <div><strong>21 天启动方案：</strong><div class="write-tags" style="margin-top:8px;flex-direction:column;align-items:flex-start;gap:6px;">${(t.plan||[]).map((p,j)=>`<span>${j+1}. ${p}</span>`).join('')}</div></div>
@@ -770,7 +770,7 @@
   const boardState = {cur:'zhihu'};
   function renderBoardTabs(){
     document.getElementById('board-tabs').innerHTML = BOARDS.map(b=>
-      `<button data-b="${b.id}" style="padding:6px 14px;border-radius:8px;cursor:pointer;background:${boardState.cur===b.id?'#22c55e':'#151520'};color:${boardState.cur===b.id?'#0b1220':'inherit'};border:1px solid #334;">${b.label}</button>`
+      `<button data-b="${b.id}" style="padding:6px 14px;border-radius:8px;cursor:pointer;background:${boardState.cur===b.id?'var(--green)':'#fff'};color:${boardState.cur===b.id?'#fff':'var(--ink)'};border:1px solid var(--line);">${b.label}</button>`
     ).join('');
     document.querySelectorAll('#board-tabs button').forEach(b=>{
       b.addEventListener('click', ()=>{ boardState.cur = b.dataset.b; renderBoardTabs(); loadBoard(); });
@@ -801,10 +801,10 @@
       document.getElementById('board-meta').textContent = meta;
       if (!rows.length){ box.innerHTML = '<div class="tip-box">该源暂无数据（海外源可能不可达）</div>'; return; }
       box.innerHTML = `<div style="display:flex;flex-direction:column;gap:6px;">` + rows.map(r=>
-        `<div style="display:flex;gap:10px;align-items:baseline;padding:7px 10px;border-radius:8px;background:#151520;">
-          <span style="min-width:26px;color:${r.rank<=3?'#22c55e':'#888'};font-weight:700;">${r.rank}</span>
+        `<div style="display:flex;gap:10px;align-items:baseline;padding:7px 10px;border-radius:8px;background:#f7faf9;">
+          <span style="min-width:26px;color:${r.rank<=3?'var(--green)':'var(--muted)'};font-weight:700;">${r.rank}</span>
           <a href="${esc(r.url)}" target="_blank" rel="noopener" style="flex:1;color:var(--ink);text-decoration:none;">${esc(r.title)}</a>
-          <span style="color:#22c55e;white-space:nowrap;">${esc(r.hot)}</span>
+          <span style="color:var(--green);white-space:nowrap;">${esc(r.hot)}</span>
         </div>`).join('') + `</div>`;
     } catch(e){
       box.innerHTML = `<div class="tip-box">榜单加载失败：${esc(e.message)}（数据文件由每日抓取任务生成）</div>`;
@@ -815,11 +815,11 @@
   const siteState = {cat:'', kw:''};
   const SITE_CATS = [...new Set(SITES.map(s=>s.c))];
   function renderSiteTabs(){
-    const all = `<button data-c="" style="padding:5px 12px;border-radius:7px;cursor:pointer;background:${siteState.cat===''?'#22c55e':'#151520'};color:${siteState.cat===''?'#0b1220':'inherit'};border:1px solid #334;">全部 139</button>`;
+    const all = `<button data-c="" style="padding:5px 12px;border-radius:7px;cursor:pointer;background:${siteState.cat===''?'var(--green)':'#fff'};color:${siteState.cat===''?'#fff':'var(--ink)'};border:1px solid var(--line);">全部 139</button>`;
     document.getElementById('site-tabs').innerHTML = all + SITE_CATS.map(c=>{
       const n = SITES.filter(s=>s.c===c).length;
       const on = siteState.cat===c;
-      return `<button data-c="${esc(c)}" style="padding:5px 12px;border-radius:7px;cursor:pointer;background:${on?'#22c55e':'#151520'};color:${on?'#0b1220':'inherit'};border:1px solid #334;">${esc(c)} ${n}</button>`;
+      return `<button data-c="${esc(c)}" style="padding:5px 12px;border-radius:7px;cursor:pointer;background:${on?'var(--green)':'#fff'};color:${on?'#fff':'var(--ink)'};border:1px solid var(--line);">${esc(c)} ${n}</button>`;
     }).join('');
     document.querySelectorAll('#site-tabs button').forEach(b=>{
       b.addEventListener('click', ()=>{ siteState.cat = b.dataset.c; renderSiteTabs(); renderSites(); });
@@ -833,9 +833,9 @@
     );
     document.getElementById('site-meta').textContent = `当前 ${list.length} 个`;
     document.getElementById('site-list').innerHTML = list.map(s=>
-      `<div style="display:flex;gap:10px;align-items:center;padding:8px 10px;border-radius:8px;background:#151520;margin-bottom:6px;">
+      `<div style="display:flex;gap:10px;align-items:center;padding:8px 10px;border-radius:8px;background:#f7faf9;margin-bottom:6px;">
         <a href="${esc(s.u)}" target="_blank" rel="noopener" style="flex:1;color:var(--ink);text-decoration:none;"><strong>${esc(s.n)} ↗</strong> <span style="opacity:.65;">${esc(s.d)}</span></a>
-        <span style="color:#22c55e;white-space:nowrap;font-size:12px;">${esc(s.t)}</span>
+        <span style="color:var(--green);white-space:nowrap;font-size:12px;">${esc(s.t)}</span>
       </div>`).join('');
   }
 
