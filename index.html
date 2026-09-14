@@ -1714,7 +1714,20 @@
         </div>
       </div>
 
-      <div class="panel"><div class="panel-head"><strong>直接跳过这些</strong><span>不值得进入二创队列</span></div><div class="panel-body"><div class="tip-box">只看热搜排名、没有正文细节的内容；纯搬运新闻稿；需要专业资质判断的医疗、法律、投资内容；明显依赖明星或单张图片才能成立的文章；数据和事实无法核验的爆文。</div></div></div>
+      <div class="panel"><div class="panel-head"><strong>直接跳过这些</strong><span>不值得进入二创队列</span></div><div class="panel-body"><div class="tip-box">只看热搜排名、没有正文细节的内容；纯搬运新闻稿；需要专业资质判断的医疗、法律、投资内容；明显依赖明星或单张图片才能成立的文章；数据和事实无法核验的爆文。</div></div>
+      <div class="panel">
+        <div class="panel-head"><strong>聚合器职场选题池（每天 19:10 自动更新）</strong><span id="topics-meta">加载中…</span></div>
+        <div class="panel-body">
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;">
+            <input id="topics-keyword" placeholder="关键词筛选：裁员 / 涨薪 / 面试 / AI…" style="flex:1;min-width:220px;padding:8px 12px;border:1px solid #334;border-radius:8px;background:#151520;color:inherit;">
+            <select id="topics-cluster" style="padding:8px 12px;border:1px solid #334;border-radius:8px;background:#151520;color:inherit;"><option value="">全部问题簇</option></select>
+            <select id="topics-type" style="padding:8px 12px;border:1px solid #334;border-radius:8px;background:#151520;color:inherit;"><option value="">全部内容类</option></select>
+          </div>
+          <div id="topics-list" class="write-grid"></div>
+        </div>
+      </div>
+
+</div>
     </div>
 
   </main>
@@ -1747,6 +1760,43 @@
     const done = document.querySelectorAll('#check-list .check-item.done').length;
     document.getElementById('check-progress').textContent = `当前检查进度 ${done} / ${total}`;
   }
+
+  // ===== 聚合器职场选题池 =====
+  const topicState = { items: [], kw: '', cluster: '', type: '' };
+  function esc(s){ return (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+  function scoreLabel(sc){ return sc >= 3 ? '选题池 A' : (sc === 2 ? '短内容 B' : '热度 C'); }
+  async function loadTopics(){
+    try {
+      const r = await fetch('workbench_topics.json', {cache:'no-store'});
+      if (!r.ok) throw new Error('HTTP '+r.status);
+      const d = await r.json();
+      topicState.items = d.items || [];
+      document.getElementById('topics-meta').textContent = `共 ${d.count||topicState.items.length} 条 · 更新 ${d.updated||''}`;
+      const clusters = [...new Set(topicState.items.map(i=>i['问题簇']).filter(Boolean))];
+      const types = [...new Set(topicState.items.map(i=>i['内容类']).filter(Boolean))];
+      document.getElementById('topics-cluster').innerHTML = '<option value="">全部问题簇</option>' + clusters.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');
+      document.getElementById('topics-type').innerHTML = '<option value="">全部内容类</option>' + types.map(t=>`<option value="${esc(t)}">${esc(t)}</option>`).join('');
+      renderTopics();
+    } catch(e){ document.getElementById('topics-meta').textContent = '数据加载失败：'+e.message; }
+  }
+  function renderTopics(){
+    const kw = topicState.kw.trim().toLowerCase();
+    const list = topicState.items.filter(i =>
+      (!kw || (i['标题']||'').toLowerCase().includes(kw)) &&
+      (!topicState.cluster || i['问题簇']===topicState.cluster) &&
+      (!topicState.type || i['内容类']===topicState.type)
+    );
+    const box = document.getElementById('topics-list');
+    if (!list.length){ box.innerHTML = '<div class="tip-box">没有匹配的选题</div>'; return; }
+    box.innerHTML = list.map(i=>{
+      const sc = i['得分']||0;
+      return `<article class="write-card"><div class="write-top"><h3><a href="${esc(i['链接'])}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${esc(i['标题'])} ↗</a></h3><span class="hot-label">${scoreLabel(sc)}</span></div><div class="write-tags"><span>${esc(i['问题簇']||'未归类')}</span><span>${esc(i['内容类']||'-')}</span><span>热度 ${esc(i['热度']||'-')}</span><span>${esc(i['来源']||'')}</span>${i['发布时间']?`<span>${esc(i['发布时间'])}</span>`:''}</div></article>`;
+    }).join('');
+  }
+  document.getElementById('topics-keyword').addEventListener('input', e=>{ topicState.kw = e.target.value; renderTopics(); });
+  document.getElementById('topics-cluster').addEventListener('change', e=>{ topicState.cluster = e.target.value; renderTopics(); });
+  document.getElementById('topics-type').addEventListener('change', e=>{ topicState.type = e.target.value; renderTopics(); });
+  loadTopics();
 </script>
 
 </body>
