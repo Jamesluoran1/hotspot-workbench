@@ -246,6 +246,13 @@
           <span>爆点 · 热门 · 文章方向</span>
         </span>
       </button>
+      <button class="nav-item" data-page="page-06">
+        <span class="nav-num">06</span>
+        <span class="nav-copy">
+          <strong>公众号爆文对标库</strong>
+          <span>微信爆文样本 · 标题配方</span>
+        </span>
+      </button>
     </nav>
 
     <div class="sidebar-footer">
@@ -579,7 +586,30 @@
       </div>
 
 </div>
-    </div>
+    <      <div class="page" id="page-06">
+        <div class="page-head">
+          <div class="page-badge">MODULE 06 · 公众号爆文对标库</div>
+          <h1>公众号爆文对标库</h1>
+          <p>180 篇微信爆文样本（自动采集，非人工关注账号）——研究标题配方，找到可复写模式。</p>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><strong>爆文标题配方</strong><span>模式统计（从样本自动提取）</span></div>
+          <div class="panel-body">
+            <div id="db-stats" class="write-tags" style="margin-bottom:0;">加载中…</div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><strong>爆文样本</strong><span id="db-count">180 篇</span></div>
+          <div class="panel-body">
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;">
+              <input id="db-keyword" placeholder="标题关键词：裁员 / 退休 / 血管…" style="flex:1;min-width:220px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);">
+              <div id="db-cats" style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;"></div>
+            </div>
+            <div id="db-list" class="write-grid"></div>
+          </div>
+        </div>
+      </div>
+/div>
 
   </main>
 </div>
@@ -616,6 +646,48 @@
   const topicState = { items: [], kw: '', cluster: '', type: '' };
   function esc(s){ return (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
   function scoreLabel(sc){ return sc >= 3 ? '选题池 A' : (sc === 2 ? '短内容 B' : '热度 C'); }
+  const dbState = { items: [], kw: '', cat: '' };
+  async function loadDuibiao(){
+    try {
+      const r = await fetch('duibiao.json', {cache:'no-store'});
+      if (!r.ok) throw new Error('HTTP '+r.status);
+      const d = await r.json();
+      dbState.items = d.items || [];
+      const modeCnt = {};
+      dbState.items.forEach(i => (i['m']||[]).forEach(mm => modeCnt[mm] = (modeCnt[mm]||0)+1));
+      const stats = document.getElementById('db-stats');
+      if(stats) stats.innerHTML = Object.entries(modeCnt).sort((a,b)=>b[1]-a[1]).map(([k,v])=>'<span style="background:#e6f7f1;color:#0f7a5a;">'+esc(k)+' '+v+' 篇</span>').join('');
+      const cats = [...new Set(dbState.items.map(i=>i['c']).filter(Boolean))].sort();
+      const box = document.getElementById('db-cats');
+      if(box){
+        box.innerHTML = '<button data-c="" style="padding:5px 12px;border-radius:7px;cursor:pointer;background:var(--green);color:#fff;border:1px solid var(--line);font-size:12px;">全部</button>' +
+          cats.map(c=>'<button data-c="'+esc(c)+'" style="padding:5px 12px;border-radius:7px;cursor:pointer;background:#fff;color:var(--ink);border:1px solid var(--line);font-size:12px;">'+esc(c)+'</button>').join('');
+        box.querySelectorAll('button').forEach(btn=>{
+          btn.addEventListener('click', ()=>{
+            dbState.cat = btn.dataset.c;
+            box.querySelectorAll('button').forEach(b=>{ b.style.background = (b.dataset.c===dbState.cat) ? 'var(--green)' : '#fff'; b.style.color = (b.dataset.c===dbState.cat) ? '#fff' : 'var(--ink)'; });
+            renderDb();
+          });
+        });
+      }
+      const kw = document.getElementById('db-keyword');
+      if(kw) kw.addEventListener('input', e=>{ dbState.kw = e.target.value.trim().toLowerCase(); renderDb(); });
+      renderDb();
+    } catch(e){ const cnt = document.getElementById('db-count'); if(cnt) cnt.textContent = '加载失败'; }
+  }
+  function renderDb(){
+    const kw = dbState.kw;
+    const list = dbState.items.filter(i => (!kw || (i['t']||'').toLowerCase().includes(kw)) && (!dbState.cat || i['c']===dbState.cat));
+    const cnt = document.getElementById('db-count');
+    if(cnt) cnt.textContent = list.length + ' / ' + dbState.items.length + ' 篇';
+    const box = document.getElementById('db-list');
+    if(!box) return;
+    if(!list.length){ box.innerHTML = '<p style="color:var(--muted);font-size:13px;">没有匹配的爆文。</p>'; return; }
+    box.innerHTML = list.map(it=>{
+      const ms = (it['m']||[]).map(x=>'<span>'+esc(x)+'</span>').join('');
+      return '<article class="write-card"><div class="write-top"><h3><a href="'+esc(it['u']||'#')+'" target="_blank" rel="noopener" style="color:var(--ink); text-decoration:none;">'+esc(it['t'])+' ↗</a></h3><span class="hot-label">'+esc(it['c']||'其他')+'</span></div><div class="write-tags" style="margin-top:10px;">'+ms+'</div></article>';
+    }).join('');
+  }
   function renderScan(){
     const items = topicState.items || [];
     const hotNum = x => Number(String(x||'').replace(/[^\d]/g,''))||0;
@@ -685,6 +757,7 @@
   makeSelect('cs-cluster','全部问题簇',()=>[...new Set(topicState.items.map(i=>i['问题簇']).filter(Boolean))],v=>{ topicState.cluster=v; renderTopics(); });
   makeSelect('cs-type','全部内容类',()=>[...new Set(topicState.items.map(i=>i['内容类']).filter(Boolean))],v=>{ topicState.type=v; renderTopics(); });
   loadTopics();
+  loadDuibiao();
 
   // ===== 注入数据（01 赛道 / 02 网站）=====
   const TRACKS = [{"id": "senior", "name": "中老年情感 / 生活感悟", "short": "中老年情感", "summary": "受众基数大、完读稳定，适合用真实故事和生活经验建立陪伴感。", "strength": "受众大、门槛低", "money": "流量主、商业广告", "difficulty": 1, "stability": 4, "styles": ["story", "empathy"], "times": ["low", "mid"], "moneyKeys": ["traffic", "ads"], "growth": ["fast", "stable"], "levels": ["new", "mid"], "risk": "内容同质化明显，需要固定人物视角和真实细节，避免空泛说教。", "topics": ["生活经历", "家庭关系", "晚年智慧"], "plan": ["拆解 20 篇高完读故事，确定 3 个固定栏目", "发布 5 篇真实生活故事，测试人物与冲突类型", "围绕高完读主题连续扩写 6 篇", "复盘打开率与读完率，保留前 2 个栏目"]}, {"id": "career", "name": "职场干货 / 国企职场", "short": "职场干货", "summary": "用户问题明确、付费意愿强，容易沉淀模板、课程和社群产品。", "strength": "需求明确、可系列化", "money": "知识付费、社群服务", "difficulty": 3, "stability": 4, "styles": ["knowledge", "story"], "times": ["mid", "high"], "moneyKeys": ["course", "service"], "growth": ["stable", "ip"], "levels": ["mid", "pro"], "risk": "必须有真实经验或可靠案例支撑，泛职场观点很难建立信任。", "topics": ["沟通汇报", "晋升路径", "体制经验"], "plan": ["列出 30 个真实职场问题，按岗位和阶段分类", "发布 5 篇问题解决型内容并附可执行清单", "制作 1 份模板资料，测试用户领取意愿", "根据高收藏问题规划首个 10 篇系列"]}, {"id": "history", "name": "历史人文 / 典故科普", "short": "历史人文", "recommended": true, "summary": "平台推荐较稳定、用户粘性强，内容资产可以长期复用，适合持续垂直运营。", "strength": "长尾稳定、生命周期长", "money": "流量主、课程、出版", "difficulty": 3, "stability": 5, "styles": ["knowledge", "story"], "times": ["mid", "high"], "moneyKeys": ["traffic", "course"], "growth": ["stable", "ip"], "levels": ["new", "mid", "pro"], "risk": "考据准确性决定账号生命力，必须标注可靠来源，避免戏说冒充史实。", "topics": ["历史人物", "典故出处", "时代生活"], "plan": ["确定一个窄切口，建立 30 个选题的资料库", "发布 5 篇“人物＋事件＋启示”样稿", "固定史料来源与配图规范，形成写作模板", "把高收藏主题扩展成 8－10 篇系列"]}, {"id": "reading", "name": "读书赛道", "short": "读书", "recommended": true, "summary": "以书为内容锚点，适合书评、知识拆解和主题书单，能持续沉淀个人认知品牌。", "strength": "素材稳定、利于沉淀 IP", "money": "图书分销、读书营、课程", "difficulty": 2, "stability": 5, "styles": ["knowledge", "story"], "times": ["mid", "high"], "moneyKeys": ["course", "service"], "growth": ["stable", "ip"], "levels": ["new", "mid", "pro"], "risk": "只做摘抄很难形成辨识度，需要明确选书标准和自己的判断框架。", "topics": ["主题书单", "经典拆解", "阅读方法"], "plan": ["选定一个阅读母题，建立 20 本核心书单", "发布 3 篇深度拆解和 2 篇主题书单", "测试“观点＋案例＋行动清单”内容模板", "整理高收藏内容，设计首期共读主题"]}, {"id": "parenting", "name": "家庭教育 / 育儿心得", "short": "家庭教育", "summary": "女性受众集中、议题丰富，可连接教育产品和家庭服务。", "strength": "话题强、商业空间多", "money": "教育服务、产品、广告", "difficulty": 3, "stability": 4, "styles": ["knowledge", "story", "empathy"], "times": ["mid", "high"], "moneyKeys": ["service", "ads", "course"], "growth": ["stable", "ip"], "levels": ["mid", "pro"], "risk": "避免绝对化教育结论；涉及儿童健康和心理问题时必须引用专业依据。", "topics": ["亲子沟通", "学习习惯", "家庭关系"], "plan": ["聚焦一个年龄段，梳理 20 个高频家庭问题", "发布 5 篇场景化解决方案", "邀请目标家长反馈，修正表达与建议边界", "围绕最高频问题制作 7 篇连续专题"]}, {"id": "entertainment", "name": "娱乐 / 剧评", "short": "娱乐剧评", "summary": "受众关注度高、传播快，适合跟进热播作品和娱乐事件迅速获取流量。", "strength": "热点密集、传播性强", "money": "流量主、品牌广告", "difficulty": 2, "stability": 2, "styles": ["hot", "story"], "times": ["mid", "high"], "moneyKeys": ["traffic", "ads"], "growth": ["fast"], "levels": ["new", "mid", "pro"], "risk": "高度依赖更新速度，素材版权和未经证实的娱乐信息需要严格把关。", "topics": ["热播剧评", "人物分析", "行业观察"], "plan": ["锁定 3 部近期热播作品，建立追更日历", "抢发 6 篇单点观点，测试标题与时效", "将高流量剧评延伸为人物或主题系列", "统计热点寿命，建立快稿与深稿双流程"]}, {"id": "psychology", "name": "心理学 / 情绪疗愈", "short": "心理疗愈", "summary": "共鸣与收藏潜力强，适合围绕情绪管理、关系模式持续建立专业信任。", "strength": "收藏高、信任价值强", "money": "课程、咨询、知识付费", "difficulty": 4, "stability": 4, "styles": ["knowledge", "empathy"], "times": ["mid", "high"], "moneyKeys": ["course", "service"], "growth": ["stable", "ip"], "levels": ["mid", "pro"], "risk": "需要清楚区分心理科普与临床诊疗，避免给出诊断或替代专业治疗。", "topics": ["情绪调节", "关系模式", "自我探索"], "plan": ["明确科普边界，整理 20 个可引用的专业来源", "发布 5 篇“场景＋机制＋练习”内容", "用收藏率验证最强需求，不以焦虑营销", "围绕高需求主题设计 7 天练习内容"]}, {"id": "relationship", "name": "情感关系 / 婚恋经营", "short": "情感婚恋", "summary": "覆盖面广、互动天然强，适合用案例分析建立个人情感 IP。", "strength": "互动强、需求广", "money": "咨询、课程、社群、广告", "difficulty": 3, "stability": 4, "styles": ["story", "empathy"], "times": ["mid", "high"], "moneyKeys": ["service", "course", "ads"], "growth": ["fast", "ip"], "levels": ["mid", "pro"], "risk": "不要承诺“挽回”等确定结果，案例要保护隐私并避免操控性建议。", "topics": ["婚姻沟通", "亲密关系", "分手成长"], "plan": ["选定单身或已婚人群，收集 30 个真实困惑", "发布 5 篇案例分析，强化观点边界", "测试问答栏目，观察评论中的高频需求", "将高互动问题扩展为关系沟通系列"]}, {"id": "growth", "name": "个人成长 / 认知提升", "short": "个人成长", "summary": "用户学习意愿强，适合用方法论和实践记录积累高价值个人 IP。", "strength": "IP 价值高、产品延展强", "money": "课程、训练营、社群", "difficulty": 3, "stability": 4, "styles": ["knowledge", "story"], "times": ["mid", "high"], "moneyKeys": ["course", "service"], "growth": ["stable", "ip"], "levels": ["mid", "pro"], "risk": "抽象概念容易变成正确的废话，需要真实实验、案例和可验证行动。", "topics": ["认知模型", "习惯系统", "学习方法"], "plan": ["确定一个可验证的成长主题，设计 21 天实验", "发布 4 篇方法文和 1 篇真实复盘", "用读者行动反馈验证方法是否可执行", "将有效方法整理成工具表和系列内容"]}, {"id": "humanity", "name": "鸡汤人性", "short": "鸡汤人性", "summary": "情绪共鸣强、覆盖广、创作门槛较低，容易获得点赞和转发。", "strength": "易传播、起步门槛低", "money": "流量主、商业广告", "difficulty": 1, "stability": 2, "styles": ["empathy", "story"], "times": ["low", "mid"], "moneyKeys": ["traffic", "ads"], "growth": ["fast"], "levels": ["new", "mid"], "risk": "同质化和低信任风险较高，建议用真实故事代替拼贴金句，避免标题过度承诺。", "topics": ["人性观察", "处世感悟", "现实故事"], "plan": ["确定一种稳定叙事口吻，收集 30 个真实故事", "发布 6 篇短故事，测试情绪和主题方向", "淘汰低转发主题，增加具体人物与细节", "把高传播主题做成固定栏目并控制同质化"]}];
