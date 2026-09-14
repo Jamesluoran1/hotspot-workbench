@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>今日热点简报 · 2026年9月14日</title>
+  <style>
+    :root {
+      --ink: #122b33;
+      --ink-2: #3f555b;
+      --muted: #738387;
+      --line: #e0e8e6;
+      --paper: #f4f7f6;
+      --panel: #fff;
+      --nav: #0b2730;
+      --green: #00a878;
+      --green-soft: #e6f7f1;
+      --orange: #df7b2e;
+      --orange-soft: #fff2e7;
+      --red: #d9534f;
+      --red-soft: #fdeceb;
+      --blue: #159fb5;
+      --blue-soft: #e6f5f9;
+      --shadow: 0 4px 16px rgba(12, 42, 50, .06);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Microsoft YaHei", "PingFang SC", -apple-system, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0b2730 0%, #123842 100%);
+      color: #fff;
+      padding: 36px 40px;
+    }
+    .hero h1 { font-size: 28px; margin-bottom: 8px; }
+    .hero .meta { color: #92adb2; font-size: 13px; }
+    .hero .stats { display: flex; gap: 16px; margin-top: 20px; flex-wrap: wrap; }
+    .hero .stat { padding: 10px 16px; background: rgba(255,255,255,.08); border-radius: 8px; }
+    .hero .stat .num { font-size: 22px; font-weight: 700; color: #3de2b5; }
+    .hero .stat .label { font-size: 11px; color: #92adb2; }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+
+    .section-title {
+      font-size: 20px;
+      margin: 32px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--green);
+    }
+
+    /* Top3推荐卡片 */
+    .top3-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 768px) {
+      .top3-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .top3-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px;
+      transition: box-shadow .2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .top3-card:hover { box-shadow: var(--shadow); }
+    .top3-rank {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 5px;
+      background: var(--green);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      align-self: flex-start;
+    }
+    .top3-card h3 { font-size: 17px; margin-bottom: 12px; line-height: 1.4; }
+    .top3-card .why { font-size: 13px; color: var(--ink-2); margin-bottom: 12px; line-height: 1.7; }
+    .top3-card .why strong { color: var(--ink); }
+    .top3-card .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .tag { padding: 2px 8px; border-radius: 4px; background: var(--green-soft); color: #247263; font-size: 11px; }
+    .tag.blue { background: var(--blue-soft); color: #1a6a7a; }
+    .tag.orange { background: var(--orange-soft); color: #8a4a1a; }
+
+    .block { margin-bottom: 12px; }
+    .block-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+    .angles-list, .titles-list, .benchmark-list {
+      font-size: 12px;
+      color: var(--ink-2);
+      line-height: 1.8;
+    }
+    .titles-list .title-item {
+      padding: 4px 8px;
+      background: #f8faf9;
+      border-radius: 4px;
+      margin-bottom: 4px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    /* 分类区块 */
+    .category { margin-top: 28px; }
+    .cat-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .cat-icon { font-size: 22px; }
+    .cat-title { font-size: 18px; font-weight: 700; }
+    .cat-count {
+      padding: 2px 8px;
+      border-radius: 10px;
+      background: var(--green-soft);
+      color: #247263;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .hot-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+    .hot-table th {
+      background: #f8faf9;
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 600;
+      border-bottom: 1px solid var(--line);
+    }
+    .hot-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      font-size: 13px;
+      vertical-align: top;
+    }
+    .hot-table tr:last-child td { border-bottom: none; }
+    .hot-table tr:hover { background: #fafcfb; }
+    .hot-table .idx { width: 36px; color: var(--muted); font-weight: 600; }
+    .hot-table .title a { color: var(--ink); text-decoration: none; font-weight: 600; }
+    .hot-table .title a:hover { color: var(--green); }
+    .hot-table .source .badge {
+      display: inline-block;
+      padding: 1px 6px;
+      border-radius: 3px;
+      background: #eef4f3;
+      color: #4a6a70;
+      font-size: 10px;
+    }
+    .hot-table .desc { color: var(--ink-2); font-size: 12px; }
+    .hot-table .type .badge {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 600;
+    }
+    .type .观点文 { background: #fff2e7; color: #8a4a1a; }
+    .type .干货文 { background: #e6f7f1; color: #247263; }
+    .type .故事文 { background: #e6f5f9; color: #1a6a7a; }
+    .type .热点评论 { background: #fdf0ef; color: #8a3a30; }
+    .type .剧评 { background: #f3e8ff; color: #5a2a7a; }
+    .hot-table .track { white-space: nowrap; font-size: 12px; color: var(--muted); }
+
+    /* 避坑提醒 */
+    .warning-box {
+      margin-top: 32px;
+      padding: 20px 24px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      border-left: 4px solid var(--red);
+    }
+    .warning-box h3 { margin-bottom: 12px; font-size: 16px; color: var(--red); }
+    .warning-list { font-size: 13px; color: var(--ink-2); line-height: 2; }
+    .warning-list .item { padding-left: 8px; }
+    .warning-list .item strong { color: var(--ink); }
+
+    /* 底部总结 */
+    .summary-box {
+      margin-top: 24px;
+      padding: 20px 24px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      border-left: 4px solid var(--green);
+    }
+    .summary-box h3 { margin-bottom: 10px; font-size: 16px; }
+    .summary-box p { font-size: 13px; color: var(--ink-2); line-height: 1.8; }
+    .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .keyword {
+      padding: 4px 12px;
+      border-radius: 16px;
+      background: var(--green-soft);
+      color: #247263;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .hero { padding: 24px 20px; }
+      .hero h1 { font-size: 22px; }
+      .hot-table { font-size: 12px; }
+      .hot-table th, .hot-table td { padding: 8px 10px; }
+      .hot-table .desc, .hot-table .track { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>📰 今日热点选题简报</h1>
+  <div class="meta">2026年9月14日 星期日 · 公众号选题参考 · 直接告诉你写什么、怎么写</div>
+  <div class="stats">
+    <div class="stat"><div class="num">8</div><div class="label">数据平台</div></div>
+    <div class="stat"><div class="num">373</div><div class="label">去重热点</div></div>
+    <div class="stat"><div class="num">3</div><div class="label">精选选题</div></div>
+    <div class="stat"><div class="num">48</div><div class="label">备选热点</div></div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- 今日Top3推荐 -->
+  
+  <!-- 公众号爆文对标 -->
+  <h2 class="section-title">📈 今日公众号爆文对标</h2>
+
+  <div style="background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px; margin-bottom: 16px;">
+    <p style="font-size: 13px; color: var(--ink-2); margin-bottom: 16px;">
+      💡 <strong>说明：</strong>以下是基于今日热点整理的「公众号爆文套路」拆解。告诉你：这个热点如果写成公众号文章，怎么写才能爆。
+    </p>
+
+    <div style="display: grid; grid-template-columns: 1fr; gap: 16px;" class="benchmark-grid">
+
+      <!-- 爆文1：AI成瘾 -->
+      <div style="padding: 16px; background: #f8faf9; border-radius: 8px; border-left: 3px solid var(--green);">
+        <h4 style="font-size: 14px; margin-bottom: 10px;">🔥 爆文类型：焦虑共鸣型（AI成瘾）</h4>
+        <div style="font-size: 12px; color: var(--ink-2); line-height: 1.8;">
+          <p><strong>常见爆款标题：</strong></p>
+          <ul style="padding-left: 16px; margin-bottom: 8px;">
+            <li>《我用AI工作3年，现在决定戒了它》</li>
+            <li>《出现这5个信号，说明你已经AI成瘾了》</li>
+            <li>《AI巨头都在喊停，为什么你还在拼命用？》</li>
+          </ul>
+          <p><strong>文章结构：</strong></p>
+          <ol style="padding-left: 16px; margin-bottom: 8px;">
+            <li>开头：讲一个自己/朋友的真实故事，制造代入感</li>
+            <li>中间：列3-5个"成瘾信号"，每个都戳中痛点</li>
+            <li>转折：AI巨头都在喊停，说明问题真的严重了</li>
+            <li>结尾：给3个简单可执行的"戒AI"方法，升华到"重新掌控生活"</li>
+          </ol>
+          <p><strong>为什么容易爆：</strong>打工人人人都在用AI，人人都有焦虑，共鸣极强</p>
+        </div>
+      </div>
+
+      <!-- 爆文2：第一学历 -->
+      <div style="padding: 16px; background: #f8faf9; border-radius: 8px; border-left: 3px solid var(--orange);">
+        <h4 style="font-size: 14px; margin-bottom: 10px;">🔥 爆文类型：扎心现实型（学历歧视）</h4>
+        <div style="font-size: 12px; color: var(--ink-2); line-height: 1.8;">
+          <p><strong>常见爆款标题：</strong></p>
+          <ul style="padding-left: 16px; margin-bottom: 8px;">
+            <li>《国家说没有第一学历，但招聘市场不认》</li>
+            <li>《考公双第一却被刷，普通人还有多少隐形门槛》</li>
+            <li>《985硕士也逃不过的第一学历歧视，怎么破？》</li>
+          </ul>
+          <p><strong>文章结构：</strong></p>
+          <ol style="padding-left: 16px; margin-bottom: 8px;">
+            <li>开头：讲一个扎心的真实案例（北大硕士被刷/考公双第一被刷）</li>
+            <li>中间：分析为什么会有第一学历歧视，市场逻辑是什么</li>
+            <li>转折：学历不能决定一切，但我们要正视它</li>
+            <li>结尾：给3个普通人的破局思路，给读者希望</li>
+          </ol>
+          <p><strong>为什么容易爆：</strong>每个打工人都有学历焦虑，转发欲极强</p>
+        </div>
+      </div>
+
+      <!-- 爆文3：名人去世 -->
+      <div style="padding: 16px; background: #f8faf9; border-radius: 8px; border-left: 3px solid var(--blue);">
+        <h4 style="font-size: 14px; margin-bottom: 10px;">🔥 爆文类型：怀旧情怀型（名人去世）</h4>
+        <div style="font-size: 12px; color: var(--ink-2); line-height: 1.8;">
+          <p><strong>常见爆款标题：</strong></p>
+          <ul style="padding-left: 16px; margin-bottom: 8px;">
+            <li>《敬一丹：那个永远温柔的央视大姐，走了》</li>
+            <li>《为什么我们越来越怀念敬一丹那个年代》</li>
+            <li>《敬一丹留给我们的3个职场启示》</li>
+          </ul>
+          <p><strong>文章结构：</strong></p>
+          <ol style="padding-left: 16px; margin-bottom: 8px;">
+            <li>开头：一句金句引入，引发怀念情绪</li>
+            <li>中间：回顾她的一生，穿插几个感人小故事</li>
+            <li>升华：从她的经历，提炼出3个人生启示</li>
+            <li>结尾："她走了，但她教会我们的东西永远在"</li>
+          </ol>
+          <p><strong>为什么容易爆：</strong>国民记忆级人物，自带情感流量，转发给朋友表达怀念</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top: 16px; padding: 12px; background: #fff8e7; border-radius: 6px; font-size: 12px; color: #8a6d1a;">
+      💡 <strong>对标建议：</strong>去新榜/微信搜一搜，搜一下今天的热点关键词，看看10w+文章都是怎么写标题的，模仿那个套路就行。
+    </div>
+  </div>
+
+
+
+  <h2 class="section-title">🔥 今日精选选题 Top 3</h2>
+
+  <div class="top3-grid">
+    <!-- 选题1 -->
+    <div class="top3-card">
+      <div class="top3-rank">推荐 #1</div>
+      <h3>「AI成瘾」与「AI巨头集体喊停」</h3>
+      <div class="why">
+        <strong>为什么推荐：</strong>今天AI相关话题全网刷屏，从个人成瘾到巨头刹车，话题层次丰富，既有情绪共鸣又有深度观点空间，是少有的"人人都能写、又能写出深度"的选题。
+      </div>
+      <div class="tags">
+        <span class="tag">个人成长</span>
+        <span class="tag">职场干货</span>
+        <span class="tag blue">科技观察</span>
+      </div>
+      <div class="block">
+        <div class="block-title">写作角度</div>
+        <div class="angles-list">
+          ① 观点文：从巨头刹车切入，聊为什么越发达越要克制<br>
+          ② 干货文：普通人怎么判断自己AI成瘾了，怎么戒<br>
+          ③ 故事文：一个重度AI用户的真实经历
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-title">参考标题</div>
+        <div class="titles-list">
+          <div class="title-item">AI巨头都在喊停，为什么你还在拼命用？</div>
+          <div class="title-item">AI成瘾的5个信号，中了3个以上就该停了</div>
+          <div class="title-item">我用AI工作3年，现在决定戒了它</div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-title">对标方向</div>
+        <div class="benchmark-list">
+          类似"数字极简""断舍离"类爆文的结构：先制造焦虑→再给解决方案→最后升华价值观
+        </div>
+      </div>
+    </div>
+
+    <!-- 选题2 -->
+    <div class="top3-card">
+      <div class="top3-rank">推荐 #2</div>
+      <h3>「第一学历歧视」</h3>
+      <div class="why">
+        <strong>为什么推荐：</strong>打工人共鸣极强，从学历到体检到考公，每个环节都能戳中焦虑。今天相关话题多个平台同时上热搜，说明情绪已经到位，正是写的好时机。
+      </div>
+      <div class="tags">
+        <span class="tag">职场干货</span>
+        <span class="tag">个人成长</span>
+        <span class="tag orange">教育</span>
+      </div>
+      <div class="block">
+        <div class="block-title">写作角度</div>
+        <div class="angles-list">
+          ① 观点文：国家说没有第一学历，但招聘市场不认<br>
+          ② 故事文：考公双第一却被刷，普通人的隐形门槛<br>
+          ③ 干货文：被第一学历歧视了怎么办，3个破局思路
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-title">参考标题</div>
+        <div class="titles-list">
+          <div class="title-item">国家说没有第一学历，但招聘市场不认</div>
+          <div class="title-item">考公双第一却被刷，普通人还有多少隐形门槛</div>
+          <div class="title-item">985硕士也逃不过的第一学历歧视，怎么破？</div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-title">对标方向</div>
+        <div class="benchmark-list">
+          类似"内卷""躺平"类职场爆文：先讲一个扎心故事→再分析本质→最后给希望和方法
+        </div>
+      </div>
+    </div>
+
+    <!-- 选题3 -->
+    <div class="top3-card">
+      <div class="top3-rank">推荐 #3</div>
+      <h3>「敬一丹去世」</h3>
+      <div class="why">
+        <strong>为什么推荐：</strong>国民记忆级人物，自带情感流量，适合做怀旧+价值观类内容。这种选题不挑赛道，情感、人文、职场号都能蹭。
+      </div>
+      <div class="tags">
+        <span class="tag orange">历史人文</span>
+        <span class="tag orange">情感婚恋</span>
+        <span class="tag">鸡汤人性</span>
+      </div>
+      <div class="block">
+        <div class="block-title">写作角度</div>
+        <div class="angles-list">
+          ① 故事文：回顾她的一生，温柔而有力量<br>
+          ② 观点文：敬一丹留给我们的3个职场启示<br>
+          ③ 怀旧文：那个年代的央视主持人，为什么让人怀念
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-title">参考标题</div>
+        <div class="titles-list">
+          <div class="title-item">敬一丹：那个永远温柔的央视大姐，走了</div>
+          <div class="title-item">敬一丹留给我们的3个职场启示</div>
+          <div class="title-item">为什么我们越来越怀念敬一丹那个年代</div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-title">对标方向</div>
+        <div class="benchmark-list">
+          名人去世类爆文的经典结构：生平回顾→金句摘录→升华价值观，不要写成讣告，要写"她教会了我们什么"
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 避坑提醒 -->
+  <div class="warning-box">
+    <h3>⚠️ 今日避坑提醒</h3>
+    <div class="warning-list">
+      <div class="item">
+        <strong>① 政治敏感类不要碰：</strong>金砖会议、胡塞武装、伊朗、洪秀柱、赖岳谦等国际政治话题，容易翻车，不要蹭。
+      </div>
+      <div class="item">
+        <strong>② 公职人员醉驾事件：</strong>涉及公检法，容易被限流，除非你是深度调查号，否则不建议写。
+      </div>
+      <div class="item">
+        <strong>③ 郭德纲/朱之文争议：</strong>这类娱乐争议已经吵了好几天，热度在下降，现在再写来不及了。
+      </div>
+      <div class="item">
+        <strong>④ 医疗健康类要谨慎：</strong>脑出血、隐翅虫这类健康话题，不要写太绝对的结论，避免误导读者。
+      </div>
+    </div>
+  </div>
+
+  <!-- 一、社会民生 -->
+  <div class="category">
+    <div class="cat-header">
+      <span class="cat-icon">🏙️</span>
+      <span class="cat-title">社会民生类</span>
+      <span class="cat-count">8条</span>
+    </div>
+    <table class="hot-table">
+      <thead>
+        <tr>
+          <th class="idx">#</th>
+          <th class="title">标题</th>
+          <th class="source">来源</th>
+          <th class="desc">一句话简介</th>
+          <th class="type">类型</th>
+          <th class="track">赛道</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="idx">1</td><td class="title"><a href="https://www.baidu.com/s?wd=%E6%B8%94%E6%B0%91%E8%90%BD%E6%B0%B411%E5%A4%A9%E5%90%8E%E4%BA%8B%E9%83%BD%E5%8A%9E%E4%BA%86%20%E4%BA%BA%E5%9B%9E%E6%9D%A5%E4%BA%86" target="_blank" style="color: inherit; text-decoration: none;">渔民落水11天后事都办了 人回来了 ↗</a></td><td class="source"><span class="badge">百度</span></td><td class="desc">60岁渔民失踪11天，家人都办后事了，人奇迹般回来了</td><td class="type"><span class="badge 故事文">故事文</span></td><td class="track">鸡汤人性</td></tr>
+        <tr><td class="idx">2</td><td class="title"><a href="https://www.baidu.com/s?wd=%E4%B8%BE%E6%8A%A5%E5%85%83%E9%9D%92%E8%8A%B1%E6%9D%AF%E5%A4%B1%E8%B8%AA%E7%83%A7%E7%83%A4%E5%BA%97%E4%B8%BB%E6%94%B9%E5%8D%96%E7%BA%A2%E8%96%AF" target="_blank" style="color: inherit; text-decoration: none;">举报元青花杯失踪烧烤店主改卖红薯 ↗</a></td><td class="source"><span class="badge">百度</span></td><td class="desc">山东菏泽烧烤店举报文物失踪后被检查15次，店主改卖红薯</td><td class="type"><span class="badge 热点评论">热点评论</span></td><td class="track">社会观察</td></tr>
+        <tr><td class="idx">3</td><td class="title"><a href="https://www.baidu.com/s?wd=%E5%85%AC%E8%81%8C%E4%BA%BA%E5%91%98%E9%86%89%E9%A9%BE%E6%92%9E%E6%AD%BB%E5%A4%AB%E5%A6%BB%20%E4%BA%8B%E5%8F%91%E7%9B%91%E6%8E%A7%E6%9B%9D%E5%85%89" target="_blank" style="color: inherit; text-decoration: none;">公职人员醉驾撞死夫妻 事发监控曝光 ↗</a></td><td class="source"><span class="badge">百度</span></td><td class="desc">公职人员醉驾致一对夫妻死亡，岗位职责曝光</td><td class="type"><span class="badge 热点评论">热点评论</span></td><td class="track">社会观察</td></tr>
+        <tr><td class="idx">4</td><td class="title"><a href="https://www.baidu.com/s?wd=22%E5%B2%81%E4%BE%84%E5%AD%90%E6%89%9B%E8%A1%8C%E6%9D%8E%E9%80%8119%E5%B2%81%E5%8F%94%E5%8F%94%E4%B8%8A%E5%A4%A7%E5%AD%A6" target="_blank" style="color: inherit; text-decoration: none;">22岁侄子扛行李送19岁叔叔上大学 ↗</a></td><td class="source"><span class="badge">百度</span></td><td class="desc">侄子比叔叔大3岁，送叔叔上大学引发热议</td><td class="type"><span class="badge 故事文">故事文</span></td><td class="track">家庭/情感</td></tr>
+        <tr><td class="idx">5</td><td class="title"><a href="https://www.baidu.com/s?wd=%E5%BA%8A%E5%A4%B4%E6%94%BE%E8%8F%9C%E5%88%80%E7%9A%84%E5%A5%B3%E5%AD%A9%E5%BC%80%E5%AD%A6%E5%85%B8%E7%A4%BC%E5%8F%91%E8%A8%80" target="_blank" style="color: inherit; text-decoration: none;">床头放菜刀的女孩开学典礼发言 ↗</a></td><td class="source"><span class="badge">百度</span></td><td class="desc">女孩在开学典礼上讲述自己的成长经历，床头放菜刀引发关注</td><td class="type"><span class="badge 故事文">故事文</span></td><td class="track">个人成长</td></tr>
+        <tr><td class="idx">6</td><td class="title"><a href="https://www.baidu.com/s?wd=%E5%9C%A8%E8%AF%BB75%E4%B8%87%20%E4%B8%AD%E5%9B%BD%E5%8D%9A%E5%A3%AB%E7%9C%9F%E7%9A%84%E8%BF%87%E5%89%A9%E4%BA%86%E5%90%97" target="_blank" style="color: inherit; text-decoration: none;">在读75万 中国博士真的过剩了吗 ↗</a></td><td class="source"><span class="badge">百度</span></td><td class="desc">博士在读人数75万，学历贬值讨论再起</td><td class="type"><span class="badge 观点文">观点文</span></td><td class="track">职场/教育</td></tr>
+        <tr><td class="idx">7</td><td class="title"><a href="https://www.baidu.com/s?wd=%E5%A4%9A%E4%BA%BA%E6%9C%AA%E9%A2%84%E5%AE%9AiPhone18Pro%E8%A2%AB%E7%9B%97%E5%88%B7" target="_blank" style="color: inherit; text-decoration: none;">多人未预定iPhone18Pro被盗刷 ↗</a></td><td class="source"><span class="badge">百度</span></td><td class="desc">多名用户未预订iPhone却被盗刷，苹果支付安全引质疑</td><td class="type"><span class="badge 干货文">干货文</span></td><td class="track">消费维权</td></tr>
+        <tr><td class="idx">8</td><td class="title"><a href="https://b23.tv/BV1TnYE67ELN" target="_blank" style="color: inherit; text-decoration: none;">武汉没订奶学生"站后排喝水" ↗</a></td><td class="source"><span class="badge">B站</span></td><td class="desc">学校要求订奶学生坐前排，没订奶的站后排喝水</td><td class="type"><span class="badge 热点评论">热点评论</span></td><td class="track">教育/社会</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 二、娱乐文化 -->
+  <div class="category">
+    <div class="cat-header">
+      <span class="cat-icon">🎬</span>
+      <span class="cat-title">娱乐文化类</span>
+      <span class="cat-count">8条</span>
+    </div>
+    <table class="hot-table">
+      <thead>
+        <tr>
+          <th class="idx">#</th>
+          <th class="title">标题</th>
+          <th class="source">来源</th>
+          <th class="desc">一句话简介</th>
+          <th class="type">类型</th>
+          <th class="track">赛道</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="idx">1</td><td class="title"><a href="https://www.baidu.com/s?wd=%E6%98%8E%E6%98%9F%E6%89%8E%E5%A0%86%E2%80%9C%E5%85%A5%E8%81%8C%E2%80%9D%E6%99%AF%E5%8C%BANPC" target="_blank" style="color: inherit; text-decoration: none;">明星扎堆"入职"景区NPC ↗</a></td><td class="source"><span class="badge">百度</span></td><td class="desc">明星纷纷去景区当NPC，文旅又出新玩法</td><td class="type"><span class="badge 观点文">观点文</span></td><td class="track">娱乐观察</td></tr>
+        <tr><td class="idx">2</td><td class="title"><a href="https://s.weibo.com/weibo?q=%E5%85%B0%E9%A6%99%E5%A6%82%E6%95%85" target="_blank" style="color: inherit; text-decoration: none;">兰香如故（全平台刷屏） ↗</a></td><td class="source"><span class="badge">微博</span></td><td class="desc">新剧《兰香如故》抖音爆火，刘学义李梦演夫妻</td><td class="type"><span class="badge 剧评">剧评</span></td><td class="track">娱乐剧评</td></tr>
+        <tr><td class="idx">3</td><td class="title"><a href="https://www.douyin.com/hot/2647222" target="_blank" style="color: inherit; text-decoration: none;">刀郎线上音乐会1小时点赞破亿 ↗</a></td><td class="source"><span class="badge">抖音</span></td><td class="desc">刀郎线上音乐会热度惊人，1小时点赞破亿</td><td class="type"><span class="badge 热点评论">热点评论</span></td><td class="track">音乐/文化</td></tr>
+        <tr><td class="idx">4</td><td class="title"><a href="https://s.weibo.com/weibo?q=%E8%B5%B5%E9%9B%B7%E9%B8%9F%E5%B7%A2%E6%BC%94%E5%94%B1%E4%BC%9A" target="_blank" style="color: inherit; text-decoration: none;">赵雷鸟巢演唱会 ↗</a></td><td class="source"><span class="badge">微博</span></td><td class="desc">赵雷在鸟巢开唱，引发青春回忆杀</td><td class="type"><span class="badge 故事文">故事文</span></td><td class="track">文化/音乐</td></tr>
+        <tr><td class="idx">5</td><td class="title"><a href="https://b23.tv/BV17mYV6WEe5" target="_blank" style="color: inherit; text-decoration: none;">周杰伦《西西里》MV发布 ↗</a></td><td class="source"><span class="badge">B站</span></td><td class="desc">周杰伦新歌MV以电影规格打造，如浓缩动作片</td><td class="type"><span class="badge 剧评">乐评</span></td><td class="track">娱乐剧评</td></tr>
+        <tr><td class="idx">6</td><td class="title"><a href="https://s.weibo.com/weibo?q=%E6%95%AC%E4%B8%80%E4%B8%B9%E6%9B%BE%E8%AF%B4%E6%AF%8D%E4%BA%B2%E7%9A%84%E8%82%AF%E5%AE%9A%E5%BD%B1%E5%93%8D%E4%BA%86%E5%A5%B9" target="_blank" style="color: inherit; text-decoration: none;">敬一丹去世 ↗</a></td><td class="source"><span class="badge">头条</span></td><td class="desc">央视前主持人敬一丹去世，全网悼念</td><td class="type"><span class="badge 故事文">故事文</span></td><td class="track">历史人文</td></tr>
+        <tr><td class="idx">7</td><td class="title"><a href="https://www.toutiao.com/trending/7684843687422987782/" target="_blank" style="color: inherit; text-decoration: none;">小琦龄童去世 ↗</a></td><td class="source"><span class="badge">头条</span></td><td class="desc">六小龄童相关，西游文化传承人去世</td><td class="type"><span class="badge 故事文">故事文</span></td><td class="track">历史人文</td></tr>
+        <tr><td class="idx">8</td><td class="title"><a href="https://www.douyin.com/hot/2646509" target="_blank" style="color: inherit; text-decoration: none;">当古代名画里的人走出了画框 ↗</a></td><td class="source"><span class="badge">抖音</span></td><td class="desc">AI技术让名画人物动起来，文化+科技结合</td><td class="type"><span class="badge 干货文">干货文</span></td><td class="track">历史人文</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 三、科技AI -->
+  <div class="category">
+    <div class="cat-header">
+      <span class="cat-icon">🤖</span>
+      <span class="cat-title">科技AI类</span>
+      <span class="cat-count">8条</span>
+    </div>
+    <table class="hot-table">
+      <thead>
+        <tr>
+          <th class="idx">#</th>
+          <th class="title">标题</th>
+          <th class="source">来源</th>
+          <th class="desc">一句话简介</th>
+          <th class="type">类型</th>
+          <th class="track">赛道</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="idx">1</td><td class="title"><a href="https://s.weibo.com/weibo?q=%E4%B8%89%E5%A4%A7AI%E5%B7%A8%E5%A4%B4%E8%81%94%E6%89%8B%E5%91%BC%E5%90%81%E6%94%BE%E7%BC%93%E5%BC%80%E5%8F%91%E6%AD%A5%E4%BC%90" target="_blank" style="color: inherit; text-decoration: none;">三大AI巨头联手呼吁放缓开发步伐 ↗</a></td><td class="source"><span class="badge">微博</span></td><td class="desc">Anthropic、马斯克、奥特曼罕见同调，呼吁AI刹车</td><td class="type"><span class="badge 观点文">观点文</span></td><td class="track">科技观察</td></tr>
+        <tr><td class="idx">2</td><td class="title"><a href="https://www.baidu.com/s?wd=%E5%87%BA%E7%8E%B0%E8%BF%99%E7%A7%8D%E6%84%9F%E8%A7%89%20%E8%AF%B4%E6%98%8E%E4%BD%A0AI%E6%88%90%E7%98%BE%E4%BA%86" target="_blank" style="color: inherit; text-decoration: none;">出现这种感觉 说明你AI成瘾了 ↗</a></td><td class="source"><span class="badge">百度</span></td><td class="desc">列出AI成瘾的几个信号，引发打工人共鸣</td><td class="type"><span class="badge 干货文">干货文</span></td><td class="track">个人成长</td></tr>
+        <tr><td class="idx">3</td><td class="title"><a href="https://www.36kr.com/p/3981223980923651" target="_blank" style="color: inherit; text-decoration: none;">OpenAI关停史上最快模型 ↗</a></td><td class="source"><span class="badge">36氪</span></td><td class="desc">OpenAI突然关停最快模型，官方未解释原因</td><td class="type"><span class="badge 热点评论">热点评论</span></td><td class="track">科技观察</td></tr>
+        <tr><td class="idx">4</td><td class="title"><a href="https://www.36kr.com/p/3981250979036163" target="_blank" style="color: inherit; text-decoration: none;">OpenAI今年不上市了 ↗</a></td><td class="source"><span class="badge">36氪</span></td><td class="desc">OpenAI取消今年上市计划，AI资本热潮退潮？</td><td class="type"><span class="badge 观点文">观点文</span></td><td class="track">科技/财经</td></tr>
+        <tr><td class="idx">5</td><td class="title"><a href="https://www.36kr.com/p/3981356827940482" target="_blank" style="color: inherit; text-decoration: none;">高中前不许碰AI 纽约市划红线 ↗</a></td><td class="source"><span class="badge">36氪</span></td><td class="desc">纽约市禁止高中生使用AI，教育界最严红线</td><td class="type"><span class="badge 观点文">观点文</span></td><td class="track">教育/科技</td></tr>
+        <tr><td class="idx">6</td><td class="title"><a href="https://b23.tv/BV1HEYv6XETo" target="_blank" style="color: inherit; text-decoration: none;">麒麟9050 Pro能效实测 ↗</a></td><td class="source"><span class="badge">知乎</span></td><td class="desc">华为新芯片实测，能效表现引发热议</td><td class="type"><span class="badge 干货文">干货文</span></td><td class="track">科技/数码</td></tr>
+        <tr><td class="idx">7</td><td class="title"><a href="https://www.zhihu.com/question/2081661494270415480" target="_blank" style="color: inherit; text-decoration: none;">iPhone Duo折叠屏发布 ↗</a></td><td class="source"><span class="badge">多平台</span></td><td class="desc">苹果首款折叠屏手机发布，等了15年</td><td class="type"><span class="badge 干货文">干货文</span></td><td class="track">科技/数码</td></tr>
+        <tr><td class="idx">8</td><td class="title"><a href="https://www.36kr.com/p/3981566976080643" target="_blank" style="color: inherit; text-decoration: none;">谷歌DeepMind破解RSI？ ↗</a></td><td class="source"><span class="badge">36氪</span></td><td class="desc">DeepMind在AI数学推理上取得突破</td><td class="type"><span class="badge 观点文">观点文</span></td><td class="track">科技观察</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 四、财经商业 -->
+  <div class="category">
+    <div class="cat-header">
+      <span class="cat-icon">💰</span>
+      <span class="cat-title">财经商业类</span>
+      <span class="cat-count">8条</span>
+    </div>
+    <table class="hot-table">
+      <thead>
+        <tr>
+          <th class="idx">#</th>
+          <th class="title">标题</th>
+          <th class="source">来源</th>
+          <th class="desc">一句话简介</th>
+          <th class="type">类型</th>
+          <th class="track">赛道</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="idx">1</td><td class="title"><a href="https://www.baidu.com/s?wd=%E5%9B%9B%E5%A4%A7%E5%9B%BD%E6%9C%89%E8%A1%8C%E4%BB%8A%E5%B9%B4%E7%BC%A9%E6%8B%9B7000%E4%BD%99%E4%BA%BA" target="_blank" style="color: inherit; text-decoration: none;">四大国有行今年缩招7000余人 ↗</a></td><td class="source"><span class="badge">百度</span></td><td class="desc">四大行集体缩招，银行人越来越难进了</td><td class="type"><span class="badge 观点文">观点文</span></td><td class="track">职场干货</td></tr>
+        <tr><td class="idx">2</td><td class="title"><a href="https://www.zhihu.com/question/2082478357984421508" target="_blank" style="color: inherit; text-decoration: none;">胖东来再招员工都是学员性质 ↗</a></td><td class="source"><span class="badge">知乎</span></td><td class="desc">于东来发文：新招员工合同4年不续签</td><td class="type"><span class="badge 观点文">观点文</span></td><td class="track">商业观察</td></tr>
+        <tr><td class="idx">3</td><td class="title"><a href="https://www.baidu.com/s?wd=%E4%BA%9A%E6%9C%B5%E5%BA%97%E9%95%BF%E5%8F%AB%E2%80%9C%E7%8E%B0%E9%95%BF%E2%80%9D%E5%BA%97%E5%8A%A9%E5%8F%AB%E2%80%9C%E6%94%BF%E5%A7%94%E2%80%9D" target="_blank" style="color: inherit; text-decoration: none;">亚朵店长叫"现长"店助叫"政委" ↗</a></td><td class="source"><span class="badge">百度</span></td><td class="desc">亚朵内部职级名称引发热议，到底是创新还是噱头</td><td class="type"><span class="badge 观点文">观点文</span></td><td class="track">职场/管理</td></tr>
+        <tr><td class="idx">4</td><td class="title"><a href="https://www.baidu.com/s?wd=%E5%A5%B3%E5%AD%90%E6%8A%95%E8%B5%84%E5%8D%83%E4%B8%87%E5%BC%80%E9%85%92%E5%BA%97%E5%8D%B4%E5%B1%A1%E5%B1%A1%E8%A2%AB%E7%BD%9A" target="_blank" style="color: inherit; text-decoration: none;">女子投资千万开酒店却屡屡被罚 ↗</a></td><td class="source"><span class="badge">百度</span></td><td class="desc">千万投资开酒店，却因各种问题屡被处罚</td><td class="type"><span class="badge 故事文">故事文</span></td><td class="track">创业/商业</td></tr>
+        <tr><td class="idx">5</td><td class="title"><a href="https://www.36kr.com/p/3981258977278979" target="_blank" style="color: inherit; text-decoration: none;">中国公司全球化周报 ↗</a></td><td class="source"><span class="badge">36氪</span></td><td class="desc">中国企业出海最新动态汇总</td><td class="type"><span class="badge 干货文">干货文</span></td><td class="track">商业观察</td></tr>
+        <tr><td class="idx">6</td><td class="title"><a href="https://www.36kr.com/p/3981198700624645" target="_blank" style="color: inherit; text-decoration: none;">特斯拉降价无人维权？ ↗</a></td><td class="source"><span class="badge">36氪</span></td><td class="desc">特斯拉降价，车主反应出人意料</td><td class="type"><span class="badge 热点评论">热点评论</span></td><td class="track">消费/商业</td></tr>
+        <tr><td class="idx">7</td><td class="title"><a href="https://www.36kr.com/p/3981811593739011" target="_blank" style="color: inherit; text-decoration: none;">黄金连锁倒闭潮来临 ↗</a></td><td class="source"><span class="badge">36氪</span></td><td class="desc">黄金价格波动，连锁金店开始倒闭潮</td><td class="type"><span class="badge 观点文">观点文</span></td><td class="track">财经观察</td></tr>
+        <tr><td class="idx">8</td><td class="title"><a href="https://www.36kr.com/p/3980432257416201" target="_blank" style="color: inherit; text-decoration: none;">最低调的海外巨头 年销超400亿 ↗</a></td><td class="source"><span class="badge">36氪</span></td><td class="desc">一家低调的海外公司，悄悄卖爆全球</td><td class="type"><span class="badge 干货文">干货文</span></td><td class="track">商业观察</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 五、生活情感 -->
+  <div class="category">
+    <div class="cat-header">
+      <span class="cat-icon">💚</span>
+      <span class="cat-title">生活情感类</span>
+      <span class="cat-count">8条</span>
+    </div>
+    <table class="hot-table">
+      <thead>
+        <tr>
+          <th class="idx">#</th>
+          <th class="title">标题</th>
+          <th class="source">来源</th>
+          <th class="desc">一句话简介</th>
+          <th class="type">类型</th>
+          <th class="track">赛道</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="idx">1</td><td class="title"><a href="https://s.weibo.com/weibo?q=%E8%BF%99%E6%89%8D%E6%98%AF%E8%BA%AB%E4%BD%93%E9%9C%80%E8%A6%81%E7%9A%847%E7%A7%8D%E4%BC%91%E6%81%AF" target="_blank" style="color: inherit; text-decoration: none;">这才是身体需要的7种休息 ↗</a></td><td class="source"><span class="badge">微博</span></td><td class="desc">不是睡觉才叫休息，7种真正有效的休息方式</td><td class="type"><span class="badge 干货文">干货文</span></td><td class="track">个人成长/心理</td></tr>
+        <tr><td class="idx">2</td><td class="title"><a href="https://s.weibo.com/weibo?q=5%E7%A7%8D%E4%B8%8D%E8%88%92%E6%9C%8D%E9%AB%98%E5%BA%A6%E8%AD%A6%E6%83%95%E8%84%91%E5%87%BA%E8%A1%80" target="_blank" style="color: inherit; text-decoration: none;">5种不舒服高度警惕脑出血 ↗</a></td><td class="source"><span class="badge">微博</span></td><td class="desc">脑出血前兆的5个信号，人人都该知道</td><td class="type"><span class="badge 干货文">干货文</span></td><td class="track">健康科普</td></tr>
+        <tr><td class="idx">3</td><td class="title"><a href="https://s.weibo.com/weibo?q=%E9%99%88%E5%A6%8D%E5%B8%8C%E5%84%BF%E5%AD%90%E6%98%9F%E6%98%9F%E4%B9%9F%E6%98%AF%E5%9B%9E%E9%81%BF%E5%9E%8B%E4%BA%BA%E6%A0%BC" target="_blank" style="color: inherit; text-decoration: none;">陈妍希儿子星星也是回避型人格 ↗</a></td><td class="source"><span class="badge">微博</span></td><td class="desc">明星育儿话题，回避型人格引发讨论</td><td class="type"><span class="badge 观点文">观点文</span></td><td class="track">心理/情感</td></tr>
+        <tr><td class="idx">4</td><td class="title"><a href="https://www.baidu.com/s?wd=%E4%BB%8A%E5%B9%B4%E9%9A%90%E7%BF%85%E8%99%AB%E4%B8%BA%E4%BD%95%E6%A0%BC%E5%A4%96%E5%A4%9A%20%E5%8C%BB%E7%94%9F%E6%8F%90%E9%86%92" target="_blank" style="color: inherit; text-decoration: none;">今年隐翅虫为何格外多 ↗</a></td><td class="source"><span class="badge">百度</span></td><td class="desc">隐翅虫泛滥，医生提醒注意事项</td><td class="type"><span class="badge 干货文">干货文</span></td><td class="track">生活科普</td></tr>
+        <tr><td class="idx">5</td><td class="title"><a href="https://www.douyin.com/hot/2648187" target="_blank" style="color: inherit; text-decoration: none;">东北入秋的仪式是一锅酱大骨 ↗</a></td><td class="source"><span class="badge">抖音</span></td><td class="desc">东北人的秋天，从一锅酱大骨开始</td><td class="type"><span class="badge 故事文">故事文</span></td><td class="track">生活/美食</td></tr>
+        <tr><td class="idx">6</td><td class="title"><a href="https://www.douyin.com/hot/2647261" target="_blank" style="color: inherit; text-decoration: none;">跟陈小春演唱会逛吃哈尔滨 ↗</a></td><td class="source"><span class="badge">抖音</span></td><td class="desc">演唱会+城市旅游，哈尔滨成新热门</td><td class="type"><span class="badge 干货文">干货文</span></td><td class="track">旅游/生活</td></tr>
+        <tr><td class="idx">7</td><td class="title"><a href="https://www.zhihu.com/question/293242309" target="_blank" style="color: inherit; text-decoration: none;">去了威海才知道的事情 ↗</a></td><td class="source"><span class="badge">知乎</span></td><td class="desc">威海旅游避坑+必做体验</td><td class="type"><span class="badge 干货文">干货文</span></td><td class="track">旅游/生活</td></tr>
+        <tr><td class="idx">8</td><td class="title"><a href="https://b23.tv/BV1xZYU6eE9F" target="_blank" style="color: inherit; text-decoration: none;">现在的小孩vs以前的小孩 ↗</a></td><td class="source"><span class="badge">B站</span></td><td class="desc">两代人的成长对比，引发集体回忆</td><td class="type"><span class="badge 观点文">观点文</span></td><td class="track">情感/怀旧</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 六、其他关注 -->
+  <div class="category">
+    <div class="cat-header">
+      <span class="cat-icon">📌</span>
+      <span class="cat-title">其他值得关注</span>
+      <span class="cat-count">8条</span>
+    </div>
+    <table class="hot-table">
+      <thead>
+        <tr>
+          <th class="idx">#</th>
+          <th class="title">标题</th>
+          <th class="source">来源</th>
+          <th class="desc">一句话简介</th>
+          <th class="type">类型</th>
+          <th class="track">赛道</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="idx">1</td><td class="title"><a href="https://www.zhihu.com/question/528355615" target="_blank" style="color: inherit; text-decoration: none;">清朝人口为何从1400万长到4亿 ↗</a></td><td class="source"><span class="badge">知乎</span></td><td class="desc">清朝人口爆发式增长的原因</td><td class="type"><span class="badge 干货文">干货文</span></td><td class="track">历史人文</td></tr>
+        <tr><td class="idx">2</td><td class="title"><a href="https://b23.tv/BV1xJYT6EEYc" target="_blank" style="color: inherit; text-decoration: none;">我们为什么要削藩？谁又是藩？ ↗</a></td><td class="source"><span class="badge">B站</span></td><td class="desc">历史深度解读，分配问题怎么解决</td><td class="type"><span class="badge 干货文">干货文</span></td><td class="track">历史人文</td></tr>
+        <tr><td class="idx">3</td><td class="title"><a href="https://b23.tv/BV1pSYM6mEyo" target="_blank" style="color: inherit; text-decoration: none;">鲁迅发薪日必须去买什么吃？ ↗</a></td><td class="source"><span class="badge">B站</span></td><td class="desc">鲁迅的工资和生活细节，趣味历史</td><td class="type"><span class="badge 故事文">故事文</span></td><td class="track">历史人文</td></tr>
+        <tr><td class="idx">4</td><td class="title"><a href="https://www.zhihu.com/question/2068727162681692756" target="_blank" style="color: inherit; text-decoration: none;">为什么扎根西北的兰大没吃到红利 ↗</a></td><td class="source"><span class="badge">知乎</span></td><td class="desc">兰州大学的困境与选择</td><td class="type"><span class="badge 观点文">观点文</span></td><td class="track">教育/社会</td></tr>
+        <tr><td class="idx">5</td><td class="title"><a href="https://www.zhihu.com/question/2081988407358767777" target="_blank" style="color: inherit; text-decoration: none;">预感将被裁员且能力不足 该辞职吗 ↗</a></td><td class="source"><span class="badge">知乎</span></td><td class="desc">职场焦虑，裁还是不裁？</td><td class="type"><span class="badge 观点文">观点文</span></td><td class="track">职场干货</td></tr>
+        <tr><td class="idx">6</td><td class="title"><a href="https://www.zhihu.com/question/24536825" target="_blank" style="color: inherit; text-decoration: none;">体检中心和医院体检有什么不一样 ↗</a></td><td class="source"><span class="badge">知乎</span></td><td class="desc">体检行业的门道，避坑指南</td><td class="type"><span class="badge 干货文">干货文</span></td><td class="track">健康/消费</td></tr>
+        <tr><td class="idx">7</td><td class="title"><a href="https://www.baidu.com/s?wd=%E5%87%BA%E7%8E%B0%E8%BF%99%E7%A7%8D%E6%84%9F%E8%A7%89%20%E8%AF%B4%E6%98%8E%E4%BD%A0AI%E6%88%90%E7%98%BE%E4%BA%86" target="_blank" style="color: inherit; text-decoration: none;">AI短剧成瘾 看多了有什么影响 ↗</a></td><td class="source"><span class="badge">知乎</span></td><td class="desc">几分钟一集的AI短剧，正在吞噬年轻人时间</td><td class="type"><span class="badge 观点文">观点文</span></td><td class="track">个人成长</td></tr>
+        <tr><td class="idx">8</td><td class="title"><a href="https://www.36kr.com/p/3981659926444808" target="_blank" style="color: inherit; text-decoration: none;">去年最火赛道 今年崩盘了 ↗</a></td><td class="source"><span class="badge">36氪</span></td><td class="desc">风口轮动速度越来越快</td><td class="type"><span class="badge 观点文">观点文</span></td><td class="track">商业观察</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 底部总结 -->
+  <div class="summary-box">
+    <h3>💡 今日写作建议</h3>
+    <p>今天AI相关话题热度最高，适合蹭"AI刹车"的热点做观点文；"第一学历"话题职场人共鸣极强，适合做干货+观点结合的文章。</p>
+    <div class="keywords">
+      <span class="keyword">AI焦虑</span>
+      <span class="keyword">学历歧视</span>
+      <span class="keyword">怀念敬一丹</span>
+      <span class="keyword">职场缩招</span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

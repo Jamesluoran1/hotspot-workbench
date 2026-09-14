@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>热点工作台</title>
+  <style>
+    :root {
+      --ink: #102b34;
+      --ink-2: #38525a;
+      --muted: #718186;
+      --line: #dbe2e0;
+      --paper: #f5f7f6;
+      --panel: #ffffff;
+      --nav: #0b252e;
+      --nav-muted: #91a8ad;
+      --green: #00b884;
+      --cyan: #13b9d4;
+      --orange: #e48334;
+      --focus: #087f68;
+    }
+
+    * { box-sizing: border-box; }
+    html { min-width: 320px; background: var(--paper); }
+    body {
+      margin: 0;
+      min-width: 320px;
+      min-height: 100vh;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+    button, input, select { font: inherit; letter-spacing: 0; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+      outline: 3px solid rgba(0, 184, 132, .28);
+      outline-offset: 2px;
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .app { min-height: 100vh; display: grid; grid-template-columns: 238px minmax(0, 1fr); }
+    .sidebar {
+      min-height: 100vh;
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      overflow-y: auto;
+      padding: 22px 16px;
+      background: var(--nav);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+    .brand { display: flex; align-items: center; gap: 11px; padding: 0 8px; }
+    .brand img { width: 39px; height: 39px; display: block; }
+    .brand-name { min-width: 0; }
+    .brand-name strong { display: block; font-size: 17px; font-weight: 700; }
+    .brand-name span { display: block; margin-top: 3px; color: var(--nav-muted); font-size: 11px; }
+
+    .nav-label { padding: 0 10px; color: var(--nav-muted); font-size: 11px; }
+    .category-nav { display: grid; gap: 4px; }
+    .category-btn {
+      width: 100%;
+      height: 40px;
+      padding: 0 10px;
+      border: 0;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #c8d5d7;
+      background: transparent;
+      cursor: pointer;
+      text-align: left;
+    }
+    .category-btn:hover { background: rgba(255, 255, 255, .07); color: #fff; }
+    .category-btn[aria-pressed="true"] { color: #fff; background: rgba(19, 185, 212, .17); }
+    .nav-icon { width: 22px; color: var(--nav-muted); font-size: 15px; text-align: center; }
+    .category-btn[aria-pressed="true"] .nav-icon { color: #42e1bd; }
+    .nav-count { margin-left: auto; color: var(--nav-muted); font-size: 11px; }
+    .sidebar-foot { margin-top: auto; padding: 13px 10px 0; border-top: 1px solid rgba(255,255,255,.11); color: var(--nav-muted); font-size: 11px; line-height: 1.7; }
+
+    main { min-width: 0; padding: 24px 28px 40px; }
+    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 20px; }
+    .title-wrap h1 { margin: 0; font-size: 27px; line-height: 1.25; letter-spacing: 0; }
+    .title-wrap p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    .date-chip { flex: none; color: var(--ink-2); font-size: 12px; }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: minmax(260px, 1fr) auto auto;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .search-wrap { position: relative; }
+    .search-symbol { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+    #search {
+      width: 100%;
+      height: 44px;
+      padding: 0 42px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      color: var(--ink);
+      background: var(--panel);
+    }
+    #search::placeholder { color: #9ba8ab; }
+    .clear-search {
+      position: absolute;
+      right: 6px;
+      top: 6px;
+      width: 32px;
+      height: 32px;
+      border: 0;
+      border-radius: 5px;
+      color: var(--muted);
+      background: transparent;
+      cursor: pointer;
+      display: none;
+    }
+    .clear-search:hover { background: #eef2f1; color: var(--ink); }
+    .clear-search.visible { display: block; }
+
+    .segmented {
+      height: 44px;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--panel);
+      display: flex;
+      gap: 2px;
+    }
+    .segment {
+      min-width: 58px;
+      padding: 0 11px;
+      border: 0;
+      border-radius: 5px;
+      color: var(--ink-2);
+      background: transparent;
+      cursor: pointer;
+    }
+    .segment:hover { background: #eef3f2; }
+    .segment[aria-pressed="true"] { color: #fff; background: var(--ink); }
+    .region-select {
+      height: 44px;
+      padding: 0 36px 0 13px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      color: var(--ink-2);
+      background: var(--panel);
+    }
+
+    .workspace-meta {
+      min-height: 32px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .workspace-meta strong { font-size: 15px; }
+    .result-count { color: var(--muted); font-size: 12px; }
+    .active-filter { color: var(--focus); }
+
+    .site-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+      gap: 12px;
+      align-items: stretch;
+    }
+    .site-card {
+      min-width: 0;
+      min-height: 126px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      position: relative;
+      transition: border-color .16s ease, box-shadow .16s ease, transform .16s ease;
+    }
+    .site-card:hover { border-color: #aebdba; box-shadow: 0 5px 18px rgba(16, 43, 52, .08); transform: translateY(-1px); }
+    .site-link { min-height: 124px; padding: 16px 48px 14px 15px; color: inherit; text-decoration: none; display: block; }
+    .site-head { display: flex; align-items: center; gap: 11px; min-width: 0; }
+    .site-logo {
+      flex: none;
+      width: 36px;
+      height: 36px;
+      border: 1px solid #e5eae9;
+      border-radius: 7px;
+      background: #f2f5f4;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .site-logo img { width: 22px; height: 22px; object-fit: contain; display: block; }
+    .site-title { min-width: 0; }
+    .site-title strong { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 15px; }
+    .site-domain { margin-top: 3px; color: var(--muted); font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .site-desc { margin: 13px 0 0; color: var(--ink-2); font-size: 12px; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .site-tag { display: inline-flex; margin-top: 9px; padding: 2px 7px; border-radius: 4px; color: #287063; background: #e9f6f2; font-size: 10px; }
+    .favorite-btn {
+      position: absolute;
+      top: 11px;
+      right: 10px;
+      width: 34px;
+      height: 34px;
+      border: 0;
+      border-radius: 6px;
+      color: #8c9a9d;
+      background: transparent;
+      cursor: pointer;
+      font-size: 20px;
+      line-height: 1;
+    }
+    .favorite-btn:hover { color: var(--orange); background: #fff5eb; }
+    .favorite-btn[aria-pressed="true"] { color: var(--orange); }
+    .favorite-btn::after {
+      content: attr(data-tip);
+      position: absolute;
+      z-index: 3;
+      right: 0;
+      top: 40px;
+      width: max-content;
+      max-width: 150px;
+      padding: 5px 7px;
+      border-radius: 4px;
+      color: #fff;
+      background: var(--ink);
+      font-size: 11px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-3px);
+      transition: opacity .12s ease, transform .12s ease;
+    }
+    .favorite-btn:hover::after, .favorite-btn:focus-visible::after { opacity: 1; transform: translateY(0); }
+
+    .empty { grid-column: 1 / -1; padding: 64px 20px; color: var(--muted); text-align: center; }
+    .empty strong { display: block; margin-bottom: 7px; color: var(--ink); font-size: 16px; }
+
+    @media (max-width: 900px) {
+      .app { width: 100%; min-width: 0; grid-template-columns: minmax(0, 1fr); overflow-x: hidden; }
+      .sidebar { min-width: 0; min-height: auto; padding: 14px 16px 10px; gap: 12px; }
+      .sidebar { height: auto; position: static; overflow: hidden; }
+      .brand { padding: 0; }
+      .brand img { width: 34px; height: 34px; }
+      .brand-name span, .sidebar-foot, .nav-label { display: none; }
+      .category-nav { width: 100%; min-width: 0; display: flex; gap: 6px; overflow-x: auto; padding-bottom: 3px; scrollbar-width: thin; }
+      .category-btn { flex: 0 0 auto; width: auto; height: 34px; padding: 0 11px; background: rgba(255,255,255,.05); }
+      .nav-icon, .nav-count { display: none; }
+      main { padding: 20px 18px 32px; }
+    }
+    @media (max-width: 680px) {
+      .topbar { align-items: flex-start; }
+      .title-wrap h1 { font-size: 23px; }
+      .date-chip { display: none; }
+      .toolbar { grid-template-columns: 1fr; }
+      .segmented { width: 100%; }
+      .segment { flex: 1; }
+      .region-select { width: 100%; }
+      .site-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <link rel="stylesheet" href="unified-theme.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" aria-label="网站分类">
+      <div class="brand">
+        <img src="./shuodao-zuodao-ai-icon.svg" alt="说到做到">
+        <div class="brand-name">
+          <strong>热点工作台</strong>
+          <span>说到做到信息技术</span>
+        </div>
+      </div>
+      <div>
+        <div class="nav-label">内容情报源</div>
+        <nav class="category-nav" id="categoryNav"></nav>
+      </div>
+      <div class="sidebar-foot">
+        <div id="totalSites">0 个网站</div>
+        <div>数据整理于 2026-09-05</div>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <div class="title-wrap">
+          <h1>Mini航海垂直小号工作台</h1>
+          <p>热点发现 · 对标研究 · 事实核验 · 趋势验证</p>
+        </div>
+        <div class="date-chip" id="today"></div>
+      </header>
+
+      <section class="toolbar" aria-label="筛选工具">
+        <label class="search-wrap">
+          <span class="search-symbol" aria-hidden="true">⌕</span>
+          <span class="sr-only">搜索网站</span>
+          <input id="search" type="search" placeholder="搜索网站、领域或用途" autocomplete="off">
+          <button class="clear-search" id="clearSearch" type="button" aria-label="清空搜索">×</button>
+        </label>
+        <div class="segmented" aria-label="视图">
+          <button class="segment" type="button" data-view="all" aria-pressed="true">全部</button>
+          <button class="segment" type="button" data-view="favorites" aria-pressed="false">收藏</button>
+          <button class="segment" type="button" data-view="recent" aria-pressed="false">最近</button>
+        </div>
+        <label>
+          <span class="sr-only">区域筛选</span>
+          <select class="region-select" id="regionFilter">
+            <option value="all">全部区域</option>
+            <option value="cn">国内</option>
+            <option value="global">海外</option>
+            <option value="tools">开源工具</option>
+          </select>
+        </label>
+      </section>
+
+      <div class="workspace-meta">
+        <strong id="sectionTitle">全部网站</strong>
+        <span class="result-count" id="resultCount"></span>
+      </div>
+      <section class="site-grid" id="siteGrid" aria-live="polite"></section>
+    </main>
+  </div>
+
+  <script>
+    const sites = [
+      {n:'今日热榜 TopHub',u:'https://tophub.today/',c:'公众号综合热榜',r:'cn',d:'聚合微博、知乎、百度、B站、科技与财经榜单',t:'全网扫盘'},
+      {n:'NewsNow',u:'https://newsnow.busiyi.world/',c:'公众号综合热榜',r:'tools',d:'轻量实时新闻与热点聚合，点击即可直接使用',t:'实时热榜'},
+      {n:'百度热搜',u:'https://top.baidu.com/board',c:'公众号综合热榜',r:'cn',d:'大众搜索需求、突发事件与社会民生趋势',t:'搜索趋势'},
+      {n:'微博热搜',u:'https://s.weibo.com/top/summary',c:'公众号综合热榜',r:'cn',d:'娱乐、社会事件与公共讨论的爆发信号',t:'社会舆情'},
+      {n:'知乎热榜',u:'https://www.zhihu.com/hot',c:'公众号综合热榜',r:'cn',d:'适合解释型、观点型与知识型选题',t:'知识讨论'},
+      {n:'今日头条热榜',u:'https://www.toutiao.com/',c:'公众号综合热榜',r:'cn',d:'社会新闻、本地话题与下沉市场趋势',t:'大众热点'},
+      {n:'抖音热点',u:'https://hot.douyin.com/',c:'公众号综合热榜',r:'cn',d:'短视频话题、热点事件与内容趋势',t:'短视频'},
+      {n:'B站热门',u:'https://www.bilibili.com/v/popular/all/',c:'公众号综合热榜',r:'cn',d:'年轻用户、科技、游戏与知识内容趋势',t:'青年文化'},
+      {n:'36氪热榜',u:'https://36kr.com/hot-list/catalog',c:'公众号综合热榜',r:'cn',d:'创投、商业、新消费与科技公司动态',t:'商业科技'},
+      {n:'虎扑',u:'https://www.hupu.com/',c:'公众号综合热榜',r:'cn',d:'体育、男性消费、游戏与社区讨论',t:'社区'},
+      {n:'豆瓣热门',u:'https://www.douban.com/gallery/',c:'公众号综合热榜',r:'cn',d:'影视、图书、文化情绪与青年生活',t:'文化娱乐'},
+
+      {n:'新榜',u:'https://www.newrank.cn/',c:'公众号对标',r:'cn',d:'公众号榜单、账号数据、爆文与行业排行',t:'核心对标'},
+      {n:'清博指数',u:'https://www.gsdata.cn/',c:'公众号对标',r:'cn',d:'微信传播指数、媒体影响力与行业榜单',t:'传播指数'},
+      {n:'西瓜数据',u:'https://www.xiguaji.com/',c:'公众号对标',r:'cn',d:'公众号文章、账号分析与投放数据',t:'账号分析'},
+      {n:'5118',u:'https://www.5118.com/',c:'公众号对标',r:'cn',d:'关键词、需求图谱、内容选题与SEO数据',t:'关键词'},
+      {n:'搜狗微信搜索',u:'https://weixin.sogou.com/',c:'公众号对标',r:'cn',d:'检索公众号历史文章与关键词文章',t:'微信检索'},
+      {n:'微信指数',u:'https://index.weixin.qq.com/',c:'公众号对标',r:'cn',d:'微信生态关键词趋势与热度变化',t:'微信趋势'},
+      {n:'易撰',u:'https://www.yizhuan5.com/',c:'公众号对标',r:'cn',d:'多平台自媒体内容、爆文与素材研究',t:'爆文素材'},
+      {n:'微小宝',u:'https://www.wxb.com/',c:'公众号对标',r:'cn',d:'公众号运营、素材、数据与协作工具',t:'运营工具'},
+      {n:'壹伴',u:'https://yiban.io/',c:'公众号对标',r:'cn',d:'微信编辑、排版、数据与运营效率',t:'编辑工具'},
+
+      {n:'中国政府网',u:'https://www.gov.cn/',c:'政策权威',r:'cn',d:'国务院政策、会议与权威文件',t:'第一信源'},
+      {n:'中国政府网政策库',u:'https://www.gov.cn/zhengce/',c:'政策权威',r:'cn',d:'检索政策原文、发布日期与发文机关',t:'政策原文'},
+      {n:'国家统计局',u:'https://www.stats.gov.cn/',c:'政策权威',r:'cn',d:'人口、就业、CPI、GDP与行业数据',t:'官方数据'},
+      {n:'中国人民银行',u:'https://www.pbc.gov.cn/',c:'政策权威',r:'cn',d:'货币政策、利率与金融统计',t:'金融政策'},
+      {n:'国家网信办',u:'https://www.cac.gov.cn/',c:'政策权威',r:'cn',d:'互联网治理、平台政策与AI规定',t:'互联网政策'},
+      {n:'市场监管总局',u:'https://www.samr.gov.cn/',c:'政策权威',r:'cn',d:'召回、处罚、反垄断与消费监管',t:'监管信息'},
+      {n:'国家卫生健康委',u:'https://www.nhc.gov.cn/',c:'政策权威',r:'cn',d:'医疗卫生政策与权威通报',t:'健康政策'},
+      {n:'中国疾控中心',u:'https://www.chinacdc.cn/',c:'政策权威',r:'cn',d:'疾病、健康风险与科普数据',t:'健康数据'},
+      {n:'联合辟谣平台',u:'https://www.piyao.org.cn/',c:'政策权威',r:'cn',d:'核查网络传言与虚假信息',t:'事实核验'},
+      {n:'新华网',u:'https://www.news.cn/',c:'政策权威',r:'cn',d:'重大政策、时政与官方通稿',t:'权威媒体'},
+      {n:'人民网',u:'http://www.people.com.cn/',c:'政策权威',r:'cn',d:'政策解读、社会与地方信息',t:'权威媒体'},
+      {n:'央视网',u:'https://www.cctv.com/',c:'政策权威',r:'cn',d:'重大突发事件与现场信息',t:'权威媒体'},
+      {n:'中国新闻网',u:'https://www.chinanews.com.cn/',c:'政策权威',r:'cn',d:'社会、国际与地方新闻',t:'通讯社'},
+      {n:'澎湃新闻',u:'https://www.thepaper.cn/',c:'政策权威',r:'cn',d:'调查、社会、政经与城市议题',t:'深度报道'},
+
+      {n:'财联社',u:'https://www.cls.cn/',c:'财经商业',r:'cn',d:'证券、公司、政策与市场快讯',t:'财经快讯'},
+      {n:'华尔街见闻',u:'https://wallstreetcn.com/',c:'财经商业',r:'cn',d:'全球市场、宏观与科技公司',t:'全球市场'},
+      {n:'第一财经',u:'https://www.yicai.com/',c:'财经商业',r:'cn',d:'宏观、产业、公司与城市商业',t:'财经媒体'},
+      {n:'21财经',u:'https://www.21jingji.com/',c:'财经商业',r:'cn',d:'金融、区域经济与公司报道',t:'财经媒体'},
+      {n:'证券时报',u:'https://www.stcn.com/',c:'财经商业',r:'cn',d:'A股、监管与上市公司资讯',t:'证券媒体'},
+      {n:'上海证券报',u:'https://www.cnstock.com/',c:'财经商业',r:'cn',d:'资本市场、政策与公告解读',t:'证券媒体'},
+      {n:'东方财富',u:'https://www.eastmoney.com/',c:'财经商业',r:'cn',d:'行情、数据、资讯与投资者社区',t:'市场数据'},
+      {n:'雪球',u:'https://xueqiu.com/',c:'财经商业',r:'cn',d:'投资者讨论、公司研究与市场情绪',t:'投资社区'},
+      {n:'财新',u:'https://www.caixin.com/',c:'财经商业',r:'cn',d:'财经调查、公司与深度报道',t:'深度财经'},
+      {n:'巨潮资讯',u:'https://www.cninfo.com.cn/',c:'财经商业',r:'cn',d:'A股法定信息披露与上市公司公告',t:'公告原文'},
+      {n:'上交所',u:'https://www.sse.com.cn/',c:'财经商业',r:'cn',d:'上市公司公告、监管与交易数据',t:'交易所'},
+      {n:'深交所',u:'https://www.szse.cn/',c:'财经商业',r:'cn',d:'上市公司公告、问询函与交易数据',t:'交易所'},
+      {n:'港交所披露易',u:'https://www.hkexnews.hk/',c:'财经商业',r:'cn',d:'港股公告、财报与权益披露',t:'公告原文'},
+      {n:'企业信用公示系统',u:'https://www.gsxt.gov.cn/',c:'财经商业',r:'cn',d:'企业登记、处罚与经营异常信息',t:'企业核验'},
+
+      {n:'36氪',u:'https://36kr.com/',c:'科技AI',r:'cn',d:'创投、科技公司、新消费与商业趋势',t:'科技商业'},
+      {n:'虎嗅',u:'https://www.huxiu.com/',c:'科技AI',r:'cn',d:'商业评论、科技产业与消费观察',t:'商业评论'},
+      {n:'钛媒体',u:'https://www.tmtpost.com/',c:'科技AI',r:'cn',d:'科技、公司、出海与产业报道',t:'科技媒体'},
+      {n:'极客公园',u:'https://www.geekpark.net/',c:'科技AI',r:'cn',d:'产品、AI、互联网公司与人物',t:'产品科技'},
+      {n:'爱范儿',u:'https://www.ifanr.com/',c:'科技AI',r:'cn',d:'消费电子、产品、设计与生活方式',t:'消费科技'},
+      {n:'少数派',u:'https://sspai.com/',c:'科技AI',r:'cn',d:'工具、效率、数码与高质量教程',t:'效率工具'},
+      {n:'IT之家',u:'https://www.ithome.com/',c:'科技AI',r:'cn',d:'数码、软硬件快讯与厂商动态',t:'科技快讯'},
+      {n:'InfoQ 中文',u:'https://www.infoq.cn/',c:'科技AI',r:'cn',d:'软件工程、架构与AI技术实践',t:'技术实践'},
+      {n:'雷峰网',u:'https://www.leiphone.com/',c:'科技AI',r:'cn',d:'AI、智能驾驶、芯片与科技产业',t:'AI产业'},
+      {n:'机器之心',u:'https://www.jiqizhixin.com/',c:'科技AI',r:'cn',d:'AI论文、模型、产品与产业新闻',t:'AI专业'},
+      {n:'量子位',u:'https://www.qbitai.com/',c:'科技AI',r:'cn',d:'AI快讯、模型、产品与公司动态',t:'AI快讯'},
+      {n:'甲子光年',u:'https://www.jazzyear.com/',c:'科技AI',r:'cn',d:'产业互联网、AI商业化与研究报告',t:'产业研究'},
+      {n:'Hacker News',u:'https://news.ycombinator.com/',c:'科技AI',r:'global',d:'开发者、创业与全球科技早期信号',t:'开发者'},
+      {n:'Product Hunt',u:'https://www.producthunt.com/',c:'科技AI',r:'global',d:'AI工具、SaaS与全球新产品发布',t:'新品发现'},
+      {n:'GitHub Trending',u:'https://github.com/trending',c:'科技AI',r:'global',d:'开源项目、开发语言与技术趋势',t:'开源趋势'},
+      {n:'Hugging Face Papers',u:'https://huggingface.co/papers',c:'科技AI',r:'global',d:'热门AI论文与社区讨论',t:'AI论文'},
+      {n:'arXiv',u:'https://arxiv.org/',c:'科技AI',r:'global',d:'计算机、物理、数学等预印本原文',t:'论文原文'},
+      {n:'TechCrunch',u:'https://techcrunch.com/',c:'科技AI',r:'global',d:'创业、融资与全球科技公司',t:'海外科技'},
+      {n:'The Verge',u:'https://www.theverge.com/',c:'科技AI',r:'global',d:'消费科技、平台、产品与互联网文化',t:'海外科技'},
+      {n:'Ars Technica',u:'https://arstechnica.com/',c:'科技AI',r:'global',d:'技术细节、科学、政策与安全',t:'技术深度'},
+      {n:'MIT Tech Review',u:'https://www.technologyreview.com/',c:'科技AI',r:'global',d:'技术趋势、AI与长期社会影响',t:'趋势研究'},
+      {n:'OpenAI News',u:'https://openai.com/news/',c:'科技AI',r:'global',d:'OpenAI产品、模型与研究的第一出处',t:'官方发布'},
+      {n:'Anthropic News',u:'https://www.anthropic.com/news',c:'科技AI',r:'global',d:'Claude产品、模型与安全研究发布',t:'官方发布'},
+      {n:'Google DeepMind',u:'https://deepmind.google/discover/blog/',c:'科技AI',r:'global',d:'Google AI研究、模型与科学进展',t:'官方发布'},
+
+      {n:'SocialBeta',u:'https://socialbeta.com/',c:'品牌营销',r:'cn',d:'品牌案例、营销趋势与Campaign',t:'品牌案例'},
+      {n:'数英',u:'https://www.digitaling.com/',c:'品牌营销',r:'cn',d:'广告案例、代理商与创意作品',t:'广告创意'},
+      {n:'梅花网',u:'https://www.meihua.info/',c:'品牌营销',r:'cn',d:'营销案例、品牌传播与行业活动',t:'营销案例'},
+      {n:'广告门',u:'https://www.adquan.com/',c:'品牌营销',r:'cn',d:'广告行业、代理公司与案例动态',t:'广告行业'},
+      {n:'品牌星球',u:'https://www.brandstar.com.cn/',c:'品牌营销',r:'cn',d:'新品牌、消费品牌与品牌战略',t:'新消费'},
+      {n:'TOPYS',u:'https://www.topys.cn/',c:'品牌营销',r:'cn',d:'创意、设计与文化趋势',t:'创意设计'},
+      {n:'Morketing',u:'https://www.morketing.cn/',c:'品牌营销',r:'cn',d:'数字营销、出海、电商与平台',t:'数字营销'},
+      {n:'人人都是产品经理',u:'https://www.woshipm.com/',c:'品牌营销',r:'cn',d:'产品、运营、职场与互联网方法论',t:'产品运营'},
+      {n:'运营派',u:'https://www.yunyingpai.com/',c:'品牌营销',r:'cn',d:'运营案例、增长、私域与内容方法',t:'内容运营'},
+      {n:'亿邦动力',u:'https://www.ebrun.com/',c:'品牌营销',r:'cn',d:'电商、零售、跨境与平台政策',t:'电商零售'},
+      {n:'赢商网',u:'https://www.winshang.com/',c:'品牌营销',r:'cn',d:'商业地产、购物中心与消费品牌开店',t:'商业消费'},
+      {n:'CBNData',u:'https://www.cbndata.com/',c:'品牌营销',r:'cn',d:'消费趋势与商业数据报告',t:'消费数据'},
+      {n:'Foodaily',u:'https://www.foodaily.com/',c:'品牌营销',r:'cn',d:'食品饮料新品、供应链与消费趋势',t:'食品消费'},
+      {n:'晚点 LatePost',u:'https://www.latepost.com/',c:'品牌营销',r:'cn',d:'大公司、科技与商业深度报道',t:'商业深度'},
+      {n:'蝉妈妈',u:'https://www.chanmama.com/',c:'品牌营销',r:'cn',d:'抖音直播、电商、达人与商品数据',t:'抖音电商'},
+      {n:'飞瓜数据',u:'https://www.feigua.cn/',c:'品牌营销',r:'cn',d:'短视频、直播、达人和商品分析',t:'短视频数据'},
+      {n:'新抖',u:'https://xd.newrank.cn/',c:'品牌营销',r:'cn',d:'抖音账号、内容与行业数据',t:'抖音数据'},
+      {n:'千瓜数据',u:'https://www.qian-gua.com/',c:'品牌营销',r:'cn',d:'小红书达人、笔记、品牌和投放分析',t:'小红书数据'},
+
+      {n:'百度指数',u:'https://index.baidu.com/',c:'数据趋势',r:'cn',d:'关键词热度、地域、人群与相关需求',t:'趋势验证'},
+      {n:'巨量算数',u:'https://trendinsight.oceanengine.com/',c:'数据趋势',r:'cn',d:'抖音内容趋势、关键词与用户兴趣',t:'抖音趋势'},
+      {n:'Google Trends',u:'https://trends.google.com/trends/',c:'数据趋势',r:'global',d:'全球搜索趋势、地区差异与相关查询',t:'全球趋势'},
+      {n:'Similarweb',u:'https://www.similarweb.com/top-websites/',c:'数据趋势',r:'global',d:'网站流量、来源结构与行业排名',t:'流量研究'},
+      {n:'QuestMobile',u:'https://www.questmobile.com.cn/',c:'数据趋势',r:'cn',d:'中国移动互联网用户与行业报告',t:'移动互联网'},
+      {n:'CNNIC',u:'https://www.cnnic.cn/',c:'数据趋势',r:'cn',d:'中国互联网发展、网民规模与结构',t:'官方报告'},
+      {n:'艾瑞咨询',u:'https://www.iresearch.com.cn/',c:'数据趋势',r:'cn',d:'互联网、消费与行业研究报告',t:'行业研究'},
+      {n:'易观分析',u:'https://www.analysys.cn/',c:'数据趋势',r:'cn',d:'数字用户、产业与应用分析',t:'数字分析'},
+      {n:'艾媒咨询',u:'https://www.iimedia.cn/',c:'数据趋势',r:'cn',d:'行业报告、消费调查与市场规模',t:'行业报告'},
+      {n:'Exploding Topics',u:'https://explodingtopics.com/',c:'数据趋势',r:'global',d:'海外早期上升关键词与新品类',t:'早期趋势'},
+      {n:'GDELT',u:'https://www.gdeltproject.org/',c:'数据趋势',r:'global',d:'全球媒体事件、议题与地域监测',t:'全球舆情'},
+
+      {n:'Google News',u:'https://news.google.com/',c:'海外出海',r:'global',d:'按地区与主题聚合全球新闻',t:'全球新闻'},
+      {n:'Reuters',u:'https://www.reuters.com/',c:'海外出海',r:'global',d:'国际政经、公司与市场的一手报道',t:'通讯社'},
+      {n:'AP News',u:'https://apnews.com/',c:'海外出海',r:'global',d:'国际突发、政治与公共事件',t:'通讯社'},
+      {n:'BBC',u:'https://www.bbc.com/',c:'海外出海',r:'global',d:'国际议题、区域新闻与专题报道',t:'国际媒体'},
+      {n:'X Explore',u:'https://x.com/explore',c:'海外出海',r:'global',d:'全球实时讨论、人物与事件动态',t:'社交趋势'},
+      {n:'Reddit Popular',u:'https://www.reddit.com/r/popular/',c:'海外出海',r:'global',d:'社区议题、消费体验与科技讨论',t:'社区趋势'},
+      {n:'TikTok Creative Center',u:'https://ads.tiktok.com/business/creativecenter/',c:'海外出海',r:'global',d:'海外短视频标签、音乐与创意趋势',t:'TikTok趋势'},
+      {n:'YouTube Charts',u:'https://charts.youtube.com/',c:'海外出海',r:'global',d:'音乐与全球内容消费信号',t:'视频趋势'},
+      {n:'SteamDB',u:'https://steamdb.info/',c:'海外出海',r:'global',d:'游戏热度、在线人数、价格与新品趋势',t:'游戏数据'},
+
+      {n:'汽车之家',u:'https://www.autohome.com.cn/',c:'垂直行业',r:'cn',d:'新车、口碑、报价与汽车论坛',t:'汽车'},
+      {n:'懂车帝',u:'https://www.dongchedi.com/',c:'垂直行业',r:'cn',d:'车型热度、视频与用户讨论',t:'汽车'},
+      {n:'乘联会',u:'http://www.cpcaauto.com/',c:'垂直行业',r:'cn',d:'乘用车销量与汽车行业数据',t:'汽车数据'},
+      {n:'豆瓣电影',u:'https://movie.douban.com/',c:'垂直行业',r:'cn',d:'影视口碑、条目与影迷讨论',t:'影视'},
+      {n:'猫眼专业版',u:'https://piaofang.maoyan.com/',c:'垂直行业',r:'cn',d:'票房、排片与电影市场数据',t:'影视数据'},
+      {n:'灯塔专业版',u:'https://dengta.taopiaopiao.com/',c:'垂直行业',r:'cn',d:'票房、宣发与电影受众数据',t:'影视数据'},
+      {n:'艺恩',u:'https://www.endata.com.cn/',c:'垂直行业',r:'cn',d:'影视娱乐产业与内容数据',t:'影视数据'},
+      {n:'TapTap',u:'https://www.taptap.cn/',c:'垂直行业',r:'cn',d:'手游新品、评分与玩家社区',t:'游戏'},
+      {n:'机核',u:'https://www.gcores.com/',c:'垂直行业',r:'cn',d:'游戏、文化与玩家深度内容',t:'游戏文化'},
+      {n:'丁香园',u:'https://www.dxy.cn/',c:'垂直行业',r:'cn',d:'医学专业内容、行业信息与社区',t:'医疗'},
+      {n:'丁香医生',u:'https://dxy.com/',c:'垂直行业',r:'cn',d:'面向大众的健康与医学科普',t:'健康科普'},
+      {n:'PubMed',u:'https://pubmed.ncbi.nlm.nih.gov/',c:'垂直行业',r:'global',d:'医学论文、研究与证据检索',t:'医学论文'},
+      {n:'WHO',u:'https://www.who.int/',c:'垂直行业',r:'global',d:'全球公共卫生与疾病信息',t:'公共卫生'},
+      {n:'科学网',u:'https://www.sciencenet.cn/',c:'垂直行业',r:'cn',d:'中国科研新闻与学术讨论',t:'科学'},
+      {n:'Nature',u:'https://www.nature.com/',c:'垂直行业',r:'global',d:'重要科学论文、新闻与评论',t:'科学论文'},
+      {n:'Science',u:'https://www.science.org/',c:'垂直行业',r:'global',d:'科学论文、研究新闻与政策',t:'科学论文'},
+      {n:'Google Scholar',u:'https://scholar.google.com/',c:'垂直行业',r:'global',d:'论文检索、引用与学术资料',t:'学术检索'},
+
+      {n:'TrendRadar',u:'https://github.com/joyce677/TrendRadar',c:'开源工具',r:'tools',d:'多平台热点监控、关键词筛选、报告与推送',t:'AI监控'},
+      {n:'LLM舆情分析助手',u:'https://github.com/hmmnxkl/LLM-Based-Intelligent-Public-Opinion-Analytics-Assistant',c:'开源工具',r:'tools',d:'榜单查询、聚类、情感分析与大模型问答',t:'AI分析'},
+      {n:'HotList-Web',u:'https://github.com/uxiaohan/HotList-Web',c:'开源工具',r:'tools',d:'聚合微博、知乎、头条、B站和36氪热榜',t:'聚合页面'},
+      {n:'NewsHub',u:'https://github.com/wu529778790/newshub.shenzjd.com',c:'开源工具',r:'tools',d:'多平台热点、科技、财经与国际分类',t:'内容中台'},
+      {n:'DailyHotApi',u:'https://github.com/imsyy/DailyHotApi',c:'开源工具',r:'tools',d:'为多个热点榜单提供统一API',t:'热点API'},
+      {n:'RSSHub',u:'https://github.com/DIYgod/RSSHub',c:'开源工具',r:'tools',d:'把大量没有RSS的网站转换为订阅源',t:'RSS'},
+      {n:'RSS-Bridge',u:'https://github.com/RSS-Bridge/rss-bridge',c:'开源工具',r:'tools',d:'为网站生成RSS与Atom订阅源',t:'RSS'},
+      {n:'FreshRSS',u:'https://github.com/FreshRSS/FreshRSS',c:'开源工具',r:'tools',d:'自建RSS阅读器与团队订阅中心',t:'RSS阅读器'},
+      {n:'Miniflux',u:'https://github.com/miniflux/v2',c:'开源工具',r:'tools',d:'简洁稳定的自托管RSS阅读器',t:'RSS阅读器'},
+      {n:'changedetection.io',u:'https://github.com/dgtlmoon/changedetection.io',c:'开源工具',r:'tools',d:'监控政策页、公告页与竞品网页变化',t:'网页监控'},
+      {n:'Huginn',u:'https://github.com/huginn/huginn',c:'开源工具',r:'tools',d:'构建抓取、过滤、触发与通知代理',t:'自动化'},
+      {n:'n8n',u:'https://github.com/n8n-io/n8n',c:'开源工具',r:'tools',d:'连接RSS、API、AI总结与团队通知',t:'工作流'}
+    ];
+
+    const categories = [
+      ['全部网站','◫'],['公众号综合热榜','↗'],['公众号对标','◎'],['政策权威','◆'],['财经商业','¥'],
+      ['科技AI','⌁'],['品牌营销','◇'],['数据趋势','↝'],['海外出海','◉'],['垂直行业','▦'],['开源工具','⌘']
+    ];
+    const state = { category:'全部网站', view:'all', region:'all', query:'' };
+    const favorites = new Set(JSON.parse(localStorage.getItem('hotspot-favorites') || '[]'));
+    let recent = JSON.parse(localStorage.getItem('hotspot-recent') || '[]');
+
+    const nav = document.getElementById('categoryNav');
+    const grid = document.getElementById('siteGrid');
+    const search = document.getElementById('search');
+    const clearSearch = document.getElementById('clearSearch');
+    const resultCount = document.getElementById('resultCount');
+    const sectionTitle = document.getElementById('sectionTitle');
+    const regionFilter = document.getElementById('regionFilter');
+
+    document.getElementById('today').textContent = new Intl.DateTimeFormat('zh-CN', {year:'numeric',month:'long',day:'numeric',weekday:'short'}).format(new Date());
+    document.getElementById('totalSites').textContent = `${sites.length} 个网站`;
+
+    const categoryCount = name => name === '全部网站' ? sites.length : sites.filter(s => s.c === name).length;
+    categories.forEach(([name, icon]) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'category-btn';
+      btn.dataset.category = name;
+      btn.setAttribute('aria-pressed', name === state.category ? 'true' : 'false');
+      btn.innerHTML = `<span class="nav-icon" aria-hidden="true">${icon}</span><span>${name}</span><span class="nav-count">${categoryCount(name)}</span>`;
+      btn.addEventListener('click', () => {
+        state.category = name;
+        document.querySelectorAll('.category-btn').forEach(el => el.setAttribute('aria-pressed', String(el === btn)));
+        render();
+      });
+      nav.appendChild(btn);
+    });
+
+    document.querySelectorAll('.segment').forEach(btn => {
+      btn.addEventListener('click', () => {
+        state.view = btn.dataset.view;
+        document.querySelectorAll('.segment').forEach(el => el.setAttribute('aria-pressed', String(el === btn)));
+        render();
+      });
+    });
+
+    search.addEventListener('input', () => {
+      state.query = search.value.trim().toLowerCase();
+      clearSearch.classList.toggle('visible', Boolean(state.query));
+      render();
+    });
+    clearSearch.addEventListener('click', () => {
+      search.value = '';
+      state.query = '';
+      clearSearch.classList.remove('visible');
+      search.focus();
+      render();
+    });
+    regionFilter.addEventListener('change', () => { state.region = regionFilter.value; render(); });
+
+    function saveFavorites() {
+      localStorage.setItem('hotspot-favorites', JSON.stringify([...favorites]));
+    }
+    function visit(url) {
+      recent = [url, ...recent.filter(item => item !== url)].slice(0, 20);
+      localStorage.setItem('hotspot-recent', JSON.stringify(recent));
+    }
+    function favicon(url) {
+      const domain = new URL(url).hostname;
+      return `https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain)}&sz=64`;
+    }
+    function domain(url) { return new URL(url).hostname.replace(/^www\./, ''); }
+    function initials(name) { return name.replace(/[\s·.]/g,'').slice(0,2).toUpperCase(); }
+
+    function filteredSites() {
+      let list = sites.filter(site => state.category === '全部网站' || site.c === state.category);
+      if (state.region !== 'all') list = list.filter(site => site.r === state.region);
+      if (state.view === 'favorites') list = list.filter(site => favorites.has(site.u));
+      if (state.view === 'recent') {
+        const order = new Map(recent.map((url, index) => [url, index]));
+        list = list.filter(site => order.has(site.u)).sort((a,b) => order.get(a.u) - order.get(b.u));
+      }
+      if (state.query) {
+        list = list.filter(site => `${site.n} ${site.c} ${site.d} ${site.t} ${domain(site.u)}`.toLowerCase().includes(state.query));
+      }
+      return list;
+    }
+
+    function render() {
+      const list = filteredSites();
+      grid.innerHTML = '';
+      sectionTitle.textContent = state.category;
+      const labels = [];
+      if (state.view === 'favorites') labels.push('收藏');
+      if (state.view === 'recent') labels.push('最近访问');
+      if (state.region !== 'all') labels.push(regionFilter.options[regionFilter.selectedIndex].text);
+      if (state.query) labels.push(`“${search.value.trim()}”`);
+      resultCount.innerHTML = `<span class="${labels.length ? 'active-filter' : ''}">${labels.join(' · ')}</span>${labels.length ? ' · ' : ''}${list.length} 个结果`;
+
+      if (!list.length) {
+        grid.innerHTML = `<div class="empty"><strong>没有匹配的网站</strong><span>调整分类、区域或搜索词后再试</span></div>`;
+        return;
+      }
+
+      list.forEach(site => {
+        const card = document.createElement('article');
+        card.className = 'site-card';
+        const isFavorite = favorites.has(site.u);
+        card.innerHTML = `
+          <a class="site-link" href="${site.u}" target="_blank" rel="noopener noreferrer" aria-label="打开 ${site.n}">
+            <div class="site-head">
+              <span class="site-logo"><span>${initials(site.n)}</span><img src="${favicon(site.u)}" alt="" loading="lazy"></span>
+              <span class="site-title"><strong>${site.n}</strong><span class="site-domain">${domain(site.u)}</span></span>
+            </div>
+            <p class="site-desc">${site.d}</p>
+            <span class="site-tag">${site.t}</span>
+          </a>
+          <button class="favorite-btn" type="button" aria-label="${isFavorite ? '取消收藏' : '收藏'} ${site.n}" aria-pressed="${isFavorite}" data-tip="${isFavorite ? '取消收藏' : '收藏'}">${isFavorite ? '★' : '☆'}</button>`;
+        const img = card.querySelector('img');
+        img.addEventListener('load', () => { img.previousElementSibling.style.display = 'none'; });
+        img.addEventListener('error', () => { img.style.display = 'none'; });
+        card.querySelector('.site-link').addEventListener('click', () => visit(site.u));
+        card.querySelector('.favorite-btn').addEventListener('click', event => {
+          event.stopPropagation();
+          favorites.has(site.u) ? favorites.delete(site.u) : favorites.add(site.u);
+          saveFavorites();
+          render();
+        });
+        grid.appendChild(card);
+      });
+    }
+
+    render();
+  </script>
+</body>
+</html>
