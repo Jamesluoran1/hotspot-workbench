@@ -93,7 +93,7 @@
     .page-badge { display: inline-block; padding: 4px 10px; border-radius: 5px; color: #247263; background: var(--green-soft); font-size: 11px; font-weight: 600; margin-bottom: 10px; }
 
     /* 通用卡片 */
-    .panel { border: 1px solid var(--line); border-radius: 10px; background: var(--panel); margin-bottom: 16px; overflow: hidden; }
+    .panel { border: 1px solid var(--line); border-radius: 10px; background: var(--panel); margin-bottom: 16px; overflow: visible; }
     .panel-head { padding: 14px 18px; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 12px; }
     .panel-head strong { font-size: 15px; }
     .panel-head span { color: var(--muted); font-size: 12px; }
@@ -571,8 +571,8 @@
         <div class="panel-body">
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;">
             <input id="topics-keyword" placeholder="关键词筛选：裁员 / 涨薪 / 面试 / AI…" style="flex:1;min-width:220px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);">
-            <select id="topics-cluster" style="padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);"><option value="">全部问题簇</option></select>
-            <select id="topics-type" style="padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);"><option value="">全部内容类</option></select>
+            <select id="topics-cluster" style="position:relative;z-index:20;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);"><option value="">全部问题簇</option></select>
+            <select id="topics-type" style="position:relative;z-index:20;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);"><option value="">全部内容类</option></select>
           </div>
           <div id="topics-list" class="write-grid"></div>
         </div>
