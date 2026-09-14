@@ -253,1214 +253,65 @@
     <!-- ========== 01 赛道定位 ========== -->
     <div class="page active" id="page-01">
       <div class="page-head">
-        <div class="page-badge">MODULE 01</div>
+        <div class="page-badge">MODULE 01 · 赛道定位数字化</div>
         <h1>公众号赛道定位工作台</h1>
-        <p>用兴趣、能力、投入与商业目标，筛出更适合长期经营的公众号方向</p>
+        <p>答 5 题，按兴趣、投入、变现与经验，筛出更适合你长期经营的赛道</p>
       </div>
 
-      <div class="section-title">十大赛道详细对比</div>
-
-      <div class="track-grid">
-
-        <div class="track-card">
-          <div class="track-title">
-            <h3>1. 中老年情感 / 生活感悟</h3>
-          </div>
-          <p class="track-summary">受众基数大、完读稳定，适合用真实故事和生活经验建立陪伴感。</p>
-          <div class="track-meta">
-            <div class="track-meta-item">
-              <span class="label">核心优势</span>
-              <span class="value">受众大、门槛低</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">变现方式</span>
-              <span class="value">流量主、商业广告</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">难度</span>
-              <span class="value">★☆☆☆☆</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">稳定性</span>
-              <span class="value">★★★★☆</span>
-            </div>
-          </div>
-          <div class="track-risk">⚠️ 内容同质化明显，需要固定人物视角和真实细节，避免空泛说教。</div>
-          <div class="track-section">
-            <span class="label">选题方向</span>
-            <span class="content">生活经历、家庭关系、晚年智慧</span>
-          </div>
-          <div class="track-section">
-            <span class="label">21天启动方案</span>
-            <ol class="track-plan">
-              <li>拆解20篇高完读故事，确定3个固定栏目</li>
-              <li>发布5篇真实生活故事，测试人物与冲突类型</li>
-              <li>围绕高完读主题连续扩写6篇</li>
-              <li>复盘打开率与读完率，保留前2个栏目</li>
-            </ol>
+      <div class="panel">
+        <div class="panel-head"><strong>① 匹配问卷</strong><span>全部答完自动出结果，可随时重答</span></div>
+        <div class="panel-body">
+          <div id="quiz"></div>
+          <div style="margin-top:16px;display:flex;gap:10px;align-items:center;">
+            <button id="quiz-reset" onclick="resetQuiz()" style="padding:8px 18px;border:1px solid #334;border-radius:8px;background:#151520;color:inherit;cursor:pointer;">重答</button>
+            <span id="quiz-hint" style="opacity:.6;">共 5 题，每题选 1 项</span>
           </div>
         </div>
+      </div>
 
-        <div class="track-card">
-          <div class="track-title">
-            <h3>2. 职场干货 / 国企职场</h3>
-          </div>
-          <p class="track-summary">用户问题明确、付费意愿强，容易沉淀模板、课程和社群产品。</p>
-          <div class="track-meta">
-            <div class="track-meta-item">
-              <span class="label">核心优势</span>
-              <span class="value">需求明确、可系列化</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">变现方式</span>
-              <span class="value">知识付费、社群服务</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">难度</span>
-              <span class="value">★★★☆☆</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">稳定性</span>
-              <span class="value">★★★★☆</span>
-            </div>
-          </div>
-          <div class="track-risk">⚠️ 必须有真实经验或可靠案例支撑，泛职场观点很难建立信任。</div>
-          <div class="track-section">
-            <span class="label">选题方向</span>
-            <span class="content">沟通汇报、晋升路径、体制经验</span>
-          </div>
-          <div class="track-section">
-            <span class="label">21天启动方案</span>
-            <ol class="track-plan">
-              <li>列出30个真实职场问题，按岗位和阶段分类</li>
-              <li>发布5篇问题解决型内容并附可执行清单</li>
-              <li>制作1份模板资料，测试用户领取意愿</li>
-              <li>根据高收藏问题规划首个10篇系列</li>
-            </ol>
-          </div>
+      <div class="panel" id="match-panel" style="display:none;">
+        <div class="panel-head"><strong>② 匹配结果</strong><span id="match-meta"></span></div>
+        <div class="panel-body">
+          <div id="match-top" class="write-grid" style="margin-bottom:16px;"></div>
+          <div class="tip-box">完整赛道库见下方「十大赛道」：每个赛道含优势、变现、难度、稳定性、风险、选题方向与 21 天启动方案。点击卡片可展开。</div>
         </div>
+      </div>
 
-        <div class="track-card recommended">
-          <div class="track-title">
-            <h3>3. 历史人文 / 典故科普</h3>
-            <span class="track-badge rec">推荐</span>
-          </div>
-          <p class="track-summary">平台推荐较稳定、用户粘性强，内容资产可以长期复用，适合持续垂直运营。</p>
-          <div class="track-meta">
-            <div class="track-meta-item">
-              <span class="label">核心优势</span>
-              <span class="value">长尾稳定、生命周期长</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">变现方式</span>
-              <span class="value">流量主、课程、出版</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">难度</span>
-              <span class="value">★★★☆☆</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">稳定性</span>
-              <span class="value">★★★★★</span>
-            </div>
-          </div>
-          <div class="track-risk">⚠️ 考据准确性决定账号生命力，必须标注可靠来源，避免戏说冒充史实。</div>
-          <div class="track-section">
-            <span class="label">选题方向</span>
-            <span class="content">历史人物、典故出处、时代生活</span>
-          </div>
-          <div class="track-section">
-            <span class="label">21天启动方案</span>
-            <ol class="track-plan">
-              <li>确定一个窄切口，建立30个选题的资料库</li>
-              <li>发布5篇"人物＋事件＋启示"样稿</li>
-              <li>固定史料来源与配图规范，形成写作模板</li>
-              <li>把高收藏主题扩展成8-10篇系列</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="track-card recommended">
-          <div class="track-title">
-            <h3>4. 读书赛道</h3>
-            <span class="track-badge rec">推荐</span>
-          </div>
-          <p class="track-summary">以书为内容锚点，适合书评、知识拆解和主题书单，能持续沉淀个人认知品牌。</p>
-          <div class="track-meta">
-            <div class="track-meta-item">
-              <span class="label">核心优势</span>
-              <span class="value">素材稳定、利于沉淀IP</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">变现方式</span>
-              <span class="value">图书分销、读书营、课程</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">难度</span>
-              <span class="value">★★☆☆☆</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">稳定性</span>
-              <span class="value">★★★★★</span>
-            </div>
-          </div>
-          <div class="track-risk">⚠️ 只做摘抄很难形成辨识度，需要明确选书标准和自己的判断框架。</div>
-          <div class="track-section">
-            <span class="label">选题方向</span>
-            <span class="content">主题书单、经典拆解、阅读方法</span>
-          </div>
-          <div class="track-section">
-            <span class="label">21天启动方案</span>
-            <ol class="track-plan">
-              <li>选定一个阅读母题，建立20本核心书单</li>
-              <li>发布3篇深度拆解和2篇主题书单</li>
-              <li>测试"观点＋案例＋行动清单"内容模板</li>
-              <li>整理高收藏内容，设计首期共读主题</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="track-card">
-          <div class="track-title">
-            <h3>5. 家庭教育 / 育儿心得</h3>
-          </div>
-          <p class="track-summary">女性受众集中、议题丰富，可连接教育产品和家庭服务。</p>
-          <div class="track-meta">
-            <div class="track-meta-item">
-              <span class="label">核心优势</span>
-              <span class="value">话题强、商业空间多</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">变现方式</span>
-              <span class="value">教育服务、产品、广告</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">难度</span>
-              <span class="value">★★★☆☆</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">稳定性</span>
-              <span class="value">★★★★☆</span>
-            </div>
-          </div>
-          <div class="track-risk">⚠️ 避免绝对化教育结论；涉及儿童健康和心理问题时必须引用专业依据。</div>
-          <div class="track-section">
-            <span class="label">选题方向</span>
-            <span class="content">亲子沟通、学习习惯、家庭关系</span>
-          </div>
-          <div class="track-section">
-            <span class="label">21天启动方案</span>
-            <ol class="track-plan">
-              <li>聚焦一个年龄段，梳理20个高频家庭问题</li>
-              <li>发布5篇场景化解决方案</li>
-              <li>邀请目标家长反馈，修正表达与建议边界</li>
-              <li>围绕最高频问题制作7篇连续专题</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="track-card">
-          <div class="track-title">
-            <h3>6. 娱乐 / 剧评</h3>
-          </div>
-          <p class="track-summary">受众关注度高、传播快，适合跟进热播作品和娱乐事件迅速获取流量。</p>
-          <div class="track-meta">
-            <div class="track-meta-item">
-              <span class="label">核心优势</span>
-              <span class="value">热点密集、传播性强</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">变现方式</span>
-              <span class="value">流量主、品牌广告</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">难度</span>
-              <span class="value">★★☆☆☆</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">稳定性</span>
-              <span class="value">★★☆☆☆</span>
-            </div>
-          </div>
-          <div class="track-risk">⚠️ 高度依赖更新速度，素材版权和未经证实的娱乐信息需要严格把关。</div>
-          <div class="track-section">
-            <span class="label">选题方向</span>
-            <span class="content">热播剧评、人物分析、行业观察</span>
-          </div>
-          <div class="track-section">
-            <span class="label">21天启动方案</span>
-            <ol class="track-plan">
-              <li>锁定3部近期热播作品，建立追更日历</li>
-              <li>抢发6篇单点观点，测试标题与时效</li>
-              <li>将高流量剧评延伸为人物或主题系列</li>
-              <li>统计热点寿命，建立快稿与深稿双流程</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="track-card">
-          <div class="track-title">
-            <h3>7. 心理学 / 情绪疗愈</h3>
-          </div>
-          <p class="track-summary">共鸣与收藏潜力强，适合围绕情绪管理、关系模式持续建立专业信任。</p>
-          <div class="track-meta">
-            <div class="track-meta-item">
-              <span class="label">核心优势</span>
-              <span class="value">收藏高、信任价值强</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">变现方式</span>
-              <span class="value">课程、咨询、知识付费</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">难度</span>
-              <span class="value">★★★★☆</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">稳定性</span>
-              <span class="value">★★★★☆</span>
-            </div>
-          </div>
-          <div class="track-risk">⚠️ 需要清楚区分心理科普与临床诊疗，避免给出诊断或替代专业治疗。</div>
-          <div class="track-section">
-            <span class="label">选题方向</span>
-            <span class="content">情绪调节、关系模式、自我探索</span>
-          </div>
-          <div class="track-section">
-            <span class="label">21天启动方案</span>
-            <ol class="track-plan">
-              <li>明确科普边界，整理20个可引用的专业来源</li>
-              <li>发布5篇"场景＋机制＋练习"内容</li>
-              <li>用收藏率验证最强需求，不以焦虑营销</li>
-              <li>围绕高需求主题设计7天练习内容</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="track-card">
-          <div class="track-title">
-            <h3>8. 情感关系 / 婚恋经营</h3>
-          </div>
-          <p class="track-summary">覆盖面广、互动天然强，适合用案例分析建立个人情感IP。</p>
-          <div class="track-meta">
-            <div class="track-meta-item">
-              <span class="label">核心优势</span>
-              <span class="value">互动强、需求广</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">变现方式</span>
-              <span class="value">咨询、课程、社群、广告</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">难度</span>
-              <span class="value">★★☆☆☆</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">稳定性</span>
-              <span class="value">★★★★☆</span>
-            </div>
-          </div>
-          <div class="track-risk">⚠️ 不要承诺"挽回"等确定结果，案例要保护隐私并避免操控性建议。</div>
-          <div class="track-section">
-            <span class="label">选题方向</span>
-            <span class="content">婚姻沟通、亲密关系、分手成长</span>
-          </div>
-          <div class="track-section">
-            <span class="label">21天启动方案</span>
-            <ol class="track-plan">
-              <li>选定单身或已婚人群，收集30个真实困惑</li>
-              <li>发布5篇案例分析，强化观点边界</li>
-              <li>测试问答栏目，观察评论中的高频需求</li>
-              <li>将高互动问题扩展为关系沟通系列</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="track-card">
-          <div class="track-title">
-            <h3>9. 个人成长 / 认知提升</h3>
-          </div>
-          <p class="track-summary">用户学习意愿强，适合用方法论和实践记录积累高价值个人IP。</p>
-          <div class="track-meta">
-            <div class="track-meta-item">
-              <span class="label">核心优势</span>
-              <span class="value">IP价值高、产品延展强</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">变现方式</span>
-              <span class="value">课程、训练营、社群</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">难度</span>
-              <span class="value">★★★☆☆</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">稳定性</span>
-              <span class="value">★★★★☆</span>
-            </div>
-          </div>
-          <div class="track-risk">⚠️ 抽象概念容易变成正确的废话，需要真实实验、案例和可验证行动。</div>
-          <div class="track-section">
-            <span class="label">选题方向</span>
-            <span class="content">认知模型、习惯系统、学习方法</span>
-          </div>
-          <div class="track-section">
-            <span class="label">21天启动方案</span>
-            <ol class="track-plan">
-              <li>确定一个可验证的成长主题，设计21天实验</li>
-              <li>发布4篇方法文和1篇真实复盘</li>
-              <li>用读者行动反馈验证方法是否可执行</li>
-              <li>将有效方法整理成工具表和系列内容</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="track-card">
-          <div class="track-title">
-            <h3>10. 鸡汤人性</h3>
-          </div>
-          <p class="track-summary">情绪共鸣强、覆盖广、创作门槛较低，容易获得点赞和转发。</p>
-          <div class="track-meta">
-            <div class="track-meta-item">
-              <span class="label">核心优势</span>
-              <span class="value">易传播、起步门槛低</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">变现方式</span>
-              <span class="value">流量主、商业广告</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">难度</span>
-              <span class="value">★☆☆☆☆</span>
-            </div>
-            <div class="track-meta-item">
-              <span class="label">稳定性</span>
-              <span class="value">★★★☆☆</span>
-            </div>
-          </div>
-          <div class="track-risk">⚠️ 同质化和低信任风险较高，建议用真实故事代替拼贴金句，避免标题过度承诺。</div>
-          <div class="track-section">
-            <span class="label">选题方向</span>
-            <span class="content">人性观察、处世感悟、现实故事</span>
-          </div>
-          <div class="track-section">
-            <span class="label">21天启动方案</span>
-            <ol class="track-plan">
-              <li>确定一种稳定叙事口吻，收集30个真实故事</li>
-              <li>发布6篇短故事，测试情绪和主题方向</li>
-              <li>淘汰低转发主题，增加具体人物与细节</li>
-              <li>把高传播主题做成固定栏目并控制同质化</li>
-            </ol>
-          </div>
-        </div>
-
+      <div class="panel">
+        <div class="panel-head"><strong>③ 十大赛道库</strong><span>点击展开完整方案</span></div>
+        <div class="panel-body" id="track-list"></div>
       </div>
     </div>
+
 
     <!-- ========== 02 热点工作台 ========== -->
     <div class="page" id="page-02">
       <div class="page-head">
-        <div class="page-badge">MODULE 02</div>
+        <div class="page-badge">MODULE 02 · 热点工作台 · 实时榜单</div>
         <h1>公众号热点工作台</h1>
-        <p>热点发现 · 对标研究 · 事实核验 · 趋势验证 ｜ 共收录 139 个网站</p>
+        <p>实时榜单（每日更新）+ 139 个网站导航</p>
       </div>
 
-      <!-- 综合热榜 -->
-      <div class="site-cat">
-        <div class="site-cat-title">
-          <h3>📊 公众号综合热榜</h3>
-          <span class="count">11个</span>
-        </div>
-        <div class="site-grid">
-          <div class="site-item">
-            <div class="site-name"><a href="https://tophub.today/" target="_blank" style="color:var(--ink); text-decoration:none;">今日热榜 TopHub ↗</a></div>
-            <div class="site-desc">聚合微博、知乎、百度、B站、科技与财经榜单</div>
-            <span class="site-tag">全网扫盘</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://newsnow.busiyi.world/" target="_blank" style="color:var(--ink); text-decoration:none;">NewsNow ↗</a></div>
-            <div class="site-desc">轻量实时新闻与热点聚合，点击即可直接使用</div>
-            <span class="site-tag">实时热榜</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://top.baidu.com/board" target="_blank" style="color:var(--ink); text-decoration:none;">百度热搜 ↗</a></div>
-            <div class="site-desc">大众搜索需求、突发事件与社会民生趋势</div>
-            <span class="site-tag">搜索趋势</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://s.weibo.com/top/summary" target="_blank" style="color:var(--ink); text-decoration:none;">微博热搜 ↗</a></div>
-            <div class="site-desc">娱乐、社会事件与公共讨论的爆发信号</div>
-            <span class="site-tag">社会舆情</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.zhihu.com/hot" target="_blank" style="color:var(--ink); text-decoration:none;">知乎热榜 ↗</a></div>
-            <div class="site-desc">适合解释型、观点型与知识型选题</div>
-            <span class="site-tag">知识讨论</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.toutiao.com/" target="_blank" style="color:var(--ink); text-decoration:none;">今日头条热榜 ↗</a></div>
-            <div class="site-desc">社会新闻、本地话题与下沉市场趋势</div>
-            <span class="site-tag">大众热点</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://hot.douyin.com/" target="_blank" style="color:var(--ink); text-decoration:none;">抖音热点 ↗</a></div>
-            <div class="site-desc">短视频话题、热点事件与内容趋势</div>
-            <span class="site-tag">短视频</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.bilibili.com/v/popular/all/" target="_blank" style="color:var(--ink); text-decoration:none;">B站热门 ↗</a></div>
-            <div class="site-desc">年轻用户、科技、游戏与知识内容趋势</div>
-            <span class="site-tag">青年文化</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://36kr.com/hot-list/catalog" target="_blank" style="color:var(--ink); text-decoration:none;">36氪热榜 ↗</a></div>
-            <div class="site-desc">创投、商业、新消费与科技公司动态</div>
-            <span class="site-tag">商业科技</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.hupu.com/" target="_blank" style="color:var(--ink); text-decoration:none;">虎扑 ↗</a></div>
-            <div class="site-desc">体育、男性消费、游戏与社区讨论</div>
-            <span class="site-tag">社区</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.douban.com/gallery/" target="_blank" style="color:var(--ink); text-decoration:none;">豆瓣热门 ↗</a></div>
-            <div class="site-desc">影视、图书、文化情绪与青年生活</div>
-            <span class="site-tag">文化娱乐</span>
-          </div>
+      <div class="panel">
+        <div class="panel-head"><strong>实时榜单</strong><span id="board-meta">点击标签加载</span></div>
+        <div class="panel-body">
+          <div id="board-tabs" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;"></div>
+          <div id="board-list"></div>
         </div>
       </div>
 
-      <!-- 公众号对标 -->
-      <div class="site-cat">
-        <div class="site-cat-title">
-          <h3>📱 公众号对标</h3>
-          <span class="count">9个</span>
-        </div>
-        <div class="site-grid">
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.newrank.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">新榜 ↗</a></div>
-            <div class="site-desc">公众号榜单、账号数据、爆文与行业排行</div>
-            <span class="site-tag">核心对标</span>
+      <div class="panel">
+        <div class="panel-head"><strong>139 个网站导航</strong><span id="site-meta"></span></div>
+        <div class="panel-body">
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;">
+            <input id="site-keyword" placeholder="搜索网站：知乎 / 36氪 / 政府…" style="flex:1;min-width:200px;padding:8px 12px;border:1px solid #334;border-radius:8px;background:#151520;color:inherit;">
           </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.gsdata.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">清博指数 ↗</a></div>
-            <div class="site-desc">微信传播指数、媒体影响力与行业榜单</div>
-            <span class="site-tag">传播指数</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.xiguaji.com/" target="_blank" style="color:var(--ink); text-decoration:none;">西瓜数据 ↗</a></div>
-            <div class="site-desc">公众号文章、账号分析与投放数据</div>
-            <span class="site-tag">账号分析</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.5118.com/" target="_blank" style="color:var(--ink); text-decoration:none;">5118 ↗</a></div>
-            <div class="site-desc">关键词、需求图谱、内容选题与SEO数据</div>
-            <span class="site-tag">关键词</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://weixin.sogou.com/" target="_blank" style="color:var(--ink); text-decoration:none;">搜狗微信搜索 ↗</a></div>
-            <div class="site-desc">检索公众号历史文章与关键词文章</div>
-            <span class="site-tag">微信检索</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://index.weixin.qq.com/" target="_blank" style="color:var(--ink); text-decoration:none;">微信指数 ↗</a></div>
-            <div class="site-desc">微信生态关键词趋势与热度变化</div>
-            <span class="site-tag">微信趋势</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.yizhuan5.com/" target="_blank" style="color:var(--ink); text-decoration:none;">易撰 ↗</a></div>
-            <div class="site-desc">多平台自媒体内容、爆文与素材研究</div>
-            <span class="site-tag">爆文素材</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.wxb.com/" target="_blank" style="color:var(--ink); text-decoration:none;">微小宝 ↗</a></div>
-            <div class="site-desc">公众号运营、素材、数据与协作工具</div>
-            <span class="site-tag">运营工具</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://yiban.io/" target="_blank" style="color:var(--ink); text-decoration:none;">壹伴 ↗</a></div>
-            <div class="site-desc">微信编辑、排版、数据与运营效率</div>
-            <span class="site-tag">编辑工具</span>
-          </div>
+          <div id="site-tabs" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;"></div>
+          <div id="site-list"></div>
         </div>
       </div>
-
-      <!-- 政策权威 -->
-      <div class="site-cat">
-        <div class="site-cat-title">
-          <h3>🏛️ 政策权威</h3>
-          <span class="count">14个</span>
-        </div>
-        <div class="site-grid">
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.gov.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">中国政府网 ↗</a></div>
-            <div class="site-desc">国务院政策、会议与权威文件</div>
-            <span class="site-tag">第一信源</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.gov.cn/zhengce/" target="_blank" style="color:var(--ink); text-decoration:none;">中国政府网政策库 ↗</a></div>
-            <div class="site-desc">检索政策原文、发布日期与发文机关</div>
-            <span class="site-tag">政策原文</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.stats.gov.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">国家统计局 ↗</a></div>
-            <div class="site-desc">人口、就业、CPI、GDP与行业数据</div>
-            <span class="site-tag">官方数据</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.pbc.gov.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">中国人民银行 ↗</a></div>
-            <div class="site-desc">货币政策、利率与金融统计</div>
-            <span class="site-tag">金融政策</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.cac.gov.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">国家网信办 ↗</a></div>
-            <div class="site-desc">互联网治理、平台政策与AI规定</div>
-            <span class="site-tag">互联网政策</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.samr.gov.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">市场监管总局 ↗</a></div>
-            <div class="site-desc">召回、处罚、反垄断与消费监管</div>
-            <span class="site-tag">监管信息</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.nhc.gov.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">国家卫生健康委 ↗</a></div>
-            <div class="site-desc">医疗卫生政策与权威通报</div>
-            <span class="site-tag">健康政策</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.chinacdc.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">中国疾控中心 ↗</a></div>
-            <div class="site-desc">疾病、健康风险与科普数据</div>
-            <span class="site-tag">健康数据</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.piyao.org.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">联合辟谣平台 ↗</a></div>
-            <div class="site-desc">核查网络传言与虚假信息</div>
-            <span class="site-tag">事实核验</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.news.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">新华网 ↗</a></div>
-            <div class="site-desc">重大政策、时政与官方通稿</div>
-            <span class="site-tag">权威媒体</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="http://www.people.com.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">人民网 ↗</a></div>
-            <div class="site-desc">政策解读、社会与地方信息</div>
-            <span class="site-tag">权威媒体</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.cctv.com/" target="_blank" style="color:var(--ink); text-decoration:none;">央视网 ↗</a></div>
-            <div class="site-desc">重大突发事件与现场信息</div>
-            <span class="site-tag">权威媒体</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.chinanews.com.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">中国新闻网 ↗</a></div>
-            <div class="site-desc">社会、国际与地方新闻</div>
-            <span class="site-tag">通讯社</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.thepaper.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">澎湃新闻 ↗</a></div>
-            <div class="site-desc">调查、社会、政经与城市议题</div>
-            <span class="site-tag">深度报道</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 财经商业 -->
-      <div class="site-cat">
-        <div class="site-cat-title">
-          <h3>💰 财经商业</h3>
-          <span class="count">14个</span>
-        </div>
-        <div class="site-grid">
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.cls.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">财联社 ↗</a></div>
-            <div class="site-desc">证券、公司、政策与市场快讯</div>
-            <span class="site-tag">财经快讯</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://wallstreetcn.com/" target="_blank" style="color:var(--ink); text-decoration:none;">华尔街见闻 ↗</a></div>
-            <div class="site-desc">全球市场、宏观与科技公司</div>
-            <span class="site-tag">全球市场</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.yicai.com/" target="_blank" style="color:var(--ink); text-decoration:none;">第一财经 ↗</a></div>
-            <div class="site-desc">宏观、产业、公司与城市商业</div>
-            <span class="site-tag">财经媒体</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.21jingji.com/" target="_blank" style="color:var(--ink); text-decoration:none;">21财经 ↗</a></div>
-            <div class="site-desc">金融、区域经济与公司报道</div>
-            <span class="site-tag">财经媒体</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.stcn.com/" target="_blank" style="color:var(--ink); text-decoration:none;">证券时报 ↗</a></div>
-            <div class="site-desc">A股、监管与上市公司资讯</div>
-            <span class="site-tag">证券媒体</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.cnstock.com/" target="_blank" style="color:var(--ink); text-decoration:none;">上海证券报 ↗</a></div>
-            <div class="site-desc">资本市场、政策与公告解读</div>
-            <span class="site-tag">证券媒体</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.eastmoney.com/" target="_blank" style="color:var(--ink); text-decoration:none;">东方财富 ↗</a></div>
-            <div class="site-desc">行情、数据、资讯与投资者社区</div>
-            <span class="site-tag">市场数据</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://xueqiu.com/" target="_blank" style="color:var(--ink); text-decoration:none;">雪球 ↗</a></div>
-            <div class="site-desc">投资者讨论、公司研究与市场情绪</div>
-            <span class="site-tag">投资社区</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.caixin.com/" target="_blank" style="color:var(--ink); text-decoration:none;">财新 ↗</a></div>
-            <div class="site-desc">财经调查、公司与深度报道</div>
-            <span class="site-tag">深度财经</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.cninfo.com.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">巨潮资讯 ↗</a></div>
-            <div class="site-desc">A股法定信息披露与上市公司公告</div>
-            <span class="site-tag">公告原文</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.sse.com.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">上交所 ↗</a></div>
-            <div class="site-desc">上市公司公告、监管与交易数据</div>
-            <span class="site-tag">交易所</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.szse.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">深交所 ↗</a></div>
-            <div class="site-desc">上市公司公告、问询函与交易数据</div>
-            <span class="site-tag">交易所</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.hkexnews.hk/" target="_blank" style="color:var(--ink); text-decoration:none;">港交所披露易 ↗</a></div>
-            <div class="site-desc">港股公告、财报与权益披露</div>
-            <span class="site-tag">公告原文</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.gsxt.gov.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">企业信用公示系统 ↗</a></div>
-            <div class="site-desc">企业登记、处罚与经营异常信息</div>
-            <span class="site-tag">企业核验</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 科技AI -->
-      <div class="site-cat">
-        <div class="site-cat-title">
-          <h3>🤖 科技AI</h3>
-          <span class="count">24个</span>
-        </div>
-        <div class="site-grid">
-          <div class="site-item">
-            <div class="site-name"><a href="https://36kr.com/" target="_blank" style="color:var(--ink); text-decoration:none;">36氪 ↗</a></div>
-            <div class="site-desc">创投、科技公司、新消费与商业趋势</div>
-            <span class="site-tag">科技商业</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.huxiu.com/" target="_blank" style="color:var(--ink); text-decoration:none;">虎嗅 ↗</a></div>
-            <div class="site-desc">商业评论、科技产业与消费观察</div>
-            <span class="site-tag">商业评论</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.tmtpost.com/" target="_blank" style="color:var(--ink); text-decoration:none;">钛媒体 ↗</a></div>
-            <div class="site-desc">科技、公司、出海与产业报道</div>
-            <span class="site-tag">科技媒体</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.geekpark.net/" target="_blank" style="color:var(--ink); text-decoration:none;">极客公园 ↗</a></div>
-            <div class="site-desc">产品、AI、互联网公司与人物</div>
-            <span class="site-tag">产品科技</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.ifanr.com/" target="_blank" style="color:var(--ink); text-decoration:none;">爱范儿 ↗</a></div>
-            <div class="site-desc">消费电子、产品、设计与生活方式</div>
-            <span class="site-tag">消费科技</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://sspai.com/" target="_blank" style="color:var(--ink); text-decoration:none;">少数派 ↗</a></div>
-            <div class="site-desc">工具、效率、数码与高质量教程</div>
-            <span class="site-tag">效率工具</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.ithome.com/" target="_blank" style="color:var(--ink); text-decoration:none;">IT之家 ↗</a></div>
-            <div class="site-desc">数码、软硬件快讯与厂商动态</div>
-            <span class="site-tag">科技快讯</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.infoq.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">InfoQ 中文 ↗</a></div>
-            <div class="site-desc">软件工程、架构与AI技术实践</div>
-            <span class="site-tag">技术实践</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.leiphone.com/" target="_blank" style="color:var(--ink); text-decoration:none;">雷峰网 ↗</a></div>
-            <div class="site-desc">AI、智能驾驶、芯片与科技产业</div>
-            <span class="site-tag">AI产业</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.jiqizhixin.com/" target="_blank" style="color:var(--ink); text-decoration:none;">机器之心 ↗</a></div>
-            <div class="site-desc">AI论文、模型、产品与产业新闻</div>
-            <span class="site-tag">AI专业</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.qbitai.com/" target="_blank" style="color:var(--ink); text-decoration:none;">量子位 ↗</a></div>
-            <div class="site-desc">AI快讯、模型、产品与公司动态</div>
-            <span class="site-tag">AI快讯</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.jazzyear.com/" target="_blank" style="color:var(--ink); text-decoration:none;">甲子光年 ↗</a></div>
-            <div class="site-desc">产业互联网、AI商业化与研究报告</div>
-            <span class="site-tag">产业研究</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://news.ycombinator.com/" target="_blank" style="color:var(--ink); text-decoration:none;">Hacker News ↗</a></div>
-            <div class="site-desc">开发者、创业与全球科技早期信号</div>
-            <span class="site-tag">开发者</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.producthunt.com/" target="_blank" style="color:var(--ink); text-decoration:none;">Product Hunt ↗</a></div>
-            <div class="site-desc">AI工具、SaaS与全球新产品发布</div>
-            <span class="site-tag">新品发现</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://github.com/trending" target="_blank" style="color:var(--ink); text-decoration:none;">GitHub Trending ↗</a></div>
-            <div class="site-desc">开源项目、开发语言与技术趋势</div>
-            <span class="site-tag">开源趋势</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://huggingface.co/papers" target="_blank" style="color:var(--ink); text-decoration:none;">Hugging Face Papers ↗</a></div>
-            <div class="site-desc">热门AI论文与社区讨论</div>
-            <span class="site-tag">AI论文</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://arxiv.org/" target="_blank" style="color:var(--ink); text-decoration:none;">arXiv ↗</a></div>
-            <div class="site-desc">计算机、物理、数学等预印本原文</div>
-            <span class="site-tag">论文原文</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://techcrunch.com/" target="_blank" style="color:var(--ink); text-decoration:none;">TechCrunch ↗</a></div>
-            <div class="site-desc">创业、融资与全球科技公司</div>
-            <span class="site-tag">海外科技</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.theverge.com/" target="_blank" style="color:var(--ink); text-decoration:none;">The Verge ↗</a></div>
-            <div class="site-desc">消费科技、平台、产品与互联网文化</div>
-            <span class="site-tag">海外科技</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://arstechnica.com/" target="_blank" style="color:var(--ink); text-decoration:none;">Ars Technica ↗</a></div>
-            <div class="site-desc">技术细节、科学、政策与安全</div>
-            <span class="site-tag">技术深度</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.technologyreview.com/" target="_blank" style="color:var(--ink); text-decoration:none;">MIT Tech Review ↗</a></div>
-            <div class="site-desc">技术趋势、AI与长期社会影响</div>
-            <span class="site-tag">趋势研究</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://openai.com/news/" target="_blank" style="color:var(--ink); text-decoration:none;">OpenAI News ↗</a></div>
-            <div class="site-desc">OpenAI产品、模型与研究的第一出处</div>
-            <span class="site-tag">官方发布</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.anthropic.com/news" target="_blank" style="color:var(--ink); text-decoration:none;">Anthropic News ↗</a></div>
-            <div class="site-desc">Claude产品、模型与安全研究发布</div>
-            <span class="site-tag">官方发布</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://deepmind.google/discover/blog/" target="_blank" style="color:var(--ink); text-decoration:none;">Google DeepMind ↗</a></div>
-            <div class="site-desc">Google AI研究、模型与科学进展</div>
-            <span class="site-tag">官方发布</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 品牌营销 -->
-      <div class="site-cat">
-        <div class="site-cat-title">
-          <h3>📣 品牌营销</h3>
-          <span class="count">18个</span>
-        </div>
-        <div class="site-grid">
-          <div class="site-item">
-            <div class="site-name"><a href="https://socialbeta.com/" target="_blank" style="color:var(--ink); text-decoration:none;">SocialBeta ↗</a></div>
-            <div class="site-desc">品牌案例、营销趋势与Campaign</div>
-            <span class="site-tag">品牌案例</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.digitaling.com/" target="_blank" style="color:var(--ink); text-decoration:none;">数英 ↗</a></div>
-            <div class="site-desc">广告案例、代理商与创意作品</div>
-            <span class="site-tag">广告创意</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.meihua.info/" target="_blank" style="color:var(--ink); text-decoration:none;">梅花网 ↗</a></div>
-            <div class="site-desc">营销案例、品牌传播与行业活动</div>
-            <span class="site-tag">营销案例</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.adquan.com/" target="_blank" style="color:var(--ink); text-decoration:none;">广告门 ↗</a></div>
-            <div class="site-desc">广告行业、代理公司与案例动态</div>
-            <span class="site-tag">广告行业</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.brandstar.com.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">品牌星球 ↗</a></div>
-            <div class="site-desc">新品牌、消费品牌与品牌战略</div>
-            <span class="site-tag">新消费</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.topys.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">TOPYS ↗</a></div>
-            <div class="site-desc">创意、设计与文化趋势</div>
-            <span class="site-tag">创意设计</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.morketing.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">Morketing ↗</a></div>
-            <div class="site-desc">数字营销、出海、电商与平台</div>
-            <span class="site-tag">数字营销</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.woshipm.com/" target="_blank" style="color:var(--ink); text-decoration:none;">人人都是产品经理 ↗</a></div>
-            <div class="site-desc">产品、运营、职场与互联网方法论</div>
-            <span class="site-tag">产品运营</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.yunyingpai.com/" target="_blank" style="color:var(--ink); text-decoration:none;">运营派 ↗</a></div>
-            <div class="site-desc">运营案例、增长、私域与内容方法</div>
-            <span class="site-tag">内容运营</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.ebrun.com/" target="_blank" style="color:var(--ink); text-decoration:none;">亿邦动力 ↗</a></div>
-            <div class="site-desc">电商、零售、跨境与平台政策</div>
-            <span class="site-tag">电商零售</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.winshang.com/" target="_blank" style="color:var(--ink); text-decoration:none;">赢商网 ↗</a></div>
-            <div class="site-desc">商业地产、购物中心与消费品牌开店</div>
-            <span class="site-tag">商业消费</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.cbndata.com/" target="_blank" style="color:var(--ink); text-decoration:none;">CBNData ↗</a></div>
-            <div class="site-desc">消费趋势与商业数据报告</div>
-            <span class="site-tag">消费数据</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.foodaily.com/" target="_blank" style="color:var(--ink); text-decoration:none;">Foodaily ↗</a></div>
-            <div class="site-desc">食品饮料新品、供应链与消费趋势</div>
-            <span class="site-tag">食品消费</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.latepost.com/" target="_blank" style="color:var(--ink); text-decoration:none;">晚点 LatePost ↗</a></div>
-            <div class="site-desc">大公司、科技与商业深度报道</div>
-            <span class="site-tag">商业深度</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.chanmama.com/" target="_blank" style="color:var(--ink); text-decoration:none;">蝉妈妈 ↗</a></div>
-            <div class="site-desc">抖音直播、电商、达人与商品数据</div>
-            <span class="site-tag">抖音电商</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.feigua.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">飞瓜数据 ↗</a></div>
-            <div class="site-desc">短视频、直播、达人和商品分析</div>
-            <span class="site-tag">短视频数据</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://xd.newrank.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">新抖 ↗</a></div>
-            <div class="site-desc">抖音账号、内容与行业数据</div>
-            <span class="site-tag">抖音数据</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.qian-gua.com/" target="_blank" style="color:var(--ink); text-decoration:none;">千瓜数据 ↗</a></div>
-            <div class="site-desc">小红书达人、笔记、品牌和投放分析</div>
-            <span class="site-tag">小红书数据</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 数据趋势 -->
-      <div class="site-cat">
-        <div class="site-cat-title">
-          <h3>📈 数据趋势</h3>
-          <span class="count">11个</span>
-        </div>
-        <div class="site-grid">
-          <div class="site-item">
-            <div class="site-name"><a href="https://index.baidu.com/" target="_blank" style="color:var(--ink); text-decoration:none;">百度指数 ↗</a></div>
-            <div class="site-desc">关键词热度、地域、人群与相关需求</div>
-            <span class="site-tag">趋势验证</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://trendinsight.oceanengine.com/" target="_blank" style="color:var(--ink); text-decoration:none;">巨量算数 ↗</a></div>
-            <div class="site-desc">抖音内容趋势、关键词与用户兴趣</div>
-            <span class="site-tag">抖音趋势</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://trends.google.com/trends/" target="_blank" style="color:var(--ink); text-decoration:none;">Google Trends ↗</a></div>
-            <div class="site-desc">全球搜索趋势、地区差异与相关查询</div>
-            <span class="site-tag">全球趋势</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.similarweb.com/top-websites/" target="_blank" style="color:var(--ink); text-decoration:none;">Similarweb ↗</a></div>
-            <div class="site-desc">网站流量、来源结构与行业排名</div>
-            <span class="site-tag">流量研究</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.questmobile.com.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">QuestMobile ↗</a></div>
-            <div class="site-desc">中国移动互联网用户与行业报告</div>
-            <span class="site-tag">移动互联网</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.cnnic.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">CNNIC ↗</a></div>
-            <div class="site-desc">中国互联网发展、网民规模与结构</div>
-            <span class="site-tag">官方报告</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.iresearch.com.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">艾瑞咨询 ↗</a></div>
-            <div class="site-desc">互联网、消费与行业研究报告</div>
-            <span class="site-tag">行业研究</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.analysys.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">易观分析 ↗</a></div>
-            <div class="site-desc">数字用户、产业与应用分析</div>
-            <span class="site-tag">数字分析</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.iimedia.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">艾媒咨询 ↗</a></div>
-            <div class="site-desc">行业报告、消费调查与市场规模</div>
-            <span class="site-tag">行业报告</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://explodingtopics.com/" target="_blank" style="color:var(--ink); text-decoration:none;">Exploding Topics ↗</a></div>
-            <div class="site-desc">海外早期上升关键词与新品类</div>
-            <span class="site-tag">早期趋势</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.gdeltproject.org/" target="_blank" style="color:var(--ink); text-decoration:none;">GDELT ↗</a></div>
-            <div class="site-desc">全球媒体事件、议题与地域监测</div>
-            <span class="site-tag">全球舆情</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 海外出海 -->
-      <div class="site-cat">
-        <div class="site-cat-title">
-          <h3>🌍 海外出海</h3>
-          <span class="count">9个</span>
-        </div>
-        <div class="site-grid">
-          <div class="site-item">
-            <div class="site-name"><a href="https://news.google.com/" target="_blank" style="color:var(--ink); text-decoration:none;">Google News ↗</a></div>
-            <div class="site-desc">按地区与主题聚合全球新闻</div>
-            <span class="site-tag">全球新闻</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.reuters.com/" target="_blank" style="color:var(--ink); text-decoration:none;">Reuters ↗</a></div>
-            <div class="site-desc">国际政经、公司与市场的一手报道</div>
-            <span class="site-tag">通讯社</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://apnews.com/" target="_blank" style="color:var(--ink); text-decoration:none;">AP News ↗</a></div>
-            <div class="site-desc">国际突发、政治与公共事件</div>
-            <span class="site-tag">通讯社</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.bbc.com/" target="_blank" style="color:var(--ink); text-decoration:none;">BBC ↗</a></div>
-            <div class="site-desc">国际议题、区域新闻与专题报道</div>
-            <span class="site-tag">国际媒体</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://x.com/explore" target="_blank" style="color:var(--ink); text-decoration:none;">X Explore ↗</a></div>
-            <div class="site-desc">全球实时讨论、人物与事件动态</div>
-            <span class="site-tag">社交趋势</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.reddit.com/r/popular/" target="_blank" style="color:var(--ink); text-decoration:none;">Reddit Popular ↗</a></div>
-            <div class="site-desc">社区议题、消费体验与科技讨论</div>
-            <span class="site-tag">社区趋势</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://ads.tiktok.com/business/creativecenter/" target="_blank" style="color:var(--ink); text-decoration:none;">TikTok Creative Center ↗</a></div>
-            <div class="site-desc">海外短视频标签、音乐与创意趋势</div>
-            <span class="site-tag">TikTok趋势</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://charts.youtube.com/" target="_blank" style="color:var(--ink); text-decoration:none;">YouTube Charts ↗</a></div>
-            <div class="site-desc">音乐与全球内容消费信号</div>
-            <span class="site-tag">视频趋势</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://steamdb.info/" target="_blank" style="color:var(--ink); text-decoration:none;">SteamDB ↗</a></div>
-            <div class="site-desc">游戏热度、在线人数、价格与新品趋势</div>
-            <span class="site-tag">游戏数据</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 垂直行业 -->
-      <div class="site-cat">
-        <div class="site-cat-title">
-          <h3>🏭 垂直行业</h3>
-          <span class="count">17个</span>
-        </div>
-        <div class="site-grid">
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.autohome.com.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">汽车之家 ↗</a></div>
-            <div class="site-desc">新车、口碑、报价与汽车论坛</div>
-            <span class="site-tag">汽车</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.dongchedi.com/" target="_blank" style="color:var(--ink); text-decoration:none;">懂车帝 ↗</a></div>
-            <div class="site-desc">车型热度、视频与用户讨论</div>
-            <span class="site-tag">汽车</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="http://www.cpcaauto.com/" target="_blank" style="color:var(--ink); text-decoration:none;">乘联会 ↗</a></div>
-            <div class="site-desc">乘用车销量与汽车行业数据</div>
-            <span class="site-tag">汽车数据</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://movie.douban.com/" target="_blank" style="color:var(--ink); text-decoration:none;">豆瓣电影 ↗</a></div>
-            <div class="site-desc">影视口碑、条目与影迷讨论</div>
-            <span class="site-tag">影视</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://piaofang.maoyan.com/" target="_blank" style="color:var(--ink); text-decoration:none;">猫眼专业版 ↗</a></div>
-            <div class="site-desc">票房、排片与电影市场数据</div>
-            <span class="site-tag">影视数据</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://dengta.taopiaopiao.com/" target="_blank" style="color:var(--ink); text-decoration:none;">灯塔专业版 ↗</a></div>
-            <div class="site-desc">票房、宣发与电影受众数据</div>
-            <span class="site-tag">影视数据</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.endata.com.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">艺恩 ↗</a></div>
-            <div class="site-desc">影视娱乐产业与内容数据</div>
-            <span class="site-tag">影视数据</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.taptap.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">TapTap ↗</a></div>
-            <div class="site-desc">手游新品、评分与玩家社区</div>
-            <span class="site-tag">游戏</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.gcores.com/" target="_blank" style="color:var(--ink); text-decoration:none;">机核 ↗</a></div>
-            <div class="site-desc">游戏、文化与玩家深度内容</div>
-            <span class="site-tag">游戏文化</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.dxy.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">丁香园 ↗</a></div>
-            <div class="site-desc">医学专业内容、行业信息与社区</div>
-            <span class="site-tag">医疗</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://dxy.com/" target="_blank" style="color:var(--ink); text-decoration:none;">丁香医生 ↗</a></div>
-            <div class="site-desc">面向大众的健康与医学科普</div>
-            <span class="site-tag">健康科普</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" style="color:var(--ink); text-decoration:none;">PubMed ↗</a></div>
-            <div class="site-desc">医学论文、研究与证据检索</div>
-            <span class="site-tag">医学论文</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.who.int/" target="_blank" style="color:var(--ink); text-decoration:none;">WHO ↗</a></div>
-            <div class="site-desc">全球公共卫生与疾病信息</div>
-            <span class="site-tag">公共卫生</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.sciencenet.cn/" target="_blank" style="color:var(--ink); text-decoration:none;">科学网 ↗</a></div>
-            <div class="site-desc">中国科研新闻与学术讨论</div>
-            <span class="site-tag">科学</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.nature.com/" target="_blank" style="color:var(--ink); text-decoration:none;">Nature ↗</a></div>
-            <div class="site-desc">重要科学论文、新闻与评论</div>
-            <span class="site-tag">科学论文</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://www.science.org/" target="_blank" style="color:var(--ink); text-decoration:none;">Science ↗</a></div>
-            <div class="site-desc">科学论文、研究新闻与政策</div>
-            <span class="site-tag">科学论文</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://scholar.google.com/" target="_blank" style="color:var(--ink); text-decoration:none;">Google Scholar ↗</a></div>
-            <div class="site-desc">论文检索、引用与学术资料</div>
-            <span class="site-tag">学术检索</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 开源工具 -->
-      <div class="site-cat">
-        <div class="site-cat-title">
-          <h3>🛠️ 开源工具</h3>
-          <span class="count">12个</span>
-        </div>
-        <div class="site-grid">
-          <div class="site-item">
-            <div class="site-name"><a href="https://github.com/joyce677/TrendRadar" target="_blank" style="color:var(--ink); text-decoration:none;">TrendRadar ↗</a></div>
-            <div class="site-desc">多平台热点监控、关键词筛选、报告与推送</div>
-            <span class="site-tag">AI监控</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://github.com/hmmnxkl/LLM-Based-Intelligent-Public-Opinion-Analytics-Assistant" target="_blank" style="color:var(--ink); text-decoration:none;">LLM舆情分析助手 ↗</a></div>
-            <div class="site-desc">榜单查询、聚类、情感分析与大模型问答</div>
-            <span class="site-tag">AI分析</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://github.com/uxiaohan/HotList-Web" target="_blank" style="color:var(--ink); text-decoration:none;">HotList-Web ↗</a></div>
-            <div class="site-desc">聚合微博、知乎、头条、B站和36氪热榜</div>
-            <span class="site-tag">聚合页面</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://github.com/wu529778790/newshub.shenzjd.com" target="_blank" style="color:var(--ink); text-decoration:none;">NewsHub ↗</a></div>
-            <div class="site-desc">多平台热点、科技、财经与国际分类</div>
-            <span class="site-tag">内容中台</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://github.com/imsyy/DailyHotApi" target="_blank" style="color:var(--ink); text-decoration:none;">DailyHotApi ↗</a></div>
-            <div class="site-desc">为多个热点榜单提供统一API</div>
-            <span class="site-tag">热点API</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://github.com/DIYgod/RSSHub" target="_blank" style="color:var(--ink); text-decoration:none;">RSSHub ↗</a></div>
-            <div class="site-desc">把大量没有RSS的网站转换为订阅源</div>
-            <span class="site-tag">RSS</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://github.com/RSS-Bridge/rss-bridge" target="_blank" style="color:var(--ink); text-decoration:none;">RSS-Bridge ↗</a></div>
-            <div class="site-desc">为网站生成RSS与Atom订阅源</div>
-            <span class="site-tag">RSS</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://github.com/FreshRSS/FreshRSS" target="_blank" style="color:var(--ink); text-decoration:none;">FreshRSS ↗</a></div>
-            <div class="site-desc">自建RSS阅读器与团队订阅中心</div>
-            <span class="site-tag">RSS阅读器</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://github.com/miniflux/v2" target="_blank" style="color:var(--ink); text-decoration:none;">Miniflux ↗</a></div>
-            <div class="site-desc">简洁稳定的自托管RSS阅读器</div>
-            <span class="site-tag">RSS阅读器</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://github.com/dgtlmoon/changedetection.io" target="_blank" style="color:var(--ink); text-decoration:none;">changedetection.io ↗</a></div>
-            <div class="site-desc">监控政策页、公告页与竞品网页变化</div>
-            <span class="site-tag">网页监控</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://github.com/huginn/huginn" target="_blank" style="color:var(--ink); text-decoration:none;">Huginn ↗</a></div>
-            <div class="site-desc">构建抓取、过滤、触发与通知代理</div>
-            <span class="site-tag">自动化</span>
-          </div>
-          <div class="site-item">
-            <div class="site-name"><a href="https://github.com/n8n-io/n8n" target="_blank" style="color:var(--ink); text-decoration:none;">n8n ↗</a></div>
-            <div class="site-desc">连接RSS、API、AI总结与团队通知</div>
-            <span class="site-tag">工作流</span>
-          </div>
-        </div>
-      </div>
-
     </div>
+
 
     <!-- ========== 03 写作流程 ========== -->
     <div class="page" id="page-03">
@@ -1797,6 +648,204 @@
   document.getElementById('topics-cluster').addEventListener('change', e=>{ topicState.cluster = e.target.value; renderTopics(); });
   document.getElementById('topics-type').addEventListener('change', e=>{ topicState.type = e.target.value; renderTopics(); });
   loadTopics();
+
+  // ===== 注入数据（01 赛道 / 02 网站）=====
+  const TRACKS = [{"id": "senior", "name": "中老年情感 / 生活感悟", "short": "中老年情感", "summary": "受众基数大、完读稳定，适合用真实故事和生活经验建立陪伴感。", "strength": "受众大、门槛低", "money": "流量主、商业广告", "difficulty": 1, "stability": 4, "styles": ["story", "empathy"], "times": ["low", "mid"], "moneyKeys": ["traffic", "ads"], "growth": ["fast", "stable"], "levels": ["new", "mid"], "risk": "内容同质化明显，需要固定人物视角和真实细节，避免空泛说教。", "topics": ["生活经历", "家庭关系", "晚年智慧"], "plan": ["拆解 20 篇高完读故事，确定 3 个固定栏目", "发布 5 篇真实生活故事，测试人物与冲突类型", "围绕高完读主题连续扩写 6 篇", "复盘打开率与读完率，保留前 2 个栏目"]}, {"id": "career", "name": "职场干货 / 国企职场", "short": "职场干货", "summary": "用户问题明确、付费意愿强，容易沉淀模板、课程和社群产品。", "strength": "需求明确、可系列化", "money": "知识付费、社群服务", "difficulty": 3, "stability": 4, "styles": ["knowledge", "story"], "times": ["mid", "high"], "moneyKeys": ["course", "service"], "growth": ["stable", "ip"], "levels": ["mid", "pro"], "risk": "必须有真实经验或可靠案例支撑，泛职场观点很难建立信任。", "topics": ["沟通汇报", "晋升路径", "体制经验"], "plan": ["列出 30 个真实职场问题，按岗位和阶段分类", "发布 5 篇问题解决型内容并附可执行清单", "制作 1 份模板资料，测试用户领取意愿", "根据高收藏问题规划首个 10 篇系列"]}, {"id": "history", "name": "历史人文 / 典故科普", "short": "历史人文", "recommended": true, "summary": "平台推荐较稳定、用户粘性强，内容资产可以长期复用，适合持续垂直运营。", "strength": "长尾稳定、生命周期长", "money": "流量主、课程、出版", "difficulty": 3, "stability": 5, "styles": ["knowledge", "story"], "times": ["mid", "high"], "moneyKeys": ["traffic", "course"], "growth": ["stable", "ip"], "levels": ["new", "mid", "pro"], "risk": "考据准确性决定账号生命力，必须标注可靠来源，避免戏说冒充史实。", "topics": ["历史人物", "典故出处", "时代生活"], "plan": ["确定一个窄切口，建立 30 个选题的资料库", "发布 5 篇“人物＋事件＋启示”样稿", "固定史料来源与配图规范，形成写作模板", "把高收藏主题扩展成 8－10 篇系列"]}, {"id": "reading", "name": "读书赛道", "short": "读书", "recommended": true, "summary": "以书为内容锚点，适合书评、知识拆解和主题书单，能持续沉淀个人认知品牌。", "strength": "素材稳定、利于沉淀 IP", "money": "图书分销、读书营、课程", "difficulty": 2, "stability": 5, "styles": ["knowledge", "story"], "times": ["mid", "high"], "moneyKeys": ["course", "service"], "growth": ["stable", "ip"], "levels": ["new", "mid", "pro"], "risk": "只做摘抄很难形成辨识度，需要明确选书标准和自己的判断框架。", "topics": ["主题书单", "经典拆解", "阅读方法"], "plan": ["选定一个阅读母题，建立 20 本核心书单", "发布 3 篇深度拆解和 2 篇主题书单", "测试“观点＋案例＋行动清单”内容模板", "整理高收藏内容，设计首期共读主题"]}, {"id": "parenting", "name": "家庭教育 / 育儿心得", "short": "家庭教育", "summary": "女性受众集中、议题丰富，可连接教育产品和家庭服务。", "strength": "话题强、商业空间多", "money": "教育服务、产品、广告", "difficulty": 3, "stability": 4, "styles": ["knowledge", "story", "empathy"], "times": ["mid", "high"], "moneyKeys": ["service", "ads", "course"], "growth": ["stable", "ip"], "levels": ["mid", "pro"], "risk": "避免绝对化教育结论；涉及儿童健康和心理问题时必须引用专业依据。", "topics": ["亲子沟通", "学习习惯", "家庭关系"], "plan": ["聚焦一个年龄段，梳理 20 个高频家庭问题", "发布 5 篇场景化解决方案", "邀请目标家长反馈，修正表达与建议边界", "围绕最高频问题制作 7 篇连续专题"]}, {"id": "entertainment", "name": "娱乐 / 剧评", "short": "娱乐剧评", "summary": "受众关注度高、传播快，适合跟进热播作品和娱乐事件迅速获取流量。", "strength": "热点密集、传播性强", "money": "流量主、品牌广告", "difficulty": 2, "stability": 2, "styles": ["hot", "story"], "times": ["mid", "high"], "moneyKeys": ["traffic", "ads"], "growth": ["fast"], "levels": ["new", "mid", "pro"], "risk": "高度依赖更新速度，素材版权和未经证实的娱乐信息需要严格把关。", "topics": ["热播剧评", "人物分析", "行业观察"], "plan": ["锁定 3 部近期热播作品，建立追更日历", "抢发 6 篇单点观点，测试标题与时效", "将高流量剧评延伸为人物或主题系列", "统计热点寿命，建立快稿与深稿双流程"]}, {"id": "psychology", "name": "心理学 / 情绪疗愈", "short": "心理疗愈", "summary": "共鸣与收藏潜力强，适合围绕情绪管理、关系模式持续建立专业信任。", "strength": "收藏高、信任价值强", "money": "课程、咨询、知识付费", "difficulty": 4, "stability": 4, "styles": ["knowledge", "empathy"], "times": ["mid", "high"], "moneyKeys": ["course", "service"], "growth": ["stable", "ip"], "levels": ["mid", "pro"], "risk": "需要清楚区分心理科普与临床诊疗，避免给出诊断或替代专业治疗。", "topics": ["情绪调节", "关系模式", "自我探索"], "plan": ["明确科普边界，整理 20 个可引用的专业来源", "发布 5 篇“场景＋机制＋练习”内容", "用收藏率验证最强需求，不以焦虑营销", "围绕高需求主题设计 7 天练习内容"]}, {"id": "relationship", "name": "情感关系 / 婚恋经营", "short": "情感婚恋", "summary": "覆盖面广、互动天然强，适合用案例分析建立个人情感 IP。", "strength": "互动强、需求广", "money": "咨询、课程、社群、广告", "difficulty": 3, "stability": 4, "styles": ["story", "empathy"], "times": ["mid", "high"], "moneyKeys": ["service", "course", "ads"], "growth": ["fast", "ip"], "levels": ["mid", "pro"], "risk": "不要承诺“挽回”等确定结果，案例要保护隐私并避免操控性建议。", "topics": ["婚姻沟通", "亲密关系", "分手成长"], "plan": ["选定单身或已婚人群，收集 30 个真实困惑", "发布 5 篇案例分析，强化观点边界", "测试问答栏目，观察评论中的高频需求", "将高互动问题扩展为关系沟通系列"]}, {"id": "growth", "name": "个人成长 / 认知提升", "short": "个人成长", "summary": "用户学习意愿强，适合用方法论和实践记录积累高价值个人 IP。", "strength": "IP 价值高、产品延展强", "money": "课程、训练营、社群", "difficulty": 3, "stability": 4, "styles": ["knowledge", "story"], "times": ["mid", "high"], "moneyKeys": ["course", "service"], "growth": ["stable", "ip"], "levels": ["mid", "pro"], "risk": "抽象概念容易变成正确的废话，需要真实实验、案例和可验证行动。", "topics": ["认知模型", "习惯系统", "学习方法"], "plan": ["确定一个可验证的成长主题，设计 21 天实验", "发布 4 篇方法文和 1 篇真实复盘", "用读者行动反馈验证方法是否可执行", "将有效方法整理成工具表和系列内容"]}, {"id": "humanity", "name": "鸡汤人性", "short": "鸡汤人性", "summary": "情绪共鸣强、覆盖广、创作门槛较低，容易获得点赞和转发。", "strength": "易传播、起步门槛低", "money": "流量主、商业广告", "difficulty": 1, "stability": 2, "styles": ["empathy", "story"], "times": ["low", "mid"], "moneyKeys": ["traffic", "ads"], "growth": ["fast"], "levels": ["new", "mid"], "risk": "同质化和低信任风险较高，建议用真实故事代替拼贴金句，避免标题过度承诺。", "topics": ["人性观察", "处世感悟", "现实故事"], "plan": ["确定一种稳定叙事口吻，收集 30 个真实故事", "发布 6 篇短故事，测试情绪和主题方向", "淘汰低转发主题，增加具体人物与细节", "把高传播主题做成固定栏目并控制同质化"]}];
+  const SITES = [{"n": "今日热榜 TopHub", "u": "https://tophub.today/", "c": "公众号综合热榜", "r": "cn", "d": "聚合微博、知乎、百度、B站、科技与财经榜单", "t": "全网扫盘"}, {"n": "NewsNow", "u": "https://newsnow.busiyi.world/", "c": "公众号综合热榜", "r": "tools", "d": "轻量实时新闻与热点聚合，点击即可直接使用", "t": "实时热榜"}, {"n": "百度热搜", "u": "https://top.baidu.com/board", "c": "公众号综合热榜", "r": "cn", "d": "大众搜索需求、突发事件与社会民生趋势", "t": "搜索趋势"}, {"n": "微博热搜", "u": "https://s.weibo.com/top/summary", "c": "公众号综合热榜", "r": "cn", "d": "娱乐、社会事件与公共讨论的爆发信号", "t": "社会舆情"}, {"n": "知乎热榜", "u": "https://www.zhihu.com/hot", "c": "公众号综合热榜", "r": "cn", "d": "适合解释型、观点型与知识型选题", "t": "知识讨论"}, {"n": "今日头条热榜", "u": "https://www.toutiao.com/", "c": "公众号综合热榜", "r": "cn", "d": "社会新闻、本地话题与下沉市场趋势", "t": "大众热点"}, {"n": "抖音热点", "u": "https://hot.douyin.com/", "c": "公众号综合热榜", "r": "cn", "d": "短视频话题、热点事件与内容趋势", "t": "短视频"}, {"n": "B站热门", "u": "https://www.bilibili.com/v/popular/all/", "c": "公众号综合热榜", "r": "cn", "d": "年轻用户、科技、游戏与知识内容趋势", "t": "青年文化"}, {"n": "36氪热榜", "u": "https://36kr.com/hot-list/catalog", "c": "公众号综合热榜", "r": "cn", "d": "创投、商业、新消费与科技公司动态", "t": "商业科技"}, {"n": "虎扑", "u": "https://www.hupu.com/", "c": "公众号综合热榜", "r": "cn", "d": "体育、男性消费、游戏与社区讨论", "t": "社区"}, {"n": "豆瓣热门", "u": "https://www.douban.com/gallery/", "c": "公众号综合热榜", "r": "cn", "d": "影视、图书、文化情绪与青年生活", "t": "文化娱乐"}, {"n": "新榜", "u": "https://www.newrank.cn/", "c": "公众号对标", "r": "cn", "d": "公众号榜单、账号数据、爆文与行业排行", "t": "核心对标"}, {"n": "清博指数", "u": "https://www.gsdata.cn/", "c": "公众号对标", "r": "cn", "d": "微信传播指数、媒体影响力与行业榜单", "t": "传播指数"}, {"n": "西瓜数据", "u": "https://www.xiguaji.com/", "c": "公众号对标", "r": "cn", "d": "公众号文章、账号分析与投放数据", "t": "账号分析"}, {"n": "5118", "u": "https://www.5118.com/", "c": "公众号对标", "r": "cn", "d": "关键词、需求图谱、内容选题与SEO数据", "t": "关键词"}, {"n": "搜狗微信搜索", "u": "https://weixin.sogou.com/", "c": "公众号对标", "r": "cn", "d": "检索公众号历史文章与关键词文章", "t": "微信检索"}, {"n": "微信指数", "u": "https://index.weixin.qq.com/", "c": "公众号对标", "r": "cn", "d": "微信生态关键词趋势与热度变化", "t": "微信趋势"}, {"n": "易撰", "u": "https://www.yizhuan5.com/", "c": "公众号对标", "r": "cn", "d": "多平台自媒体内容、爆文与素材研究", "t": "爆文素材"}, {"n": "微小宝", "u": "https://www.wxb.com/", "c": "公众号对标", "r": "cn", "d": "公众号运营、素材、数据与协作工具", "t": "运营工具"}, {"n": "壹伴", "u": "https://yiban.io/", "c": "公众号对标", "r": "cn", "d": "微信编辑、排版、数据与运营效率", "t": "编辑工具"}, {"n": "中国政府网", "u": "https://www.gov.cn/", "c": "政策权威", "r": "cn", "d": "国务院政策、会议与权威文件", "t": "第一信源"}, {"n": "中国政府网政策库", "u": "https://www.gov.cn/zhengce/", "c": "政策权威", "r": "cn", "d": "检索政策原文、发布日期与发文机关", "t": "政策原文"}, {"n": "国家统计局", "u": "https://www.stats.gov.cn/", "c": "政策权威", "r": "cn", "d": "人口、就业、CPI、GDP与行业数据", "t": "官方数据"}, {"n": "中国人民银行", "u": "https://www.pbc.gov.cn/", "c": "政策权威", "r": "cn", "d": "货币政策、利率与金融统计", "t": "金融政策"}, {"n": "国家网信办", "u": "https://www.cac.gov.cn/", "c": "政策权威", "r": "cn", "d": "互联网治理、平台政策与AI规定", "t": "互联网政策"}, {"n": "市场监管总局", "u": "https://www.samr.gov.cn/", "c": "政策权威", "r": "cn", "d": "召回、处罚、反垄断与消费监管", "t": "监管信息"}, {"n": "国家卫生健康委", "u": "https://www.nhc.gov.cn/", "c": "政策权威", "r": "cn", "d": "医疗卫生政策与权威通报", "t": "健康政策"}, {"n": "中国疾控中心", "u": "https://www.chinacdc.cn/", "c": "政策权威", "r": "cn", "d": "疾病、健康风险与科普数据", "t": "健康数据"}, {"n": "联合辟谣平台", "u": "https://www.piyao.org.cn/", "c": "政策权威", "r": "cn", "d": "核查网络传言与虚假信息", "t": "事实核验"}, {"n": "新华网", "u": "https://www.news.cn/", "c": "政策权威", "r": "cn", "d": "重大政策、时政与官方通稿", "t": "权威媒体"}, {"n": "人民网", "u": "http://www.people.com.cn/", "c": "政策权威", "r": "cn", "d": "政策解读、社会与地方信息", "t": "权威媒体"}, {"n": "央视网", "u": "https://www.cctv.com/", "c": "政策权威", "r": "cn", "d": "重大突发事件与现场信息", "t": "权威媒体"}, {"n": "中国新闻网", "u": "https://www.chinanews.com.cn/", "c": "政策权威", "r": "cn", "d": "社会、国际与地方新闻", "t": "通讯社"}, {"n": "澎湃新闻", "u": "https://www.thepaper.cn/", "c": "政策权威", "r": "cn", "d": "调查、社会、政经与城市议题", "t": "深度报道"}, {"n": "财联社", "u": "https://www.cls.cn/", "c": "财经商业", "r": "cn", "d": "证券、公司、政策与市场快讯", "t": "财经快讯"}, {"n": "华尔街见闻", "u": "https://wallstreetcn.com/", "c": "财经商业", "r": "cn", "d": "全球市场、宏观与科技公司", "t": "全球市场"}, {"n": "第一财经", "u": "https://www.yicai.com/", "c": "财经商业", "r": "cn", "d": "宏观、产业、公司与城市商业", "t": "财经媒体"}, {"n": "21财经", "u": "https://www.21jingji.com/", "c": "财经商业", "r": "cn", "d": "金融、区域经济与公司报道", "t": "财经媒体"}, {"n": "证券时报", "u": "https://www.stcn.com/", "c": "财经商业", "r": "cn", "d": "A股、监管与上市公司资讯", "t": "证券媒体"}, {"n": "上海证券报", "u": "https://www.cnstock.com/", "c": "财经商业", "r": "cn", "d": "资本市场、政策与公告解读", "t": "证券媒体"}, {"n": "东方财富", "u": "https://www.eastmoney.com/", "c": "财经商业", "r": "cn", "d": "行情、数据、资讯与投资者社区", "t": "市场数据"}, {"n": "雪球", "u": "https://xueqiu.com/", "c": "财经商业", "r": "cn", "d": "投资者讨论、公司研究与市场情绪", "t": "投资社区"}, {"n": "财新", "u": "https://www.caixin.com/", "c": "财经商业", "r": "cn", "d": "财经调查、公司与深度报道", "t": "深度财经"}, {"n": "巨潮资讯", "u": "https://www.cninfo.com.cn/", "c": "财经商业", "r": "cn", "d": "A股法定信息披露与上市公司公告", "t": "公告原文"}, {"n": "上交所", "u": "https://www.sse.com.cn/", "c": "财经商业", "r": "cn", "d": "上市公司公告、监管与交易数据", "t": "交易所"}, {"n": "深交所", "u": "https://www.szse.cn/", "c": "财经商业", "r": "cn", "d": "上市公司公告、问询函与交易数据", "t": "交易所"}, {"n": "港交所披露易", "u": "https://www.hkexnews.hk/", "c": "财经商业", "r": "cn", "d": "港股公告、财报与权益披露", "t": "公告原文"}, {"n": "企业信用公示系统", "u": "https://www.gsxt.gov.cn/", "c": "财经商业", "r": "cn", "d": "企业登记、处罚与经营异常信息", "t": "企业核验"}, {"n": "36氪", "u": "https://36kr.com/", "c": "科技AI", "r": "cn", "d": "创投、科技公司、新消费与商业趋势", "t": "科技商业"}, {"n": "虎嗅", "u": "https://www.huxiu.com/", "c": "科技AI", "r": "cn", "d": "商业评论、科技产业与消费观察", "t": "商业评论"}, {"n": "钛媒体", "u": "https://www.tmtpost.com/", "c": "科技AI", "r": "cn", "d": "科技、公司、出海与产业报道", "t": "科技媒体"}, {"n": "极客公园", "u": "https://www.geekpark.net/", "c": "科技AI", "r": "cn", "d": "产品、AI、互联网公司与人物", "t": "产品科技"}, {"n": "爱范儿", "u": "https://www.ifanr.com/", "c": "科技AI", "r": "cn", "d": "消费电子、产品、设计与生活方式", "t": "消费科技"}, {"n": "少数派", "u": "https://sspai.com/", "c": "科技AI", "r": "cn", "d": "工具、效率、数码与高质量教程", "t": "效率工具"}, {"n": "IT之家", "u": "https://www.ithome.com/", "c": "科技AI", "r": "cn", "d": "数码、软硬件快讯与厂商动态", "t": "科技快讯"}, {"n": "InfoQ 中文", "u": "https://www.infoq.cn/", "c": "科技AI", "r": "cn", "d": "软件工程、架构与AI技术实践", "t": "技术实践"}, {"n": "雷峰网", "u": "https://www.leiphone.com/", "c": "科技AI", "r": "cn", "d": "AI、智能驾驶、芯片与科技产业", "t": "AI产业"}, {"n": "机器之心", "u": "https://www.jiqizhixin.com/", "c": "科技AI", "r": "cn", "d": "AI论文、模型、产品与产业新闻", "t": "AI专业"}, {"n": "量子位", "u": "https://www.qbitai.com/", "c": "科技AI", "r": "cn", "d": "AI快讯、模型、产品与公司动态", "t": "AI快讯"}, {"n": "甲子光年", "u": "https://www.jazzyear.com/", "c": "科技AI", "r": "cn", "d": "产业互联网、AI商业化与研究报告", "t": "产业研究"}, {"n": "Hacker News", "u": "https://news.ycombinator.com/", "c": "科技AI", "r": "global", "d": "开发者、创业与全球科技早期信号", "t": "开发者"}, {"n": "Product Hunt", "u": "https://www.producthunt.com/", "c": "科技AI", "r": "global", "d": "AI工具、SaaS与全球新产品发布", "t": "新品发现"}, {"n": "GitHub Trending", "u": "https://github.com/trending", "c": "科技AI", "r": "global", "d": "开源项目、开发语言与技术趋势", "t": "开源趋势"}, {"n": "Hugging Face Papers", "u": "https://huggingface.co/papers", "c": "科技AI", "r": "global", "d": "热门AI论文与社区讨论", "t": "AI论文"}, {"n": "arXiv", "u": "https://arxiv.org/", "c": "科技AI", "r": "global", "d": "计算机、物理、数学等预印本原文", "t": "论文原文"}, {"n": "TechCrunch", "u": "https://techcrunch.com/", "c": "科技AI", "r": "global", "d": "创业、融资与全球科技公司", "t": "海外科技"}, {"n": "The Verge", "u": "https://www.theverge.com/", "c": "科技AI", "r": "global", "d": "消费科技、平台、产品与互联网文化", "t": "海外科技"}, {"n": "Ars Technica", "u": "https://arstechnica.com/", "c": "科技AI", "r": "global", "d": "技术细节、科学、政策与安全", "t": "技术深度"}, {"n": "MIT Tech Review", "u": "https://www.technologyreview.com/", "c": "科技AI", "r": "global", "d": "技术趋势、AI与长期社会影响", "t": "趋势研究"}, {"n": "OpenAI News", "u": "https://openai.com/news/", "c": "科技AI", "r": "global", "d": "OpenAI产品、模型与研究的第一出处", "t": "官方发布"}, {"n": "Anthropic News", "u": "https://www.anthropic.com/news", "c": "科技AI", "r": "global", "d": "Claude产品、模型与安全研究发布", "t": "官方发布"}, {"n": "Google DeepMind", "u": "https://deepmind.google/discover/blog/", "c": "科技AI", "r": "global", "d": "Google AI研究、模型与科学进展", "t": "官方发布"}, {"n": "SocialBeta", "u": "https://socialbeta.com/", "c": "品牌营销", "r": "cn", "d": "品牌案例、营销趋势与Campaign", "t": "品牌案例"}, {"n": "数英", "u": "https://www.digitaling.com/", "c": "品牌营销", "r": "cn", "d": "广告案例、代理商与创意作品", "t": "广告创意"}, {"n": "梅花网", "u": "https://www.meihua.info/", "c": "品牌营销", "r": "cn", "d": "营销案例、品牌传播与行业活动", "t": "营销案例"}, {"n": "广告门", "u": "https://www.adquan.com/", "c": "品牌营销", "r": "cn", "d": "广告行业、代理公司与案例动态", "t": "广告行业"}, {"n": "品牌星球", "u": "https://www.brandstar.com.cn/", "c": "品牌营销", "r": "cn", "d": "新品牌、消费品牌与品牌战略", "t": "新消费"}, {"n": "TOPYS", "u": "https://www.topys.cn/", "c": "品牌营销", "r": "cn", "d": "创意、设计与文化趋势", "t": "创意设计"}, {"n": "Morketing", "u": "https://www.morketing.cn/", "c": "品牌营销", "r": "cn", "d": "数字营销、出海、电商与平台", "t": "数字营销"}, {"n": "人人都是产品经理", "u": "https://www.woshipm.com/", "c": "品牌营销", "r": "cn", "d": "产品、运营、职场与互联网方法论", "t": "产品运营"}, {"n": "运营派", "u": "https://www.yunyingpai.com/", "c": "品牌营销", "r": "cn", "d": "运营案例、增长、私域与内容方法", "t": "内容运营"}, {"n": "亿邦动力", "u": "https://www.ebrun.com/", "c": "品牌营销", "r": "cn", "d": "电商、零售、跨境与平台政策", "t": "电商零售"}, {"n": "赢商网", "u": "https://www.winshang.com/", "c": "品牌营销", "r": "cn", "d": "商业地产、购物中心与消费品牌开店", "t": "商业消费"}, {"n": "CBNData", "u": "https://www.cbndata.com/", "c": "品牌营销", "r": "cn", "d": "消费趋势与商业数据报告", "t": "消费数据"}, {"n": "Foodaily", "u": "https://www.foodaily.com/", "c": "品牌营销", "r": "cn", "d": "食品饮料新品、供应链与消费趋势", "t": "食品消费"}, {"n": "晚点 LatePost", "u": "https://www.latepost.com/", "c": "品牌营销", "r": "cn", "d": "大公司、科技与商业深度报道", "t": "商业深度"}, {"n": "蝉妈妈", "u": "https://www.chanmama.com/", "c": "品牌营销", "r": "cn", "d": "抖音直播、电商、达人与商品数据", "t": "抖音电商"}, {"n": "飞瓜数据", "u": "https://www.feigua.cn/", "c": "品牌营销", "r": "cn", "d": "短视频、直播、达人和商品分析", "t": "短视频数据"}, {"n": "新抖", "u": "https://xd.newrank.cn/", "c": "品牌营销", "r": "cn", "d": "抖音账号、内容与行业数据", "t": "抖音数据"}, {"n": "千瓜数据", "u": "https://www.qian-gua.com/", "c": "品牌营销", "r": "cn", "d": "小红书达人、笔记、品牌和投放分析", "t": "小红书数据"}, {"n": "百度指数", "u": "https://index.baidu.com/", "c": "数据趋势", "r": "cn", "d": "关键词热度、地域、人群与相关需求", "t": "趋势验证"}, {"n": "巨量算数", "u": "https://trendinsight.oceanengine.com/", "c": "数据趋势", "r": "cn", "d": "抖音内容趋势、关键词与用户兴趣", "t": "抖音趋势"}, {"n": "Google Trends", "u": "https://trends.google.com/trends/", "c": "数据趋势", "r": "global", "d": "全球搜索趋势、地区差异与相关查询", "t": "全球趋势"}, {"n": "Similarweb", "u": "https://www.similarweb.com/top-websites/", "c": "数据趋势", "r": "global", "d": "网站流量、来源结构与行业排名", "t": "流量研究"}, {"n": "QuestMobile", "u": "https://www.questmobile.com.cn/", "c": "数据趋势", "r": "cn", "d": "中国移动互联网用户与行业报告", "t": "移动互联网"}, {"n": "CNNIC", "u": "https://www.cnnic.cn/", "c": "数据趋势", "r": "cn", "d": "中国互联网发展、网民规模与结构", "t": "官方报告"}, {"n": "艾瑞咨询", "u": "https://www.iresearch.com.cn/", "c": "数据趋势", "r": "cn", "d": "互联网、消费与行业研究报告", "t": "行业研究"}, {"n": "易观分析", "u": "https://www.analysys.cn/", "c": "数据趋势", "r": "cn", "d": "数字用户、产业与应用分析", "t": "数字分析"}, {"n": "艾媒咨询", "u": "https://www.iimedia.cn/", "c": "数据趋势", "r": "cn", "d": "行业报告、消费调查与市场规模", "t": "行业报告"}, {"n": "Exploding Topics", "u": "https://explodingtopics.com/", "c": "数据趋势", "r": "global", "d": "海外早期上升关键词与新品类", "t": "早期趋势"}, {"n": "GDELT", "u": "https://www.gdeltproject.org/", "c": "数据趋势", "r": "global", "d": "全球媒体事件、议题与地域监测", "t": "全球舆情"}, {"n": "Google News", "u": "https://news.google.com/", "c": "海外出海", "r": "global", "d": "按地区与主题聚合全球新闻", "t": "全球新闻"}, {"n": "Reuters", "u": "https://www.reuters.com/", "c": "海外出海", "r": "global", "d": "国际政经、公司与市场的一手报道", "t": "通讯社"}, {"n": "AP News", "u": "https://apnews.com/", "c": "海外出海", "r": "global", "d": "国际突发、政治与公共事件", "t": "通讯社"}, {"n": "BBC", "u": "https://www.bbc.com/", "c": "海外出海", "r": "global", "d": "国际议题、区域新闻与专题报道", "t": "国际媒体"}, {"n": "X Explore", "u": "https://x.com/explore", "c": "海外出海", "r": "global", "d": "全球实时讨论、人物与事件动态", "t": "社交趋势"}, {"n": "Reddit Popular", "u": "https://www.reddit.com/r/popular/", "c": "海外出海", "r": "global", "d": "社区议题、消费体验与科技讨论", "t": "社区趋势"}, {"n": "TikTok Creative Center", "u": "https://ads.tiktok.com/business/creativecenter/", "c": "海外出海", "r": "global", "d": "海外短视频标签、音乐与创意趋势", "t": "TikTok趋势"}, {"n": "YouTube Charts", "u": "https://charts.youtube.com/", "c": "海外出海", "r": "global", "d": "音乐与全球内容消费信号", "t": "视频趋势"}, {"n": "SteamDB", "u": "https://steamdb.info/", "c": "海外出海", "r": "global", "d": "游戏热度、在线人数、价格与新品趋势", "t": "游戏数据"}, {"n": "汽车之家", "u": "https://www.autohome.com.cn/", "c": "垂直行业", "r": "cn", "d": "新车、口碑、报价与汽车论坛", "t": "汽车"}, {"n": "懂车帝", "u": "https://www.dongchedi.com/", "c": "垂直行业", "r": "cn", "d": "车型热度、视频与用户讨论", "t": "汽车"}, {"n": "乘联会", "u": "http://www.cpcaauto.com/", "c": "垂直行业", "r": "cn", "d": "乘用车销量与汽车行业数据", "t": "汽车数据"}, {"n": "豆瓣电影", "u": "https://movie.douban.com/", "c": "垂直行业", "r": "cn", "d": "影视口碑、条目与影迷讨论", "t": "影视"}, {"n": "猫眼专业版", "u": "https://piaofang.maoyan.com/", "c": "垂直行业", "r": "cn", "d": "票房、排片与电影市场数据", "t": "影视数据"}, {"n": "灯塔专业版", "u": "https://dengta.taopiaopiao.com/", "c": "垂直行业", "r": "cn", "d": "票房、宣发与电影受众数据", "t": "影视数据"}, {"n": "艺恩", "u": "https://www.endata.com.cn/", "c": "垂直行业", "r": "cn", "d": "影视娱乐产业与内容数据", "t": "影视数据"}, {"n": "TapTap", "u": "https://www.taptap.cn/", "c": "垂直行业", "r": "cn", "d": "手游新品、评分与玩家社区", "t": "游戏"}, {"n": "机核", "u": "https://www.gcores.com/", "c": "垂直行业", "r": "cn", "d": "游戏、文化与玩家深度内容", "t": "游戏文化"}, {"n": "丁香园", "u": "https://www.dxy.cn/", "c": "垂直行业", "r": "cn", "d": "医学专业内容、行业信息与社区", "t": "医疗"}, {"n": "丁香医生", "u": "https://dxy.com/", "c": "垂直行业", "r": "cn", "d": "面向大众的健康与医学科普", "t": "健康科普"}, {"n": "PubMed", "u": "https://pubmed.ncbi.nlm.nih.gov/", "c": "垂直行业", "r": "global", "d": "医学论文、研究与证据检索", "t": "医学论文"}, {"n": "WHO", "u": "https://www.who.int/", "c": "垂直行业", "r": "global", "d": "全球公共卫生与疾病信息", "t": "公共卫生"}, {"n": "科学网", "u": "https://www.sciencenet.cn/", "c": "垂直行业", "r": "cn", "d": "中国科研新闻与学术讨论", "t": "科学"}, {"n": "Nature", "u": "https://www.nature.com/", "c": "垂直行业", "r": "global", "d": "重要科学论文、新闻与评论", "t": "科学论文"}, {"n": "Science", "u": "https://www.science.org/", "c": "垂直行业", "r": "global", "d": "科学论文、研究新闻与政策", "t": "科学论文"}, {"n": "Google Scholar", "u": "https://scholar.google.com/", "c": "垂直行业", "r": "global", "d": "论文检索、引用与学术资料", "t": "学术检索"}, {"n": "TrendRadar", "u": "https://github.com/joyce677/TrendRadar", "c": "开源工具", "r": "tools", "d": "多平台热点监控、关键词筛选、报告与推送", "t": "AI监控"}, {"n": "LLM舆情分析助手", "u": "https://github.com/hmmnxkl/LLM-Based-Intelligent-Public-Opinion-Analytics-Assistant", "c": "开源工具", "r": "tools", "d": "榜单查询、聚类、情感分析与大模型问答", "t": "AI分析"}, {"n": "HotList-Web", "u": "https://github.com/uxiaohan/HotList-Web", "c": "开源工具", "r": "tools", "d": "聚合微博、知乎、头条、B站和36氪热榜", "t": "聚合页面"}, {"n": "NewsHub", "u": "https://github.com/wu529778790/newshub.shenzjd.com", "c": "开源工具", "r": "tools", "d": "多平台热点、科技、财经与国际分类", "t": "内容中台"}, {"n": "DailyHotApi", "u": "https://github.com/imsyy/DailyHotApi", "c": "开源工具", "r": "tools", "d": "为多个热点榜单提供统一API", "t": "热点API"}, {"n": "RSSHub", "u": "https://github.com/DIYgod/RSSHub", "c": "开源工具", "r": "tools", "d": "把大量没有RSS的网站转换为订阅源", "t": "RSS"}, {"n": "RSS-Bridge", "u": "https://github.com/RSS-Bridge/rss-bridge", "c": "开源工具", "r": "tools", "d": "为网站生成RSS与Atom订阅源", "t": "RSS"}, {"n": "FreshRSS", "u": "https://github.com/FreshRSS/FreshRSS", "c": "开源工具", "r": "tools", "d": "自建RSS阅读器与团队订阅中心", "t": "RSS阅读器"}, {"n": "Miniflux", "u": "https://github.com/miniflux/v2", "c": "开源工具", "r": "tools", "d": "简洁稳定的自托管RSS阅读器", "t": "RSS阅读器"}, {"n": "changedetection.io", "u": "https://github.com/dgtlmoon/changedetection.io", "c": "开源工具", "r": "tools", "d": "监控政策页、公告页与竞品网页变化", "t": "网页监控"}, {"n": "Huginn", "u": "https://github.com/huginn/huginn", "c": "开源工具", "r": "tools", "d": "构建抓取、过滤、触发与通知代理", "t": "自动化"}, {"n": "n8n", "u": "https://github.com/n8n-io/n8n", "c": "开源工具", "r": "tools", "d": "连接RSS、API、AI总结与团队通知", "t": "工作流"}];
+
+  // ===== 01 赛道问卷匹配 =====
+  const QUIZ = [
+    {key:'styles', q:'你最擅长 / 喜欢写哪种内容？', options:[
+      {v:'story', label:'故事叙事（真实人物与情节）'},
+      {v:'knowledge', label:'知识干货（方法、步骤、清单）'},
+      {v:'empathy', label:'情绪共鸣（陪伴、治愈、懂你）'},
+      {v:'hot', label:'热点跟随（追热点、快评）'}]},
+    {key:'times', q:'你每天能投入多少时间？', options:[
+      {v:'low', label:'不到 1 小时（碎片时间）'},
+      {v:'mid', label:'1-3 小时（稳定更新）'},
+      {v:'high', label:'3 小时以上（全职投入）'}]},
+    {key:'moneyKeys', q:'你最想靠什么变现？（可多选）', multi:true, options:[
+      {v:'traffic', label:'流量主广告'},
+      {v:'ads', label:'商业广告接单'},
+      {v:'course', label:'课程 / 知识付费'},
+      {v:'service', label:'社群 / 咨询服务'}]},
+    {key:'levels', q:'你目前的写作 / 运营经验？', options:[
+      {v:'new', label:'纯新手，刚起步'},
+      {v:'mid', label:'有相关经验，但没系统做过'},
+      {v:'pro', label:'已会写作和运营'}]},
+    {key:'growth', q:'你对增长节奏的预期？', options:[
+      {v:'fast', label:'想尽快起量看到反馈'},
+      {v:'stable', label:'接受慢启动，求长期稳定'},
+      {v:'ip', label:'想打造个人 IP / 影响力'}]}
+  ];
+  const quizState = {};
+  function renderQuiz(){
+    document.getElementById('quiz').innerHTML = QUIZ.map((qq, qi) => {
+      const opts = qq.options.map(o => {
+        const sel = qq.multi ? (quizState[qq.key]||[]).includes(o.v) : quizState[qq.key]===o.v;
+        const border = sel ? '2px solid #22c55e' : '1px solid #334';
+        return `<button type="button" data-k="${qq.key}" data-v="${o.v}" style="padding:8px 14px;border:${border};border-radius:8px;background:#151520;color:inherit;cursor:pointer;text-align:left;">${o.label}</button>`;
+      }).join('');
+      return `<div style="margin-bottom:18px;"><div style="margin-bottom:8px;font-weight:600;">Q${qi+1}. ${qq.q}${qq.multi?'（可多选）':''}</div><div style="display:flex;gap:8px;flex-wrap:wrap;">${opts}</div></div>`;
+    }).join('');
+    document.querySelectorAll('#quiz button[data-k]').forEach(b => {
+      b.addEventListener('click', () => {
+        const k = b.dataset.k, v = b.dataset.v, qq = QUIZ.find(x=>x.key===k);
+        if (qq.multi){
+          quizState[k] = quizState[k]||[];
+          quizState[k] = quizState[k].includes(v) ? quizState[k].filter(x=>x!==v) : [...quizState[k], v];
+        } else { quizState[k] = v; }
+        renderQuiz();
+        maybeMatch();
+      });
+    });
+  }
+  function allAnswered(){
+    return QUIZ.every(q => {
+      if (q.multi) return (quizState[q.key]||[]).length > 0;
+      return !!quizState[q.key];
+    });
+  }
+  function maybeMatch(){
+    if (!allAnswered()) return;
+    const level = quizState.levels;
+    const scored = TRACKS.map(t => {
+      let score = 0, max = 0;
+      for (const q of QUIZ){
+        const chosen = q.multi ? (quizState[q.key]||[]) : [quizState[q.key]];
+        const dim = t[q.key]||[];
+        for (const v of chosen){ score += dim.includes(v) ? 2 : 0; }
+        max += q.multi ? chosen.length*2 : 2;
+      }
+      if (level==='new' && (t.difficulty||0)>=4) score -= 1.5;
+      if (level==='pro' && (t.difficulty||0)<=2) score += 1;
+      if (quizState.growth==='stable' && (t.stability||0)>=4) score += 1;
+      max += 1;
+      const pct = Math.max(0, Math.min(100, Math.round(score/max*100)));
+      return {t, pct, score};
+    }).sort((a,b)=>b.score-a.score);
+    const meta = document.getElementById('match-meta');
+    meta.textContent = `按你的 5 项选择匹配，前 3 名：${scored.slice(0,3).map(s=>s.t.short).join(' / ')}`;
+    document.getElementById('match-panel').style.display = '';
+    document.getElementById('match-top').innerHTML = scored.slice(0,3).map((s,i)=>{
+      const t = s.t;
+      const bar = Math.max(8, s.pct);
+      return `<article class="write-card"><div class="write-top"><h3>${i+1}. ${t.short}</h3><span class="hot-label" style="background:${i===0?'#22c55e':'#334'};color:${i===0?'#0b1220':'inherit'};">匹配 ${s.pct}%</span></div><p><strong>${t.summary}</strong></p><div class="write-tags"><span>${t.strength}</span><span>${t.money}</span><span>难度 ${'★'.repeat(t.difficulty)}</span><span>稳定 ${'★'.repeat(t.stability)}</span></div><div style="height:6px;background:#1e1e2e;border-radius:4px;margin-top:8px;overflow:hidden;"><div style="height:100%;width:${bar}%;background:${i===0?'#22c55e':'#4b5563'};"></div></div></article>`;
+    }).join('');
+  }
+  function resetQuiz(){
+    for (const k of Object.keys(quizState)) delete quizState[k];
+    document.getElementById('match-panel').style.display = 'none';
+    renderQuiz();
+  }
+  function renderTracks(){
+    document.getElementById('track-list').innerHTML = TRACKS.map((t,i)=>{
+      const level = ['入门','易','中等','偏难','难'][t.difficulty-1] || t.difficulty;
+      const stab = ['—','低','中低','稳定','很稳定'][t.stability-1] || t.stability;
+      return `<article class="write-card" style="cursor:pointer;" onclick="this.querySelector('.track-detail').style.display = (this.querySelector('.track-detail').style.display==='none'?'block':'none')">
+        <div class="write-top"><h3>${i+1}. ${t.name}</h3><span class="hot-label">难度 ${level}</span></div>
+        <p><strong>${t.summary}</strong></p>
+        <div class="write-tags"><span>${t.strength}</span><span>${t.money}</span><span>稳定性：${stab}</span></div>
+        <div class="track-detail" style="display:none;margin-top:12px;padding-top:12px;border-top:1px solid #26263a;">
+          <div class="tip-box" style="margin-bottom:10px;"><strong>风险：</strong>${t.risk}</div>
+          <div style="margin-bottom:10px;"><strong>选题方向：</strong><span class="write-tags" style="display:inline-flex;">${(t.topics||[]).map(x=>`<span>${x}</span>`).join('')}</span></div>
+          <div><strong>21 天启动方案：</strong><div class="write-tags" style="margin-top:8px;flex-direction:column;align-items:flex-start;gap:6px;">${(t.plan||[]).map((p,j)=>`<span>${j+1}. ${p}</span>`).join('')}</div></div>
+        </div>
+      </article>`;
+    }).join('');
+  }
+
+  // ===== 02 实时榜单 =====
+  const BOARDS = [
+    {id:'zhihu', label:'知乎热榜', file:'raw_zhihu.json'},
+    {id:'weibo', label:'微博热搜', file:'raw_weibo.json'},
+    {id:'baidu', label:'百度热搜', file:'raw_baidu.json'},
+    {id:'toutiao', label:'今日头条', file:'raw_toutiao.json'},
+    {id:'douyin', label:'抖音热点', file:'raw_douyin.json'},
+    {id:'bilibili', label:'B站热门', file:'raw_bilibili.json'},
+    {id:'36kr', label:'36氪', file:'raw_36kr.json'},
+    {id:'github', label:'GitHub', file:'raw_github.json'},
+    {id:'topics', label:'职场选题池', file:'workbench_topics.json'}
+  ];
+  const boardState = {cur:'zhihu'};
+  function renderBoardTabs(){
+    document.getElementById('board-tabs').innerHTML = BOARDS.map(b=>
+      `<button data-b="${b.id}" style="padding:6px 14px;border-radius:8px;cursor:pointer;background:${boardState.cur===b.id?'#22c55e':'#151520'};color:${boardState.cur===b.id?'#0b1220':'inherit'};border:1px solid #334;">${b.label}</button>`
+    ).join('');
+    document.querySelectorAll('#board-tabs button').forEach(b=>{
+      b.addEventListener('click', ()=>{ boardState.cur = b.dataset.b; renderBoardTabs(); loadBoard(); });
+    });
+  }
+  function fmtHot(v){
+    if (v==null || v==='') return '';
+    const n = parseFloat(v);
+    if (isNaN(n)) return String(v);
+    return n>=10000 ? (n/10000).toFixed(1)+'万' : String(Math.round(n));
+  }
+  async function loadBoard(){
+    const b = BOARDS.find(x=>x.id===boardState.cur);
+    const box = document.getElementById('board-list');
+    box.innerHTML = '<div class="tip-box">加载中…</div>';
+    try {
+      const r = await fetch(b.file, {cache:'no-store'});
+      if (!r.ok) throw new Error('HTTP '+r.status);
+      const d = await r.json();
+      let rows, meta;
+      if (b.id==='topics'){
+        rows = (d.items||[]).map((it,i)=>({rank:i+1, title:it['标题'], hot:it['得分']!=null?'得分'+it['得分']:(it['热度']||''), url:it['链接'], extra:it['问题簇']+' · '+it['内容类']+' · '+it['来源']}));
+        meta = `共 ${d.count||rows.length} 条 · 更新 ${d.updated||''}`;
+      } else {
+        rows = (d.data||[]).slice(0,50).map((it,i)=>({rank:i+1, title:it.title, hot:fmtHot(it.hot), url:it.url||it.mobileUrl||'', extra:it.desc?String(it.desc).slice(0,40):''}));
+        meta = d.updateTime ? `更新于 ${d.updateTime}` : `共 ${rows.length} 条`;
+      }
+      document.getElementById('board-meta').textContent = meta;
+      if (!rows.length){ box.innerHTML = '<div class="tip-box">该源暂无数据（海外源可能不可达）</div>'; return; }
+      box.innerHTML = `<div style="display:flex;flex-direction:column;gap:6px;">` + rows.map(r=>
+        `<div style="display:flex;gap:10px;align-items:baseline;padding:7px 10px;border-radius:8px;background:#151520;">
+          <span style="min-width:26px;color:${r.rank<=3?'#22c55e':'#888'};font-weight:700;">${r.rank}</span>
+          <a href="${esc(r.url)}" target="_blank" rel="noopener" style="flex:1;color:var(--ink);text-decoration:none;">${esc(r.title)}</a>
+          <span style="color:#22c55e;white-space:nowrap;">${esc(r.hot)}</span>
+        </div>`).join('') + `</div>`;
+    } catch(e){
+      box.innerHTML = `<div class="tip-box">榜单加载失败：${esc(e.message)}（数据文件由每日抓取任务生成）</div>`;
+    }
+  }
+
+  // ===== 02 网站导航 =====
+  const siteState = {cat:'', kw:''};
+  const SITE_CATS = [...new Set(SITES.map(s=>s.c))];
+  function renderSiteTabs(){
+    const all = `<button data-c="" style="padding:5px 12px;border-radius:7px;cursor:pointer;background:${siteState.cat===''?'#22c55e':'#151520'};color:${siteState.cat===''?'#0b1220':'inherit'};border:1px solid #334;">全部 139</button>`;
+    document.getElementById('site-tabs').innerHTML = all + SITE_CATS.map(c=>{
+      const n = SITES.filter(s=>s.c===c).length;
+      const on = siteState.cat===c;
+      return `<button data-c="${esc(c)}" style="padding:5px 12px;border-radius:7px;cursor:pointer;background:${on?'#22c55e':'#151520'};color:${on?'#0b1220':'inherit'};border:1px solid #334;">${esc(c)} ${n}</button>`;
+    }).join('');
+    document.querySelectorAll('#site-tabs button').forEach(b=>{
+      b.addEventListener('click', ()=>{ siteState.cat = b.dataset.c; renderSiteTabs(); renderSites(); });
+    });
+  }
+  function renderSites(){
+    const kw = siteState.kw.trim().toLowerCase();
+    const list = SITES.filter(s =>
+      (!siteState.cat || s.c===siteState.cat) &&
+      (!kw || (s.n+s.d+s.t).toLowerCase().includes(kw))
+    );
+    document.getElementById('site-meta').textContent = `当前 ${list.length} 个`;
+    document.getElementById('site-list').innerHTML = list.map(s=>
+      `<div style="display:flex;gap:10px;align-items:center;padding:8px 10px;border-radius:8px;background:#151520;margin-bottom:6px;">
+        <a href="${esc(s.u)}" target="_blank" rel="noopener" style="flex:1;color:var(--ink);text-decoration:none;"><strong>${esc(s.n)} ↗</strong> <span style="opacity:.65;">${esc(s.d)}</span></a>
+        <span style="color:#22c55e;white-space:nowrap;font-size:12px;">${esc(s.t)}</span>
+      </div>`).join('');
+  }
+
+  renderQuiz();
+  renderTracks();
+  renderBoardTabs();
+  loadBoard();
+  renderSiteTabs();
+  renderSites();
+  document.getElementById('site-keyword').addEventListener('input', e=>{ siteState.kw = e.target.value; renderSites(); });
 </script>
 
 </body>
