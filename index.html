@@ -190,6 +190,7 @@
     .xhs-btn.done { border-color: #ff2442; background: #fff0f2; color: #ff2442; font-weight: 700; }
     .xhs-search { padding: 2px 8px; font-size: 11px; border: 1px solid #ffd6dd; border-radius: 6px; background: #fff; color: #ff2442; cursor: pointer; line-height: 1.5; text-decoration: none; }
     .xhs-search:hover { background: #fff0f2; }
+    .multi-tag { padding: 2px 8px; font-size: 11px; border-radius: 6px; background: var(--orange-soft); color: #8a4a1a; font-weight: 700; }
     .wx-search { padding: 2px 8px; font-size: 11px; border: 1px solid #bfe8d6; border-radius: 6px; background: #fff; color: var(--green); cursor: pointer; line-height: 1.5; text-decoration: none; }
     .wx-search:hover { background: var(--green-soft); }
     .write-card p { margin: 7px 0; color: var(--ink-2); font-size: 13px; line-height: 1.65; }
@@ -564,15 +565,7 @@
         <p>抓到热门之后，先筛出真正值得交给你的二创 Skill 的文章</p>
       </div>
 
-      <div class="panel">
-        <div class="panel-head"><strong>每日扫描的 8 个源头</strong><span>围绕职场干货 / 国企职场</span></div>
-        <div class="panel-body">
-          <div class="write-tags" style="gap:8px;">
-            <span>知乎热榜：职场问题与真实回答</span><span>微博热搜：突发职场话题</span><span>百度热搜：大众搜索需求</span><span>今日头条：社会与就业趋势</span><span>抖音热点：高传播案例</span><span>36氪：行业与公司变化</span><span>新榜：公众号爆文数据</span><span>微信搜一搜/看一看：同赛道原文</span>
-          </div>
-          <div class="tip-box" style="margin-bottom:0;">筛选优先级：明确的职场问题 ＞ 有真实人物和冲突的案例 ＞ 能拆成步骤、模板、清单的方法。只把“原文文章”放进下面的文章池，榜单页面本身只作为线索。</div>
-        </div>
-      </div>
+      
 
       <div class="panel">
         <div class="panel-head" id="scan-head"><strong>今日扫描结果 · 自动精选</strong><span id="scan-count">加载中…</span></div>
@@ -580,15 +573,7 @@
           <div id="scan-list" class="write-grid" style="margin-bottom:16px;"><p style="color:var(--muted);font-size:13px;">正在读取最新选题…</p></div>
           <div class="panel-head" id="brief-panel" style="margin:0 -18px 14px; border-top:1px solid var(--line);"><strong>每日热点简报归档</strong><span>点日期打开当天热点简报</span></div>
           <div id="brief-list" class="write-tags" style="margin:0 -18px 0; padding:0 18px 14px;">加载中…</div>
-          <div class="panel-head" style="margin:0 -18px 14px; border-top:1px solid var(--line);"><strong>长期筛选标准</strong><span>先筛文章，再交给 Skill 二创</span></div>
-          <div class="write-grid">
-            <article class="write-card"><div class="write-top"><h3><a href="https://www.36kr.com/p/3973218946691590" target="_blank" rel="noopener" style="color:var(--ink); text-decoration:none;">AI 浪潮下，5 个正在崛起的新机会 ↗</a></h3><span class="hot-label">优先级 A</span></div><p><strong>爆点：</strong>把复杂趋势拆成 5 个具体机会，标题有数字、结果和行动暗示。</p><p class="write-title">适合复写：换成你所在赛道的“5 个新机会”</p><div class="write-tags"><span>AI/商业</span><span>数字标题</span><span>首选</span></div></article>
-            <article class="write-card"><div class="write-top"><h3><a href="https://www.zhihu.com/special/1421185602344022016" target="_blank" rel="noopener" style="color:var(--ink); text-decoration:none;">知乎媒体每周看点：一周热门问题 ↗</a></h3><span class="hot-label">优先级 A</span></div><p><strong>爆点：</strong>真实问题带着关注数和回答量，争议点已经被读者验证。</p><p class="write-title">适合复写：选一个问题，补充自己的经历和判断</p><div class="write-tags"><span>社会话题</span><span>争议</span><span>观点型</span></div></article>
-            <article class="write-card"><div class="write-top"><h3><a href="https://eu.36kr.com/zh/p/3980057243441029" target="_blank" rel="noopener" style="color:var(--ink); text-decoration:none;">100 人干了 2000 人的活：AI 重算影视行业 ↗</a></h3><span class="hot-label">优先级 A</span></div><p><strong>爆点：</strong>“100 对 2000”的强反差，加上制作、资产、生意三本账。</p><p class="write-title">适合复写：找你所在行业被新技术重算的三笔账</p><div class="write-tags"><span>行业变化</span><span>数字反差</span><span>故事</span></div></article>
-            <article class="write-card"><div class="write-top"><h3><a href="https://www.36kr.com/p/3964434609069320" target="_blank" rel="noopener" style="color:var(--ink); text-decoration:none;">让项目从“被介绍”走向“被理解” ↗</a></h3><span class="hot-label">优先级 B</span></div><p><strong>爆点：</strong>把“不会表达”这个普遍痛点拆成具体场景和解决方式。</p><p class="write-title">适合复写：把你熟悉的行业难题写成“从 A 到 B”</p><div class="write-tags"><span>方法型</span><span>痛点明确</span><span>收藏型</span></div></article>
-            <article class="write-card"><div class="write-top"><h3><a href="https://36kr.com/p/3245184886030344" target="_blank" rel="noopener" style="color:var(--ink); text-decoration:none;">“HR 抢着加微信”，AI 实习生月入过万 ↗</a></h3><span class="hot-label">优先级 B</span></div><p><strong>爆点：</strong>薪资数字和身份反差很强，正文还有多个真实人物可拆。</p><p class="write-title">适合复写：换成你所在城市或行业的“高薪真相”</p><div class="write-tags"><span>职场</span><span>数字冲击</span><span>人物</span></div></article>
-            <article class="write-card"><div class="write-top"><h3><a href="https://eu.36kr.com/zh/p/3980179218699912" target="_blank" rel="noopener" style="color:var(--ink); text-decoration:none;">日薪千元的 AI 实习生，在焦虑什么？ ↗</a></h3><span class="hot-label">优先级 B</span></div><p><strong>爆点：</strong>高薪和焦虑同时出现，形成“别人羡慕、当事人不安”的冲突。</p><p class="write-title">适合复写：保留冲突，换成普通人的真实处境</p><div class="write-tags"><span>职场</span><span>情绪冲突</span><span>长尾</span></div></article>
-          </div>
+          
         </div>
       </div>
 
@@ -603,6 +588,10 @@
             <div id="day-filter" style="display:flex;gap:6px;flex:0 0 auto;">
               <button type="button" data-day="" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:var(--green);color:#fff;font-size:12px;cursor:pointer;">全部时间</button>
               <button type="button" data-day="today" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:12px;cursor:pointer;">仅今天</button>
+            </div>
+            <div id="plat-filter" style="display:flex;gap:6px;flex:0 0 auto;">
+              <button type="button" data-plat="" style="padding:7px 12px;border-radius:8px;border:1px solid #8a4a1a;background:#8a4a1a;color:#fff;font-size:12px;cursor:pointer;">全部</button>
+              <button type="button" data-plat="multi" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:12px;cursor:pointer;">多平台报道</button>
             </div>
             <div id="xhs-filter" style="display:flex;gap:6px;flex:0 0 auto;">
               <button type="button" data-xhs="" style="padding:7px 12px;border-radius:8px;border:1px solid #ff2442;background:#ff2442;color:#fff;font-size:12px;cursor:pointer;">小红书</button>
@@ -699,7 +688,7 @@
   }
 
   // ===== 聚合器职场选题池 =====
-  const topicState = { items: [], kw: '', cluster: '', type: '', day: '', xhs: '' };
+  const topicState = { items: [], kw: '', cluster: '', type: '', day: '', xhs: '', plat: '' };
   function fmtTime(ts){
     if(!ts) return '';
     const m = String(ts).match(/^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})/);
@@ -820,12 +809,25 @@
     menu.addEventListener('click',e=>{ const it=e.target.closest('.cselect-item'); if(!it) return; const v=it.dataset.v||''; lab.textContent=v||label; onChange(v); close(); });
     document.addEventListener('click',e=>{ if(!wrap.contains(e.target)) close(); });
   }
+  // ===== 多平台热度：同一标题出现在几个不同榜单/来源 =====
+  function calcPlats(items){
+    const g = {};
+    items.forEach(i=>{
+      const k = (i['标题']||'').replace(/\s+/g,'').toLowerCase();
+      (g[k] = g[k] || new Set()).add(i['榜单']||i['来源']||'');
+    });
+    items.forEach(i=>{
+      const k = (i['标题']||'').replace(/\s+/g,'').toLowerCase();
+      i._plat = g[k].size;
+    });
+  }
   async function loadTopics(){
     try {
       const r = await fetch('workbench_topics.json?t='+Date.now(), {cache:'no-store'});
       if (!r.ok) throw new Error('HTTP '+r.status);
       const d = await r.json();
       topicState.items = d.items || [];
+      calcPlats(topicState.items);
       renderScan();
       document.getElementById('topics-meta').textContent = `共 ${d.count||topicState.items.length} 条 · 更新 ${d.updated||''}`;
       renderTopics();
@@ -873,13 +875,14 @@
       (!topicState.cluster || i['问题簇']===topicState.cluster) &&
       (!topicState.type || i['内容类']===topicState.type) &&
       (!topicState.day || isToday(i['抓取时间'])) &&
-      (!topicState.xhs || (topicState.xhs==='yes') === xhsHas(i['链接']))
+      (!topicState.xhs || (topicState.xhs==='yes') === xhsHas(i['链接'])) &&
+      (!topicState.plat || (topicState.plat==='multi' && (i._plat||0)>=2))
     );
     const box = document.getElementById('topics-list');
     if (!list.length){ box.innerHTML = '<div class="tip-box">没有匹配的选题</div>'; return; }
     box.innerHTML = list.map(i=>{
       const sc = i['得分']||0;
-      return `<article class="write-card"><div class="write-top"><h3><a href="${esc(i['链接'])}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${esc(i['标题'])} ↗</a><button class="copy-btn" data-title="${esc(i['标题'])}" title="复制标题">复制</button></h3><span class="hot-label">${scoreLabel(sc)}</span></div><div class="write-tags"><span>${esc(i['问题簇']||'未归类')}</span><span>${esc(i['内容类']||'-')}</span><span>热度 ${esc(i['热度']||'-')}</span><span>${esc(i['来源']||'')}</span>${xhsBtnHtml(i['链接'], i['标题'])}${fetchTag(i['抓取时间'])}${i['发布时间']?`<span>${esc(i['发布时间'])}</span>`:''}</div></article>`;
+      return `<article class="write-card"><div class="write-top"><h3><a href="${esc(i['链接'])}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${esc(i['标题'])} ↗</a><button class="copy-btn" data-title="${esc(i['标题'])}" title="复制标题">复制</button></h3><span class="hot-label">${scoreLabel(sc)}</span></div><div class="write-tags"><span>${esc(i['问题簇']||'未归类')}</span><span>${esc(i['内容类']||'-')}</span><span>热度 ${esc(i['热度']||'-')}</span>${(i._plat||0)>=2?`<span class="multi-tag">多平台 ${i._plat} 家</span>`:''}<span>${esc(i['来源']||'')}</span>${xhsBtnHtml(i['链接'], i['标题'])}${fetchTag(i['抓取时间'])}${i['发布时间']?`<span>${esc(i['发布时间'])}</span>`:''}</div></article>`;
     }).join('');
   }
   document.getElementById('topics-keyword').addEventListener('input', e=>{ topicState.kw = e.target.value; renderTopics(); });
@@ -937,6 +940,19 @@
   loadEcom();
   bindXhsFilter('xhs-filter', topicState);
   bindXhsFilter('xhs-filter-ecom', ecomState);
+  // 多平台报道筛选（05）
+  document.querySelectorAll('#plat-filter button').forEach(b=>{
+    b.addEventListener('click', ()=>{
+      topicState.plat = b.dataset.plat;
+      document.querySelectorAll('#plat-filter button').forEach(x=>{
+        const on = (x===b);
+        x.style.background = on ? '#8a4a1a' : '#fff';
+        x.style.color = on ? '#fff' : 'var(--ink)';
+        x.style.borderColor = on ? '#8a4a1a' : 'var(--line)';
+      });
+      renderTopics();
+    });
+  });
 
   // 复制标题按钮（事件委托，05/07 通用；clipboard API 失败时回退 execCommand）
   document.addEventListener('click', async e=>{
