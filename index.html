@@ -809,16 +809,16 @@
     menu.addEventListener('click',e=>{ const it=e.target.closest('.cselect-item'); if(!it) return; const v=it.dataset.v||''; lab.textContent=v||label; onChange(v); close(); });
     document.addEventListener('click',e=>{ if(!wrap.contains(e.target)) close(); });
   }
-  // ===== 多平台热度：同一标题出现在几个不同榜单/来源 =====
+  // ===== 多平台热度：同一标题出现在几个不同榜单/来源（优先后端 平台数，前端兜底）=====
   function calcPlats(items){
     const g = {};
     items.forEach(i=>{
       const k = (i['标题']||'').replace(/\s+/g,'').toLowerCase();
-      (g[k] = g[k] || new Set()).add(i['榜单']||i['来源']||'');
+      (g[k] = g[k] || new Set()).add(i['媒体']||i['来源']||'');
     });
     items.forEach(i=>{
       const k = (i['标题']||'').replace(/\s+/g,'').toLowerCase();
-      i._plat = g[k].size;
+      i._plat = i['平台数'] || g[k].size;
     });
   }
   async function loadTopics(){
@@ -882,7 +882,7 @@
     if (!list.length){ box.innerHTML = '<div class="tip-box">没有匹配的选题</div>'; return; }
     box.innerHTML = list.map(i=>{
       const sc = i['得分']||0;
-      return `<article class="write-card"><div class="write-top"><h3><a href="${esc(i['链接'])}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${esc(i['标题'])} ↗</a><button class="copy-btn" data-title="${esc(i['标题'])}" title="复制标题">复制</button></h3><span class="hot-label">${scoreLabel(sc)}</span></div><div class="write-tags"><span>${esc(i['问题簇']||'未归类')}</span><span>${esc(i['内容类']||'-')}</span><span>热度 ${esc(i['热度']||'-')}</span>${(i._plat||0)>=2?`<span class="multi-tag">多平台 ${i._plat} 家</span>`:''}<span>${esc(i['来源']||'')}</span>${xhsBtnHtml(i['链接'], i['标题'])}${fetchTag(i['抓取时间'])}${i['发布时间']?`<span>${esc(i['发布时间'])}</span>`:''}</div></article>`;
+      return `<article class="write-card"><div class="write-top"><h3><a href="${esc(i['链接'])}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${esc(i['标题'])} ↗</a><button class="copy-btn" data-title="${esc(i['标题'])}" title="复制标题">复制</button></h3><span class="hot-label">${scoreLabel(sc)}</span></div><div class="write-tags"><span>${esc(i['问题簇']||'未归类')}</span><span>${esc(i['内容类']||'-')}</span><span>热度 ${esc(i['热度']||'-')}</span>${(i._plat||0)>=2?`<span class="multi-tag">多平台 ${i._plat} 家 · ${esc(i['平台列表']||'')}</span>`:''}<span>${esc(i['媒体']||i['来源']||'')}</span>${xhsBtnHtml(i['链接'], i['标题'])}${fetchTag(i['抓取时间'])}${i['发布时间']?`<span>${esc(i['发布时间'])}</span>`:''}</div></article>`;
     }).join('');
   }
   document.getElementById('topics-keyword').addEventListener('input', e=>{ topicState.kw = e.target.value; renderTopics(); });
