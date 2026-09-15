@@ -583,6 +583,10 @@
             <input id="topics-keyword" placeholder="关键词筛选：裁员 / 涨薪 / 面试 / AI…" style="flex:1;min-width:220px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);">
             <div class="cselect" id="cs-cluster" style="flex:0 0 auto;min-width:150px;position:relative;z-index:30;"><button type="button" class="cselect-btn"><span class="cselect-label">全部问题簇</span><span class="cselect-arrow">▾</span></button><div class="cselect-menu"></div></div>
             <div class="cselect" id="cs-type" style="flex:0 0 auto;min-width:150px;position:relative;z-index:30;"><button type="button" class="cselect-btn"><span class="cselect-label">全部内容类</span><span class="cselect-arrow">▾</span></button><div class="cselect-menu"></div></div>
+            <div id="day-filter" style="display:flex;gap:6px;flex:0 0 auto;">
+              <button type="button" data-day="" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:var(--green);color:#fff;font-size:12px;cursor:pointer;">全部时间</button>
+              <button type="button" data-day="today" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:12px;cursor:pointer;">仅今天</button>
+            </div>
           </div>
           <div id="topics-list" class="write-grid"></div>
         </div>
@@ -648,7 +652,33 @@
   }
 
   // ===== 聚合器职场选题池 =====
-  const topicState = { items: [], kw: '', cluster: '', type: '' };
+  const topicState = { items: [], kw: '', cluster: '', type: '', day: '' };
+  function fmtTime(ts){
+    if(!ts) return '';
+    const m = String(ts).match(/^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})/);
+    if(!m) return esc(ts);
+    const now = new Date();
+    const d = new Date(+m[1], +m[2]-1, +m[3]);
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const diff = Math.round((today - d)/86400000);
+    if(diff===0) return '今天 '+m[4]+':'+m[5];
+    if(diff===1) return '昨天 '+m[4]+':'+m[5];
+    return (+m[2])+'月'+(+m[3])+'日 '+m[4]+':'+m[5];
+  }
+  function isToday(ts){
+    const m = String(ts||'').match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if(!m) return false;
+    const now = new Date();
+    const d = new Date(+m[1], +m[2]-1, +m[3]);
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    return d.getTime() === today.getTime();
+  }
+  function fetchTag(ts){
+    if(!ts) return '';
+    return isToday(ts)
+      ? '<span style="background:#e6f7f1;color:#0f7a5a;">抓取 '+fmtTime(ts)+'</span>'
+      : '<span style="background:#eef1f0;color:#738387;">抓取 '+fmtTime(ts)+'</span>';
+  }
   function esc(s){ return (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
   function scoreLabel(sc){ return sc >= 3 ? '选题池 A' : (sc === 2 ? '短内容 B' : '热度 C'); }
   async function loadBriefings(){
@@ -728,7 +758,7 @@
       else if(ct==='工具') ang = '把相关内容整理成模板/清单/自查表';
       else ang = '从「'+kw+'」切入，拆成 3 个可写角度（是什么/为什么/怎么办）';
       const spot = '「'+(t.length>18?t.slice(0,18)+'…':t)+'」——'+(it['问题簇']||'')+'赛道 · '+(it['来源']||'')+((it['热度']!==undefined && it['热度']!=='')?(' · 热度 '+it['热度']):'');
-      return '<article class="write-card"><div class="write-top"><h3><a href="'+esc(it['链接']||it['url']||'#')+'" target="_blank" rel="noopener" style="color:var(--ink); text-decoration:none;">'+esc(t)+' ↗</a></h3><span class="hot-label">'+lab+'</span></div><p><strong>爆点：</strong>'+esc(spot)+'</p><p class="write-title">二创角度：'+esc(ang)+'</p><div class="write-tags"><span>'+esc(it['问题簇']||'')+'</span><span>'+esc(ct||'热点')+'</span><span style="background:#f0e6d6;color:#8a5a1e;">'+cls+'级 '+s+'分</span></div></article>';
+      return '<article class="write-card"><div class="write-top"><h3><a href="'+esc(it['链接']||it['url']||'#')+'" target="_blank" rel="noopener" style="color:var(--ink); text-decoration:none;">'+esc(t)+' ↗</a></h3><span class="hot-label">'+lab+'</span></div><p><strong>爆点：</strong>'+esc(spot)+'</p><p class="write-title">二创角度：'+esc(ang)+'</p><div class="write-tags"><span>'+esc(it['问题簇']||'')+'</span><span>'+esc(ct||'热点')+'</span>'+fetchTag(it['抓取时间'])+'<span style="background:#f0e6d6;color:#8a5a1e;">'+cls+'级 '+s+'分</span></div></article>';
     }).join('');
   }
   function makeSelect(id,label,getOptions,onChange){
@@ -759,18 +789,26 @@
     const list = topicState.items.filter(i =>
       (!kw || (i['标题']||'').toLowerCase().includes(kw)) &&
       (!topicState.cluster || i['问题簇']===topicState.cluster) &&
-      (!topicState.type || i['内容类']===topicState.type)
+      (!topicState.type || i['内容类']===topicState.type) &&
+      (!topicState.day || isToday(i['抓取时间']))
     );
     const box = document.getElementById('topics-list');
     if (!list.length){ box.innerHTML = '<div class="tip-box">没有匹配的选题</div>'; return; }
     box.innerHTML = list.map(i=>{
       const sc = i['得分']||0;
-      return `<article class="write-card"><div class="write-top"><h3><a href="${esc(i['链接'])}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${esc(i['标题'])} ↗</a></h3><span class="hot-label">${scoreLabel(sc)}</span></div><div class="write-tags"><span>${esc(i['问题簇']||'未归类')}</span><span>${esc(i['内容类']||'-')}</span><span>热度 ${esc(i['热度']||'-')}</span><span>${esc(i['来源']||'')}</span>${i['发布时间']?`<span>${esc(i['发布时间'])}</span>`:''}</div></article>`;
+      return `<article class="write-card"><div class="write-top"><h3><a href="${esc(i['链接'])}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${esc(i['标题'])} ↗</a></h3><span class="hot-label">${scoreLabel(sc)}</span></div><div class="write-tags"><span>${esc(i['问题簇']||'未归类')}</span><span>${esc(i['内容类']||'-')}</span><span>热度 ${esc(i['热度']||'-')}</span><span>${esc(i['来源']||'')}</span>${fetchTag(i['抓取时间'])}${i['发布时间']?`<span>${esc(i['发布时间'])}</span>`:''}</div></article>`;
     }).join('');
   }
   document.getElementById('topics-keyword').addEventListener('input', e=>{ topicState.kw = e.target.value; renderTopics(); });
   makeSelect('cs-cluster','全部问题簇',()=>[...new Set(topicState.items.map(i=>i['问题簇']).filter(Boolean))],v=>{ topicState.cluster=v; renderTopics(); });
   makeSelect('cs-type','全部内容类',()=>[...new Set(topicState.items.map(i=>i['内容类']).filter(Boolean))],v=>{ topicState.type=v; renderTopics(); });
+  document.querySelectorAll('#day-filter button').forEach(b=>{
+    b.addEventListener('click', ()=>{
+      topicState.day = b.dataset.day;
+      document.querySelectorAll('#day-filter button').forEach(x=>{ x.style.background = (x===b)?'var(--green)':'#fff'; x.style.color = (x===b)?'#fff':'var(--ink)'; });
+      renderTopics();
+    });
+  });
   loadTopics();
   loadDuibiao();
   loadBriefings();
