@@ -185,6 +185,9 @@
     .copy-btn { margin-left: 8px; padding: 2px 8px; font-size: 11px; border: 1px solid var(--line); border-radius: 6px; background: #fff; color: var(--ink-2); cursor: pointer; vertical-align: middle; line-height: 1.5; }
     .copy-btn:hover { border-color: var(--green); color: var(--green); }
     .copy-btn.copied { border-color: var(--green); background: var(--green-soft); color: var(--green); }
+    .xhs-btn { padding: 2px 8px; font-size: 11px; border: 1px solid var(--line); border-radius: 6px; background: #fff; color: var(--ink-2); cursor: pointer; line-height: 1.5; }
+    .xhs-btn:hover { border-color: #ff2442; color: #ff2442; }
+    .xhs-btn.done { border-color: #ff2442; background: #fff0f2; color: #ff2442; font-weight: 700; }
     .write-card p { margin: 7px 0; color: var(--ink-2); font-size: 13px; line-height: 1.65; }
     .write-card p strong { color: var(--ink); }
     .write-title { margin-top: 12px !important; padding: 10px 12px; border-radius: 6px; color: #247263 !important; background: var(--green-soft); font-size: 13px !important; font-weight: 600; }
@@ -597,6 +600,11 @@
               <button type="button" data-day="" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:var(--green);color:#fff;font-size:12px;cursor:pointer;">全部时间</button>
               <button type="button" data-day="today" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:12px;cursor:pointer;">仅今天</button>
             </div>
+            <div id="xhs-filter" style="display:flex;gap:6px;flex:0 0 auto;">
+              <button type="button" data-xhs="" style="padding:7px 12px;border-radius:8px;border:1px solid #ff2442;background:#ff2442;color:#fff;font-size:12px;cursor:pointer;">小红书</button>
+              <button type="button" data-xhs="yes" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:12px;cursor:pointer;">已验证</button>
+              <button type="button" data-xhs="no" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:12px;cursor:pointer;">未验证</button>
+            </div>
           </div>
           <div id="topics-list" class="write-grid"></div>
         </div>
@@ -644,6 +652,11 @@
                 <button data-day="" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:var(--green);color:#fff;font-size:12px;cursor:pointer;">全部时间</button>
                 <button data-day="today" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:12px;cursor:pointer;">仅今天</button>
               </div>
+              <div id="xhs-filter-ecom" style="display:flex;gap:6px;">
+                <button data-xhs="" style="padding:7px 12px;border-radius:8px;border:1px solid #ff2442;background:#ff2442;color:#fff;font-size:12px;cursor:pointer;">小红书</button>
+                <button data-xhs="yes" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:12px;cursor:pointer;">已验证</button>
+                <button data-xhs="no" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:12px;cursor:pointer;">未验证</button>
+              </div>
             </div>
             <div id="ecom-list" class="write-grid"></div>
           </div>
@@ -682,7 +695,7 @@
   }
 
   // ===== 聚合器职场选题池 =====
-  const topicState = { items: [], kw: '', cluster: '', type: '', day: '' };
+  const topicState = { items: [], kw: '', cluster: '', type: '', day: '', xhs: '' };
   function fmtTime(ts){
     if(!ts) return '';
     const m = String(ts).match(/^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})/);
@@ -814,19 +827,51 @@
       renderTopics();
     } catch(e){ document.getElementById('topics-meta').textContent = '数据加载失败：'+e.message; }
   }
+  // ===== 小红书验证标记（localStorage 持久化，按文章 URL 记）=====
+  const XHS_KEY = 'xhs_verified_v1';
+  function xhsLoad(){ try{ return JSON.parse(localStorage.getItem(XHS_KEY)||'{}'); }catch(e){ return {}; } }
+  function xhsHas(url){ return !!xhsLoad()[url]; }
+  function xhsSet(url, on){
+    try{
+      const d = xhsLoad();
+      if(on) d[url] = Date.now(); else delete d[url];
+      localStorage.setItem(XHS_KEY, JSON.stringify(d));
+      return true;
+    }catch(e){ return false; }
+  }
+  function xhsBtnHtml(url){
+    return xhsHas(url)
+      ? '<button type="button" class="xhs-btn done" data-url="'+esc(url)+'" title="点击取消标记">小红书已验证 ✓</button>'
+      : '<button type="button" class="xhs-btn" data-url="'+esc(url)+'" title="去小红书搜这个选题，3天内互动高就点一下">小红书验证</button>';
+  }
+  function bindXhsFilter(id, state){
+    document.querySelectorAll('#'+id+' button').forEach(b=>{
+      b.addEventListener('click', ()=>{
+        state.xhs = b.dataset.xhs;
+        document.querySelectorAll('#'+id+' button').forEach(x=>{
+          const on = (x===b);
+          x.style.background = on ? '#ff2442' : '#fff';
+          x.style.color = on ? '#fff' : 'var(--ink)';
+          x.style.borderColor = on ? '#ff2442' : 'var(--line)';
+        });
+        if(id==='xhs-filter') renderTopics(); else renderEcom();
+      });
+    });
+  }
   function renderTopics(){
     const kw = topicState.kw.trim().toLowerCase();
     const list = topicState.items.filter(i =>
       (!kw || (i['标题']||'').toLowerCase().includes(kw)) &&
       (!topicState.cluster || i['问题簇']===topicState.cluster) &&
       (!topicState.type || i['内容类']===topicState.type) &&
-      (!topicState.day || isToday(i['抓取时间']))
+      (!topicState.day || isToday(i['抓取时间'])) &&
+      (!topicState.xhs || (topicState.xhs==='yes') === xhsHas(i['链接']))
     );
     const box = document.getElementById('topics-list');
     if (!list.length){ box.innerHTML = '<div class="tip-box">没有匹配的选题</div>'; return; }
     box.innerHTML = list.map(i=>{
       const sc = i['得分']||0;
-      return `<article class="write-card"><div class="write-top"><h3><a href="${esc(i['链接'])}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${esc(i['标题'])} ↗</a><button class="copy-btn" data-title="${esc(i['标题'])}" title="复制标题">复制</button></h3><span class="hot-label">${scoreLabel(sc)}</span></div><div class="write-tags"><span>${esc(i['问题簇']||'未归类')}</span><span>${esc(i['内容类']||'-')}</span><span>热度 ${esc(i['热度']||'-')}</span><span>${esc(i['来源']||'')}</span>${fetchTag(i['抓取时间'])}${i['发布时间']?`<span>${esc(i['发布时间'])}</span>`:''}</div></article>`;
+      return `<article class="write-card"><div class="write-top"><h3><a href="${esc(i['链接'])}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${esc(i['标题'])} ↗</a><button class="copy-btn" data-title="${esc(i['标题'])}" title="复制标题">复制</button></h3><span class="hot-label">${scoreLabel(sc)}</span></div><div class="write-tags"><span>${esc(i['问题簇']||'未归类')}</span><span>${esc(i['内容类']||'-')}</span><span>热度 ${esc(i['热度']||'-')}</span><span>${esc(i['来源']||'')}</span>${xhsBtnHtml(i['链接'])}${fetchTag(i['抓取时间'])}${i['发布时间']?`<span>${esc(i['发布时间'])}</span>`:''}</div></article>`;
     }).join('');
   }
   document.getElementById('topics-keyword').addEventListener('input', e=>{ topicState.kw = e.target.value; renderTopics(); });
@@ -842,21 +887,24 @@
   loadTopics();
   loadDuibiao();
   loadBriefings();
+  bindXhsFilter('xhs-filter', topicState);
+  bindXhsFilter('xhs-filter-ecom', ecomState);
 
   // ===== 07 电商/跨境选题 =====
-  const ecomState = { kw: '', day: '' };
+  const ecomState = { kw: '', day: '', xhs: '' };
   let ecomItems = [];
   function renderEcom(){
     const kw = ecomState.kw.trim().toLowerCase();
     const list = ecomItems.filter(i =>
       (!kw || (i['标题']||'').toLowerCase().includes(kw)) &&
-      (!ecomState.day || isToday(i['抓取时间']))
+      (!ecomState.day || isToday(i['抓取时间'])) &&
+      (!ecomState.xhs || (ecomState.xhs==='yes') === xhsHas(i['链接']))
     );
     const box = document.getElementById('ecom-list');
     if (!list.length){ box.innerHTML = '<div class="tip-box">没有匹配的电商选题</div>'; return; }
     box.innerHTML = list.map(i=>{
       const sc = i['得分']||0;
-      return `<article class="write-card"><div class="write-top"><h3><a href="${esc(i['链接'])}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${esc(i['标题'])} ↗</a><button class="copy-btn" data-title="${esc(i['标题'])}" title="复制标题">复制</button></h3><span class="hot-label">${scoreLabel(sc)}</span></div><div class="write-tags"><span>${esc(i['来源']||'')}</span><span>${esc(i['内容类']||'-')}</span>${fetchTag(i['抓取时间'])}${i['发布时间']?`<span>${esc(i['发布时间'])}</span>`:''}</div></article>`;
+      return `<article class="write-card"><div class="write-top"><h3><a href="${esc(i['链接'])}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${esc(i['标题'])} ↗</a><button class="copy-btn" data-title="${esc(i['标题'])}" title="复制标题">复制</button></h3><span class="hot-label">${scoreLabel(sc)}</span></div><div class="write-tags"><span>${esc(i['来源']||'')}</span><span>${esc(i['内容类']||'-')}</span>${xhsBtnHtml(i['链接'])}${fetchTag(i['抓取时间'])}${i['发布时间']?`<span>${esc(i['发布时间'])}</span>`:''}</div></article>`;
     }).join('');
   }
   async function loadEcom(){
@@ -914,6 +962,17 @@
     }else{
       b.textContent = '复制失败';
     }
+  });
+  // 小红书验证标记（点击切换，05/07 通用）
+  document.addEventListener('click', e=>{
+    const b = e.target.closest('.xhs-btn');
+    if(!b) return;
+    const url = b.dataset.url;
+    if(!url) return;
+    const on = xhsSet(url, !xhsHas(url));
+    if(!on){ b.textContent = '保存失败'; return; }
+    const cur05 = document.querySelector('.page.active')?.id === 'page-05';
+    if(cur05) renderTopics(); else renderEcom();
   });
 
   // ===== 注入数据（01 赛道 / 02 网站）=====
