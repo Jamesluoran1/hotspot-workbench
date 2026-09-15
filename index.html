@@ -584,6 +584,7 @@
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;">
             <input id="topics-keyword" placeholder="关键词筛选：裁员 / 涨薪 / 面试 / AI…" style="flex:1;min-width:220px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);">
             <div class="cselect" id="cs-cluster" style="flex:0 0 auto;min-width:150px;position:relative;z-index:30;"><button type="button" class="cselect-btn"><span class="cselect-label">全部问题簇</span><span class="cselect-arrow">▾</span></button><div class="cselect-menu"></div></div>
+            <div class="cselect" id="cs-src" style="flex:0 0 auto;min-width:150px;position:relative;z-index:29;"><button type="button" class="cselect-btn"><span class="cselect-label">全部来源</span><span class="cselect-arrow">▾</span></button><div class="cselect-menu"></div></div>
             <div class="cselect" id="cs-type" style="flex:0 0 auto;min-width:150px;position:relative;z-index:30;"><button type="button" class="cselect-btn"><span class="cselect-label">全部内容类</span><span class="cselect-arrow">▾</span></button><div class="cselect-menu"></div></div>
             <div id="day-filter" style="display:flex;gap:6px;flex:0 0 auto;">
               <button type="button" data-day="" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:var(--green);color:#fff;font-size:12px;cursor:pointer;">全部时间</button>
@@ -688,7 +689,7 @@
   }
 
   // ===== 聚合器职场选题池 =====
-  const topicState = { items: [], kw: '', cluster: '', type: '', day: '', plat: '', sort: '' };
+  const topicState = { items: [], kw: '', cluster: '', type: '', day: '', plat: '', sort: '', src: '' };
   function fmtTime(ts){
     if(!ts) return '';
     const m = String(ts).match(/^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})/);
@@ -879,6 +880,7 @@
       (!topicState.cluster || i['问题簇']===topicState.cluster) &&
       (!topicState.type || i['内容类']===topicState.type) &&
       (!topicState.day || isToday(i['抓取时间'])) &&
+      (!topicState.src || (i['媒体']||i['来源']||'')===topicState.src) &&
       (!topicState.plat || (topicState.plat==='multi' && (i._plat||0)>=2))
     );
     if (topicState.sort === 'heat') {
@@ -897,6 +899,7 @@
   document.getElementById('topics-keyword').addEventListener('input', e=>{ topicState.kw = e.target.value; renderTopics(); });
   makeSelect('cs-cluster','全部问题簇',()=>[...new Set(topicState.items.map(i=>i['问题簇']).filter(Boolean))],v=>{ topicState.cluster=v; renderTopics(); });
   makeSelect('cs-type','全部内容类',()=>[...new Set(topicState.items.map(i=>i['内容类']).filter(Boolean))],v=>{ topicState.type=v; renderTopics(); });
+  makeSelect('cs-src','全部来源',()=>{ const c={}; topicState.items.forEach(i=>{ const s=i['媒体']||i['来源']||''; if(s) c[s]=(c[s]||0)+1; }); return Object.keys(c).sort((a,b)=>c[b]-c[a]); },v=>{ topicState.src=v; renderTopics(); });
   document.querySelectorAll('#day-filter button').forEach(b=>{
     b.addEventListener('click', ()=>{
       topicState.day = b.dataset.day;
