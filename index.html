@@ -882,17 +882,38 @@
   });
   loadEcom();
 
-  // 复制标题按钮（事件委托，05/07 通用）
+  // 复制标题按钮（事件委托，05/07 通用；clipboard API 失败时回退 execCommand）
   document.addEventListener('click', async e=>{
     const b = e.target.closest('.copy-btn');
     if(!b) return;
     const t = b.dataset.title || '';
+    let ok = false;
     try{
-      await navigator.clipboard.writeText(t);
+      if(navigator.clipboard && window.isSecureContext){
+        await navigator.clipboard.writeText(t);
+        ok = true;
+      }
+    }catch(err){}
+    if(!ok){
+      try{
+        const ta = document.createElement('textarea');
+        ta.value = t;
+        ta.setAttribute('readonly','');
+        ta.style.position = 'fixed';
+        ta.style.top = '-999px';
+        document.body.appendChild(ta);
+        ta.select();
+        ok = document.execCommand('copy');
+        ta.remove();
+      }catch(err){ ok = false; }
+    }
+    if(ok){
       b.textContent = '已复制';
       b.classList.add('copied');
       setTimeout(()=>{ b.textContent = '复制'; b.classList.remove('copied'); }, 1500);
-    }catch(err){ b.textContent = '复制失败'; }
+    }else{
+      b.textContent = '复制失败';
+    }
   });
 
   // ===== 注入数据（01 赛道 / 02 网站）=====
