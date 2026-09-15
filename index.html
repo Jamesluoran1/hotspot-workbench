@@ -188,6 +188,10 @@
     .xhs-btn { padding: 2px 8px; font-size: 11px; border: 1px solid var(--line); border-radius: 6px; background: #fff; color: var(--ink-2); cursor: pointer; line-height: 1.5; }
     .xhs-btn:hover { border-color: #ff2442; color: #ff2442; }
     .xhs-btn.done { border-color: #ff2442; background: #fff0f2; color: #ff2442; font-weight: 700; }
+    .xhs-search { padding: 2px 8px; font-size: 11px; border: 1px solid #ffd6dd; border-radius: 6px; background: #fff; color: #ff2442; cursor: pointer; line-height: 1.5; text-decoration: none; }
+    .xhs-search:hover { background: #fff0f2; }
+    .wx-search { padding: 2px 8px; font-size: 11px; border: 1px solid #bfe8d6; border-radius: 6px; background: #fff; color: var(--green); cursor: pointer; line-height: 1.5; text-decoration: none; }
+    .wx-search:hover { background: var(--green-soft); }
     .write-card p { margin: 7px 0; color: var(--ink-2); font-size: 13px; line-height: 1.65; }
     .write-card p strong { color: var(--ink); }
     .write-title { margin-top: 12px !important; padding: 10px 12px; border-radius: 6px; color: #247263 !important; background: var(--green-soft); font-size: 13px !important; font-weight: 600; }
@@ -839,10 +843,14 @@
       return true;
     }catch(e){ return false; }
   }
-  function xhsBtnHtml(url){
-    return xhsHas(url)
-      ? '<button type="button" class="xhs-btn done" data-url="'+esc(url)+'" title="点击取消标记">小红书已验证 ✓</button>'
-      : '<button type="button" class="xhs-btn" data-url="'+esc(url)+'" title="去小红书搜这个选题，3天内互动高就点一下">小红书验证</button>';
+  function xhsBtnHtml(url, title){
+    const kw = encodeURIComponent(title);
+    const search = '<a class="xhs-search" href="https://www.xiaohongshu.com/search_result?keyword='+kw+'" target="_blank" rel="noopener" title="去小红书搜这个选题">小红书搜 ↗</a>';
+    const wx = '<a class="wx-search" href="https://weixin.sogou.com/weixin?type=2&amp;query='+kw+'" target="_blank" rel="noopener" title="搜微信看公众号发过没">微信搜 ↗</a>';
+    const mark = xhsHas(url)
+      ? '<button type="button" class="xhs-btn done" data-url="'+esc(url)+'" title="点击取消标记">已验证 ✓</button>'
+      : '<button type="button" class="xhs-btn" data-url="'+esc(url)+'" title="两边搜完互动高就点一下标记">标记</button>';
+    return search + wx + mark;
   }
   function bindXhsFilter(id, state){
     document.querySelectorAll('#'+id+' button').forEach(b=>{
@@ -871,7 +879,7 @@
     if (!list.length){ box.innerHTML = '<div class="tip-box">没有匹配的选题</div>'; return; }
     box.innerHTML = list.map(i=>{
       const sc = i['得分']||0;
-      return `<article class="write-card"><div class="write-top"><h3><a href="${esc(i['链接'])}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${esc(i['标题'])} ↗</a><button class="copy-btn" data-title="${esc(i['标题'])}" title="复制标题">复制</button></h3><span class="hot-label">${scoreLabel(sc)}</span></div><div class="write-tags"><span>${esc(i['问题簇']||'未归类')}</span><span>${esc(i['内容类']||'-')}</span><span>热度 ${esc(i['热度']||'-')}</span><span>${esc(i['来源']||'')}</span>${xhsBtnHtml(i['链接'])}${fetchTag(i['抓取时间'])}${i['发布时间']?`<span>${esc(i['发布时间'])}</span>`:''}</div></article>`;
+      return `<article class="write-card"><div class="write-top"><h3><a href="${esc(i['链接'])}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${esc(i['标题'])} ↗</a><button class="copy-btn" data-title="${esc(i['标题'])}" title="复制标题">复制</button></h3><span class="hot-label">${scoreLabel(sc)}</span></div><div class="write-tags"><span>${esc(i['问题簇']||'未归类')}</span><span>${esc(i['内容类']||'-')}</span><span>热度 ${esc(i['热度']||'-')}</span><span>${esc(i['来源']||'')}</span>${xhsBtnHtml(i['链接'], i['标题'])}${fetchTag(i['抓取时间'])}${i['发布时间']?`<span>${esc(i['发布时间'])}</span>`:''}</div></article>`;
     }).join('');
   }
   document.getElementById('topics-keyword').addEventListener('input', e=>{ topicState.kw = e.target.value; renderTopics(); });
@@ -902,7 +910,7 @@
     if (!list.length){ box.innerHTML = '<div class="tip-box">没有匹配的电商选题</div>'; return; }
     box.innerHTML = list.map(i=>{
       const sc = i['得分']||0;
-      return `<article class="write-card"><div class="write-top"><h3><a href="${esc(i['链接'])}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${esc(i['标题'])} ↗</a><button class="copy-btn" data-title="${esc(i['标题'])}" title="复制标题">复制</button></h3><span class="hot-label">${scoreLabel(sc)}</span></div><div class="write-tags"><span>${esc(i['来源']||'')}</span><span>${esc(i['内容类']||'-')}</span>${xhsBtnHtml(i['链接'])}${fetchTag(i['抓取时间'])}${i['发布时间']?`<span>${esc(i['发布时间'])}</span>`:''}</div></article>`;
+      return `<article class="write-card"><div class="write-top"><h3><a href="${esc(i['链接'])}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${esc(i['标题'])} ↗</a><button class="copy-btn" data-title="${esc(i['标题'])}" title="复制标题">复制</button></h3><span class="hot-label">${scoreLabel(sc)}</span></div><div class="write-tags"><span>${esc(i['来源']||'')}</span><span>${esc(i['内容类']||'-')}</span>${xhsBtnHtml(i['链接'], i['标题'])}${fetchTag(i['抓取时间'])}${i['发布时间']?`<span>${esc(i['发布时间'])}</span>`:''}</div></article>`;
     }).join('');
   }
   async function loadEcom(){
