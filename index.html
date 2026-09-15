@@ -887,8 +887,6 @@
   loadTopics();
   loadDuibiao();
   loadBriefings();
-  bindXhsFilter('xhs-filter', topicState);
-  bindXhsFilter('xhs-filter-ecom', ecomState);
 
   // ===== 07 电商/跨境选题 =====
   const ecomState = { kw: '', day: '', xhs: '' };
@@ -929,6 +927,8 @@
     });
   });
   loadEcom();
+  bindXhsFilter('xhs-filter', topicState);
+  bindXhsFilter('xhs-filter-ecom', ecomState);
 
   // 复制标题按钮（事件委托，05/07 通用；clipboard API 失败时回退 execCommand）
   document.addEventListener('click', async e=>{
