@@ -772,7 +772,10 @@
   function renderScan(){
     const items = topicState.items || [];
     const hotNum = x => Number(String(x||'').replace(/[^\d]/g,''))||0;
-    const pool = items.slice().sort((a,b)=> (Number(b['得分']||0)-Number(a['得分']||0)) || (hotNum(b['热度'])-hotNum(a['热度']))).slice(0,6);
+    // 「今日扫描结果」只看今天抓取的热点（8:30/23:30 各更新一批），避免显示昨日旧热点
+    const todayStr = new Date().toLocaleDateString('sv-SE'); // YYYY-MM-DD
+    const todayItems = items.filter(i => (i['抓取时间']||'').slice(0,10) === todayStr);
+    const pool = (todayItems.length ? todayItems : items).slice().sort((a,b)=> (Number(b['得分']||0)-Number(a['得分']||0)) || (hotNum(b['热度'])-hotNum(a['热度']))).slice(0,6);
     const head = document.getElementById('scan-head');
     const cnt = document.getElementById('scan-count');
     const list = document.getElementById('scan-list');
