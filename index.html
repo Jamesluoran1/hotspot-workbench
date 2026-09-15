@@ -650,7 +650,7 @@
   function scoreLabel(sc){ return sc >= 3 ? '选题池 A' : (sc === 2 ? '短内容 B' : '热度 C'); }
   async function loadBriefings(){
     try {
-      const r = await fetch('briefings.json', {cache:'no-store'});
+      const r = await fetch('briefings.json?t='+Date.now(), {cache:'no-store'});
       if (!r.ok) throw new Error('HTTP '+r.status);
       const d = await r.json();
       const box = document.getElementById('brief-list');
@@ -658,12 +658,12 @@
       const list = (d.briefings || []).slice().reverse();
       if(!list.length){ box.innerHTML = '<span style="background:#f0e6d6;color:#8a5a1e;">暂无归档</span>'; return; }
       box.innerHTML = list.map(b=>'<a href="'+esc(b['file']||'')+'" target="_blank" rel="noopener" style="display:inline-block;padding:6px 14px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);font-size:13px;text-decoration:none;margin:0 6px 6px 0;">'+esc(b['label']||b['d'])+' 热点简报 ↗</a>').join('');
-    } catch(e){ const box = document.getElementById('brief-list'); if(box) box.innerHTML = '<span style="background:#f0e6d6;color:#8a5a1e;">归档加载失败</span>'; }
+    } catch(e){ const box = document.getElementById('brief-list'); if(box) box.innerHTML = '<span style="background:#f0e6d6;color:#8a5a1e;">归档加载失败:'+esc(e.message)+'</span>'; }
   }
   const dbState = { items: [], kw: '', cat: '' };
   async function loadDuibiao(){
     try {
-      const r = await fetch('duibiao.json', {cache:'no-store'});
+      const r = await fetch('duibiao.json?t='+Date.now(), {cache:'no-store'});
       if (!r.ok) throw new Error('HTTP '+r.status);
       const d = await r.json();
       dbState.items = d.items || [];
@@ -744,7 +744,7 @@
   }
   async function loadTopics(){
     try {
-      const r = await fetch('workbench_topics.json', {cache:'no-store'});
+      const r = await fetch('workbench_topics.json?t='+Date.now(), {cache:'no-store'});
       if (!r.ok) throw new Error('HTTP '+r.status);
       const d = await r.json();
       topicState.items = d.items || [];
@@ -912,7 +912,7 @@
     const box = document.getElementById('board-list');
     box.innerHTML = '<div class="tip-box">加载中…</div>';
     try {
-      const r = await fetch(b.file, {cache:'no-store'});
+      const r = await fetch(b.file+'?t='+Date.now(), {cache:'no-store'});
       if (!r.ok) throw new Error('HTTP '+r.status);
       const d = await r.json();
       let rows, meta;
