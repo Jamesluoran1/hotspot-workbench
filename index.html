@@ -419,7 +419,7 @@
         </div>
         <div class="panel-body">
           <p style="margin:0; font-size:14px; line-height:1.8; color:var(--ink-2);">
-            ① 热点库与Skill → ② 用Skill生成文章 → ③ 植入人设调优 → ④ 转发朋友圈 → ⑤ 一键转贴图
+            ① 05 选热点 → ② 生成写作任务（素材+赛道+Skill规则，复制发给AI） → ③ AI 写出文章 → ④ 植入人设调优 → ⑤ 转发朋友圈/转贴图
           </p>
         </div>
       </div>
@@ -902,7 +902,7 @@
     const onlyRead = (document.getElementById('scan-only-read')||{}).checked;
     const daySel = wbScanDay;
     let pool = items.filter(i=>{
-      if(onlyRead && !(i['content_ok']===1 || i['content_ok']===undefined)) return false;
+      if(onlyRead && i['content_ok']!==1) return false;
       if(kw && !(i['标题']||'').toLowerCase().includes(kw)) return false;
       if(daySel==='today' && (i['抓取时间']||'').slice(0,10)!==todayStr) return false;
       if(range==='6h'){ const age=(Date.now()-new Date((i['抓取时间']||'').replace(' ','T')).getTime())/36e5; if(!isFinite(age)||age>6) return false; }
@@ -910,19 +910,33 @@
       if(range==='3d'){ const age=(Date.now()-new Date((i['抓取时间']||'').replace(' ','T')).getTime())/864e5; if(!isFinite(age)||age>3) return false; }
       return true;
     });
-    pool = (pool.length ? pool : items.slice()).sort((a,b)=>{
+    let sorted0 = (pool.length ? pool : items.slice()).sort((a,b)=>{
       const ga=wbGrade(a,track), gb=wbGrade(b,track);
       return (gb==='A')-(ga==='A') || (wbScore(b,track).total - wbScore(a,track).total) || (hotNum(b['热度'])-hotNum(a['热度']));
-    }).slice(0,12);
-    if(onlyA) pool = pool.filter(i=>wbGrade(i,track)==='A');
+    });
+    // 事件聚合：按「问题簇」把同一事件的多条报道合成一张卡（西贝倒闭传闻/回应/新品牌 = 一个事件）
+    const gmap={}, gorder=[];
+    sorted0.forEach(it=>{
+      const c=String(it['问题簇']||'').trim();
+      const key = c ? ('c__'+c) : ('s__'+(it['链接']||it['url']||it['标题']||Math.random()));
+      if(!gmap[key]){ gmap[key]=[]; gorder.push(key); }
+      gmap[key].push(it);
+    });
+    let cards = gorder.map(k=>{
+      const g=gmap[k].slice().sort((a,b)=>wbScore(b,track).total-wbScore(a,track).total);
+      return {main:g[0], sib:g.slice(1), cluster:(k.startsWith('c__')?k.slice(2):'')};
+    });
+    cards.sort((a,b)=>wbScore(b.main,track).total-wbScore(a.main,track).total);
+    if(onlyA) cards = cards.filter(g=>wbGrade(g.main,track)==='A');
+    cards = cards.slice(0,12);
     const head = document.getElementById('scan-head');
     const cnt = document.getElementById('scan-count');
     const list = document.getElementById('scan-list');
     if(!list) return;
     if(head) head.querySelector('strong').textContent = '今日扫描结果 · 自动精选'+(track?(' · '+track):'');
-    if(cnt) cnt.textContent = pool.length + ' 篇 · 综合评分 = 热度40% + 事实25% + Skill适配25% + 可信10%';
-    if(!pool.length){ list.innerHTML = '<p style="color:var(--muted);font-size:13px;">当前筛选下没有选题。调整筛选或等下一轮更新。</p>'; return; }
-    list.innerHTML = pool.map(it=>wbCardHtml(it)).join('');
+    if(cnt) cnt.textContent = cards.length + ' 个事件（同事件多条已聚合）· 综合评分 = 热度40% + 事实25% + Skill适配25% + 可信10%';
+    if(!cards.length){ list.innerHTML = '<p style="color:var(--muted);font-size:13px;">当前筛选下没有选题。调整筛选或等下一轮更新。</p>'; return; }
+    list.innerHTML = cards.map(g=>wbCardHtml(g.main,g.sib,g.cluster)).join('');
   }
   // ============ 05 Skill 管理 + 综合评分 + 二创角度（2026-09-19 大改造） ============
   const WB_SKILLS_KEY='wb_skills_v2', WB_BACKUP_KEY='wb_backup_v2', WB_TASK_KEY='wb_write_task_v2';
@@ -973,12 +987,17 @@
     if(file.size>2*1024*1024) throw new Error('ZIP 超过 2MB，请压缩后重试。');
     const zip=await JSZip.loadAsync(file);
     let mdEntry=null;
-    zip.forEach((path,entry)=>{ if(!entry.dir && /skill\.md$/i.test(path)) mdEntry=entry; });
-    if(!mdEntry) throw new Error('压缩包里没有找到 SKILL.md，无法识别 Skill。');
-    const md=await mdEntry.async('string');
+    const mdFiles=[];
+    zip.forEach((path,entry)=>{ if(!entry.dir && /\.md$/i.test(path)) mdFiles.push({path,entry}); });
+    const main=mdFiles.find(f=>/skill\.md$/i.test(f.path));
+    if(!main) throw new Error('压缩包里没有找到 SKILL.md，无法识别 Skill。');
+    const others=mdFiles.filter(f=>f!==main).sort((a,b)=>a.path.localeCompare(b.path));
+    const md=await main.entry.async('string');
+    let full=md;
+    for(const o of others){ try{ const c=await o.entry.async('string'); full+='\n\n\n========== 文件：'+o.path+' ==========\n'+c; }catch(e){} }
     const pr=wbParseSkillMd(md);
     const track=wbDetectTrack(pr.name+' '+pr.desc);
-    return {id:'sk'+Date.now().toString(36)+Math.random().toString(36).slice(2,6), name:pr.name, desc:pr.desc, track:track, content:md, uploadedAt:new Date().toLocaleString('zh-CN',{hour12:false}), def:false, file:file.name};
+    return {id:'sk'+Date.now().toString(36)+Math.random().toString(36).slice(2,6), name:pr.name, desc:pr.desc, track:track, content:full, uploadedAt:new Date().toLocaleString('zh-CN',{hour12:false}), def:false, file:file.name, fileCount:mdFiles.length};
   }
   function wbRenderSkillList(){
     const box=document.getElementById('wb-skill-list'); if(!box) return;
@@ -1035,7 +1054,7 @@
     return {total:total, heat:heat, fact:fact, fit:fit, trust:trust};
   }
   function wbGrade(it, track){
-    if(it['content_ok']===0) return '待观察';
+    if(it['content_ok']!==1) return '待观察';
     const total=wbScore(it, track).total;
     if(total>=80) return 'A'; if(total>=60) return 'B'; if(total>=40) return 'C';
     return '待观察';
@@ -1079,7 +1098,7 @@
   function wbBackupHas(url){ return !!wbBackupLoad()[url]; }
   function wbBackupSet(url,on){ try{ const d=wbBackupLoad(); if(on) d[url]=Date.now(); else delete d[url]; localStorage.setItem(WB_BACKUP_KEY,JSON.stringify(d)); return true; }catch(e){ return false; } }
   // 卡片 HTML
-  function wbCardHtml(it){
+  function wbCardHtml(it, siblings, clusterName){
     const t=it['标题']||'';
     const track=(document.getElementById('wb-track')||{}).value||'';
     const skill=wbSkillById((document.getElementById('wb-skill')||{}).value||'');
@@ -1087,6 +1106,7 @@
     const grade=wbGrade(it,track);
     const ang=wbAngles(it,track,skill);
     const readOk=(it['content_ok']===1);
+    const sibs=siblings||[];
     const multi=Number(it['多源数']||1);
     const backup=wbBackupHas(it['链接']||it['url']||'');
     const url=it['链接']||it['url']||'#';
@@ -1105,7 +1125,7 @@
       '<span>正文 <b>'+(readOk?'已读取':'不可读')+'</b></span>'+
       '<span>多源 <b>'+multi+'</b></span>'+
       '</div>'+
-      '<div class="wb-angles"><div class="a-title">'+(skill?esc('Skill「'+skill.name+'」生成的角度'):'二创角度（未选 Skill，按赛道生成）')+'</div>'+angleHtml+'</div>'+
+      '<div class="wb-angles"><div class="a-title">'+esc('当前赛道「'+(track||'通用热点')+'」生成的预设角度（Skill 仅作写作规则参考，未参与分析）')+'</div>'+angleHtml+'</div>'+
       '<div class="wb-actions">'+
       '<a href="'+esc(url)+'" target="_blank" rel="noopener">查看原文</a>'+
       '<button type="button" data-op="fact" data-idx="'+esc(url)+'">查看事实摘要</button>'+
@@ -1117,6 +1137,10 @@
       '</div>'+
       '<div class="wb-fact" data-for="'+esc(url)+'" style="display:none;"></div>'+
       '<div class="wb-src" data-for="'+esc(url)+'" style="display:none;font-size:12px;color:var(--muted);margin-top:6px;">其他来源：'+otherSrc+'</div>'+
+      (clusterName?'<div style="font-size:12px;color:#0f7a5a;margin-top:6px;">事件簇：'+esc(clusterName)+(sibs.length?(' · 本事件另有 '+sibs.length+' 条进展：'):'')+'</div>':'')+
+      (sibs.length?('<div style="font-size:12px;color:var(--muted);margin-top:4px;line-height:1.7;">'+
+        sibs.map(x=>'· '+esc((x['标题']||'').slice(0,42))+' <span style="opacity:.7">'+esc(x['来源']||'')+' '+esc(x['发布时间']||'')+'</span>').join('<br>')+
+        '</div>'):'')+
       '</article>';
   }
   function wbFindItem(url){ return (topicState.items||[]).find(i=>(i['链接']||i['url']||'')===url)||null; }
@@ -1140,8 +1164,8 @@
   }
   function wbBuildWriteCmd(task, skill){
     const skName=task.skillName||'（未上传 Skill，按通用写作规则）';
-    const skRules=skill?skill.content.slice(0,1500):'无';
-    const body=(task.content||'').slice(0,1200);
+    const skRules=skill?skill.content:'（未上传 Skill，按通用写作规则）';
+    const body=task.content||'';
     return ['请用选定的写作 Skill 完成这篇文章的创作。',
       '【写作赛道】'+task.track,
       '【写作 Skill】'+skName,
