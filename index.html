@@ -636,7 +636,13 @@
         <div class="page-head">
           <div class="page-badge">MODULE 07 · 电商/跨境选题</div>
           <h1>电商/跨境选题</h1>
-          <p>赢商网 · CBNData · 联商网 每日抓取（国内电商 + 出海跨境）。独立成类，不与职场选题混合。</p>
+          <p>赢商网 · CBNData · 联商网 · 今日热榜-购物 每 30 分钟抓取（国内电商 + 出海跨境）。独立成类，不与职场选题混合。</p>
+        </div>
+        <div class="panel">
+          <div class="panel-head" id="ecom-scan-head"><strong>今日扫描结果 · 自动精选</strong><span id="ecom-scan-count">加载中…</span></div>
+          <div class="panel-body">
+            <div id="ecom-scan-list" class="write-grid" style="margin-bottom:16px;"><p style="color:var(--muted);font-size:13px;">正在读取最新电商选题…</p></div>
+          </div>
         </div>
         <div class="panel">
           <div class="panel-head"><strong>电商选题</strong><span id="ecom-meta">加载中…</span></div>
@@ -931,6 +937,37 @@
       return `<article class="write-card"><div class="write-top"><h3><a href="${esc(i['链接'])}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${esc(i['标题'])} ↗</a><button class="copy-btn" data-title="${esc(i['标题'])}" title="复制标题">复制</button></h3><span class="hot-label">${scoreLabel(sc)}</span></div><div class="write-tags"><span>${esc(i['来源']||'')}</span><span>${esc(i['内容类']||'-')}</span>${xhsBtnHtml(i['链接'], i['标题'])}${fetchTag(i['抓取时间'])}${i['发布时间']?`<span>${esc(i['发布时间'])}</span>`:''}</div></article>`;
     }).join('');
   }
+  function renderEcomScan(){
+    // 07 电商池自动精选：复刻 05 renderScan，只看今天抓取，按得分+热度取前 6，A/B/C 评级
+    const items = ecomItems || [];
+    const hotNum = x => Number(String(x||'').replace(/[^\d]/g,''))||0;
+    const todayStr = new Date().toLocaleDateString('sv-SE');
+    const todayItems = items.filter(i => (i['抓取时间']||'').slice(0,10) === todayStr);
+    const pool = (todayItems.length ? todayItems : items).slice().sort((a,b)=> (Number(b['得分']||0)-Number(a['得分']||0)) || (hotNum(b['热度'])-hotNum(a['热度']))).slice(0,6);
+    const head = document.getElementById('ecom-scan-head');
+    const cnt = document.getElementById('ecom-scan-count');
+    const list = document.getElementById('ecom-scan-list');
+    if(!list) return;
+    if(head) head.querySelector('strong').textContent = '今日扫描结果 · 自动精选';
+    if(cnt) cnt.textContent = pool.length + ' 篇入选文章';
+    if(!pool.length){ list.innerHTML = '<p style="color:var(--muted);font-size:13px;">暂无 A/B 级选题，下一轮抓取后自动出现。</p>'; return; }
+    list.innerHTML = pool.map(it=>{
+      const t = it['标题']||'';
+      const s = Number(it['得分']||0);
+      const lab = s>=3 ? '优先 A' : (s===2 ? '优先 B' : '热度参考');
+      const cls = s>=3 ? 'A' : (s===2 ? 'B' : 'C');
+      const ct = it['内容类']||'';
+      const kw = (t.replace(/[，。！？、,.!?「」"'（）()·：:]/g,' ').trim().split(/\s+/).slice(0,4).join('、')) || '这件事';
+      let ang;
+      if(ct==='方法') ang = '写一篇「'+kw+'」清单型实操文章，把步骤拆成能照做的动作';
+      else if(ct==='判决') ang = '拆解事件：关键方回应 + 后续结果，写成案例分析';
+      else if(ct==='现场') ang = '还原现场细节与冲突，让读者代入，结尾给一个可执行动作';
+      else if(ct==='工具') ang = '把相关内容整理成模板/清单/自查表';
+      else ang = '从「'+kw+'」切入，拆成 3 个可写角度（是什么/为什么/怎么办）';
+      const spot = '「'+(t.length>18?t.slice(0,18)+'…':t)+'」——'+(it['问题簇']||'电商/跨境')+'赛道 · '+(it['来源']||'')+((it['热度']!==undefined && it['热度']!=='')?(' · 热度 '+it['热度']):'');
+      return '<article class="write-card"><div class="write-top"><h3><a href="'+esc(it['链接']||it['url']||'#')+'" target="_blank" rel="noopener" style="color:var(--ink); text-decoration:none;">'+esc(t)+' ↗</a></h3><span class="hot-label">'+lab+'</span></div><p><strong>爆点：</strong>'+esc(spot)+'</p><p class="write-title">二创角度：'+esc(ang)+'</p><div class="write-tags"><span>'+esc(it['问题簇']||'电商/跨境')+'</span><span>'+esc(ct||'电商')+'</span>'+fetchTag(it['抓取时间'])+'<span style="background:#f0e6d6;color:#8a5a1e;">'+cls+'级 '+s+'分</span></div></article>';
+    }).join('');
+  }
   async function loadEcom(){
     try{
       let data = window.__ECOM__;
@@ -941,6 +978,7 @@
       }
       ecomItems = data.items||[];
       document.getElementById('ecom-meta').textContent = `${ecomItems.length} 条 · 更新 ${data.updated||''}`;
+      renderEcomScan();
       renderEcom();
     }catch(e){ document.getElementById('ecom-meta').textContent = '数据加载失败：'+e.message; }
   }
