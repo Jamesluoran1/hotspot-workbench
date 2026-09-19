@@ -935,7 +935,12 @@
       if(sib.length && main && main['链接']){ window.__wbSiblings[main['链接']] = sib; }
       return {main:main, sib:sib, cluster:(k.startsWith('e__')?k.slice(2):'')};
     });
-    cards.sort((a,b)=>wbScore(b.main,track).total-wbScore(a.main,track).total);
+    cards.sort((a,b)=>{
+      // 多事件组（同事件有多条进展）优先排前，保证「查看事件进展」按钮不被切片截掉
+      const ga=(a.sib&&a.sib.length)?1:0, gb=(b.sib&&b.sib.length)?1:0;
+      if(gb!==ga) return gb-ga;
+      return wbScore(b.main,track).total-wbScore(a.main,track).total;
+    });
     if(onlyA) cards = cards.filter(g=>wbGrade(g.main,track)==='A');
     cards = cards.slice(0,12);
     const head = document.getElementById('scan-head');
