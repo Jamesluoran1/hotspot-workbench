@@ -363,7 +363,7 @@
       <div class="page-head">
         <div class="page-badge">MODULE 02 · 热点工作台 · 实时榜单</div>
         <h1>公众号热点工作台</h1>
-        <p>实时榜单（每日更新）+ 139 个网站导航</p>
+        <p>热点榜单定时更新，具体频率以各来源任务为准。+ 139 个网站导航</p>
       </div>
 
       <div class="panel">
@@ -806,7 +806,7 @@
     document.getElementById('check-progress').textContent = `当前检查进度 ${done} / ${total}`;
   }
 
-  // ===== 聚合器职场选题池 =====
+  // ===== 聚合器可写选题池 =====
   const topicState = { items: [], kw: '', cluster: '', type: '', day: '', plat: '', sort: '', src: '', media: '' };
   function fmtTime(ts){
     if(!ts) return '';
@@ -1688,7 +1688,7 @@
     {id:'github', label:'GitHub', file:'raw_github.json'},
     {id:'hot', label:'榜中榜', file:'raw_hot.json'},
     {id:'weixin', label:'微信热文', file:'raw_weixin.json'},
-    {id:'topics', label:'职场选题池', file:'workbench_topics.json'}
+    {id:'topics', label:'可写选题池', file:'workbench_topics.json'}
   ];
   const boardState = {cur:'zhihu'};
   function renderBoardTabs(){
