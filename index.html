@@ -663,15 +663,15 @@
               <button type="button" data-grade="A" class="wb-btn">A</button>
               <button type="button" data-grade="B" class="wb-btn">B</button>
               <button type="button" data-grade="C" class="wb-btn">C</button>
-              <button type="button" data-grade="待核实" class="wb-btn">待核实</button>
             </span>
-            <button type="button" data-day="" class="wb-btn primary" id="scan-day-all">全部时间</button>
-            <button type="button" data-day="today" class="wb-btn" id="scan-day-today">仅今天</button>
-            <label class="wb-field" style="cursor:pointer;"><input type="checkbox" id="scan-only-read"> 仅正文可读</label>
+            <button type="button" data-day="today" class="wb-btn primary" id="scan-day-today">今天</button>
+            <button type="button" data-day="yesterday" class="wb-btn" id="scan-day-yesterday">昨天</button>
+            <button type="button" data-day="day-before" class="wb-btn" id="scan-day-before">前天</button>
+            <button type="button" data-day="" class="wb-btn" id="scan-day-all">近3天</button>
           </div>
           <div id="scan-list" class="write-grid" style="margin-bottom:16px;"><p style="color:var(--muted);font-size:13px;">正在读取最新选题…</p></div>
-          <div id="scan-pending-block" style="margin:10px 0 16px;border-top:1px dashed var(--line);padding-top:10px;">
-            <div id="scan-pending-head" style="cursor:pointer;font-size:13px;font-weight:600;color:var(--accent);user-select:none;">▸ 待核实热点区</div>
+          <div id="scan-pending-block" style="margin:10px 0 16px;border-top:1px dashed var(--line);padding-top:10px;display:none;">
+            <div id="scan-pending-head" style="cursor:pointer;font-size:13px;font-weight:600;color:var(--accent);user-select:none;">▸ 正文验证进度</div>
             <div id="scan-pending-body" class="write-grid" style="display:none;margin-top:10px;"></div>
           </div>
           <div class="panel-head" id="brief-panel" style="margin:0 -18px 14px; border-top:1px solid var(--line);"><strong>每日热点简报归档</strong><span>点日期打开当天热点简报</span></div>
@@ -876,7 +876,11 @@
       : '<span style="background:#eef1f0;color:#738387;">抓取 '+fmtTime(ts)+'</span>';
   }
   function esc(s){ return (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
-  function scoreLabel(sc){ return sc >= 3 ? '选题池 A' : (sc === 2 ? '短内容 B' : '热度 C'); }
+  function scoreLabel(it){ 
+    // 第5批：直接读后台评级
+    const g = it && it['评级'];
+    return g || '';
+  }
   async function loadBriefings(){
     try {
       const r = await fetch('briefings.json?t='+Date.now(), {cache:'no-store'});
@@ -943,7 +947,7 @@
     const daySel = wbScanDay;
     // 统计
     const allToday = items.filter(i => (i['抓取时间']||'').slice(0,10) === todayStr);
-    const gradeCount = {A:0,B:0,C:0,待核实:0};
+    const gradeCount = {A:0,B:0,C:0};
     items.forEach(i=>{ const g=i['评级']||''; if(gradeCount[g]!==undefined) gradeCount[g]++; });
     const bs = window.__WB_STATS__ || {};
     const okN = bs['正文成功'] !== undefined ? bs['正文成功'] : items.filter(i=>i['content_ok']===1).length;
