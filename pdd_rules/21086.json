@@ -1,0 +1,28 @@
+{
+ "id": 21086,
+ "title": "商家客服考核恢复",
+ "boards": [
+  "公告专区"
+ ],
+ "cluster": "平台新规",
+ "content_type": "规则更新",
+ "score": 8,
+ "acquire_score": 6,
+ "publish_time": "2025-02-18",
+ "fetched_at": "2026-09-20 03:24:49",
+ "content_ok": 1,
+ "content_len": 130,
+ "content": "平台将于4月7日0点起恢复“5分钟回复率”考核及“近30天投诉率”的统计。“3分钟人工回复率”考核的切换将后续通知。\n店铺的回复率数据详见：https://mms.pinduoduo.com/mms-chat/overview/store\n感谢您的理解与配合！",
+ "all_urls": [
+  "https://mms.pinduoduo.com/other/rule?id=777"
+ ],
+ "versions": [
+  {
+   "title": "商家客服考核恢复",
+   "board": "公告专区",
+   "publish_time": "2025-02-18",
+   "url": "https://mms.pinduoduo.com/other/rule?id=777",
+   "content_ok": 1
+  }
+ ]
+}

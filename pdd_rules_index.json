@@ -1,0 +1,4905 @@
+{
+ "title": "拼多多完整规则库",
+ "updated": "2026-09-20 17:42:21",
+ "total": 283,
+ "has_content": 272,
+ "no_content": 11,
+ "in_2026": 250,
+ "recent_30d": 24,
+ "selected_count": 203,
+ "items": [
+  {
+   "id": 20727,
+   "title": "关于开展“清朗浦江·世界技能大赛网络环境整治”专项行动的公告",
+   "boards": [
+    "公告",
+    "最新规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-09-16",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 778,
+   "version_count": 2,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2385"
+  },
+  {
+   "id": 20726,
+   "title": "关于严禁售卖猫、狗肉及相关商品的公告",
+   "boards": [
+    "公告",
+    "最新规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-09-16",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 625,
+   "version_count": 2,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2386"
+  },
+  {
+   "id": 20725,
+   "title": "关于开展老花镜商品变焦功能虚假宣传治理公告",
+   "boards": [
+    "公告",
+    "最新规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-09-16",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 930,
+   "version_count": 2,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2387"
+  },
+  {
+   "id": 20724,
+   "title": "关于严禁售卖涉“定位修改、IP修改及虚假考勤”类违规商品的专项治理公告",
+   "boards": [
+    "公告",
+    "最新规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 10,
+   "publish_time": "2026-09-16",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 636,
+   "version_count": 2,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2388"
+  },
+  {
+   "id": 20729,
+   "title": "关于活体动物类商品的专项治理公告",
+   "boards": [
+    "公告",
+    "最新规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-09-15",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2101,
+   "version_count": 2,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2383"
+  },
+  {
+   "id": 20728,
+   "title": "关于开展境外电话卡类商品描述不符违规行为的治理公告",
+   "boards": [
+    "公告",
+    "最新规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 10,
+   "publish_time": "2026-09-15",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1119,
+   "version_count": 2,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2384"
+  },
+  {
+   "id": 20742,
+   "title": "《偏远地区中转软件服务规则》更新意见征集（2026.9.6）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "最新规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-09-06",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2901,
+   "version_count": 4,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2366"
+  },
+  {
+   "id": 20733,
+   "title": "关于孕婴童用品虚假宣传可入口商品专项治理公告",
+   "boards": [
+    "公告",
+    "最新规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-09-09",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 876,
+   "version_count": 2,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2379"
+  },
+  {
+   "id": 20732,
+   "title": "关于进一步加强“AB货”问题专项治理公告",
+   "boards": [
+    "公告",
+    "最新规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-09-09",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 971,
+   "version_count": 2,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2381"
+  },
+  {
+   "id": 20744,
+   "title": "《价格保护服务规则》更新意见征集（2026.09.01）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "最新规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-09-01",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3605,
+   "version_count": 4,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2370"
+  },
+  {
+   "id": 20737,
+   "title": "关于加强打击非法售卖人民币活动的治理公告",
+   "boards": [
+    "公告",
+    "最新规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-09-08",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1084,
+   "version_count": 2,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2376"
+  },
+  {
+   "id": 20758,
+   "title": "《物流拦截技术支持服务规则》更新意见征集（2026.08.23）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "最新规则",
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-08-23",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2218,
+   "version_count": 4,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2356"
+  },
+  {
+   "id": 20735,
+   "title": "物流拦截技术支持服务规则",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-09-08",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2016,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1619"
+  },
+  {
+   "id": 20745,
+   "title": "《“评价有礼”服务条款》更新意见征集（2026.08.31）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "最新规则"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 0,
+   "acquire_score": 0,
+   "publish_time": "2026-08-31",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2250,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2369"
+  },
+  {
+   "id": 20850,
+   "title": "《黑标商品技术服务费一览表》更新意见征集（2026.6.29）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "最新规则",
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 12,
+   "publish_time": "2026-06-29",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 23621,
+   "version_count": 8,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2271"
+  },
+  {
+   "id": 20852,
+   "title": "《“百亿补贴”技术服务费一览表》更新意见征集（2026.6.29）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "最新规则",
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 12,
+   "publish_time": "2026-06-29",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 23632,
+   "version_count": 9,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2273"
+  },
+  {
+   "id": 20748,
+   "title": "《类目技术服务费一览表》更新意见征集（2026.8.30）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "最新规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 14,
+   "publish_time": "2026-08-30",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 4701,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2365"
+  },
+  {
+   "id": 20738,
+   "title": "关于农药商品超登记范围宣传专项治理公告",
+   "boards": [
+    "公告",
+    "最新规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-09-07",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1192,
+   "version_count": 2,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2375"
+  },
+  {
+   "id": 21084,
+   "title": "受自然灾害影响部分地区发货违规赔付调整公告",
+   "boards": [
+    "公告专区"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 4,
+   "publish_time": "2026-09-04",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 9401,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1446"
+  },
+  {
+   "id": 20743,
+   "title": "关于开展电线电缆类商品专项治理的公告",
+   "boards": [
+    "公告",
+    "最新规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-09-04",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 715,
+   "version_count": 2,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2371"
+  },
+  {
+   "id": 20747,
+   "title": "关于进一步加强瓶装液化石油气调压器及燃气软管专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-08-30",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1128,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2367"
+  },
+  {
+   "id": 20778,
+   "title": "《旗舰店考核规范》意见征集（2026.08.05）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 2,
+   "publish_time": "2026-08-05",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1135,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2338"
+  },
+  {
+   "id": 20751,
+   "title": "旗舰店考核规范",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 2,
+   "publish_time": "2026-08-29",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 959,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2362"
+  },
+  {
+   "id": 20772,
+   "title": "《商家版极速退款服务条款》更新意见征集（2026.08.09）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-09",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1447,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2342"
+  },
+  {
+   "id": 20754,
+   "title": "商家版极速退款服务条款",
+   "boards": [
+    "服务协议"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-25",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1261,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=429"
+  },
+  {
+   "id": 20753,
+   "title": "关于进一步加强生肉类商品专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-08-25",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 688,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2360"
+  },
+  {
+   "id": 20757,
+   "title": "关于进一步开展种子种苗资质核验的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-08-24",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1354,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2357"
+  },
+  {
+   "id": 20756,
+   "title": "关于禁止售卖现役、退役军服及其服饰配件的专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-08-24",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 927,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2358"
+  },
+  {
+   "id": 20760,
+   "title": "关于进一步明确亚硝酸盐相关商品禁售的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-08-20",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 615,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2354"
+  },
+  {
+   "id": 20759,
+   "title": "关于进一步规范高锰酸钾商品合规发布的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-08-20",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 477,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2355"
+  },
+  {
+   "id": 20761,
+   "title": "关于规范食品类商品净含量信息描述的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-08-18",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 926,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2353"
+  },
+  {
+   "id": 20763,
+   "title": "关于进一步开展SKU发布不规范专项治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 12,
+   "publish_time": "2026-08-17",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1077,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2352"
+  },
+  {
+   "id": 20762,
+   "title": "关于规范上传商品包装标签图的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-08-17",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 5567,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2351"
+  },
+  {
+   "id": 20766,
+   "title": "关于水果生鲜行业存在虚假宣传过度承诺问题的专项治理公告 ",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-08-14",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1420,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2348"
+  },
+  {
+   "id": 20765,
+   "title": "关于开展“清朗·未成年人网络保护”专项行动的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-08-14",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1507,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2349"
+  },
+  {
+   "id": 20767,
+   "title": "玩具及儿童用品新国标公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-08-13",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 6587,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2347"
+  },
+  {
+   "id": 20769,
+   "title": "关于开展“户外燃气燃烧器具”商品的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-08-12",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 543,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2345"
+  },
+  {
+   "id": 20770,
+   "title": "关于网售无人机销售实名登记管理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-08-11",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 910,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2344"
+  },
+  {
+   "id": 20774,
+   "title": "《保证金规则》更新生效通知【2026.08.09】",
+   "boards": [
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 12,
+   "publish_time": "2026-08-09",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 13775,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2324"
+  },
+  {
+   "id": 20773,
+   "title": "保证金规则",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 12,
+   "publish_time": "2026-08-09",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 13664,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1"
+  },
+  {
+   "id": 20771,
+   "title": "关于平台加强奶粉类商品治理专项公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-08-09",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1617,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2343"
+  },
+  {
+   "id": 20777,
+   "title": "关于开展电动自行车类商品的专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-08-07",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2157,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2339"
+  },
+  {
+   "id": 20776,
+   "title": "关于进一步规范商家AI生成图片合规应用的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-08-07",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1720,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2340"
+  },
+  {
+   "id": 20775,
+   "title": "关于进一步开展商品产地等虚假宣传专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-08-07",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 895,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2341"
+  },
+  {
+   "id": 20780,
+   "title": "《商品保质期管理规范》生效通知【2026.08.05】",
+   "boards": [
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-08-05",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3405,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2316"
+  },
+  {
+   "id": 20779,
+   "title": "商品保质期管理规范",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 2,
+   "publish_time": "2026-08-05",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3265,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2313"
+  },
+  {
+   "id": 20784,
+   "title": "关于禁止售卖共享账号类商品的专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-08-02",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 411,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2334"
+  },
+  {
+   "id": 20783,
+   "title": "关于禁止售卖分期交付虚拟商品的专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-08-02",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 476,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2335"
+  },
+  {
+   "id": 20782,
+   "title": "关于违规引导消费者线下分期支付的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 6,
+   "publish_time": "2026-08-02",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 605,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2336"
+  },
+  {
+   "id": 20781,
+   "title": "关于加强商品描述不符违规行为专项治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-08-02",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1458,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2337"
+  },
+  {
+   "id": 20785,
+   "title": "《保证金规则》更新公示通知【2026.08.01】",
+   "boards": [
+    "更新公示"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 12,
+   "publish_time": "2026-08-01",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 13819,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2323"
+  },
+  {
+   "id": 20791,
+   "title": "《店铺命名信息规则》更新生效通知 （2026.07.31）",
+   "boards": [
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-07-31",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3724,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2327"
+  },
+  {
+   "id": 20790,
+   "title": "店铺命名信息规则",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-07-31",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3598,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=4"
+  },
+  {
+   "id": 20809,
+   "title": "《平台发货规则》更新意见征集（2026.07.15）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 6,
+   "publish_time": "2026-07-15",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 13221,
+   "version_count": 6,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2309"
+  },
+  {
+   "id": 20788,
+   "title": "平台发货规则",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-07-31",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 13032,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=8"
+  },
+  {
+   "id": 20787,
+   "title": "关于持续开展品牌资质核验的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-07-31",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1023,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2332"
+  },
+  {
+   "id": 20786,
+   "title": "关于平台开展手机卡相关商品专项治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-07-31",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 429,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2333"
+  },
+  {
+   "id": 20795,
+   "title": "关于严禁发布、售卖无人机破解、反制、代飞等违规商品及服务的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 10,
+   "publish_time": "2026-07-30",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 633,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2328"
+  },
+  {
+   "id": 20794,
+   "title": "关于严禁发布、售卖伪造、变造机动车号牌等违规商品及服务的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-07-30",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 591,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2330"
+  },
+  {
+   "id": 20793,
+   "title": "商家寄件物流服务协议",
+   "boards": [
+    "协议"
+   ],
+   "cluster": "选品案例",
+   "content_type": "商家案例",
+   "score": 2,
+   "acquire_score": 4,
+   "publish_time": "2026-07-30",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 7707,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2329"
+  },
+  {
+   "id": 20802,
+   "title": "《商家寄件物流服务协议》更新公示通知（2026.7.22）",
+   "boards": [
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "选品案例",
+   "content_type": "商家案例",
+   "score": 2,
+   "acquire_score": 4,
+   "publish_time": "2026-07-22",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 7882,
+   "version_count": 2,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2318"
+  },
+  {
+   "id": 20804,
+   "title": "《商品保质期管理规范》意见征集（2026.07.20）",
+   "boards": [
+    "公告",
+    "更新公示"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 2,
+   "publish_time": "2026-07-20",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3457,
+   "version_count": 2,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2314"
+  },
+  {
+   "id": 20797,
+   "title": "关于开展店铺实际经营地址核验的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "国内品牌",
+   "content_type": "品牌案例",
+   "score": 6,
+   "acquire_score": 2,
+   "publish_time": "2026-07-27",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 801,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2325"
+  },
+  {
+   "id": 20798,
+   "title": "《保证金规则》更新意见征集【2026.07.24】",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 12,
+   "publish_time": "2026-07-24",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 13836,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2322"
+  },
+  {
+   "id": 20800,
+   "title": "《店铺命名信息规则》更新公示通知 （2026.07.23）",
+   "boards": [
+    "更新公示"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-07-23",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3764,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2320"
+  },
+  {
+   "id": 20799,
+   "title": "关于进一步提醒商家办理市场主体登记的重要通知",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "选品案例",
+   "content_type": "商家案例",
+   "score": 0,
+   "acquire_score": 2,
+   "publish_time": "2026-07-23",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1113,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2321"
+  },
+  {
+   "id": 20803,
+   "title": "关于开展影响未成年人身心健康商品及内容专项治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-07-20",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1546,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2317"
+  },
+  {
+   "id": 20805,
+   "title": "关于“香港大药房”相关标识虚假宣传问题的专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-07-19",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 715,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2312"
+  },
+  {
+   "id": 20840,
+   "title": "《图书市场管理规范》更新意见征集（2026.07.02）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 0,
+   "publish_time": "2026-07-02",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2839,
+   "version_count": 6,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2278"
+  },
+  {
+   "id": 20806,
+   "title": "图书市场管理规范",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 2,
+   "publish_time": "2026-07-18",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2648,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=918"
+  },
+  {
+   "id": 20808,
+   "title": "关于规范销售槟榔及其提取物生产加工制品的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-07-16",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 829,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2310"
+  },
+  {
+   "id": 20817,
+   "title": "《店铺命名信息规则》更新意见征集 （2026.07.15）",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-07-15",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3794,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2307"
+  },
+  {
+   "id": 20851,
+   "title": "《直播技术服务费一览表》更新意见征集（2026.6.29）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 12,
+   "publish_time": "2026-06-29",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 25439,
+   "version_count": 6,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2272"
+  },
+  {
+   "id": 20813,
+   "title": "“百亿补贴”技术服务费一览表        ",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 12,
+   "publish_time": "2026-07-15",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 23409,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1315"
+  },
+  {
+   "id": 20812,
+   "title": "黑标商品技术服务费一览表",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 12,
+   "publish_time": "2026-07-15",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 23409,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1736"
+  },
+  {
+   "id": 20811,
+   "title": "直播技术服务费一览表",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 12,
+   "publish_time": "2026-07-15",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 25235,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1314"
+  },
+  {
+   "id": 20810,
+   "title": "关于开展店铺联系方式核验的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-07-15",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 614,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2308"
+  },
+  {
+   "id": 20818,
+   "title": "《商家寄件物流服务协议》更新意见征集（2026.7.14） ",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "选品案例",
+   "content_type": "商家案例",
+   "score": 2,
+   "acquire_score": 4,
+   "publish_time": "2026-07-14",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 7921,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2303"
+  },
+  {
+   "id": 20820,
+   "title": "关于加强商品货不对板违规行为治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-07-13",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1085,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2301"
+  },
+  {
+   "id": 20819,
+   "title": "关于电子产品类商品禁止诱导消费者额外充值的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-07-13",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 841,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2302"
+  },
+  {
+   "id": 20821,
+   "title": "关于平台加强商品效期管控的通知",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 6,
+   "publish_time": "2026-07-10",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1737,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2300"
+  },
+  {
+   "id": 20860,
+   "title": "《医药健康市场管理规范》更新意见征集（2026.06.23）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 2,
+   "publish_time": "2026-06-23",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 7832,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2264"
+  },
+  {
+   "id": 20823,
+   "title": "医药健康市场管理规范",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 2,
+   "publish_time": "2026-07-09",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 7505,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=298"
+  },
+  {
+   "id": 20825,
+   "title": "关于加强直播主体治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-07-08",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 903,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2297"
+  },
+  {
+   "id": 20834,
+   "title": "关于严禁不当使用军警、国家机关相关标识宣传商品的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-07-06",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 625,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2288"
+  },
+  {
+   "id": 20833,
+   "title": "关于规范商家AI技术应用的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-07-06",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1336,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2289"
+  },
+  {
+   "id": 20832,
+   "title": "关于发布、售卖“重点保护古生物化石”商品相关违规行为的专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-07-06",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 592,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2290"
+  },
+  {
+   "id": 20831,
+   "title": "关于规范特许养殖水产、特许养殖肉类商品发布及售卖的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-07-06",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1292,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2291"
+  },
+  {
+   "id": 20830,
+   "title": "关于对违规获取、使用个人隐私信息相关商品及服务开展专项治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-07-06",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 748,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2292"
+  },
+  {
+   "id": 20829,
+   "title": "关于使用平台电子面单规范物流发货的通知",
+   "boards": [
+    "通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 4,
+   "publish_time": "2026-07-06",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 348,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2293"
+  },
+  {
+   "id": 20839,
+   "title": "关于开展“诱导好评”违规行为专项治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-07-05",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 957,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2283"
+  },
+  {
+   "id": 20838,
+   "title": "关于严禁作出返现承诺类虚假宣传的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-07-05",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 490,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2284"
+  },
+  {
+   "id": 20837,
+   "title": "关于规范“红包类”商品发布及宣传的专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-07-05",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 548,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2285"
+  },
+  {
+   "id": 20836,
+   "title": "关于严禁作出过度承诺类虚假宣传的专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-07-05",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 888,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2286"
+  },
+  {
+   "id": 20835,
+   "title": "关于“诱导消费者提前确认收货”相关违规行为治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-07-05",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 640,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2287"
+  },
+  {
+   "id": 20875,
+   "title": "《平台大闸蟹市场管理规范》更新意见征集（2026.06.15）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 4,
+   "publish_time": "2026-06-15",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 6032,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2248"
+  },
+  {
+   "id": 20876,
+   "title": "《平台2026年度大闸蟹提货券市场管理规范》意见征集（2026.06.15）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 4,
+   "publish_time": "2026-06-15",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2789,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2249"
+  },
+  {
+   "id": 20843,
+   "title": "平台2026年度大闸蟹提货券市场管理规范",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 4,
+   "publish_time": "2026-07-01",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2535,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2281"
+  },
+  {
+   "id": 20842,
+   "title": "平台大闸蟹市场管理规范",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 4,
+   "publish_time": "2026-07-01",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 5818,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1556"
+  },
+  {
+   "id": 20849,
+   "title": "关于直播间售卖【珠宝/钻石/翡翠/黄金】类商品专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-06-29",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1461,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2274"
+  },
+  {
+   "id": 20848,
+   "title": "关于加强发布、销售仿冒药品等违规行为的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-06-29",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 919,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2275"
+  },
+  {
+   "id": 20847,
+   "title": "关于严禁展示及售卖虚拟货币相关商品或服务的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-06-29",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 889,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2277"
+  },
+  {
+   "id": 20846,
+   "title": "关于进一步规范平台内商家兽药经营行为的特别提示",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "选品案例",
+   "content_type": "商家案例",
+   "score": 2,
+   "acquire_score": 4,
+   "publish_time": "2026-06-29",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1149,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2276"
+  },
+  {
+   "id": 20855,
+   "title": "关于开展违规电动四轮车治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-06-26",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1312,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2270"
+  },
+  {
+   "id": 20854,
+   "title": "关于加强抽奖类虚拟商品治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-06-26",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 786,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2268"
+  },
+  {
+   "id": 20853,
+   "title": "关于加强流量充值类商品“代扣话费、积分充值”违规行为治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 12,
+   "publish_time": "2026-06-26",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 450,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2269"
+  },
+  {
+   "id": 20858,
+   "title": "关于进一步加强酒类商品专项治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-06-25",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1937,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2266"
+  },
+  {
+   "id": 20901,
+   "title": "《特定类目市场管理规范一览表》更新意见征集（2026.06.09）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-06-09",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2100,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2224"
+  },
+  {
+   "id": 20856,
+   "title": "特定类目市场管理规范一览表",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-06-25",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1899,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1546"
+  },
+  {
+   "id": 20859,
+   "title": "关于进一步加强“拼豆/捏捏乐”类商品专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-06-24",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1414,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2265"
+  },
+  {
+   "id": 20866,
+   "title": "关于严禁使用低俗图片进行商品宣传的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-06-22",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 780,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2260"
+  },
+  {
+   "id": 20865,
+   "title": "关于加强平台金融跨境投资相关商品或服务的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "跨境出海",
+   "content_type": "出海情报",
+   "score": 6,
+   "acquire_score": 0,
+   "publish_time": "2026-06-22",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 773,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2263"
+  },
+  {
+   "id": 20864,
+   "title": "关于严禁不当使用“军人、警察形象”宣传商品的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-06-22",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 670,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2261"
+  },
+  {
+   "id": 20863,
+   "title": "关于严禁不当展示及售卖“涉破坏国家统一”违规商品及信息的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-06-22",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 966,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2262"
+  },
+  {
+   "id": 20871,
+   "title": "关于开展商家履约风险专项治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-06-17",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1589,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2253"
+  },
+  {
+   "id": 20870,
+   "title": "关于违规宣传“淘金类”商品专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 10,
+   "publish_time": "2026-06-17",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 684,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2254"
+  },
+  {
+   "id": 20869,
+   "title": "关于严禁作出收益承诺类虚假宣传的专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-06-17",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 934,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2255"
+  },
+  {
+   "id": 20868,
+   "title": "关于加强对发布混淆诱导信息违规行为治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 10,
+   "publish_time": "2026-06-17",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1496,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2256"
+  },
+  {
+   "id": 20867,
+   "title": "关于加强手机卡类商品治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-06-17",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1570,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2257"
+  },
+  {
+   "id": 20874,
+   "title": "关于开展商家店铺联系手机号定期核验的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-06-16",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 470,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2250"
+  },
+  {
+   "id": 20873,
+   "title": "关于进一步加强营业执照状态异常专项治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-06-16",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1106,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2251"
+  },
+  {
+   "id": 20913,
+   "title": "《品质包装服务条款》意见征集（2026.05.29）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 4,
+   "publish_time": "2026-05-29",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1870,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2212"
+  },
+  {
+   "id": 20879,
+   "title": "品质包装服务条款",
+   "boards": [
+    "服务协议"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 6,
+   "publish_time": "2026-06-14",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1681,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2244"
+  },
+  {
+   "id": 20878,
+   "title": "关于规范“防蚊驱蚊类”商品发布的专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-06-14",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1021,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2246"
+  },
+  {
+   "id": 20877,
+   "title": "关于严禁展示及售卖“节电器”及“电动车增程器、稳压器、电池修复器”商品的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-06-14",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 454,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2247"
+  },
+  {
+   "id": 20886,
+   "title": "关于开展医药商家违规异地发货专项治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-06-12",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 555,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2240"
+  },
+  {
+   "id": 20885,
+   "title": "关于规范新鲜杨梅类商品信息的专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-06-12",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 666,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2241"
+  },
+  {
+   "id": 20884,
+   "title": "关于加强清理发布人脉资源类商品或服务的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-06-12",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 442,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2239"
+  },
+  {
+   "id": 20883,
+   "title": "关于加强网络赚钱教程、兼职类商品治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 17,
+   "acquire_score": 15,
+   "publish_time": "2026-06-12",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 612,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2242"
+  },
+  {
+   "id": 20916,
+   "title": "《“百亿补贴”活动规则》更新意见征集（2026.5.27）",
+   "boards": [
+    "公告",
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 12,
+   "publish_time": "2026-05-27",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 6963,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2209"
+  },
+  {
+   "id": 20881,
+   "title": "“百亿补贴”活动规则",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 12,
+   "publish_time": "2026-06-12",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 6752,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=627"
+  },
+  {
+   "id": 20892,
+   "title": "关于家电品牌违规宣传的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-06-11",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1072,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2233"
+  },
+  {
+   "id": 20891,
+   "title": "关于加强山寨商品治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-06-11",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 694,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2234"
+  },
+  {
+   "id": 20890,
+   "title": "关于严禁展示及售卖“代办虚假证件、报告类”商品及服务的专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 13,
+   "acquire_score": 2,
+   "publish_time": "2026-06-11",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1857,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2235"
+  },
+  {
+   "id": 20889,
+   "title": "关于加强打击内推类商品的专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-06-11",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 379,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2236"
+  },
+  {
+   "id": 20888,
+   "title": "关于严禁展示及售卖“销量及评价作弊类”违规商品的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 6,
+   "publish_time": "2026-06-11",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 544,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2237"
+  },
+  {
+   "id": 20887,
+   "title": "关于严禁展示及售卖“中小学校外教培类”商品及服务的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-06-11",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 606,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2238"
+  },
+  {
+   "id": 20900,
+   "title": "关于加强网络购药安全的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-06-10",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1514,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2225"
+  },
+  {
+   "id": 20899,
+   "title": "关于加强动物源性食品安全的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-06-10",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 883,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2226"
+  },
+  {
+   "id": 20898,
+   "title": "关于开展消毒酒精、食用级酒精原料及化妆品级酒精原料等商品的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-06-10",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 686,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2227"
+  },
+  {
+   "id": 20897,
+   "title": "关于开展虚假检验检测报告治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 13,
+   "acquire_score": 6,
+   "publish_time": "2026-06-10",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 880,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2228"
+  },
+  {
+   "id": 20896,
+   "title": "关于严禁展示及售卖“钢丝棉烟花”商品的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-06-10",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 894,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2229"
+  },
+  {
+   "id": 20895,
+   "title": "关于进一步规范强制性认证产品的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-06-10",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 599,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2230"
+  },
+  {
+   "id": 20894,
+   "title": "关于平台加强知名品牌假货治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-06-10",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 792,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2231"
+  },
+  {
+   "id": 20893,
+   "title": "关于进一步加强假货实物抽检的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-06-10",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 627,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2232"
+  },
+  {
+   "id": 20903,
+   "title": "关于开展服饰类商品防晒功能虚假宣传专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-06-07",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 705,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2223"
+  },
+  {
+   "id": 20902,
+   "title": "关于服饰类商品材质/功能等描述不符的专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-06-07",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1641,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2222"
+  },
+  {
+   "id": 20905,
+   "title": "关于平台地理标志商品专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-06-05",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 962,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2221"
+  },
+  {
+   "id": 20907,
+   "title": "关于加强互联网经营农药合规治理及自查自纠的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-06-03",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1103,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2218"
+  },
+  {
+   "id": 20911,
+   "title": "关于平台加强诱导第三方违规行为治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 4,
+   "publish_time": "2026-06-02",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 964,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2216"
+  },
+  {
+   "id": 20910,
+   "title": "关于火碱、片碱等危险化学品相关违规商品专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 10,
+   "publish_time": "2026-06-02",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 631,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2215"
+  },
+  {
+   "id": 20909,
+   "title": "关于严禁售卖“流量造假、黑公关、网络水军”违规商品的专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 12,
+   "publish_time": "2026-06-02",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1081,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2214"
+  },
+  {
+   "id": 20908,
+   "title": "关于“零添加”等违规宣传治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 6,
+   "publish_time": "2026-06-02",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1830,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2217"
+  },
+  {
+   "id": 20912,
+   "title": "关于食品行业开展店铺实际经营地址核验的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "国内品牌",
+   "content_type": "品牌案例",
+   "score": 4,
+   "acquire_score": 0,
+   "publish_time": "2026-06-01",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 657,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2213"
+  },
+  {
+   "id": 20914,
+   "title": "关于网络销售重点工业产品治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-05-29",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1217,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2211"
+  },
+  {
+   "id": 20915,
+   "title": "关于平台全面禁售“餐饮制售类”商品的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-05-28",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 591,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2210"
+  },
+  {
+   "id": 20918,
+   "title": "关于直播秒拼不合规发布专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-05-27",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 637,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2208"
+  },
+  {
+   "id": 20917,
+   "title": "关于直播短视频虚假演绎营销专项治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-05-27",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1404,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2206"
+  },
+  {
+   "id": 20922,
+   "title": "关于“野生动物专用标识“违规商品的专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-05-26",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 525,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2202"
+  },
+  {
+   "id": 20921,
+   "title": "关于严禁展示及售卖宗教类违规商品的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-05-26",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 867,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2203"
+  },
+  {
+   "id": 20920,
+   "title": "关于严禁展示及售卖“破网、翻墙软件及VPN代理服务”违规商品的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-05-26",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 815,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2204"
+  },
+  {
+   "id": 20919,
+   "title": "关于规范成人用品类商品隐私部位打码遮挡标准的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-05-26",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 935,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2205"
+  },
+  {
+   "id": 20924,
+   "title": "关于进一步开展交易中自害风险管控的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-05-25",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 767,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2200"
+  },
+  {
+   "id": 20923,
+   "title": "关于风扇商品夸大宣传专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-05-25",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 773,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2201"
+  },
+  {
+   "id": 20926,
+   "title": "关于加强境外流通与生产证明核验的专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-05-24",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1135,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2198"
+  },
+  {
+   "id": 20925,
+   "title": "射频美容设备类商品治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-05-24",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 289,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2199"
+  },
+  {
+   "id": 20932,
+   "title": "关于“拼豆”类商品专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-05-21",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 624,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2192"
+  },
+  {
+   "id": 20931,
+   "title": "关于严禁展示及售卖 “信息伪造与账号篡改”违规商品的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 6,
+   "publish_time": "2026-05-21",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 863,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2193"
+  },
+  {
+   "id": 20930,
+   "title": "关于“AI起号、转售AI虚拟账号”的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 12,
+   "publish_time": "2026-05-21",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 597,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2194"
+  },
+  {
+   "id": 20929,
+   "title": "关于AI托管网络账号的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-05-21",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 637,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2195"
+  },
+  {
+   "id": 20928,
+   "title": "关于AI数据投毒的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 13,
+   "publish_time": "2026-05-21",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 634,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2196"
+  },
+  {
+   "id": 20927,
+   "title": "关于AI押题的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-05-21",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 564,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2197"
+  },
+  {
+   "id": 20937,
+   "title": "关于随身wifi商品发布专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-05-20",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1180,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2189"
+  },
+  {
+   "id": 20936,
+   "title": "关于加强平台电子烟及相关商品治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-05-20",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 889,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2190"
+  },
+  {
+   "id": 20935,
+   "title": "关于规范原石直播行为的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-05-20",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 851,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2187"
+  },
+  {
+   "id": 20934,
+   "title": "关于加强直播间售卖食品治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-05-20",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2235,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2188"
+  },
+  {
+   "id": 20933,
+   "title": "关于加强平台枪模类商品合规治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-05-20",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1003,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2191"
+  },
+  {
+   "id": 20940,
+   "title": "关于进一步规范平台内化妆品商品包装标签图展示的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-05-19",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 452,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2184"
+  },
+  {
+   "id": 20939,
+   "title": "关于严禁不当展示及售卖“涉国家领导人形象”违规商品的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-05-19",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 692,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2185"
+  },
+  {
+   "id": 20938,
+   "title": "关于严禁展示及售卖“封建迷信“违规商品的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-05-19",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 792,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2186"
+  },
+  {
+   "id": 20942,
+   "title": "关于开展境外影视资源专项治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-05-18",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 784,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2182"
+  },
+  {
+   "id": 20941,
+   "title": "关于开展化妆品类商品的专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-05-18",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 988,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2183"
+  },
+  {
+   "id": 20951,
+   "title": "关于开展“清朗·整治AI应用乱象”专项行动的公告",
+   "boards": [
+    "通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-05-15",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 346,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2177"
+  },
+  {
+   "id": 20950,
+   "title": "关于进一步规范平台内食品类商家经营资质的特别提示",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "选品案例",
+   "content_type": "商家案例",
+   "score": 2,
+   "acquire_score": 4,
+   "publish_time": "2026-05-15",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 975,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2178"
+  },
+  {
+   "id": 20946,
+   "title": "关于去除人工智能生成标识专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-05-15",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 661,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2179"
+  },
+  {
+   "id": 20945,
+   "title": "关于加强平台修图服务商品违规治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 9,
+   "publish_time": "2026-05-15",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 628,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2180"
+  },
+  {
+   "id": 20944,
+   "title": "关于进一步规范平台内商家检验检测服务等经营行为的特别提示",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "选品案例",
+   "content_type": "商家案例",
+   "score": 2,
+   "acquire_score": 4,
+   "publish_time": "2026-05-15",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 810,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2181"
+  },
+  {
+   "id": 20980,
+   "title": "《保证金规则》更新意见征集（2026.04.28）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 12,
+   "publish_time": "2026-04-28",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 13789,
+   "version_count": 4,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2145"
+  },
+  {
+   "id": 20953,
+   "title": "拼多多商家版隐私政策 V4.2",
+   "boards": [
+    "协议"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-05-14",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 15173,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1235"
+  },
+  {
+   "id": 20952,
+   "title": "《拼多多商家版隐私政策》更新公示通知（2026.05.14）",
+   "boards": [
+    "更新公示"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-05-14",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 15509,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2173"
+  },
+  {
+   "id": 20961,
+   "title": "关于提醒商家办理市场主体登记的通知",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "选品案例",
+   "content_type": "商家案例",
+   "score": 0,
+   "acquire_score": 2,
+   "publish_time": "2026-05-13",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1039,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2164"
+  },
+  {
+   "id": 20960,
+   "title": "关于提醒个人商家填写真实有效地址的通知",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "选品案例",
+   "content_type": "商家案例",
+   "score": 0,
+   "acquire_score": 0,
+   "publish_time": "2026-05-13",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 233,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2165"
+  },
+  {
+   "id": 20959,
+   "title": "关于平台开展“品牌不一致”专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-05-13",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 993,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2166"
+  },
+  {
+   "id": 20958,
+   "title": "关于加强平台金融产品及金融服务合规治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-05-13",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1334,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2167"
+  },
+  {
+   "id": 20957,
+   "title": "关于严禁展示及售卖“涉国家机关名义”违规商品的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-05-13",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 763,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2168"
+  },
+  {
+   "id": 20956,
+   "title": "关于加强跨境零售进口膳食补充剂的治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "跨境出海",
+   "content_type": "出海情报",
+   "score": 6,
+   "acquire_score": 0,
+   "publish_time": "2026-05-13",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 370,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2169"
+  },
+  {
+   "id": 20955,
+   "title": "关于进一步加强盲盒/福袋类商品治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-05-13",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1307,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2170"
+  },
+  {
+   "id": 20962,
+   "title": "关于食品虚假宣传专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-05-12",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2705,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2163"
+  },
+  {
+   "id": 20963,
+   "title": "关于持续推进算法向上向善的公告",
+   "boards": [
+    "通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 8,
+   "publish_time": "2026-05-08",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 456,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2162"
+  },
+  {
+   "id": 20971,
+   "title": "关于营业执照状态异常的专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-04-30",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 337,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2155"
+  },
+  {
+   "id": 20970,
+   "title": "关于进一步规范平台内商家出版物经营行为的特别提示",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "选品案例",
+   "content_type": "商家案例",
+   "score": 2,
+   "acquire_score": 4,
+   "publish_time": "2026-04-30",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 774,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2154"
+  },
+  {
+   "id": 20969,
+   "title": "关于开展规范图书市场秩序专项治理的通知",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-04-30",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1007,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2156"
+  },
+  {
+   "id": 20978,
+   "title": "《黑标商品技术服务费一览表》更新征集意见（2026.4.29）",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 12,
+   "publish_time": "2026-04-29",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 23521,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2147"
+  },
+  {
+   "id": 20976,
+   "title": "关于北京地区限制销售无人驾驶航空器及其核心部件的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-04-29",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 755,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2149"
+  },
+  {
+   "id": 20975,
+   "title": "关于开展“生鲜灯”类商品专项治理的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-04-29",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 678,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2152"
+  },
+  {
+   "id": 20974,
+   "title": "关于进一步规范平台内食品包装标签图的发布要求",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 0,
+   "publish_time": "2026-04-29",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 508,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2151"
+  },
+  {
+   "id": 20973,
+   "title": "关于【儿童化妆品】类商品专项治理公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-04-29",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1027,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2150"
+  },
+  {
+   "id": 21018,
+   "title": "《“满额优惠”活动条款》更新意见征集（2026.04.03）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 0,
+   "acquire_score": 4,
+   "publish_time": "2026-04-03",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3871,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2121"
+  },
+  {
+   "id": 20981,
+   "title": "“满额优惠”活动条款",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 0,
+   "acquire_score": 4,
+   "publish_time": "2026-04-19",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3668,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1133"
+  },
+  {
+   "id": 21029,
+   "title": "《食品行业发布规范》更新意见征集（2026.3.31）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 0,
+   "acquire_score": 2,
+   "publish_time": "2026-03-31",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3972,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2107"
+  },
+  {
+   "id": 21034,
+   "title": "《技术服务费收费规则》更新意见征集（2026.3.31）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 14,
+   "publish_time": "2026-03-31",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2911,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2070"
+  },
+  {
+   "id": 20984,
+   "title": "食品行业发布规范",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 0,
+   "acquire_score": 2,
+   "publish_time": "2026-04-16",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3762,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1208"
+  },
+  {
+   "id": 20983,
+   "title": "技术服务费收费规则",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 14,
+   "publish_time": "2026-04-16",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2718,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1164"
+  },
+  {
+   "id": 20989,
+   "title": "关于规范跨境电商进口商品宣传行为的公告",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "跨境出海",
+   "content_type": "出海情报",
+   "score": 6,
+   "acquire_score": -4,
+   "publish_time": "2026-04-15",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 290,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2143"
+  },
+  {
+   "id": 21035,
+   "title": "《预售业务管理规范》更新意见征集（2026.03.30）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 6,
+   "publish_time": "2026-03-30",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3551,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2101"
+  },
+  {
+   "id": 20987,
+   "title": "预售业务管理规范",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 6,
+   "publish_time": "2026-04-15",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3360,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=5"
+  },
+  {
+   "id": 21036,
+   "title": "《优惠联合营销活动规则》更新意见征集（2026.3.29）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-03-29",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2254,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2100"
+  },
+  {
+   "id": 20990,
+   "title": "《优惠联合营销活动规则》",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-04-14",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2035,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2140"
+  },
+  {
+   "id": 21037,
+   "title": "《商家客户服务管理规则》更新意见征集（2026.03.27）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-03-27",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 5198,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2095"
+  },
+  {
+   "id": 20994,
+   "title": "商家客户服务管理规则",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-04-12",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 4984,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=9"
+  },
+  {
+   "id": 21038,
+   "title": "《禁发商品及信息管理规范》更新意见征集（2026.03.27）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 6,
+   "publish_time": "2026-03-27",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 4532,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2096"
+  },
+  {
+   "id": 20992,
+   "title": "禁发商品及信息管理规范",
+   "boards": [
+    "长期规则"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 6,
+   "publish_time": "2026-04-12",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 4190,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=181"
+  },
+  {
+   "id": 21045,
+   "title": "《假货处理规则》更新意见征集（2026.03.25）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-03-25",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3213,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2086"
+  },
+  {
+   "id": 21009,
+   "title": "假货处理规则",
+   "boards": [
+    "处理规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-04-10",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2988,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=3"
+  },
+  {
+   "id": 21043,
+   "title": "《商品描述及质量抽检规则解读》更新意见征集（2026.03.25）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 8,
+   "publish_time": "2026-03-25",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2793,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2088"
+  },
+  {
+   "id": 21007,
+   "title": "商品描述及质量抽检规则解读",
+   "boards": [
+    "公告"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 8,
+   "publish_time": "2026-04-10",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2572,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=222"
+  },
+  {
+   "id": 21044,
+   "title": "《商品描述及质量抽检规则》更新意见征集（2026.03.25）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-03-25",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 6139,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2090"
+  },
+  {
+   "id": 21005,
+   "title": "商品描述及质量抽检规则",
+   "boards": [
+    "处理规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-04-10",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 5916,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=75"
+  },
+  {
+   "id": 21042,
+   "title": "《平台合作协议》更新意见征集（2026.3.25）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 2,
+   "publish_time": "2026-03-25",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 20879,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2087"
+  },
+  {
+   "id": 21003,
+   "title": "平台合作协议",
+   "boards": [
+    "协议"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 2,
+   "publish_time": "2026-04-10",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 20694,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1131"
+  },
+  {
+   "id": 21048,
+   "title": "《红屁屁无忧服务条款》更新意见征集（2026.3.25）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 2,
+   "publish_time": "2026-03-25",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2098,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2084"
+  },
+  {
+   "id": 21041,
+   "title": "《虚假交易处理规则》更新意见征集（2026.3.25）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 12,
+   "publish_time": "2026-03-25",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2615,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2081"
+  },
+  {
+   "id": 21040,
+   "title": "《不当获取/使用信息处理规则》更新意见征集（2026.3.25）",
+   "boards": [
+    "公告",
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-03-25",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3803,
+   "version_count": 3,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2082"
+  },
+  {
+   "id": 20999,
+   "title": "《红屁屁无忧服务条款》",
+   "boards": [
+    "服务协议"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 4,
+   "publish_time": "2026-04-10",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1899,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2125"
+  },
+  {
+   "id": 20998,
+   "title": "不当获取/使用信息处理规则",
+   "boards": [
+    "处理规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-04-10",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3573,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1323"
+  },
+  {
+   "id": 20997,
+   "title": "虚假交易处理规则",
+   "boards": [
+    "处理规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 12,
+   "publish_time": "2026-04-10",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2407,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=851"
+  },
+  {
+   "id": 21047,
+   "title": "《商家履约风险处理规则》更新公示通知（2026.3.25）",
+   "boards": [
+    "更新公示",
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 12,
+   "publish_time": "2026-03-25",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1622,
+   "version_count": 2,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2080"
+  },
+  {
+   "id": 21026,
+   "title": "商家履约风险处理规则",
+   "boards": [
+    "处理规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 12,
+   "publish_time": "2026-04-02",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1439,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1393"
+  },
+  {
+   "id": 21033,
+   "title": "《消费者尊享上门计划条款》生效通知（2026.3.31）",
+   "boards": [
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 12,
+   "publish_time": "2026-03-31",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2901,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2097"
+  },
+  {
+   "id": 21032,
+   "title": "消费者尊享上门计划条款",
+   "boards": [
+    "服务协议"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 8,
+   "publish_time": "2026-03-31",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2758,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2098"
+  },
+  {
+   "id": 21031,
+   "title": "《拼多多商家服务市场服务协议（商家版）》更新生效通知（2026.3.31）",
+   "boards": [
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 8,
+   "publish_time": "2026-03-31",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 6525,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2099"
+  },
+  {
+   "id": 21030,
+   "title": "拼多多商家服务市场服务协议（商家版）",
+   "boards": [
+    "协议"
+   ],
+   "cluster": "选品案例",
+   "content_type": "商家案例",
+   "score": 0,
+   "acquire_score": 4,
+   "publish_time": "2026-03-31",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 6365,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1114"
+  },
+  {
+   "id": 21050,
+   "title": "《质检认证服务条款》更新生效通知（2026.3.24）",
+   "boards": [
+    "生效通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 6,
+   "publish_time": "2026-03-24",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1934,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2077"
+  },
+  {
+   "id": 21049,
+   "title": "质检认证服务条款",
+   "boards": [
+    "服务协议"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 2,
+   "publish_time": "2026-03-24",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1795,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1653"
+  },
+  {
+   "id": 21059,
+   "title": "“清朗·2026年营造喜庆祥和春节网络环境”公告（2月14日—2月28日）",
+   "boards": [
+    "通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-02-28",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 339,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2056"
+  },
+  {
+   "id": 21060,
+   "title": "关于开展“清朗·2026年营造喜庆祥和春节网络环境”专项公告",
+   "boards": [
+    "通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-02-14",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1221,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2050"
+  },
+  {
+   "id": 21051,
+   "title": "消费者体验提升计划",
+   "boards": [
+    "服务协议"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 9,
+   "publish_time": "2026-02-12",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1925,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1260"
+  },
+  {
+   "id": 21052,
+   "title": "售后服务规则​ ",
+   "boards": [
+    "服务协议"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-01-27",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 6804,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=15"
+  },
+  {
+   "id": 21062,
+   "title": "2026年春节期间发货相关规则调整公告",
+   "boards": [
+    "通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 6,
+   "publish_time": "2026-01-20",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3813,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2029"
+  },
+  {
+   "id": 21061,
+   "title": "2026年春节期间商家及平台服务调整公告",
+   "boards": [
+    "通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-01-20",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2546,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=2028"
+  },
+  {
+   "id": 21072,
+   "title": "商家直播服务协议",
+   "boards": [
+    "协议"
+   ],
+   "cluster": "选品案例",
+   "content_type": "商家案例",
+   "score": 2,
+   "acquire_score": 0,
+   "publish_time": "2025-12-16",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 7029,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1099"
+  },
+  {
+   "id": 21071,
+   "title": "软件许可使用协议",
+   "boards": [
+    "协议"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 0,
+   "acquire_score": 0,
+   "publish_time": "2025-12-16",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 9849,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1858"
+  },
+  {
+   "id": 21053,
+   "title": "价格保护服务规则",
+   "boards": [
+    "服务协议"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2025-12-09",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3384,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1285"
+  },
+  {
+   "id": 21054,
+   "title": "争议处理规则",
+   "boards": [
+    "服务协议"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2025-12-04",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 6189,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=111"
+  },
+  {
+   "id": 21056,
+   "title": "商家虚假信息处理规则",
+   "boards": [
+    "处理规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2025-12-02",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2289,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1327"
+  },
+  {
+   "id": 21063,
+   "title": "关于开展“清朗·整治网络直播打赏乱象”专项行动的公告",
+   "boards": [
+    "通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2025-11-20",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1104,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1968"
+  },
+  {
+   "id": 21064,
+   "title": "网络食品交易第三方平台食品安全管理自律公约",
+   "boards": [
+    "通知"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 2,
+   "acquire_score": 2,
+   "publish_time": "2025-11-07",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1135,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1952"
+  },
+  {
+   "id": 21065,
+   "title": "“清朗·整治恶意挑动负面情绪问题”专项行动治理公告",
+   "boards": [
+    "通知"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2025-11-03",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 404,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1949"
+  },
+  {
+   "id": 21055,
+   "title": "消费者付费送货上门服务条款",
+   "boards": [
+    "服务协议"
+   ],
+   "cluster": "流量投放",
+   "content_type": "投放技巧",
+   "score": 2,
+   "acquire_score": 4,
+   "publish_time": "2025-11-02",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2481,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1939"
+  },
+  {
+   "id": 21073,
+   "title": "偏远和境外地区物流服务协议",
+   "boards": [
+    "协议"
+   ],
+   "cluster": "跨境出海",
+   "content_type": "出海情报",
+   "score": 2,
+   "acquire_score": 0,
+   "publish_time": "2025-09-14",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 5174,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1243"
+  },
+  {
+   "id": 21083,
+   "title": "食品及保健食品类商品抽检标准及实施细则（2025.8.27）",
+   "boards": [
+    "抽检细则"
+   ],
+   "cluster": "选品案例",
+   "content_type": "商家案例",
+   "score": 0,
+   "acquire_score": 0,
+   "publish_time": "2025-08-19",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 0,
+   "content_len": 0,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1847"
+  },
+  {
+   "id": 21082,
+   "title": "居家日用百货、收纳整理、家庭清洁、洗护纸品、厨房用品类商品抽检及实施细则（2025.8.27）",
+   "boards": [
+    "抽检细则"
+   ],
+   "cluster": "选品案例",
+   "content_type": "商家案例",
+   "score": 0,
+   "acquire_score": 0,
+   "publish_time": "2025-08-19",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 0,
+   "content_len": 0,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1860"
+  },
+  {
+   "id": 21081,
+   "title": "腕表眼镜类商品抽检标准及实施细则（2025.8.27）",
+   "boards": [
+    "抽检细则"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 0,
+   "acquire_score": 0,
+   "publish_time": "2025-08-19",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 0,
+   "content_len": 0,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1859"
+  },
+  {
+   "id": 21080,
+   "title": "母婴玩具类商品抽检标准及实施细则（2025.8.27）",
+   "boards": [
+    "抽检细则"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 0,
+   "acquire_score": 0,
+   "publish_time": "2025-08-19",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 0,
+   "content_len": 0,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1854"
+  },
+  {
+   "id": 21079,
+   "title": "全屋定制、家装主材、基础建材、家装灯饰光源等家装类商品抽检标准及实施细则（2025.8.27）",
+   "boards": [
+    "抽检细则"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 0,
+   "acquire_score": 0,
+   "publish_time": "2025-08-19",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 0,
+   "content_len": 0,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1853"
+  },
+  {
+   "id": 21078,
+   "title": "3C数码类商品抽检标准及实施细则（2025.8.27）",
+   "boards": [
+    "抽检细则"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 0,
+   "acquire_score": 0,
+   "publish_time": "2025-08-19",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 0,
+   "content_len": 0,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1852"
+  },
+  {
+   "id": 21077,
+   "title": "家用电器类商品抽检标准及实施细则（2025.8.27）",
+   "boards": [
+    "抽检细则"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 0,
+   "acquire_score": 0,
+   "publish_time": "2025-08-19",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 0,
+   "content_len": 0,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1851"
+  },
+  {
+   "id": 21076,
+   "title": "箱包抽检标准及实施细则（2025.8.27）",
+   "boards": [
+    "抽检细则"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 0,
+   "acquire_score": 0,
+   "publish_time": "2025-08-19",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 0,
+   "content_len": 0,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1850"
+  },
+  {
+   "id": 21075,
+   "title": "鞋类抽检标准及实施细则（2025.8.27）",
+   "boards": [
+    "抽检细则"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 0,
+   "acquire_score": 0,
+   "publish_time": "2025-08-19",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 0,
+   "content_len": 0,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1849"
+  },
+  {
+   "id": 21074,
+   "title": "服饰抽检标准及实施细则（2025.8.27）",
+   "boards": [
+    "抽检细则"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 0,
+   "acquire_score": 0,
+   "publish_time": "2025-08-19",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 0,
+   "content_len": 0,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1848"
+  },
+  {
+   "id": 21068,
+   "title": "拼多多抽检标准及实施细则（2023.5.27）",
+   "boards": [
+    "抽检标准"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 0,
+   "acquire_score": 0,
+   "publish_time": "2023-05-19",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 575,
+   "version_count": 4,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1366"
+  },
+  {
+   "id": 21086,
+   "title": "商家客服考核恢复",
+   "boards": [
+    "公告专区"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 6,
+   "publish_time": "2025-02-18",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 130,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=777"
+  },
+  {
+   "id": 21085,
+   "title": "受自然灾害影响部分地区发货违规赔付调整",
+   "boards": [
+    "公告专区"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 4,
+   "publish_time": "2025-02-18",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 3926,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1699"
+  },
+  {
+   "id": 21057,
+   "title": "拼多多滥发信息处理规则",
+   "boards": [
+    "处理规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2024-11-15",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 4657,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=169"
+  },
+  {
+   "id": 21067,
+   "title": "拼多多抽检标准及实施细则（【2024】年【7】月【23】日）",
+   "boards": [
+    "抽检标准"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 0,
+   "acquire_score": 0,
+   "publish_time": "2024-07-15",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 527,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1562"
+  },
+  {
+   "id": 21087,
+   "title": "受台风影响部分地区发货违规赔付调整公告",
+   "boards": [
+    "公告专区"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2023-09-08",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1705,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=1409"
+  },
+  {
+   "id": 21058,
+   "title": "诱导第三方处理规则",
+   "boards": [
+    "处理规则"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2022-01-06",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 2270,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=369"
+  },
+  {
+   "id": 21088,
+   "title": "《拼多多平台合作协议》更新通知",
+   "boards": [
+    "公告专区"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 0,
+   "acquire_score": 0,
+   "publish_time": "2021-06-12",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 242,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=965"
+  },
+  {
+   "id": 21090,
+   "title": "《拼多多售后服务规则》更新生效通知",
+   "boards": [
+    "公告专区"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2020-06-17",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 5797,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=831"
+  },
+  {
+   "id": 21089,
+   "title": "《坏果包赔服务条款》更新生效通知",
+   "boards": [
+    "公告专区"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2020-06-17",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 1960,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=833"
+  },
+  {
+   "id": 21091,
+   "title": "商家客服3分钟人工回复率开始考核通知",
+   "boards": [
+    "公告专区"
+   ],
+   "cluster": "选品案例",
+   "content_type": "商家案例",
+   "score": 0,
+   "acquire_score": 0,
+   "publish_time": "2020-04-26",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 116,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=784"
+  },
+  {
+   "id": 21092,
+   "title": "拼多多2020年春节期间发货相关规则更新公示通知",
+   "boards": [
+    "公告专区"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 4,
+   "publish_time": "2020-04-06",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 1,
+   "content_len": 181,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=697"
+  },
+  {
+   "id": 21093,
+   "title": "物流时效激励升级，截至21号！",
+   "boards": [
+    "公告专区"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2020-02-21",
+   "fetched_at": "2026-09-20 03:24:49",
+   "content_ok": 0,
+   "content_len": 0,
+   "version_count": 1,
+   "url": "https://mms.pinduoduo.com/other/rule?id=698"
+  }
+ ]
+}

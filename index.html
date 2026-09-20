@@ -773,6 +773,31 @@
             <div id="ecom-list" class="write-grid"></div>
           </div>
         </div>
+
+        <!-- 拼多多完整规则库 -->
+        <div class="panel">
+          <div class="panel-head"><strong>拼多多完整规则库</strong><span id="pdd-stat">加载中…</span></div>
+          <div class="panel-body">
+            <div id="pdd-banner" style="margin-bottom:14px;padding:10px 14px;background:#f0f7f4;border-radius:8px;font-size:13px;color:#334;"></div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;align-items:center;">
+              <input id="pdd-kw" placeholder="搜索规则标题…" style="flex:1;min-width:200px;padding:7px 12px;border:1px solid var(--line);border-radius:8px;font-size:13px;">
+              <select id="pdd-board" style="padding:7px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff;">
+                <option value="">全部栏目</option>
+              </select>
+              <select id="pdd-content-filter" style="padding:7px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff;">
+                <option value="">全部状态</option>
+                <option value="has">正文已抓取</option>
+                <option value="none">正文待补</option>
+              </select>
+              <select id="pdd-month" style="padding:7px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff;">
+                <option value="">全部月份</option>
+              </select>
+              <span id="pdd-count" style="font-size:12px;color:var(--muted);"></span>
+            </div>
+            <div id="pdd-list" style="display:flex;flex-direction:column;gap:10px;"></div>
+            <div id="pdd-pager" style="display:flex;gap:8px;justify-content:center;margin-top:14px;align-items:center;"></div>
+          </div>
+        </div>
       </div>
 
   </main>
@@ -1526,8 +1551,164 @@
       document.getElementById('ecom-meta').textContent = `${ecomItems.length} 条 · 更新 ${data.updated||''}`;
       renderEcomScan();
       renderEcom();
+      loadPddRules();
     }catch(e){ document.getElementById('ecom-meta').textContent = '数据加载失败：'+e.message; }
   }
+  // ===== 拼多多完整规则库 =====
+  const PDD_PAGE_SIZE = 20;
+  let pddData = null;
+  let pddState = { kw:'', board:'', content:'', month:'', page: 1 };
+
+  async function loadPddRules(){
+    try{
+      const r = await fetch('pdd_rules_index.json?t=' + Date.now(), {cache:'no-store'});
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      pddData = await r.json();
+      renderPddBanner();
+      fillPddFilters();
+      renderPddList();
+    }catch(e){
+      const el = document.getElementById('pdd-stat');
+      if(el) el.textContent = '规则库加载失败：'+e.message;
+    }
+  }
+
+  function renderPddBanner(){
+    if(!pddData) return;
+    const d = pddData;
+    const today = new Date().toLocaleDateString('sv-SE');
+    const monthNew = (d.items||[]).filter(i => (i.publish_time||'').slice(0,7) === today.slice(0,7)).length;
+    document.getElementById('pdd-banner').innerHTML =
+      '<strong>2026年已抓取：'+d.in_2026+' 条</strong> · 正文完整 '+d.has_content+' 条 · 正文待补 '+d.no_content+' 条 · 本月新增 '+monthNew+' 条 · 进入精选 '+d.selected_count+' 条 · 更新于 '+d.updated;
+    document.getElementById('pdd-stat').textContent = '共 '+d.total+' 条 · 正文完整 '+d.has_content;
+  }
+
+  function fillPddFilters(){
+    if(!pddData) return;
+    const boards = new Set();
+    const months = new Set();
+    pddData.items.forEach(i => {
+      (i.boards||[]).forEach(b => boards.add(b));
+      if(i.publish_time) months.add(i.publish_time.slice(0,7));
+    });
+    const bs = document.getElementById('pdd-board');
+    [...boards].sort().forEach(b => {
+      const o = document.createElement('option'); o.value = b; o.textContent = b; bs.appendChild(o);
+    });
+    const ms = document.getElementById('pdd-month');
+    [...months].sort().reverse().forEach(m => {
+      const o = document.createElement('option'); o.value = m; o.textContent = m; ms.appendChild(o);
+    });
+  }
+
+  function pddFiltered(){
+    if(!pddData) return [];
+    const kw = pddState.kw.trim().toLowerCase();
+    return pddData.items.filter(i => {
+      if(kw && !(i.title||'').toLowerCase().includes(kw)) return false;
+      if(pddState.board && !(i.boards||[]).includes(pddState.board)) return false;
+      if(pddState.content==='has' && !(i.content_ok===1 && i.content_len>50)) return false;
+      if(pddState.content==='none' && (i.content_ok===1 && i.content_len>50)) return false;
+      if(pddState.month && (i.publish_time||'').slice(0,7) !== pddState.month) return false;
+      return true;
+    }).sort((a,b) => (b.publish_time||'').localeCompare(a.publish_time||''));
+  }
+
+  function renderPddList(){
+    if(!pddData) return;
+    const list = pddFiltered();
+    const totalPages = Math.max(1, Math.ceil(list.length / PDD_PAGE_SIZE));
+    if(pddState.page > totalPages) pddState.page = totalPages;
+    const start = (pddState.page-1) * PDD_PAGE_SIZE;
+    const pageItems = list.slice(start, start+PDD_PAGE_SIZE);
+    document.getElementById('pdd-count').textContent = list.length + ' 条';
+    const box = document.getElementById('pdd-list');
+    if(!pageItems.length){ box.innerHTML = '<div class="tip-box">没有匹配的规则</div>'; }
+    else{
+      box.innerHTML = pageItems.map(i => {
+        const hasC = i.content_ok===1 && i.content_len>50;
+        const g = i.acquire_score>=9 ? {c:'A',bg:'#d63a2f'} : i.acquire_score>=7 ? {c:'B',bg:'#0a7a50'} : i.acquire_score>=6 ? {c:'C',bg:'#2f6fd6'} : {c:'-',bg:'#999'};
+        const boards = (i.boards||[]).join(' / ');
+        const vCount = i.version_count>1 ? '<span style="background:#e8e0f0;color:#6b3fa0;">'+i.version_count+'个版本</span>' : '';
+        const cTag = hasC ? '<span style="background:#e0f0e8;color:#0a7a50;">正文已抓取</span>' : '<span style="background:#fde8e8;color:#c0392b;">正文待补</span>';
+        return '<article class="write-card" data-pdd-id="'+i.id+'" style="cursor:pointer;">'
+          + '<div class="write-top"><h3 style="font-size:14px;">'+esc(i.title)+'</h3>'
+          + '<span class="hot-label" style="background:'+g.bg+';color:#fff;">'+g.c+'级</span></div>'
+          + '<div class="write-tags">'
+          + '<span>'+esc(boards||'')+'</span>'
+          + '<span>'+esc(i.publish_time||'')+'</span>'
+          + '<span style="background:#eef2f7;color:#334;">获客 '+i.acquire_score+'</span>'
+          + cTag + vCount
+          + (hasC ? '<button class="copy-btn" data-title="'+esc(i.title)+'" style="margin-left:auto;">查看正文</button>' : '')
+          + '</div></article>';
+      }).join('');
+      // 点击查看正文
+      box.querySelectorAll('[data-pdd-id]').forEach(card => {
+        card.addEventListener('click', async (e) => {
+          if(e.target.classList.contains('copy-btn')) return;
+          const id = card.dataset.pddId;
+          await showPddDetail(id, card);
+        });
+      });
+    }
+    // 分页
+    const pg = document.getElementById('pdd-pager');
+    let html = '';
+    if(totalPages > 1){
+      html += '<button onclick="pddGoPage('+(pddState.page-1)+')" style="padding:5px 12px;border:1px solid var(--line);border-radius:6px;cursor:pointer;'+(pddState.page<=1?'opacity:.4;':'')+'">上一页</button>';
+      html += '<span style="font-size:13px;">'+pddState.page+' / '+totalPages+'</span>';
+      html += '<button onclick="pddGoPage('+(pddState.page+1)+')" style="padding:5px 12px;border:1px solid var(--line);border-radius:6px;cursor:pointer;'+(pddState.page>=totalPages?'opacity:.4;':'')+'">下一页</button>';
+    }
+    pg.innerHTML = html;
+  }
+
+  window.pddGoPage = function(p){ pddState.page = p; renderPddList(); };
+
+  async function showPddDetail(id, card){
+    const existing = card.querySelector('.pdd-detail');
+    if(existing){ existing.remove(); return; }
+    try{
+      const r = await fetch('pdd_rules/'+id+'.json?t='+Date.now(), {cache:'no-store'});
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      const d = await r.json();
+      const hasC = d.content_ok===1 && (d.content||'').length>50;
+      const div = document.createElement('div');
+      div.className = 'pdd-detail';
+      div.style.cssText = 'margin-top:10px;padding:12px;background:#f8f9fa;border-radius:8px;font-size:13px;line-height:1.7;white-space:pre-wrap;max-height:400px;overflow-y:auto;';
+      let html = '';
+      if(hasC){
+        html += '<div style="margin-bottom:8px;color:#0a7a50;">✓ 正文已抓取（'+(d.content||'').length+'字）</div>';
+        html += '<div>'+esc(d.content||'')+'</div>';
+      } else {
+        html += '<div style="color:#c0392b;">⚠ 正文待补，不可直接写作</div>';
+      }
+      if(d.versions && d.versions.length>1){
+        html += '<div style="margin-top:10px;padding-top:8px;border-top:1px solid #ddd;"><strong>版本链：</strong><br>';
+        d.versions.forEach(v => {
+          html += '<div style="font-size:12px;color:#666;">['+esc(v.board||'')+'] '+esc(v.title)+' ('+esc(v.publish_time||'')+')'+(v.content_ok===1?'':' [无正文]')+'</div>';
+        });
+        html += '</div>';
+      }
+      if(d.all_urls && d.all_urls.length){
+        html += '<div style="margin-top:8px;"><a href="'+d.all_urls[0]+'" target="_blank" rel="noopener" style="color:#2f6fd6;">查看官方原文 ↗</a></div>';
+      }
+      div.innerHTML = html;
+      card.appendChild(div);
+      div.scrollIntoView({behavior:'smooth', block:'nearest'});
+    }catch(e){
+      const div = document.createElement('div');
+      div.style.cssText = 'margin-top:10px;padding:10px;background:#fde8e8;border-radius:8px;color:#c0392b;font-size:13px;';
+      div.textContent = '正文加载失败：'+e.message;
+      card.appendChild(div);
+    }
+  }
+
+  // 筛选事件
+  document.getElementById('pdd-kw').addEventListener('input', e => { pddState.kw = e.target.value; pddState.page = 1; renderPddList(); });
+  document.getElementById('pdd-board').addEventListener('change', e => { pddState.board = e.target.value; pddState.page = 1; renderPddList(); });
+  document.getElementById('pdd-content-filter').addEventListener('change', e => { pddState.content = e.target.value; pddState.page = 1; renderPddList(); });
+  document.getElementById('pdd-month').addEventListener('change', e => { pddState.month = e.target.value; pddState.page = 1; renderPddList(); });
+
   document.getElementById('ecom-keyword').addEventListener('input', e=>{ ecomState.kw = e.target.value; renderEcom(); });
   document.querySelectorAll('#ecom-cluster button').forEach(b=>{
     b.addEventListener('click', ()=>{

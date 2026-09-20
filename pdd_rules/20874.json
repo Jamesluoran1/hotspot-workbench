@@ -1,0 +1,28 @@
+{
+ "id": 20874,
+ "title": "关于开展商家店铺联系手机号定期核验的公告",
+ "boards": [
+  "公告"
+ ],
+ "cluster": "平台新规",
+ "content_type": "规则更新",
+ "score": 8,
+ "acquire_score": 4,
+ "publish_time": "2026-06-16",
+ "fetched_at": "2026-09-20 03:24:49",
+ "content_ok": 1,
+ "content_len": 470,
+ "content": "关于开展商家店铺联系手机号定期核验的公告\n根据《电子商务法》及《网络交易监督管理办法》等相关法律法规要求，网络交易平台经营者应当要求申请进入平台销售商品或者提供服务的经营者提交联系方式等真实信息，进行核验、登记，建立登记档案，并至少每六个月核验一次。\n平台已陆续对店铺联系手机号开启定期核验工作，通知方式包括不限于店铺弹窗、站内信、外呼、短信等方式。为保障核验工作的顺利开展，避免因未及时进行手机号核验影响店铺正常经营，请商家根据系统提醒时间尽快完成核验工作，如逾期未核验，平台将依据相关协议及规则，视情形采取店铺一级限制、二级限制、部分或全部商品降权、店铺三级限制等措施，请各位商家认真对待。\n核验入口：\n电脑端:https://mms.pinduoduo.com/mallcenter/phone-number-verification\n手机端：https://mms.pinduoduo.com/mobile-shop-ssr/phone-number-verification\n感谢各位商家的理解、支持与配合。\n2026年6月16日",
+ "all_urls": [
+  "https://mms.pinduoduo.com/other/rule?id=2250"
+ ],
+ "versions": [
+  {
+   "title": "关于开展商家店铺联系手机号定期核验的公告",
+   "board": "公告",
+   "publish_time": "2026-06-16",
+   "url": "https://mms.pinduoduo.com/other/rule?id=2250",
+   "content_ok": 1
+  }
+ ]
+}
