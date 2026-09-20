@@ -670,6 +670,10 @@
             <label class="wb-field" style="cursor:pointer;"><input type="checkbox" id="scan-only-read"> 仅正文可读</label>
           </div>
           <div id="scan-list" class="write-grid" style="margin-bottom:16px;"><p style="color:var(--muted);font-size:13px;">正在读取最新选题…</p></div>
+          <div id="scan-pending-block" style="margin:10px 0 16px;border-top:1px dashed var(--line);padding-top:10px;">
+            <div id="scan-pending-head" style="cursor:pointer;font-size:13px;font-weight:600;color:var(--accent);user-select:none;">▸ 待核实热点区</div>
+            <div id="scan-pending-body" class="write-grid" style="display:none;margin-top:10px;"></div>
+          </div>
           <div class="panel-head" id="brief-panel" style="margin:0 -18px 14px; border-top:1px solid var(--line);"><strong>每日热点简报归档</strong><span>点日期打开当天热点简报</span></div>
           <div id="brief-list" class="write-tags" style="margin:0 -18px 0; padding:0 18px 14px;">加载中…</div>
         </div>
@@ -992,20 +996,37 @@
       if(gb!==ga) return gb-ga;
       return wbScore(b.main,track).total-wbScore(a.main,track).total;
     });
-    // 12条精选中待核实最多6条
+    // 12条精选：已验证最多6条 + 待核实最多6条，总数12，不足互相补足
     let verifiedCards = cards.filter(g=>(g.main['评级']||'')!=='待核实');
-    let pendingCards = cards.filter(g=>(g.main['评级']||'')==='待核实');
-    const pendingLimit = Math.min(6, pendingCards.length);
-    cards = verifiedCards.concat(pendingCards.slice(0, pendingLimit)).slice(0,12);
+    let pendingAll = cards.filter(g=>(g.main['评级']||'')==='待核实');
+    const verifiedTake = Math.min(6, verifiedCards.length);
+    const pendingTake = Math.min(6, pendingAll.length, 12 - verifiedTake);
+    const pickedVerified = verifiedCards.slice(0, verifiedTake);
+    const pickedPending = pendingAll.slice(0, pendingTake);
+    cards = pickedVerified.concat(pickedPending).slice(0,12);
     const head = document.getElementById('scan-head');
     const cnt = document.getElementById('scan-count');
     const list = document.getElementById('scan-list');
     if(!list) return;
     if(head) head.querySelector('strong').textContent = '今日扫描结果 · 自动精选'+(track?(' · '+track):'');
     const pendN = cards.filter(g=>(g.main['评级']||'')==='待核实').length;
-    if(cnt) cnt.textContent = cards.length + ' 个事件（待核实 '+pendN+' 条）· 今天优先 · 待核实≤6';
-    if(!cards.length){ list.innerHTML = '<p style="color:var(--muted);font-size:13px;">当前没有符合条件的选题，请调整筛选或等待下一轮验证。</p>'; return; }
-    list.innerHTML = cards.map(g=>wbCardHtml(g.main,g.sib,g.cluster)).join('');
+    if(cnt) cnt.textContent = cards.length + ' 个事件（已验证 '+pickedVerified.length+' · 待核实 '+pendN+'）· 今天优先';
+    if(!cards.length){ list.innerHTML = '<p style="color:var(--muted);font-size:13px;">当前没有符合条件的选题，请调整筛选或等待下一轮验证。</p>'; }
+    else list.innerHTML = cards.map(g=>wbCardHtml(g.main,g.sib,g.cluster)).join('');
+    // 待核实热点区：默认折叠
+    const pendToday = pendingAll.filter(g=>(g.main['抓取时间']||'').slice(0,10)===todayStr).length;
+    const pendBlock = document.getElementById('scan-pending-block');
+    if(pendBlock){
+      const pendHead = document.getElementById('scan-pending-head');
+      const pendBody = document.getElementById('scan-pending-body');
+      if(pendHead) pendHead.innerHTML = '▸ 待核实热点区 '+pendingAll.length+' 条｜今日 '+pendToday+' 条（点击展开/折叠）';
+      if(pendBody){
+        if(!pendingAll.length){ pendBody.innerHTML='<p style="color:var(--muted);font-size:12px;">暂无待核实内容。</p>'; }
+        else {
+          pendBody.innerHTML = pendingAll.map(g=>wbCardHtml(g.main,g.sib,g.cluster)).join('');
+        }
+      }
+    }
   }
   // ============ 05 Skill 管理 + 综合评分 + 二创角度（2026-09-19 大改造） ============
   const WB_SKILLS_KEY='wb_skills_v2', WB_BACKUP_KEY='wb_backup_v2', WB_TASK_KEY='wb_write_task_v2';
@@ -1297,6 +1318,11 @@
         gradeBox.querySelectorAll('button').forEach(b=>{ b.classList.toggle('primary', b===btn); });
         renderScan();
       });
+    });
+    const pendHead=document.getElementById('scan-pending-head');
+    if(pendHead) pendHead.addEventListener('click',()=>{
+      const b=document.getElementById('scan-pending-body');
+      if(b) b.style.display = (b.style.display==='none'||!b.style.display)?'':'none';
     });
     const dayAll=document.getElementById('scan-day-all');
     const dayToday=document.getElementById('scan-day-today');
