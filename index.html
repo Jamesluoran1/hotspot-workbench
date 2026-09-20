@@ -789,6 +789,11 @@
                 <option value="has">正文已抓取</option>
                 <option value="none">正文待补</option>
               </select>
+              <select id="pdd-year" style="padding:7px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff;">
+                <option value="2026" selected>2026年</option>
+                <option value="all">全部</option>
+                <option value="history">历史规则</option>
+              </select>
               <select id="pdd-month" style="padding:7px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff;">
                 <option value="">全部月份</option>
               </select>
@@ -1557,7 +1562,7 @@
   // ===== 拼多多完整规则库 =====
   const PDD_PAGE_SIZE = 20;
   let pddData = null;
-  let pddState = { kw:'', board:'', content:'', month:'', page: 1 };
+  let pddState = { kw:'', board:'', content:'', month:'', year:'2026', page: 1 };
 
   async function loadPddRules(){
     try{
@@ -1610,6 +1615,8 @@
       if(pddState.content==='has' && !(i.content_ok===1 && i.content_len>50)) return false;
       if(pddState.content==='none' && (i.content_ok===1 && i.content_len>50)) return false;
       if(pddState.month && (i.publish_time||'').slice(0,7) !== pddState.month) return false;
+      if(pddState.year==='2026' && (i.publish_time||'').slice(0,4) !== '2026') return false;
+      if(pddState.year==='history' && (i.publish_time||'').slice(0,4) === '2026') return false;
       return true;
     }).sort((a,b) => (b.publish_time||'').localeCompare(a.publish_time||''));
   }
@@ -1708,6 +1715,7 @@
   document.getElementById('pdd-board').addEventListener('change', e => { pddState.board = e.target.value; pddState.page = 1; renderPddList(); });
   document.getElementById('pdd-content-filter').addEventListener('change', e => { pddState.content = e.target.value; pddState.page = 1; renderPddList(); });
   document.getElementById('pdd-month').addEventListener('change', e => { pddState.month = e.target.value; pddState.page = 1; renderPddList(); });
+  document.getElementById('pdd-year').addEventListener('change', e => { pddState.year = e.target.value; pddState.page = 1; renderPddList(); });
 
   document.getElementById('ecom-keyword').addEventListener('input', e=>{ ecomState.kw = e.target.value; renderEcom(); });
   document.querySelectorAll('#ecom-cluster button').forEach(b=>{
