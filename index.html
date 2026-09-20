@@ -996,13 +996,23 @@
       if(gb!==ga) return gb-ga;
       return wbScore(b.main,track).total-wbScore(a.main,track).total;
     });
-    // 12条精选：已验证最多6条 + 待核实最多6条，总数12，不足互相补足
+    // 12条精选：已验证最多8条 + 待核实最多4条；待核实进精选需今天+高热+评分门槛
     let verifiedCards = cards.filter(g=>(g.main['评级']||'')!=='待核实');
     let pendingAll = cards.filter(g=>(g.main['评级']||'')==='待核实');
-    const verifiedTake = Math.min(6, verifiedCards.length);
-    const pendingTake = Math.min(6, pendingAll.length, 12 - verifiedTake);
+    // 待核实进精选门槛：必须今天抓取，且热度≥10万或得分≥5
+    const hotNum2 = x => Number(String(x||'').replace(/[^\d]/g,''))||0;
+    const pendingQualified = pendingAll.filter(g=>{
+      const it=g.main;
+      const isToday=(it['抓取时间']||'').slice(0,10)===todayStr;
+      if(!isToday) return false;
+      const heat=hotNum2(it['热度']||0);
+      const sc=Number(it['得分']||0);
+      return heat>=100000 || sc>=5;
+    });
+    const verifiedTake = Math.min(8, verifiedCards.length);
+    const pendingTake = Math.min(4, pendingQualified.length, 12 - verifiedTake);
     const pickedVerified = verifiedCards.slice(0, verifiedTake);
-    const pickedPending = pendingAll.slice(0, pendingTake);
+    const pickedPending = pendingQualified.slice(0, pendingTake);
     cards = pickedVerified.concat(pickedPending).slice(0,12);
     const head = document.getElementById('scan-head');
     const cnt = document.getElementById('scan-count');
