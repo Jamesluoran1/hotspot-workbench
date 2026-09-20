@@ -956,7 +956,11 @@
     let pool = items.filter(i=>{
       if(gradeFilter && (i['评级']||'') !== gradeFilter) return false;
       if(kw && !(i['标题']||'').toLowerCase().includes(kw)) return false;
-      if(daySel==='today' && (i['抓取时间']||'').slice(0,10)!==todayStr) return false;
+      // 日期过滤
+      const iDay = (i['抓取时间']||'').slice(0,10);
+      if(daySel==='today' && iDay!==todayStr) return false;
+      if(daySel==='yesterday'){ const y=new Date(); y.setDate(y.getDate()-1); const ys=y.toISOString().slice(0,10); if(iDay!==ys) return false; }
+      if(daySel==='day-before'){ const d=new Date(); d.setDate(d.getDate()-2); const ds=d.toISOString().slice(0,10); if(iDay!==ds) return false; }
       if(range==='6h'){ const age=(Date.now()-new Date((i['抓取时间']||'').replace(' ','T')).getTime())/36e5; if(!isFinite(age)||age>6) return false; }
       if(range==='24h'){ const age=(Date.now()-new Date((i['抓取时间']||'').replace(' ','T')).getTime())/36e5; if(!isFinite(age)||age>24) return false; }
       if(range==='3d'){ const age=(Date.now()-new Date((i['抓取时间']||'').replace(' ','T')).getTime())/864e5; if(!isFinite(age)||age>3) return false; }
@@ -1309,14 +1313,19 @@
     });
     const dayAll=document.getElementById('scan-day-all');
     const dayToday=document.getElementById('scan-day-today');
+    const dayYest=document.getElementById('scan-day-yesterday');
+    const dayBefore=document.getElementById('scan-day-before');
+    const dayBtns=[dayAll,dayToday,dayYest,dayBefore];
     function setDay(v,el){
       wbScanDay=v;
-      [dayAll,dayToday].forEach(b=>{ if(b){ b.classList.remove('primary'); b.style.borderColor='var(--line)'; b.style.background='#fff'; b.style.color='var(--ink)'; } });
+      dayBtns.forEach(b=>{ if(b){ b.classList.remove('primary'); b.style.borderColor='var(--line)'; b.style.background='#fff'; b.style.color='var(--ink)'; } });
       if(el){ el.classList.add('primary'); el.style.borderColor='#2f6fed'; el.style.background='#2f6fed'; el.style.color='#fff'; }
       renderScan();
     }
     if(dayAll) dayAll.addEventListener('click',()=>setDay('',dayAll));
     if(dayToday) dayToday.addEventListener('click',()=>setDay('today',dayToday));
+    if(dayYest) dayYest.addEventListener('click',()=>setDay('yesterday',dayYest));
+    if(dayBefore) dayBefore.addEventListener('click',()=>setDay('day-before',dayBefore));
     // 上传 / 管理按钮
     const upBtn=document.getElementById('wb-upload-btn');
     if(upBtn) upBtn.addEventListener('click',()=>{ const m=document.getElementById('wb-skill-modal'); if(m) m.classList.add('open'); });
