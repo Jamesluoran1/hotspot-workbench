@@ -655,12 +655,19 @@
       <div class="panel">
         <div class="panel-head" id="scan-head"><strong>今日扫描结果 · 自动精选</strong><span id="scan-count">加载中…</span></div>
         <div class="panel-body">
-          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;">
+          <div id="scan-stats" style="font-size:12px;color:var(--muted);margin-bottom:8px;"></div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;align-items:center;">
             <input id="scan-keyword" placeholder="搜索热点关键词…" style="flex:1;min-width:200px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);font-size:12px;">
+            <span id="scan-grade-filter" style="display:inline-flex;gap:4px;flex-wrap:wrap;">
+              <button type="button" data-grade="" class="wb-btn primary">全部</button>
+              <button type="button" data-grade="A" class="wb-btn">A</button>
+              <button type="button" data-grade="B" class="wb-btn">B</button>
+              <button type="button" data-grade="C" class="wb-btn">C</button>
+              <button type="button" data-grade="待核实" class="wb-btn">待核实</button>
+            </span>
             <button type="button" data-day="" class="wb-btn primary" id="scan-day-all">全部时间</button>
             <button type="button" data-day="today" class="wb-btn" id="scan-day-today">仅今天</button>
-            <label class="wb-field" style="cursor:pointer;"><input type="checkbox" id="scan-only-a"> 仅显示 A 级</label>
-            <label class="wb-field" style="cursor:pointer;"><input type="checkbox" id="scan-only-read" checked> 仅正文可读</label>
+            <label class="wb-field" style="cursor:pointer;"><input type="checkbox" id="scan-only-read"> 仅正文可读</label>
           </div>
           <div id="scan-list" class="write-grid" style="margin-bottom:16px;"><p style="color:var(--muted);font-size:13px;">正在读取最新选题…</p></div>
           <div class="panel-head" id="brief-panel" style="margin:0 -18px 14px; border-top:1px solid var(--line);"><strong>每日热点简报归档</strong><span>点日期打开当天热点简报</span></div>
@@ -837,7 +844,7 @@
   }
 
   // ===== 聚合器可写选题池 =====
-  const topicState = { items: [], kw: '', cluster: '', type: '', day: '', plat: '', sort: '', src: '', media: '' };
+  const topicState = { items: [], kw: '', cluster: '', type: '', day: '', plat: '', sort: '', src: '', media: '', grade: '' };
   function fmtTime(ts){
     if(!ts) return '';
     const m = String(ts).match(/^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})/);
@@ -922,17 +929,23 @@
     const items = topicState.items || [];
     const hotNum = x => Number(String(x||'').replace(/[^\d]/g,''))||0;
     const todayStr = new Date().toLocaleDateString('sv-SE');
-    const todayItems = items.filter(i => (i['抓取时间']||'').slice(0,10) === todayStr);
     const track = (document.getElementById('wb-track')||{}).value || '';
     const skillId = (document.getElementById('wb-skill')||{}).value || '';
     const skill = wbSkillById(skillId);
     const range = (document.getElementById('wb-range')||{}).value || 'all';
     const kw = ((document.getElementById('scan-keyword')||{}).value||'').trim().toLowerCase();
-    const onlyA = (document.getElementById('scan-only-a')||{}).checked || false;
     const onlyRead = (document.getElementById('scan-only-read')||{}).checked;
+    const gradeFilter = topicState.grade || '';
     const daySel = wbScanDay;
+    // 统计
+    const allToday = items.filter(i => (i['抓取时间']||'').slice(0,10) === todayStr);
+    const gradeCount = {A:0,B:0,C:0,待核实:0};
+    items.forEach(i=>{ const g=i['评级']||''; if(gradeCount[g]!==undefined) gradeCount[g]++; });
+    const statsBox = document.getElementById('scan-stats');
+    if(statsBox) statsBox.textContent = `近3天 ${items.length} 条｜今日新增 ${allToday.length} 条｜A ${gradeCount.A}｜B ${gradeCount.B}｜C ${gradeCount.C}｜待核实 ${gradeCount['待核实']}`;
     let pool = items.filter(i=>{
       if(onlyRead && i['content_ok']!==1) return false;
+      if(gradeFilter && (i['评级']||'') !== gradeFilter) return false;
       if(kw && !(i['标题']||'').toLowerCase().includes(kw)) return false;
       if(daySel==='today' && (i['抓取时间']||'').slice(0,10)!==todayStr) return false;
       if(range==='6h'){ const age=(Date.now()-new Date((i['抓取时间']||'').replace(' ','T')).getTime())/36e5; if(!isFinite(age)||age>6) return false; }
@@ -940,9 +953,12 @@
       if(range==='3d'){ const age=(Date.now()-new Date((i['抓取时间']||'').replace(' ','T')).getTime())/864e5; if(!isFinite(age)||age>3) return false; }
       return true;
     });
-    let sorted0 = (pool.length ? pool : items.slice()).sort((a,b)=>{
-      const ga=wbGrade(a,track), gb=wbGrade(b,track);
-      return (gb==='A')-(ga==='A') || (wbScore(b,track).total - wbScore(a,track).total) || (hotNum(b['热度'])-hotNum(a['热度']));
+    // 排序：今天的优先，然后按得分
+    let sorted0 = pool.slice().sort((a,b)=>{
+      const aToday=(a['抓取时间']||'').slice(0,10)===todayStr?0:1;
+      const bToday=(b['抓取时间']||'').slice(0,10)===todayStr?0:1;
+      if(aToday!==bToday) return aToday-bToday;
+      return (wbScore(b,track).total - wbScore(a,track).total) || (hotNum(b['热度'])-hotNum(a['热度']));
     });
     // 事件聚合（2026-09-19 修正）：只按 event_id（后端提取的事件主体）聚合；
     // 问题簇仅作标签，不再当聚合键；无 event_id 的单条独立成卡，绝不按问题簇兜底。
@@ -971,15 +987,19 @@
       if(gb!==ga) return gb-ga;
       return wbScore(b.main,track).total-wbScore(a.main,track).total;
     });
-    if(onlyA) cards = cards.filter(g=>wbGrade(g.main,track)==='A');
-    cards = cards.slice(0,12);
+    // 12条精选中待核实最多6条
+    let verifiedCards = cards.filter(g=>(g.main['评级']||'')!=='待核实');
+    let pendingCards = cards.filter(g=>(g.main['评级']||'')==='待核实');
+    const pendingLimit = Math.min(6, pendingCards.length);
+    cards = verifiedCards.concat(pendingCards.slice(0, pendingLimit)).slice(0,12);
     const head = document.getElementById('scan-head');
     const cnt = document.getElementById('scan-count');
     const list = document.getElementById('scan-list');
     if(!list) return;
     if(head) head.querySelector('strong').textContent = '今日扫描结果 · 自动精选'+(track?(' · '+track):'');
-    if(cnt) cnt.textContent = cards.length + ' 个事件（按事件ID聚合；问题簇仅作标签）· 综合评分 = 热度40% + 事实25% + Skill适配25% + 可信10%';
-    if(!cards.length){ list.innerHTML = '<p style="color:var(--muted);font-size:13px;">当前筛选下没有选题。调整筛选或等下一轮更新。</p>'; return; }
+    const pendN = cards.filter(g=>(g.main['评级']||'')==='待核实').length;
+    if(cnt) cnt.textContent = cards.length + ' 个事件（待核实 '+pendN+' 条）· 今天优先 · 待核实≤6';
+    if(!cards.length){ list.innerHTML = '<p style="color:var(--muted);font-size:13px;">当前没有符合条件的选题，请调整筛选或等待下一轮验证。</p>'; return; }
     list.innerHTML = cards.map(g=>wbCardHtml(g.main,g.sib,g.cluster)).join('');
   }
   // ============ 05 Skill 管理 + 综合评分 + 二创角度（2026-09-19 大改造） ============
@@ -1147,14 +1167,14 @@
     const track=(document.getElementById('wb-track')||{}).value||'';
     const skill=wbSkillById((document.getElementById('wb-skill')||{}).value||'');
     const sc=wbScore(it,track);
-    const grade=wbGrade(it,track);
+    const grade=it['评级']||'C';
     const ang=wbAngles(it,track,skill);
     const readOk=(it['content_ok']===1);
     const sibs=siblings||[];
     const multi=Number(it['多源数']||1);
     const backup=wbBackupHas(it['链接']||it['url']||'');
     const url=it['链接']||it['url']||'#';
-    const gradeLab={'A':'A 级','B':'B 级','C':'C 级','待观察':'待观察'}[grade]||'C 级';
+    const gradeLab={'A':'A 级','B':'B 级','C':'C 级','待核实':'待核实','待观察':'C 级'}[grade]||'C 级';
     const angleHtml=ang.angles.map(a=>'<div class="wb-angle-item">角度'+a.n+'：'+esc(a.text)+'</div>').join('');
     const otherSrc=(it['其他来源']||[]).map(x=>esc(x)).join('、')||'暂无其他来源';
     return '<article class="write-card"><div class="write-top"><h3><a href="'+esc(url)+'" target="_blank" rel="noopener" style="color:var(--ink); text-decoration:none;">'+esc(t)+' ↗</a></h3><span class="hot-label">'+gradeLab+' · 综合 '+sc.total+'</span></div>'+
@@ -1262,10 +1282,17 @@
     if(rangeSel) rangeSel.addEventListener('change',renderScan);
     const kw=document.getElementById('scan-keyword');
     if(kw) kw.addEventListener('input',renderScan);
-    const onlyA=document.getElementById('scan-only-a');
-    if(onlyA) onlyA.addEventListener('change',renderScan);
     const onlyRead=document.getElementById('scan-only-read');
     if(onlyRead) onlyRead.addEventListener('change',renderScan);
+    // 评级筛选
+    const gradeBox=document.getElementById('scan-grade-filter');
+    if(gradeBox) gradeBox.querySelectorAll('button').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        topicState.grade=btn.dataset.grade||'';
+        gradeBox.querySelectorAll('button').forEach(b=>{ b.classList.toggle('primary', b===btn); });
+        renderScan();
+      });
+    });
     const dayAll=document.getElementById('scan-day-all');
     const dayToday=document.getElementById('scan-day-today');
     function setDay(v,el){
