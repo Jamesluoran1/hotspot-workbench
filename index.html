@@ -941,8 +941,11 @@
     const allToday = items.filter(i => (i['抓取时间']||'').slice(0,10) === todayStr);
     const gradeCount = {A:0,B:0,C:0,待核实:0};
     items.forEach(i=>{ const g=i['评级']||''; if(gradeCount[g]!==undefined) gradeCount[g]++; });
+    const bs = window.__WB_STATS__ || {};
+    const okN = bs['正文成功'] !== undefined ? bs['正文成功'] : items.filter(i=>i['content_ok']===1).length;
+    const retryN = bs['等待重试'] !== undefined ? bs['等待重试'] : items.filter(i=>i['content_ok']===-2).length;
     const statsBox = document.getElementById('scan-stats');
-    if(statsBox) statsBox.textContent = `近3天 ${items.length} 条｜今日新增 ${allToday.length} 条｜A ${gradeCount.A}｜B ${gradeCount.B}｜C ${gradeCount.C}｜待核实 ${gradeCount['待核实']}`;
+    if(statsBox) statsBox.textContent = `近3天 ${items.length} 条｜今日新增 ${allToday.length} 条｜A ${gradeCount.A}｜B ${gradeCount.B}｜C ${gradeCount.C}｜待核实 ${gradeCount['待核实']}｜正文成功 ${okN}｜等待重试 ${retryN}`;
     let pool = items.filter(i=>{
       if(onlyRead && i['content_ok']!==1) return false;
       if(gradeFilter && (i['评级']||'') !== gradeFilter) return false;
@@ -951,6 +954,8 @@
       if(range==='6h'){ const age=(Date.now()-new Date((i['抓取时间']||'').replace(' ','T')).getTime())/36e5; if(!isFinite(age)||age>6) return false; }
       if(range==='24h'){ const age=(Date.now()-new Date((i['抓取时间']||'').replace(' ','T')).getTime())/36e5; if(!isFinite(age)||age>24) return false; }
       if(range==='3d'){ const age=(Date.now()-new Date((i['抓取时间']||'').replace(' ','T')).getTime())/864e5; if(!isFinite(age)||age>3) return false; }
+      // 默认72小时硬限
+      if(!range || range==='all'){ const age=(Date.now()-new Date((i['抓取时间']||'').replace(' ','T')).getTime())/864e5; if(!isFinite(age)||age>3) return false; }
       return true;
     });
     // 排序：今天的优先，然后按得分
@@ -1429,6 +1434,7 @@
       if (!r.ok) throw new Error('HTTP '+r.status);
       const d = await r.json();
       topicState.items = d.items || [];
+      window.__WB_STATS__ = d.stats || {};
       calcPlats(topicState.items);
       renderScan();
       document.getElementById('topics-meta').textContent = `共 ${d.count||topicState.items.length} 条 · 更新 ${d.updated||''}`;
