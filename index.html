@@ -968,7 +968,8 @@
     const statsBox = document.getElementById('scan-stats');
     if(statsBox) statsBox.textContent = `近3天 ${items.length} 条｜今日新增 ${allToday.length} 条｜A ${gradeCount.A}｜B ${gradeCount.B}｜C ${gradeCount.C}｜正文成功 ${okN}｜等待重试 ${retryN}`;
     let pool = items.filter(i=>{
-
+      // 第6批：精选只读可发布内容（publishable=true），风险内容仅留在原始热点库
+      if(i['可发布']===false) return false;
       if(kw && !(i['标题']||'').toLowerCase().includes(kw)) return false;
       // 日期过滤
       const iDay = (i['抓取时间']||'').slice(0,10);
@@ -1571,6 +1572,7 @@
     const kw = topicState.kw.trim().toLowerCase();
     const heatVal = x => { const s = String(x||''); const m = parseFloat(s); return s.includes('万') ? (m||0)*10000 : (m||0); };
     const list = topicState.items.filter(i =>
+      (i['可发布']!==false) &&
       (!kw || (i['标题']||'').toLowerCase().includes(kw)) &&
       (!topicState.cluster || i['问题簇']===topicState.cluster) &&
       (!topicState.type || i['内容类']===topicState.type) &&
