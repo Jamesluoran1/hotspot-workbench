@@ -635,11 +635,15 @@
         <div class="wb-field">写作赛道
           <select id="wb-track">
             <option value="">请选择 ▼</option>
-            <option>职场观察</option>
-            <option>电商经营</option>
-            <option>商业案例</option>
-            <option>个人成长</option>
-            <option>情感关系</option>
+            <option>通用热点</option>
+            <option>职场</option>
+            <option>电商</option>
+            <option>商业</option>
+            <option>AI科技</option>
+            <option>社会</option>
+            <option>情感</option>
+            <option>影视娱乐</option>
+            <option>其他</option>
             <option>通用热点</option>
             <option value="__custom">自定义赛道</option>
           </select>
@@ -1105,33 +1109,42 @@
     const multi=(Number(it['多源数']||1)>=2)?('多源交叉验证 '+it['多源数']+' 家'):'单源报道';
     const skNote=skill&&skill.name?('按 Skill「'+skill.name+'」的赛道规则展开'):'按所选赛道展开';
     const t=it['标题']||''; let base=[];
-    if(track==='职场观察'){
+    if(track==='职场'){
       base.push('职场视角：从「'+kw+'」中拆出对打工人/管理者真正有影响的一条（权责、汇报、待遇、团队），讲清发生了什么、为什么、谁该负责。');
       base.push('管理视角：把事件还原成一个管理决策场景（止损/激励/信任/制度），用「'+kw+'」做案例，给出可执行的判断标准。');
-      base.push('避坑清单：基于「'+kw+'」给职场人一份能照做的自查清单（哪些信号要警惕、遇到类似情况怎么办）。');
-    } else if(track==='电商经营'){
-      base.push('商家视角：从「'+kw+'」里挖出对电商商家有用的信号（平台规则/流量/成本/选品），讲清影响谁、影响多大、什么时候生效。');
-      base.push('经营动作：把事件转成 3 个可执行动作（改什么设置/调什么策略/备什么货），附判断依据。');
-      base.push('风险与机会：拆出事件的「机会面」和「风险面」，给出不同预算规模下的应对建议。');
-    } else if(track==='商业案例'){
-      base.push('案例拆解：把「'+kw+'」还原成完整商业案例（背景-决策-结果），提炼可复用的判断框架。');
-      base.push('数据视角：抓住事件里的关键数字，讲清数字背后的商业逻辑与行业信号。');
-      base.push('复盘清单：给同类经营者一份复盘清单（哪些决策对、哪些代价可以避免）。');
-    } else if(track==='个人成长'){
-      base.push('成长视角：从「'+kw+'」里提炼一条可迁移的成长规律，讲清「这对我的生活/工作有什么用」。');
-      base.push('方法拆解：把事件里的做法/教训整理成一套可执行的方法步骤。');
-      base.push('自省清单：基于「'+kw+'」做一份个人自省清单（哪些误区要避开）。');
-    } else if(track==='情感关系'){
-      base.push('关系视角：从「'+kw+'」中拆出关系里的关键冲突与选择，讲清双方立场与代价。');
-      base.push('沟通视角：把事件还原成一个沟通场景，给出更优的沟通与处理方式。');
-      base.push('边界清单：基于「'+kw+'」整理关系中的边界与底线清单。');
+      base.push('避坑清单：基于「'+kw+'」给职场人一份能照做的自查清单。');
+    } else if(track==='电商'){
+      base.push('商家视角：从「'+kw+'」里挖出对电商商家有用的信号（平台规则/流量/成本/选品）。');
+      base.push('经营动作：把事件转成 3 个可执行动作（改什么设置/调什么策略/备什么货）。');
+      base.push('风险与机会：拆出事件的「机会面」和「风险面」。');
+    } else if(track==='商业'){
+      base.push('案例拆解：把「'+kw+'」还原成完整商业案例（背景-决策-结果）。');
+      base.push('数据视角：抓住事件里的关键数字，讲清数字背后的商业逻辑。');
+      base.push('复盘清单：给同类经营者一份复盘清单。');
+    } else if(track==='AI科技'){
+      base.push('技术视角：从「'+kw+'」里拆出技术变化对普通用户/从业者的实际影响。');
+      base.push('落地动作：把技术新闻转成可执行的跟进动作（学什么/用什么/避什么坑）。');
+      base.push('行业信号：判断这个技术动向对哪些岗位、产品、生意有长期影响。');
+    } else if(track==='社会'){
+      base.push('事件梳理：把「'+kw+'」讲清楚（人物/时间/地点/经过/结果）。');
+      base.push('原因分析：拆出事件背后的原因、冲突与各方立场。');
+      base.push('行动建议：给读者一个可执行的动作或判断。');
+    } else if(track==='情感'){
+      base.push('关系视角：从「'+kw+'」中拆出关系里的关键冲突与选择。');
+      base.push('沟通视角：把事件还原成一个沟通场景，给出更优处理方式。');
+      base.push('边界清单：基于「'+kw+'」整理关系中的边界与底线。');
+    } else if(track==='影视娱乐'){
+      base.push('剧情看点：从「'+kw+'」里拆出最值得讨论的冲突、人物和结局。');
+      base.push('共鸣点：找出观众情绪共鸣点（成长/背叛/逆袭/治愈）。');
+      base.push('延展话题：从剧情延伸到现实生活中的类似话题。');
     } else {
       base.push('是什么：用「'+kw+'」把事件讲清楚（人物/动作/经过/结果/数据）。');
       base.push('为什么：拆出事件背后的原因、冲突与各方立场。');
-      base.push('怎么办：给读者一个可执行的动作或判断（结合 '+src+' 的线索）。');
+      base.push('怎么办：给读者一个可执行的动作或判断。');
     }
     const angles=base.map((a,i)=>({n:i+1, text:a}));
-    return {angles:angles, fit:wbFitScore(it,track), note:multi+' · 素材来源：'+src+' · 热度 '+heat+' · '+skNote};
+    const fit = Number((it['赛道分']||{})[track]||0);
+    return {angles:angles, fit:fit, note:multi+' · 素材来源：'+src+' · 热度 '+heat+' · '+skNote};
   }
   // 备用标记（localStorage 按 URL）
   function wbBackupLoad(){ try{return JSON.parse(localStorage.getItem(WB_BACKUP_KEY)||'{}');}catch(e){return {};} }
@@ -1142,7 +1155,11 @@
     const t=it['标题']||'';
     const track=(document.getElementById('wb-track')||{}).value||'';
     const skill=wbSkillById((document.getElementById('wb-skill')||{}).value||'');
-    const sc=wbScore(it,track);
+    const recScore=Number(it['推荐分']||0);
+    const matchScore=Number(it['匹配分']||0);
+    const heatScore=Number(it['热度分']||0);
+    const freshScore=Number(it['新鲜度分']||0);
+    const srcScore=Number(it['来源分']||0);
     const grade=it['评级']||'C';
     const ang=wbAngles(it,track,skill);
     const readOk=(it['content_ok']===1);
@@ -1153,16 +1170,17 @@
     const gradeLab={'A':'A 级','B':'B 级','C':'C 级'}[grade]||'C 级';
     const angleHtml=ang.angles.map(a=>'<div class="wb-angle-item">角度'+a.n+'：'+esc(a.text)+'</div>').join('');
     const otherSrc=(it['其他来源']||[]).map(x=>esc(x)).join('、')||'暂无其他来源';
-    return '<article class="write-card"><div class="write-top"><h3><a href="'+esc(url)+'" target="_blank" rel="noopener" style="color:var(--ink); text-decoration:none;">'+esc(t)+' ↗</a></h3><span class="hot-label">'+gradeLab+' · 综合 '+sc.total+'</span></div>'+
+    return '<article class="write-card"><div class="write-top"><h3><a href="'+esc(url)+'" target="_blank" rel="noopener" style="color:var(--ink); text-decoration:none;">'+esc(t)+' ↗</a></h3><span class="hot-label">'+gradeLab+' · 推荐分 '+recScore+'</span></div>'+
       '<div class="wb-card-meta">'+
       '<span>来源 <b>'+esc(it['来源']||'—')+'</b></span>'+
       '<span>发布时间 <b>'+esc(it['发布时间']||'—')+'</b></span>'+
       '<span>抓取 <b>'+esc(it['抓取时间']||'')+'</b></span>'+
       '<span>热度 <b>'+esc(it['热度']||'—')+'</b></span>'+
-      '<span>事实完整度 <b>'+sc.fact+'</b></span>'+
-      '<span>Skill适配 <b>'+sc.fit+'</b></span>'+
-      '<span>来源可信 <b>'+sc.trust+'</b></span>'+
-      '<span>正文 <b>'+(readOk?'已读取':'不可读')+'</b></span>'+
+      '<span>匹配分 <b>'+matchScore+'</b></span>'+
+      '<span>热度分 <b>'+heatScore+'</b></span>'+
+      '<span>新鲜度 <b>'+freshScore+'</b></span>'+
+      '<span>来源分 <b>'+srcScore+'</b></span>'+
+      '<span>正文 <b>'+(readOk?'已读取':'未读')+'</b></span>'+
       '<span>多源 <b>'+multi+'</b></span>'+
       '</div>'+
       '<div class="wb-angles"><div class="a-title">'+esc('当前赛道「'+(track||'通用热点')+'」生成的预设角度（Skill 仅作写作规则参考，未参与分析）')+'</div>'+angleHtml+'</div>'+
