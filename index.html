@@ -644,7 +644,6 @@
             <option>情感</option>
             <option>影视娱乐</option>
             <option>其他</option>
-            <option>通用热点</option>
             <option value="__custom">自定义赛道</option>
           </select>
         </div>
@@ -662,16 +661,10 @@
           <div id="scan-stats" style="font-size:12px;color:var(--muted);margin-bottom:8px;"></div>
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;align-items:center;">
             <input id="scan-keyword" placeholder="搜索热点关键词…" style="flex:1;min-width:200px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);font-size:12px;">
-            <span id="scan-grade-filter" style="display:inline-flex;gap:4px;flex-wrap:wrap;">
-              <button type="button" data-grade="" class="wb-btn primary">全部</button>
-              <button type="button" data-grade="A" class="wb-btn">A</button>
-              <button type="button" data-grade="B" class="wb-btn">B</button>
-              <button type="button" data-grade="C" class="wb-btn">C</button>
-            </span>
-            <button type="button" data-day="today" class="wb-btn primary" id="scan-day-today">今天</button>
+            <button type="button" data-day="today" class="wb-btn" id="scan-day-today">今天</button>
             <button type="button" data-day="yesterday" class="wb-btn" id="scan-day-yesterday">昨天</button>
             <button type="button" data-day="day-before" class="wb-btn" id="scan-day-before">前天</button>
-            <button type="button" data-day="" class="wb-btn" id="scan-day-all">近3天</button>
+            <button type="button" data-day="" class="wb-btn primary" id="scan-day-all">近3天</button>
           </div>
           <div id="scan-list" class="write-grid" style="margin-bottom:16px;"><p style="color:var(--muted);font-size:13px;">正在读取最新选题…</p></div>
           <div id="scan-pending-block" style="margin:10px 0 16px;border-top:1px dashed var(--line);padding-top:10px;display:none;">
@@ -946,7 +939,6 @@
     const skill = wbSkillById(skillId);
     const range = (document.getElementById('wb-range')||{}).value || 'all';
     const kw = ((document.getElementById('scan-keyword')||{}).value||'').trim().toLowerCase();
-    const gradeFilter = topicState.grade || '';
     const daySel = wbScanDay;
     // 统计
     const allToday = items.filter(i => (i['抓取时间']||'').slice(0,10) === todayStr);
@@ -958,7 +950,7 @@
     const statsBox = document.getElementById('scan-stats');
     if(statsBox) statsBox.textContent = `近3天 ${items.length} 条｜今日新增 ${allToday.length} 条｜A ${gradeCount.A}｜B ${gradeCount.B}｜C ${gradeCount.C}｜正文成功 ${okN}｜等待重试 ${retryN}`;
     let pool = items.filter(i=>{
-      if(gradeFilter && (i['评级']||'') !== gradeFilter) return false;
+
       if(kw && !(i['标题']||'').toLowerCase().includes(kw)) return false;
       // 日期过滤
       const iDay = (i['抓取时间']||'').slice(0,10);
@@ -1279,7 +1271,6 @@
     const onlyRead=null;
     if(onlyRead) onlyRead.addEventListener('change',renderScan);
     // 评级筛选
-    const gradeBox=document.getElementById('scan-grade-filter');
     if(gradeBox) gradeBox.querySelectorAll('button').forEach(btn=>{
       btn.addEventListener('click',()=>{
         topicState.grade=btn.dataset.grade||'';
