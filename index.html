@@ -1379,14 +1379,6 @@
     if(kw) kw.addEventListener('input',renderScan);
     const onlyRead=null;
     if(onlyRead) onlyRead.addEventListener('change',renderScan);
-    // 评级筛选
-    if(gradeBox) gradeBox.querySelectorAll('button').forEach(btn=>{
-      btn.addEventListener('click',()=>{
-        topicState.grade=btn.dataset.grade||'';
-        gradeBox.querySelectorAll('button').forEach(b=>{ b.classList.toggle('primary', b===btn); });
-        renderScan();
-      });
-    });
     const pendHead=document.getElementById('scan-pending-head');
     if(pendHead) pendHead.addEventListener('click',()=>{
       const b=document.getElementById('scan-pending-body');
