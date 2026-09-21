@@ -984,7 +984,7 @@
       if(!gmap[key]){ gmap[key]=[]; gorder.push(key); }
       gmap[key].push(it);
     });
-    const wbMainRank = it => [ it['content_ok']===1 ? 1:0, Number(it['事实完整度']||0), wbScore(it,track).total, hotNum(it['热度']) ];
+    const wbMainRank = it => [ Number(it['推荐分']||0), Number(it['新鲜度分']||0), Number(it['热度分']||0) ];
     let cards = gorder.map(k=>{
       const g=gmap[k].slice().sort((a,b)=>{
         const ra=wbMainRank(a), rb=wbMainRank(b);
@@ -996,10 +996,11 @@
       return {main:main, sib:sib, cluster:(k.startsWith('e__')?k.slice(2):'')};
     });
     cards.sort((a,b)=>{
-      // 多事件组（同事件有多条进展）优先排前，保证「查看事件进展」按钮不被切片截掉
-      const ga=(a.sib&&a.sib.length)?1:0, gb=(b.sib&&b.sib.length)?1:0;
-      if(gb!==ga) return gb-ga;
-      return wbScore(b.main,track).total-wbScore(a.main,track).total;
+      // 纯后台推荐分降序，同分按新鲜度、热度
+      const ra=[Number(a.main['推荐分']||0),Number(a.main['新鲜度分']||0),Number(a.main['热度分']||0)];
+      const rb=[Number(b.main['推荐分']||0),Number(b.main['新鲜度分']||0),Number(b.main['热度分']||0)];
+      for(let i=0;i<ra.length;i++) if(rb[i]!==ra[i]) return rb[i]-ra[i];
+      return 0;
     });
     // 第5批：12条精选纯推荐分排序，今天不足用昨天前天补
     cards = cards.slice(0, 12);
@@ -1017,15 +1018,8 @@
   // ============ 05 Skill 管理 + 综合评分 + 二创角度（2026-09-19 大改造） ============
   const WB_SKILLS_KEY='wb_skills_v2', WB_BACKUP_KEY='wb_backup_v2', WB_TASK_KEY='wb_write_task_v2';
   let wbScanDay = '';
-  const WB_TRACKS=['职场观察','电商经营','商业案例','个人成长','情感关系','通用热点'];
-  const WB_TRACK_KEYWORDS={
-    '职场观察':['职场','员工','老板','管理','加班','裁员','晋升','工资','公积金','领导','公司','办公室','汇报','offer','面试','离职','hr','拖欠'],
-    '电商经营':['电商','淘宝','天猫','京东','拼多多','抖音','小红书','快手','商家','店铺','佣金','流量','转化','直播','选品','跨境','亚马逊','temu','tiktok shop','shopee','微信小店','sku'],
-    '商业案例':['商业','创业','融资','营收','上市','品牌','门店','零售','消费','投资人','估值','财报','增长','营销'],
-    '个人成长':['成长','学习','自律','习惯','时间管理','认知','读书','目标','复盘','效率','心态'],
-    '情感关系':['情感','婚姻','恋爱','分手','家庭','关系','两性','亲密关系'],
-    '通用热点':[]
-  };
+  const WB_TRACKS=['通用热点','职场','电商','商业','AI科技','社会','情感','影视娱乐','其他'];
+  // 第5批：赛道由后台track_category决定，前端不再用关键词打分
   function wbSkillsLoad(){ try{return JSON.parse(localStorage.getItem(WB_SKILLS_KEY)||'[]');}catch(e){return [];} }
   function wbSkillsSave(list){ try{ localStorage.setItem(WB_SKILLS_KEY, JSON.stringify(list)); return true; }catch(e){ return false; } }
   function wbSkillById(id){ return wbSkillsLoad().find(x=>x.id===id)||null; }
@@ -1104,37 +1098,7 @@
     if(cur && list.some(sk=>sk.id===cur)) sel.value=cur;
   }
   // 综合评分：热度40% + 事实完整度25% + Skill适配度25% + 来源可信度10%
-  function wbHeatScore(it){
-    const s=String(it['热度']||''); const m=parseFloat(s);
-    const v= s.includes('万')?(m||0)*10000:(m||0);
-    if(!v) return 40;
-    return Math.min(100, Math.round(30+70*Math.min(1, Math.log10(1+v)/7)));
-  }
-  function wbTrustScore(it){
-    const n=Number(it['多源数']||1);
-    if(n>=3) return 100; if(n===2) return 80; return 50;
-  }
-  function wbFitScore(it, track){
-    if(!track) return 60;
-    const t=((it['标题']||'')+' '+(it['问题簇']||'')+' '+(it['内容类']||'')).toLowerCase();
-    const ks=WB_TRACK_KEYWORDS[track]||[];
-    let n=0; ks.forEach(k=>{ if(t.includes(k.toLowerCase())) n++; });
-    return Math.min(100, Math.round(40+n*18));
-  }
-  function wbScore(it, track){
-    const fact=Math.min(100, Number(it['事实完整度']||40));
-    const heat=wbHeatScore(it);
-    const fit=wbFitScore(it, track);
-    const trust=wbTrustScore(it);
-    const total=Math.round(heat*0.4 + fact*0.25 + fit*0.25 + trust*0.1);
-    return {total:total, heat:heat, fact:fact, fit:fit, trust:trust};
-  }
-  function wbGrade(it, track){
-    if(it['content_ok']!==1) return '待观察';
-    const total=wbScore(it, track).total;
-    if(total>=80) return 'A'; if(total>=60) return 'B'; if(total>=40) return 'C';
-    return '待观察';
-  }
+  // 第5批：旧前端评分函数已删，直接用后台推荐分/评级
   function wbAngles(it, track, skill){
     const kw=(it['标题']||'').replace(/[，。！？、,.!?「」"'（）()·：:]/g,' ').trim().split(/\s+/).slice(0,4).join('、')||'这件事';
     const src=it['来源']||''; const heat=it['热度']||'';
@@ -1515,7 +1479,7 @@
     if (!list.length){ box.innerHTML = '<div class="tip-box">没有匹配的选题</div>'; return; }
     box.innerHTML = list.map(i=>{
       const sc = i['得分']||0;
-      return `<article class="write-card"><div class="write-top"><h3><a href="${esc(i['链接'])}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${esc(i['标题'])} ↗</a><button class="copy-btn" data-title="${esc(i['标题'])}" title="复制标题">复制</button></h3><span class="hot-label">${scoreLabel(sc)}</span></div><div class="write-tags"><span>${esc(i['问题簇']||'未归类')}</span><span>${esc(i['内容类']||'-')}</span><span>热度 ${esc(i['热度']||'-')}</span>${(i._plat||0)>=2?`<span class="multi-tag">多平台 ${i._plat} 家 · ${esc(i['平台列表']||'')}</span>`:''}<span>${esc(i['媒体']||i['来源']||'')}</span>${xhsBtnHtml(i['链接'], i['标题'])}${fetchTag(i['抓取时间'])}${i['发布时间']?`<span>${esc(i['发布时间'])}</span>`:''}</div></article>`;
+      return `<article class="write-card"><div class="write-top"><h3><a href="${esc(i['链接'])}" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:none;">${esc(i['标题'])} ↗</a><button class="copy-btn" data-title="${esc(i['标题'])}" title="复制标题">复制</button></h3><span class="hot-label">${scoreLabel(i)}</span></div><div class="write-tags"><span>${esc(i['问题簇']||'未归类')}</span><span>${esc(i['内容类']||'-')}</span><span>热度 ${esc(i['热度']||'-')}</span>${(i._plat||0)>=2?`<span class="multi-tag">多平台 ${i._plat} 家 · ${esc(i['平台列表']||'')}</span>`:''}<span>${esc(i['媒体']||i['来源']||'')}</span>${xhsBtnHtml(i['链接'], i['标题'])}${fetchTag(i['抓取时间'])}${i['发布时间']?`<span>${esc(i['发布时间'])}</span>`:''}</div></article>`;
     }).join('');
   }
   document.getElementById('topics-keyword').addEventListener('input', e=>{ topicState.kw = e.target.value; renderTopics(); });
