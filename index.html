@@ -673,6 +673,24 @@
           </div>
           <div class="panel-head" id="brief-panel" style="margin:0 -18px 14px; border-top:1px solid var(--line);"><strong>每日热点简报归档</strong><span>点日期打开当天热点简报</span></div>
           <div id="brief-list" class="write-tags" style="margin:0 -18px 0; padding:0 18px 14px;">加载中…</div>
+          <div style="margin-top:16px;border-top:1px dashed var(--line);padding-top:12px;">
+            <button type="button" id="raw-toggle" class="wb-btn" style="width:100%;text-align:left;">📚 原始热点库（近72小时聚合，点击展开加载）</button>
+            <div id="raw-panel" style="display:none;margin-top:12px;">
+              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;align-items:center;">
+                <input id="raw-keyword" placeholder="搜索原始热点…" style="flex:1;min-width:180px;padding:6px 10px;border:1px solid var(--line);border-radius:6px;font-size:12px;">
+                <select id="raw-track" style="padding:6px;border:1px solid var(--line);border-radius:6px;font-size:12px;"><option value="">全部赛道</option></select>
+                <select id="raw-sort" style="padding:6px;border:1px solid var(--line);border-radius:6px;font-size:12px;"><option value="rec">推荐分</option><option value="heat">热度</option><option value="time">最新</option></select>
+                <label style="font-size:12px;display:flex;align-items:center;gap:4px;"><input type="checkbox" id="raw-risk"> 显示风险</label>
+                <span id="raw-count" style="font-size:12px;color:var(--muted);"></span>
+              </div>
+              <div id="raw-list" style="max-height:600px;overflow-y:auto;"></div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;">
+                <button type="button" id="raw-prev" class="wb-btn">上一页</button>
+                <span id="raw-page" style="font-size:12px;color:var(--muted);"></span>
+                <button type="button" id="raw-next" class="wb-btn">下一页</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -1196,6 +1214,97 @@
       '</article>';
   }
   function wbFindItem(url){ return (topicState.items||[]).find(i=>(i['链接']||i['url']||'')===url)||null; }
+
+  // ===== 原始热点库（第5项）=====
+  const rawState = {loaded:false, data:[], page:1, per:30, filterDay:'', track:'', kw:'', sort:'rec', showRisk:false};
+  async function rawLoad(){
+    if(rawState.loaded) return;
+    document.getElementById('raw-list').innerHTML = '加载中…';
+    try{
+      const r = await fetch('workbench_raw.json?v=' + Date.now());
+      const j = await r.json();
+      rawState.data = j.items || [];
+      rawState.loaded = true;
+      // 填赛道下拉
+      const sel = document.getElementById('raw-track');
+      const tracks = [...new Set(rawState.data.map(x=>x['赛道分类']||'其他'))].sort();
+      tracks.forEach(t=>{ const o=document.createElement('option'); o.value=t; o.textContent=t; sel.appendChild(o); });
+      rawRender();
+    }catch(e){
+      document.getElementById('raw-list').innerHTML = '加载失败: '+e.message;
+    }
+  }
+  function rawFilter(){
+    const kw = rawState.kw.trim();
+    return rawState.data.filter(it=>{
+      if(!rawState.showRisk && it['可发布']===false) return false;
+      if(rawState.track && (it['赛道分类']||'') !== rawState.track) return false;
+      if(rawState.filterDay){
+        const d = (it['抓取时间']||'').slice(0,10);
+        const today = new Date();
+        const dstr = x => new Date(x).toISOString().slice(0,10);
+        if(rawState.filterDay==='today' && d !== dstr(today)) return false;
+        if(rawState.filterDay==='yesterday'){ const y=new Date(today); y.setDate(y.getDate()-1); if(d!==dstr(y)) return false; }
+        if(rawState.filterDay==='day-before'){ const y=new Date(today); y.setDate(y.getDate()-2); if(d!==dstr(y)) return false; }
+      }
+      if(kw && !(it['标题']||'').includes(kw)) return false;
+      return true;
+    }).sort((a,b)=>{
+      if(rawState.sort==='heat') return (b['热度分']||0)-(a['热度分']||0);
+      if(rawState.sort==='time') return (b['抓取时间']||'').localeCompare(a['抓取时间']||'');
+      return (b['推荐分']||0)-(a['推荐分']||0);
+    });
+  }
+  function rawRender(){
+    const list = rawFilter();
+    const total = list.length;
+    const pages = Math.max(1, Math.ceil(total/rawState.per));
+    if(rawState.page>pages) rawState.page = pages;
+    const start = (rawState.page-1)*rawState.per;
+    const slice = list.slice(start, start+rawState.per);
+    document.getElementById('raw-count').textContent = `共 ${total} 条`;
+    document.getElementById('raw-page').textContent = `第 ${rawState.page}/${pages} 页`;
+    document.getElementById('raw-prev').disabled = rawState.page<=1;
+    document.getElementById('raw-next').disabled = rawState.page>=pages;
+    const g = document.getElementById('raw-list');
+    if(!slice.length){ g.innerHTML = '<div style="color:var(--muted);font-size:12px;padding:20px;text-align:center;">无匹配内容</div>'; return; }
+    g.innerHTML = slice.map(it=>{
+      const rec = it['推荐分']||0;
+      const grade = it['评级']||'';
+      const title = it['标题']||'';
+      const url = it['链接']||'#';
+      const src = it['来源']||'';
+      const ft = it['抓取时间']||'';
+      const track = it['赛道分类']||'';
+      const risk = it['可发布']===false ? '<span style="color:#c00;">风险</span>' : '';
+      const sibs = (it['事件进展']||[]).length;
+      return '<div style="padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px;">'+
+        '<a href="'+url+'" target="_blank" style="color:var(--ink);text-decoration:none;">'+title+' ↗</a>'+
+        ' <span style="font-size:11px;color:#888;">['+grade+' '+rec+'分 · '+track+' · '+src+' · '+ft.slice(5,16)+(sibs?' · '+sibs+'来源':'')+']</span>'+risk+
+        '</div>';
+    }).join('');
+  }
+  document.addEventListener('DOMContentLoaded', ()=>{
+    const tg = document.getElementById('raw-toggle');
+    if(tg) tg.addEventListener('click', ()=>{
+      const p = document.getElementById('raw-panel');
+      if(p.style.display==='none'){ p.style.display='block'; rawLoad(); }
+      else p.style.display='none';
+    });
+    const kw = document.getElementById('raw-keyword');
+    if(kw) kw.addEventListener('input', ()=>{ rawState.kw=kw.value; rawState.page=1; rawRender(); });
+    const tr = document.getElementById('raw-track');
+    if(tr) tr.addEventListener('change', ()=>{ rawState.track=tr.value; rawState.page=1; rawRender(); });
+    const so = document.getElementById('raw-sort');
+    if(so) so.addEventListener('change', ()=>{ rawState.sort=so.value; rawState.page=1; rawRender(); });
+    const rk = document.getElementById('raw-risk');
+    if(rk) rk.addEventListener('change', ()=>{ rawState.showRisk=rk.checked; rawState.page=1; rawRender(); });
+    const pv = document.getElementById('raw-prev');
+    if(pv) pv.addEventListener('click', ()=>{ if(rawState.page>1){ rawState.page--; rawRender(); }});
+    const nx = document.getElementById('raw-next');
+    if(nx) nx.addEventListener('click', ()=>{ rawState.page++; rawRender(); });
+  });
+
   function wbGo(pageId){
     const navItems=document.querySelectorAll('.nav-item');
     const pages=document.querySelectorAll('.page');
