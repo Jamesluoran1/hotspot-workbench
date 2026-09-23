@@ -1,0 +1,4603 @@
+{
+ "updated": "2026-09-23 13:00",
+ "count": 287,
+ "total": 287,
+ "in_2026": 287,
+ "has_content": 281,
+ "no_content": 6,
+ "selected_count": 174,
+ "items": [
+  {
+   "id": 20010897,
+   "title": "关于新增《淘宝网\"支持专票\"服务规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 4,
+   "acquire_score": 4,
+   "publish_time": "2026-09-22",
+   "fetched_at": "2026-09-23 08:52:31",
+   "content_ok": 0,
+   "content_len": 0,
+   "version_count": 1
+  },
+  {
+   "id": 20010851,
+   "title": "关于新增《淘宝网“免费安装”服务规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-09-16 17:23:58",
+   "fetched_at": "2026-09-20 18:21:00",
+   "content_ok": 1,
+   "content_len": 2484,
+   "version_count": 1
+  },
+  {
+   "id": 20010842,
+   "title": "淘宝天猫平台关于进一步规范“餐饮制售类”商品的治理公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-09-16 13:35:00",
+   "fetched_at": "2026-09-20 18:13:09",
+   "content_ok": 1,
+   "content_len": 702,
+   "version_count": 1
+  },
+  {
+   "id": 20010841,
+   "title": "关于变更《淘宝网食品行业管理规范》《淘宝网生鲜行业管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-09-16 13:34:38",
+   "fetched_at": "2026-09-20 18:13:28",
+   "content_ok": 1,
+   "content_len": 7994,
+   "version_count": 1
+  },
+  {
+   "id": 20010836,
+   "title": "“淘宝极有家严选”市场管理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 10,
+   "publish_time": "2026-09-15 15:05:21",
+   "fetched_at": "2026-09-20 18:21:13",
+   "content_ok": 1,
+   "content_len": 2401,
+   "version_count": 1
+  },
+  {
+   "id": 20004501,
+   "title": "淘宝网“产地直发”服务规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-09-11 18:00:00",
+   "fetched_at": "2026-09-20 18:21:31",
+   "content_ok": 1,
+   "content_len": 2076,
+   "version_count": 1
+  },
+  {
+   "id": 20010799,
+   "title": "关于变更《淘宝网超时说明》特殊商品付款时效细则的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-09-10 10:26:38",
+   "fetched_at": "2026-09-20 18:21:42",
+   "content_ok": 1,
+   "content_len": 534,
+   "version_count": 1
+  },
+  {
+   "id": 20010782,
+   "title": "关于新增《淘宝网“极有家严选”市场管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-09-08 11:05:30",
+   "fetched_at": "2026-09-20 18:24:56",
+   "content_ok": 1,
+   "content_len": 2725,
+   "version_count": 1
+  },
+  {
+   "id": 20010781,
+   "title": "关于新增《淘宝网“极有家严选”市场管理规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 4,
+   "acquire_score": 4,
+   "publish_time": "2026-09-08 11:01:40",
+   "fetched_at": "2026-09-20 18:25:13",
+   "content_ok": 1,
+   "content_len": 162,
+   "version_count": 1
+  },
+  {
+   "id": 20010771,
+   "title": "关于升级《淘宝网“产地直发”服务规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-09-04 18:02:59",
+   "fetched_at": "2026-09-20 18:25:26",
+   "content_ok": 1,
+   "content_len": 2301,
+   "version_count": 1
+  },
+  {
+   "id": 20010770,
+   "title": "关于升级《淘宝网“产地直发”管理规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 4,
+   "acquire_score": 4,
+   "publish_time": "2026-09-04 17:57:19",
+   "fetched_at": "2026-09-20 18:25:40",
+   "content_ok": 1,
+   "content_len": 129,
+   "version_count": 1
+  },
+  {
+   "id": 518,
+   "title": "淘宝网关于扰乱市场秩序实施细则",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 10,
+   "publish_time": "2026-09-03 22:03:35",
+   "fetched_at": "2026-09-20 18:25:58",
+   "content_ok": 1,
+   "content_len": 2965,
+   "version_count": 1
+  },
+  {
+   "id": 14,
+   "title": "淘宝网市场管理与违规处理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-09-03 22:02:47",
+   "fetched_at": "2026-09-20 18:26:08",
+   "content_ok": 1,
+   "content_len": 13102,
+   "version_count": 1
+  },
+  {
+   "id": 20010764,
+   "title": "关于变更《热浪引擎平台预约商品结算细则》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 12,
+   "publish_time": "2026-09-03 17:55:46",
+   "fetched_at": "2026-09-20 18:26:20",
+   "content_ok": 1,
+   "content_len": 3760,
+   "version_count": 1
+  },
+  {
+   "id": 20010762,
+   "title": "关于变更《淘宝直播管理规则》市场管理处置的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-09-03 17:44:38",
+   "fetched_at": "2026-09-20 18:26:37",
+   "content_ok": 1,
+   "content_len": 957,
+   "version_count": 1
+  },
+  {
+   "id": 20010760,
+   "title": "关于变更《淘宝直播管理规则》市场管理处置的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-09-03 17:38:03",
+   "fetched_at": "2026-09-20 18:26:45",
+   "content_ok": 1,
+   "content_len": 136,
+   "version_count": 1
+  },
+  {
+   "id": 20010763,
+   "title": "关于变更《热浪引擎平台预约商品结算细则》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 10,
+   "publish_time": "2026-09-03 17:28:23",
+   "fetched_at": "2026-09-20 18:27:01",
+   "content_ok": 1,
+   "content_len": 150,
+   "version_count": 1
+  },
+  {
+   "id": 20010753,
+   "title": "关于变更《认证管理规则与实施细则》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-09-02 23:35:16",
+   "fetched_at": "2026-09-20 18:27:14",
+   "content_ok": 1,
+   "content_len": 1342,
+   "version_count": 1
+  },
+  {
+   "id": 20010752,
+   "title": "关于变更《淘宝网保证金管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 10,
+   "publish_time": "2026-09-02 23:25:27",
+   "fetched_at": "2026-09-20 18:27:31",
+   "content_ok": 1,
+   "content_len": 439,
+   "version_count": 1
+  },
+  {
+   "id": 20006228,
+   "title": "淘宝网“退货宝”服务规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-09-02 14:47:50",
+   "fetched_at": "2026-09-20 18:27:50",
+   "content_ok": 1,
+   "content_len": 2112,
+   "version_count": 1
+  },
+  {
+   "id": 20010742,
+   "title": "关于变更《淘宝网发货管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-09-01 14:56:21",
+   "fetched_at": "2026-09-20 18:27:59",
+   "content_ok": 1,
+   "content_len": 2002,
+   "version_count": 1
+  },
+  {
+   "id": 20010741,
+   "title": "关于变更《淘宝网发货管理规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 4,
+   "publish_time": "2026-09-01 14:55:40",
+   "fetched_at": "2026-09-20 18:28:14",
+   "content_ok": 1,
+   "content_len": 128,
+   "version_count": 1
+  },
+  {
+   "id": 20010708,
+   "title": "《极有家严选商品标准》细则",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 4,
+   "acquire_score": 4,
+   "publish_time": "2026-09-01 09:50:00",
+   "fetched_at": "2026-09-20 18:33:06",
+   "content_ok": 0,
+   "content_len": 0,
+   "version_count": 1
+  },
+  {
+   "id": 20010707,
+   "title": "关于变更《淘宝网市场管理与违规处理规范 》及《淘宝网关于扰乱市场秩序实施细则》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 12,
+   "publish_time": "2026-08-27 21:42:45",
+   "fetched_at": "2026-09-20 18:33:22",
+   "content_ok": 1,
+   "content_len": 4597,
+   "version_count": 1
+  },
+  {
+   "id": 20010706,
+   "title": "关于变更《淘宝网市场管理与违规处理规范》及《淘宝网关于扰乱市场秩序实施细则》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 4,
+   "publish_time": "2026-08-27 21:06:11",
+   "fetched_at": "2026-09-20 18:33:40",
+   "content_ok": 1,
+   "content_len": 175,
+   "version_count": 1
+  },
+  {
+   "id": 20010696,
+   "title": "关于变更飞猪旅行集市度假&门票商品服务保障标准的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-08-27 14:46:29",
+   "fetched_at": "2026-09-20 18:34:00",
+   "content_ok": 1,
+   "content_len": 326,
+   "version_count": 1
+  },
+  {
+   "id": 20010691,
+   "title": "关于飞猪旅行集市度假&门票商品服务保障标准的意见征集反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 4,
+   "acquire_score": 4,
+   "publish_time": "2026-08-27 14:01:36",
+   "fetched_at": "2026-09-20 18:34:20",
+   "content_ok": 1,
+   "content_len": 151,
+   "version_count": 1
+  },
+  {
+   "id": 20010657,
+   "title": "关于变更《淘宝网“退货宝”服务规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 10,
+   "publish_time": "2026-08-25 09:00:01",
+   "fetched_at": "2026-09-20 18:34:45",
+   "content_ok": 1,
+   "content_len": 3889,
+   "version_count": 1
+  },
+  {
+   "id": 20010645,
+   "title": "关于变更《淘宝网3C数码配件行业管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-08-20 16:30:39",
+   "fetched_at": "2026-09-20 18:35:05",
+   "content_ok": 1,
+   "content_len": 631,
+   "version_count": 1
+  },
+  {
+   "id": 20010644,
+   "title": "关于变更《淘宝网3C数码配件行业管理规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-08-20 16:27:06",
+   "fetched_at": "2026-09-20 18:35:25",
+   "content_ok": 1,
+   "content_len": 165,
+   "version_count": 1
+  },
+  {
+   "id": 20010592,
+   "title": "淘宝网“安心充电”服务规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-08-18 18:00:03",
+   "fetched_at": "2026-09-20 18:35:39",
+   "content_ok": 1,
+   "content_len": 2048,
+   "version_count": 1
+  },
+  {
+   "id": 20007029,
+   "title": "【更新260903】关于自然灾害影响地区发货及考核调整公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 6,
+   "publish_time": "2026-08-14 22:29:35",
+   "fetched_at": "2026-09-20 18:12:06",
+   "content_ok": 1,
+   "content_len": 4854,
+   "version_count": 1
+  },
+  {
+   "id": 20010600,
+   "title": "淘宝平台关于“承诺承运方式未履约”的治理公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-08-14 13:43:53",
+   "fetched_at": "2026-09-20 18:12:23",
+   "content_ok": 1,
+   "content_len": 1011,
+   "version_count": 1
+  },
+  {
+   "id": 20010599,
+   "title": "关于变更《热浪引擎平台管理规则》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-08-14 10:10:56",
+   "fetched_at": "2026-09-20 18:35:57",
+   "content_ok": 1,
+   "content_len": 3959,
+   "version_count": 1
+  },
+  {
+   "id": 20010601,
+   "title": "关于变更《热浪引擎平台管理规则》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-08-14 10:00:36",
+   "fetched_at": "2026-09-20 18:36:10",
+   "content_ok": 1,
+   "content_len": 146,
+   "version_count": 1
+  },
+  {
+   "id": 2352,
+   "title": "淘宝网评价规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-08-12 16:46:28",
+   "fetched_at": "2026-09-20 18:36:21",
+   "content_ok": 1,
+   "content_len": 2740,
+   "version_count": 1
+  },
+  {
+   "id": 20010584,
+   "title": "关于新增《淘宝网“安心充电”服务规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-08-11 17:25:26",
+   "fetched_at": "2026-09-20 18:36:29",
+   "content_ok": 1,
+   "content_len": 2363,
+   "version_count": 1
+  },
+  {
+   "id": 20006317,
+   "title": "淘宝平台票务类商品争议处理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-08-11 15:30:00",
+   "fetched_at": "2026-09-20 18:36:47",
+   "content_ok": 1,
+   "content_len": 1949,
+   "version_count": 1
+  },
+  {
+   "id": 20008023,
+   "title": "“阿里企业购”市场管理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-11 15:00:00",
+   "fetched_at": "2026-09-20 18:41:46",
+   "content_ok": 1,
+   "content_len": 3264,
+   "version_count": 1
+  },
+  {
+   "id": 20010570,
+   "title": "关于变更《淘宝网二手数码行业管理规范》《淘宝平台二手数码类商品争议处理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-08-07 11:44:52",
+   "fetched_at": "2026-09-20 18:42:02",
+   "content_ok": 1,
+   "content_len": 659,
+   "version_count": 1
+  },
+  {
+   "id": 20010569,
+   "title": "关于变更《淘宝网二手数码行业管理规范》《淘宝平台二手数码类商品争议处理规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-08-07 11:39:43",
+   "fetched_at": "2026-09-20 18:42:19",
+   "content_ok": 1,
+   "content_len": 210,
+   "version_count": 1
+  },
+  {
+   "id": 11002629,
+   "title": "（二十六）不符合国家生产标准商品类",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "选品案例",
+   "content_type": "商家案例",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:42:32",
+   "content_ok": 1,
+   "content_len": 1774,
+   "version_count": 1
+  },
+  {
+   "id": 20005428,
+   "title": "淘宝网体验抽检标准（食品）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:42:41",
+   "content_ok": 1,
+   "content_len": 803,
+   "version_count": 1
+  },
+  {
+   "id": 20005427,
+   "title": "淘宝网体验抽检标准（箱包类）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:42:58",
+   "content_ok": 1,
+   "content_len": 495,
+   "version_count": 1
+  },
+  {
+   "id": 20005426,
+   "title": "淘宝网体验抽检标准（鞋类）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:43:17",
+   "content_ok": 1,
+   "content_len": 497,
+   "version_count": 1
+  },
+  {
+   "id": 20005425,
+   "title": "淘宝网体验抽检标准-纸巾",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:43:37",
+   "content_ok": 1,
+   "content_len": 499,
+   "version_count": 1
+  },
+  {
+   "id": 20005424,
+   "title": "淘宝网体验抽检标准（卫生清洁类）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:43:46",
+   "content_ok": 1,
+   "content_len": 497,
+   "version_count": 1
+  },
+  {
+   "id": 20005423,
+   "title": "淘宝网体验抽检标准（护肤彩妆类）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:44:03",
+   "content_ok": 1,
+   "content_len": 497,
+   "version_count": 1
+  },
+  {
+   "id": 20005422,
+   "title": "淘宝网体验抽检标准-贴膜类",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:44:23",
+   "content_ok": 1,
+   "content_len": 515,
+   "version_count": 1
+  },
+  {
+   "id": 20005419,
+   "title": "淘宝网体验抽检标准-蓝牙耳机",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:44:39",
+   "content_ok": 1,
+   "content_len": 562,
+   "version_count": 1
+  },
+  {
+   "id": 20005418,
+   "title": "淘宝网体验抽检标准（电子数码类）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:44:54",
+   "content_ok": 1,
+   "content_len": 475,
+   "version_count": 1
+  },
+  {
+   "id": 20005417,
+   "title": "淘宝网体验抽检标准-垃圾袋",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:45:11",
+   "content_ok": 1,
+   "content_len": 552,
+   "version_count": 1
+  },
+  {
+   "id": 20005416,
+   "title": "淘宝网体验抽检标准（居家杂货类）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:45:22",
+   "content_ok": 1,
+   "content_len": 657,
+   "version_count": 1
+  },
+  {
+   "id": 20005414,
+   "title": "淘宝网体验抽检标准总则",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:48:49",
+   "content_ok": 1,
+   "content_len": 615,
+   "version_count": 1
+  },
+  {
+   "id": 9134,
+   "title": "淘宝网抽检标准（运动户外）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 4,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:48:57",
+   "content_ok": 0,
+   "content_len": 11,
+   "version_count": 1
+  },
+  {
+   "id": 8303,
+   "title": "淘宝网抽检标准（商用厨房电器类）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 4,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:49:06",
+   "content_ok": 0,
+   "content_len": 11,
+   "version_count": 1
+  },
+  {
+   "id": 6460,
+   "title": "淘宝网抽检标准（成人用品）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 4,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:49:19",
+   "content_ok": 0,
+   "content_len": 11,
+   "version_count": 1
+  },
+  {
+   "id": 20006507,
+   "title": "淘宝网数码类商品品质抽检规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:49:38",
+   "content_ok": 1,
+   "content_len": 9099,
+   "version_count": 1
+  },
+  {
+   "id": 1038,
+   "title": "淘宝网抽检标准（保健食品）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 4,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:49:51",
+   "content_ok": 1,
+   "content_len": 833,
+   "version_count": 1
+  },
+  {
+   "id": 1039,
+   "title": "淘宝网抽检标准（珠宝、饰品）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:50:04",
+   "content_ok": 1,
+   "content_len": 1742,
+   "version_count": 1
+  },
+  {
+   "id": 1023,
+   "title": "淘宝网抽检标准（夏凉产品）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 4,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:50:13",
+   "content_ok": 1,
+   "content_len": 1084,
+   "version_count": 1
+  },
+  {
+   "id": 1017,
+   "title": "淘宝网抽检标准（饰品）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 4,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:50:23",
+   "content_ok": 1,
+   "content_len": 278,
+   "version_count": 1
+  },
+  {
+   "id": 1028,
+   "title": "淘宝网抽检标准（汽配）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 4,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:50:39",
+   "content_ok": 1,
+   "content_len": 274,
+   "version_count": 1
+  },
+  {
+   "id": 1032,
+   "title": "淘宝网抽检标准（家装、家具）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 4,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:51:00",
+   "content_ok": 1,
+   "content_len": 4646,
+   "version_count": 1
+  },
+  {
+   "id": 1022,
+   "title": "淘宝网箱包商品品质抽检规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:51:15",
+   "content_ok": 1,
+   "content_len": 2726,
+   "version_count": 1
+  },
+  {
+   "id": 1021,
+   "title": "淘宝网鞋类商品品质抽检规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:51:34",
+   "content_ok": 1,
+   "content_len": 3453,
+   "version_count": 1
+  },
+  {
+   "id": 1036,
+   "title": "淘宝网抽检标准（电器）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 4,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:51:44",
+   "content_ok": 1,
+   "content_len": 9608,
+   "version_count": 1
+  },
+  {
+   "id": 1025,
+   "title": "淘宝网玩具、学生用品商品品质抽检规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:51:57",
+   "content_ok": 1,
+   "content_len": 1902,
+   "version_count": 1
+  },
+  {
+   "id": 20000512,
+   "title": "淘宝网化妆品商品品质抽检规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 4,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:57:08",
+   "content_ok": 1,
+   "content_len": 7227,
+   "version_count": 1
+  },
+  {
+   "id": 1041,
+   "title": "淘宝网抽检标准（居家）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 4,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:57:17",
+   "content_ok": 1,
+   "content_len": 3712,
+   "version_count": 1
+  },
+  {
+   "id": 4103,
+   "title": "淘宝网抽检标准（床品、母婴类）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 4,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:57:35",
+   "content_ok": 1,
+   "content_len": 1827,
+   "version_count": 1
+  },
+  {
+   "id": 1016,
+   "title": "淘宝网服饰类商品品质抽检规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:57:46",
+   "content_ok": 1,
+   "content_len": 3936,
+   "version_count": 1
+  },
+  {
+   "id": 677,
+   "title": "淘宝网关于描述或品质不符实施细则",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 10,
+   "publish_time": "2026-08-07 10:00:00",
+   "fetched_at": "2026-09-20 18:57:55",
+   "content_ok": 1,
+   "content_len": 1282,
+   "version_count": 1
+  },
+  {
+   "id": 20010564,
+   "title": "关于运动户外行业调整发布类目同步变更直播相关规则的公示",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-08-06 23:40:23",
+   "fetched_at": "2026-09-20 18:58:11",
+   "content_ok": 1,
+   "content_len": 1031,
+   "version_count": 1
+  },
+  {
+   "id": 20010563,
+   "title": "关于运动户外行业调整发布类目同步变更直播相关规则的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-08-06 23:31:33",
+   "fetched_at": "2026-09-20 18:58:23",
+   "content_ok": 1,
+   "content_len": 154,
+   "version_count": 1
+  },
+  {
+   "id": 20008524,
+   "title": "【26年8月6日更新】关于谨慎选择质检机构的风险提醒公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-08-06 11:43:23",
+   "fetched_at": "2026-09-20 18:19:01",
+   "content_ok": 1,
+   "content_len": 969,
+   "version_count": 1
+  },
+  {
+   "id": 20010555,
+   "title": "关于变更《淘宝网评价规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-08-05 21:04:08",
+   "fetched_at": "2026-09-20 18:58:35",
+   "content_ok": 1,
+   "content_len": 3027,
+   "version_count": 1
+  },
+  {
+   "id": 20010540,
+   "title": "关于变更《淘宝网超时说明》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-08-04 21:01:26",
+   "fetched_at": "2026-09-20 18:58:45",
+   "content_ok": 1,
+   "content_len": 1563,
+   "version_count": 1
+  },
+  {
+   "id": 11004252,
+   "title": "淘宝平台虚拟类商品争议处理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-08-04 19:35:18",
+   "fetched_at": "2026-09-20 18:59:04",
+   "content_ok": 1,
+   "content_len": 1458,
+   "version_count": 1
+  },
+  {
+   "id": 20010533,
+   "title": "关于变更《“阿里企业购”市场管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-08-04 14:40:49",
+   "fetched_at": "2026-09-20 18:59:23",
+   "content_ok": 1,
+   "content_len": 667,
+   "version_count": 1
+  },
+  {
+   "id": 20010532,
+   "title": "关于变更《淘宝平台票务类商品争议处理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-08-04 10:32:03",
+   "fetched_at": "2026-09-20 18:59:40",
+   "content_ok": 1,
+   "content_len": 2378,
+   "version_count": 1
+  },
+  {
+   "id": 20004998,
+   "title": "《淘宝平台商品信息质量分管理规范》解读",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 10,
+   "publish_time": "2026-08-03 16:50:00",
+   "fetched_at": "2026-09-20 19:00:00",
+   "content_ok": 1,
+   "content_len": 3237,
+   "version_count": 1
+  },
+  {
+   "id": 20004997,
+   "title": "淘宝平台商品信息质量分管理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 10,
+   "publish_time": "2026-08-03 16:50:00",
+   "fetched_at": "2026-09-20 19:00:10",
+   "content_ok": 1,
+   "content_len": 1330,
+   "version_count": 1
+  },
+  {
+   "id": 20010511,
+   "title": "关于变更《飞猪旅行集市租车商品消费者保障标准》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-07-31 11:51:51",
+   "fetched_at": "2026-09-20 19:00:20",
+   "content_ok": 1,
+   "content_len": 7968,
+   "version_count": 1
+  },
+  {
+   "id": 20010509,
+   "title": "关于变更《飞猪旅行集市租车商品消费者保障标准》的意见征集反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-07-31 11:36:41",
+   "fetched_at": "2026-09-20 19:05:09",
+   "content_ok": 1,
+   "content_len": 279,
+   "version_count": 1
+  },
+  {
+   "id": 20010503,
+   "title": "关于变更《淘宝网关于描述或品质不符实施细则》、《淘宝网服饰类商品品质抽检规范》等规则的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-07-31 10:00:08",
+   "fetched_at": "2026-09-20 19:05:22",
+   "content_ok": 1,
+   "content_len": 55191,
+   "version_count": 1
+  },
+  {
+   "id": 20010491,
+   "title": "关于变更《淘宝网关于违背承诺实施细则》等规则的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-07-29 10:23:34",
+   "fetched_at": "2026-09-20 19:05:33",
+   "content_ok": 1,
+   "content_len": 4112,
+   "version_count": 1
+  },
+  {
+   "id": 20010488,
+   "title": "关于变更《淘宝平台商品信息质量分管理规范》及《《淘宝平台商品信息质量分管理规范》解读》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-07-27 18:00:00",
+   "fetched_at": "2026-09-20 19:05:41",
+   "content_ok": 1,
+   "content_len": 6265,
+   "version_count": 1
+  },
+  {
+   "id": 20010484,
+   "title": "关于变更《淘宝直播机构管理规则》《机构及主播/商家绑定关系管理规则》《内容MCN机构及主播绑定关系管理规则》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-07-27 14:38:22",
+   "fetched_at": "2026-09-20 19:05:59",
+   "content_ok": 1,
+   "content_len": 4563,
+   "version_count": 1
+  },
+  {
+   "id": 20010455,
+   "title": "关于平台内经营者办理市场主体登记及公示营业执照的公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 6,
+   "publish_time": "2026-07-21 13:58:10",
+   "fetched_at": "2026-09-20 19:06:28",
+   "content_ok": 1,
+   "content_len": 754,
+   "version_count": 1
+  },
+  {
+   "id": 20007379,
+   "title": "淘宝平台关于商品图片不失真的规则解读",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 6,
+   "publish_time": "2026-07-17 23:00:00",
+   "fetched_at": "2026-09-20 19:06:43",
+   "content_ok": 1,
+   "content_len": 750,
+   "version_count": 1
+  },
+  {
+   "id": 20010423,
+   "title": "关于《淘宝平台价格管理规则》变更公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-07-15 11:18:12",
+   "fetched_at": "2026-09-20 19:06:58",
+   "content_ok": 1,
+   "content_len": 2968,
+   "version_count": 1
+  },
+  {
+   "id": 20010383,
+   "title": "关于变更《淘宝平台关于商品图片不失真的规则解读》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 6,
+   "publish_time": "2026-07-10 14:30:00",
+   "fetched_at": "2026-09-20 19:07:21",
+   "content_ok": 1,
+   "content_len": 903,
+   "version_count": 1
+  },
+  {
+   "id": 20010367,
+   "title": "关于规范展示预包装食品标签信息的公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-07-07 09:56:06",
+   "fetched_at": "2026-09-20 18:13:42",
+   "content_ok": 1,
+   "content_len": 2319,
+   "version_count": 1
+  },
+  {
+   "id": 20010362,
+   "title": "关于变更《淘宝直播管理规则》中打赏功能要求的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-07-06 11:21:49",
+   "fetched_at": "2026-09-20 19:07:36",
+   "content_ok": 1,
+   "content_len": 708,
+   "version_count": 1
+  },
+  {
+   "id": 20010361,
+   "title": "关于变更《淘宝直播管理规则》中打赏功能要求的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-07-06 11:11:27",
+   "fetched_at": "2026-09-20 19:07:49",
+   "content_ok": 1,
+   "content_len": 158,
+   "version_count": 1
+  },
+  {
+   "id": 20010355,
+   "title": "关于变更《淘宝平台宠物类商品争议处理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-07-03 13:46:00",
+   "fetched_at": "2026-09-20 19:08:02",
+   "content_ok": 1,
+   "content_len": 6038,
+   "version_count": 1
+  },
+  {
+   "id": 20010345,
+   "title": "关于规范售卖槟榔商品的公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-07-01 10:24:39",
+   "fetched_at": "2026-09-20 18:13:51",
+   "content_ok": 1,
+   "content_len": 595,
+   "version_count": 1
+  },
+  {
+   "id": 20010340,
+   "title": "游戏账号交易不再“全凭运气”    淘宝邀请商家共创首篇游戏服务争议处理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-06-30 11:46:57",
+   "fetched_at": "2026-09-20 19:08:18",
+   "content_ok": 1,
+   "content_len": 1178,
+   "version_count": 1
+  },
+  {
+   "id": 20010325,
+   "title": "关于变更《淘宝网生鲜行业管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-06-25 14:14:19",
+   "fetched_at": "2026-09-20 18:14:01",
+   "content_ok": 1,
+   "content_len": 523,
+   "version_count": 1
+  },
+  {
+   "id": 20010324,
+   "title": "关于变更《淘宝网生鲜行业管理规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-06-25 14:00:31",
+   "fetched_at": "2026-09-20 18:14:12",
+   "content_ok": 1,
+   "content_len": 142,
+   "version_count": 1
+  },
+  {
+   "id": 11001321,
+   "title": "淘宝网会员一般违规节点处理详解",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-06-24 18:29:52",
+   "fetched_at": "2026-09-20 19:12:55",
+   "content_ok": 1,
+   "content_len": 3372,
+   "version_count": 1
+  },
+  {
+   "id": 20004502,
+   "title": "《淘宝网超时说明》特殊商品付款时效细则",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-06-22 10:00:00",
+   "fetched_at": "2026-09-20 19:13:05",
+   "content_ok": 1,
+   "content_len": 2594,
+   "version_count": 1
+  },
+  {
+   "id": 780,
+   "title": "淘宝网商品发布数量限制规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 4,
+   "publish_time": "2026-06-22 10:00:00",
+   "fetched_at": "2026-09-20 19:13:14",
+   "content_ok": 1,
+   "content_len": 132,
+   "version_count": 1
+  },
+  {
+   "id": 4149,
+   "title": "淘宝网商品评价、销量特殊计算逻辑说明",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-06-22 10:00:00",
+   "fetched_at": "2026-09-20 19:13:27",
+   "content_ok": 1,
+   "content_len": 3846,
+   "version_count": 1
+  },
+  {
+   "id": 20010303,
+   "title": "淘宝平台游戏服务类商品争议处理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-06-19 18:00:04",
+   "fetched_at": "2026-09-20 19:13:41",
+   "content_ok": 1,
+   "content_len": 4677,
+   "version_count": 1
+  },
+  {
+   "id": 61,
+   "title": "淘宝平台违禁信息管理规则",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-06-19 16:48:32",
+   "fetched_at": "2026-09-20 19:13:58",
+   "content_ok": 1,
+   "content_len": 9417,
+   "version_count": 1
+  },
+  {
+   "id": 20010306,
+   "title": "（三十一）AI服务及技术不当应用类",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-06-19 16:48:21",
+   "fetched_at": "2026-09-20 19:14:12",
+   "content_ok": 1,
+   "content_len": 516,
+   "version_count": 1
+  },
+  {
+   "id": 20010296,
+   "title": "关于加强电子烟及相关商品管控的治理公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-06-17 14:01:29",
+   "fetched_at": "2026-09-20 18:12:36",
+   "content_ok": 1,
+   "content_len": 637,
+   "version_count": 1
+  },
+  {
+   "id": 20003873,
+   "title": "淘宝网全球购市场管理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-06-16 12:00:00",
+   "fetched_at": "2026-09-20 19:14:21",
+   "content_ok": 1,
+   "content_len": 2661,
+   "version_count": 1
+  },
+  {
+   "id": 20010284,
+   "title": "关于变更《淘宝网出版物行业管理规范》《淘宝网商品发布数量限制规范》等规则的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-06-15 11:00:35",
+   "fetched_at": "2026-09-20 19:14:31",
+   "content_ok": 1,
+   "content_len": 1467,
+   "version_count": 1
+  },
+  {
+   "id": 20010279,
+   "title": "关于新增《淘宝平台游戏服务类商品争议处理规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-06-12 18:00:05",
+   "fetched_at": "2026-09-20 19:14:50",
+   "content_ok": 1,
+   "content_len": 247,
+   "version_count": 1
+  },
+  {
+   "id": 20010280,
+   "title": "关于新增《淘宝平台游戏服务类商品争议处理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-06-12 18:00:05",
+   "fetched_at": "2026-09-20 19:15:09",
+   "content_ok": 1,
+   "content_len": 4964,
+   "version_count": 1
+  },
+  {
+   "id": 20010277,
+   "title": "关于\"日本叮叮\"等品牌商品信息规范填写的公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "跨境出海",
+   "content_type": "出海情报",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-06-12 16:45:04",
+   "fetched_at": "2026-09-20 19:15:19",
+   "content_ok": 1,
+   "content_len": 876,
+   "version_count": 1
+  },
+  {
+   "id": 20010275,
+   "title": "关于变更《淘宝平台违禁信息管理规则》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-06-12 16:18:17",
+   "fetched_at": "2026-09-20 19:15:35",
+   "content_ok": 1,
+   "content_len": 1102,
+   "version_count": 1
+  },
+  {
+   "id": 20010274,
+   "title": "关于变更《淘宝平台违禁信息管理规则》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-06-12 16:13:45",
+   "fetched_at": "2026-09-20 19:15:47",
+   "content_ok": 1,
+   "content_len": 111,
+   "version_count": 1
+  },
+  {
+   "id": 20010258,
+   "title": "关于变更《淘宝网全球购市场管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-06-09 10:00:00",
+   "fetched_at": "2026-09-20 19:18:47",
+   "content_ok": 1,
+   "content_len": 3004,
+   "version_count": 1
+  },
+  {
+   "id": 20010257,
+   "title": "关于变更《淘宝网全球购市场管理规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-06-09 10:00:00",
+   "fetched_at": "2026-09-20 19:18:56",
+   "content_ok": 1,
+   "content_len": 145,
+   "version_count": 1
+  },
+  {
+   "id": 20010246,
+   "title": "关于淘宝平台物流轨迹异常等违规行为的治理公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 4,
+   "publish_time": "2026-06-08 14:57:07",
+   "fetched_at": "2026-09-20 18:12:56",
+   "content_ok": 1,
+   "content_len": 1336,
+   "version_count": 1
+  },
+  {
+   "id": 11003608,
+   "title": "淘宝平台生鲜类商品争议处理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-06-04 20:52:21",
+   "fetched_at": "2026-09-20 19:19:07",
+   "content_ok": 1,
+   "content_len": 6866,
+   "version_count": 1
+  },
+  {
+   "id": 620,
+   "title": "淘宝网关于不当使用他人权利实施细则",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-05-28 15:30:59",
+   "fetched_at": "2026-09-20 19:19:57",
+   "content_ok": 1,
+   "content_len": 1899,
+   "version_count": 1
+  },
+  {
+   "id": 20006892,
+   "title": "淘宝平台“加价发顺丰” 服务规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-05-27 19:08:28",
+   "fetched_at": "2026-09-20 19:20:12",
+   "content_ok": 1,
+   "content_len": 3782,
+   "version_count": 1
+  },
+  {
+   "id": 20010208,
+   "title": "关于变更《淘宝平台生鲜类商品争议处理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-05-27 10:40:09",
+   "fetched_at": "2026-09-20 18:14:23",
+   "content_ok": 1,
+   "content_len": 2214,
+   "version_count": 1
+  },
+  {
+   "id": 20010207,
+   "title": "关于变更《淘宝平台生鲜类商品争议处理规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-05-27 10:36:30",
+   "fetched_at": "2026-09-20 18:14:33",
+   "content_ok": 1,
+   "content_len": 163,
+   "version_count": 1
+  },
+  {
+   "id": 20010206,
+   "title": "关于规范杨梅商品信息发布的公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-05-27 09:57:41",
+   "fetched_at": "2026-09-20 18:14:45",
+   "content_ok": 1,
+   "content_len": 336,
+   "version_count": 1
+  },
+  {
+   "id": 20010191,
+   "title": "关于变更《淘宝网居家布艺行业管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-05-25 15:35:46",
+   "fetched_at": "2026-09-20 19:20:23",
+   "content_ok": 1,
+   "content_len": 2143,
+   "version_count": 1
+  },
+  {
+   "id": 20010190,
+   "title": "关于变更《淘宝网居家布艺行业管理规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-05-25 15:30:59",
+   "fetched_at": "2026-09-20 19:20:38",
+   "content_ok": 1,
+   "content_len": 138,
+   "version_count": 1
+  },
+  {
+   "id": 20010187,
+   "title": "关于变更《淘宝网保健食品行业管理规范》、《淘宝网保健食品行业管理规范》实施细则的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-05-25 11:19:30",
+   "fetched_at": "2026-09-20 19:20:53",
+   "content_ok": 1,
+   "content_len": 4244,
+   "version_count": 1
+  },
+  {
+   "id": 20010186,
+   "title": "关于变更《淘宝网保健食品行业管理规范》、《淘宝网保健食品行业管理规范》实施细则的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-05-25 11:16:09",
+   "fetched_at": "2026-09-20 19:21:03",
+   "content_ok": 1,
+   "content_len": 171,
+   "version_count": 1
+  },
+  {
+   "id": 20010182,
+   "title": "关于变更《热浪引擎平台资费规则》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 10,
+   "publish_time": "2026-05-22 10:00:05",
+   "fetched_at": "2026-09-20 19:21:13",
+   "content_ok": 1,
+   "content_len": 7716,
+   "version_count": 1
+  },
+  {
+   "id": 20010181,
+   "title": "关于变更《热浪引擎平台资费规则》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-05-22 10:00:05",
+   "fetched_at": "2026-09-20 19:21:33",
+   "content_ok": 1,
+   "content_len": 151,
+   "version_count": 1
+  },
+  {
+   "id": 20010177,
+   "title": "关于变更《淘宝网关于不当使用他人权利实施细则》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-05-21 15:25:12",
+   "fetched_at": "2026-09-20 19:21:48",
+   "content_ok": 1,
+   "content_len": 949,
+   "version_count": 1
+  },
+  {
+   "id": 20010217,
+   "title": "关于变更《淘宝网关于不当使用他人权利实施细则》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-05-21 11:18:08",
+   "fetched_at": "2026-09-20 19:22:07",
+   "content_ok": 1,
+   "content_len": 162,
+   "version_count": 1
+  },
+  {
+   "id": 20010172,
+   "title": "关于升级《淘宝平台“加价发顺丰” 服务规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-05-20 16:47:51",
+   "fetched_at": "2026-09-20 19:26:59",
+   "content_ok": 1,
+   "content_len": 4099,
+   "version_count": 1
+  },
+  {
+   "id": 20010171,
+   "title": "关于升级《淘宝平台“加价发顺丰” 服务规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 4,
+   "acquire_score": 4,
+   "publish_time": "2026-05-20 16:45:24",
+   "fetched_at": "2026-09-20 19:27:16",
+   "content_ok": 1,
+   "content_len": 157,
+   "version_count": 1
+  },
+  {
+   "id": 20010164,
+   "title": "关于变更《淘宝直播翡翠原石行业管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 12,
+   "publish_time": "2026-05-19 16:54:17",
+   "fetched_at": "2026-09-20 19:27:35",
+   "content_ok": 1,
+   "content_len": 1812,
+   "version_count": 1
+  },
+  {
+   "id": 20010163,
+   "title": "关于变更《淘宝直播翡翠原石行业管理规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-05-19 16:01:06",
+   "fetched_at": "2026-09-20 19:27:53",
+   "content_ok": 1,
+   "content_len": 151,
+   "version_count": 1
+  },
+  {
+   "id": 20010129,
+   "title": "关于变更《淘宝新品指定类目及新品期》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-05-19 16:00:00",
+   "fetched_at": "2026-09-20 19:28:12",
+   "content_ok": 1,
+   "content_len": 1259,
+   "version_count": 1
+  },
+  {
+   "id": 20004493,
+   "title": "淘宝网生鲜行业管理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-05-15 10:49:29",
+   "fetched_at": "2026-09-20 19:28:30",
+   "content_ok": 1,
+   "content_len": 7601,
+   "version_count": 1
+  },
+  {
+   "id": 2346,
+   "title": "淘宝网食品行业管理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 4,
+   "publish_time": "2026-05-15 10:40:33",
+   "fetched_at": "2026-09-20 19:28:40",
+   "content_ok": 1,
+   "content_len": 7126,
+   "version_count": 1
+  },
+  {
+   "id": 20010140,
+   "title": "关于变更《淘宝网农药行业管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-05-15 10:05:16",
+   "fetched_at": "2026-09-20 19:28:48",
+   "content_ok": 1,
+   "content_len": 1902,
+   "version_count": 1
+  },
+  {
+   "id": 20010139,
+   "title": "关于变更《淘宝网农药行业管理规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-05-15 09:54:12",
+   "fetched_at": "2026-09-20 19:28:59",
+   "content_ok": 1,
+   "content_len": 132,
+   "version_count": 1
+  },
+  {
+   "id": 20010102,
+   "title": "关于《淘宝网“送装一体”服务规范》的变更公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-05-11 16:39:52",
+   "fetched_at": "2026-09-20 19:29:13",
+   "content_ok": 1,
+   "content_len": 5795,
+   "version_count": 1
+  },
+  {
+   "id": 20010098,
+   "title": "淘宝网拆旧服务规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-05-09 16:50:22",
+   "fetched_at": "2026-09-20 19:29:26",
+   "content_ok": 1,
+   "content_len": 3988,
+   "version_count": 1
+  },
+  {
+   "id": 20010079,
+   "title": "关于变更《淘宝网食品行业管理规范》《淘宝网生鲜行业管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 6,
+   "publish_time": "2026-05-08 10:08:57",
+   "fetched_at": "2026-09-20 18:15:00",
+   "content_ok": 1,
+   "content_len": 4061,
+   "version_count": 1
+  },
+  {
+   "id": 20010077,
+   "title": "关于变更《淘宝网食品行业管理规范》《淘宝网生鲜行业管理规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-05-08 09:45:27",
+   "fetched_at": "2026-09-20 18:15:14",
+   "content_ok": 1,
+   "content_len": 171,
+   "version_count": 1
+  },
+  {
+   "id": 20010069,
+   "title": "关于《飞猪旅行集市包车商品消费者保障标准》的变更公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-05-07 00:00:02",
+   "fetched_at": "2026-09-20 19:29:52",
+   "content_ok": 1,
+   "content_len": 1246,
+   "version_count": 1
+  },
+  {
+   "id": 20010071,
+   "title": "关于变更《飞猪旅行集市包车商品消费者保障标准》的意见征集",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-05-06 18:13:49",
+   "fetched_at": "2026-09-20 19:30:05",
+   "content_ok": 1,
+   "content_len": 265,
+   "version_count": 1
+  },
+  {
+   "id": 20010068,
+   "title": "淘宝直播食品行业管理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-05-06 16:56:40",
+   "fetched_at": "2026-09-20 19:30:14",
+   "content_ok": 1,
+   "content_len": 5456,
+   "version_count": 1
+  },
+  {
+   "id": 20010062,
+   "title": "关于变更《淘宝网“海外直邮”服务规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "跨境出海",
+   "content_type": "出海情报",
+   "score": 10,
+   "acquire_score": 2,
+   "publish_time": "2026-05-06 10:22:44",
+   "fetched_at": "2026-09-20 19:34:35",
+   "content_ok": 1,
+   "content_len": 1416,
+   "version_count": 1
+  },
+  {
+   "id": 20010058,
+   "title": "关于变更《热浪引擎平台预约商品结算细则》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 12,
+   "publish_time": "2026-05-05 12:04:15",
+   "fetched_at": "2026-09-20 19:34:51",
+   "content_ok": 1,
+   "content_len": 3675,
+   "version_count": 1
+  },
+  {
+   "id": 20010057,
+   "title": "关于变更《热浪引擎平台预约商品结算细则》的意见征集结果反馈\t",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-05-05 12:01:20",
+   "fetched_at": "2026-09-20 19:35:10",
+   "content_ok": 1,
+   "content_len": 153,
+   "version_count": 1
+  },
+  {
+   "id": 20010051,
+   "title": "关于新增《淘宝网拆旧服务规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 4,
+   "acquire_score": 4,
+   "publish_time": "2026-05-02 21:41:10",
+   "fetched_at": "2026-09-20 19:35:29",
+   "content_ok": 1,
+   "content_len": 150,
+   "version_count": 1
+  },
+  {
+   "id": 20010042,
+   "title": "关于规范三文鱼商品属性信息发布的公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-04-30 13:45:55",
+   "fetched_at": "2026-09-20 18:18:25",
+   "content_ok": 1,
+   "content_len": 581,
+   "version_count": 1
+  },
+  {
+   "id": 20010052,
+   "title": "关于新增《淘宝网拆旧服务规范》的公示",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-04-30 10:51:28",
+   "fetched_at": "2026-09-20 19:35:44",
+   "content_ok": 1,
+   "content_len": 4097,
+   "version_count": 1
+  },
+  {
+   "id": 20010047,
+   "title": "关于新增《淘宝直播食品行业管理规范》 的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-04-29 18:07:07",
+   "fetched_at": "2026-09-20 19:36:03",
+   "content_ok": 1,
+   "content_len": 5718,
+   "version_count": 1
+  },
+  {
+   "id": 20010046,
+   "title": "关于新增《淘宝直播食品行业管理规范》 的意见征集",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 4,
+   "acquire_score": 4,
+   "publish_time": "2026-04-29 18:03:32",
+   "fetched_at": "2026-09-20 19:36:23",
+   "content_ok": 1,
+   "content_len": 175,
+   "version_count": 1
+  },
+  {
+   "id": 20010024,
+   "title": "关于变更《淘宝平台违禁信息管理规则》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-04-28 19:56:26",
+   "fetched_at": "2026-09-20 19:36:34",
+   "content_ok": 1,
+   "content_len": 2315,
+   "version_count": 1
+  },
+  {
+   "id": 20010022,
+   "title": "关于变更《淘宝平台违禁信息管理规则》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-04-28 18:40:48",
+   "fetched_at": "2026-09-20 19:36:49",
+   "content_ok": 1,
+   "content_len": 155,
+   "version_count": 1
+  },
+  {
+   "id": 20010036,
+   "title": "淘宝网关于虚假门店的实施细则",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "国内品牌",
+   "content_type": "品牌案例",
+   "score": 6,
+   "acquire_score": 4,
+   "publish_time": "2026-04-28 17:00:00",
+   "fetched_at": "2026-09-20 19:37:07",
+   "content_ok": 1,
+   "content_len": 312,
+   "version_count": 1
+  },
+  {
+   "id": 20004250,
+   "title": "淘宝网关于无货源店铺实施细则",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "国内品牌",
+   "content_type": "品牌案例",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-04-28 17:00:00",
+   "fetched_at": "2026-09-20 19:37:19",
+   "content_ok": 1,
+   "content_len": 1714,
+   "version_count": 1
+  },
+  {
+   "id": 20010035,
+   "title": "淘宝网&天猫平台门店管理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "国内品牌",
+   "content_type": "品牌案例",
+   "score": 6,
+   "acquire_score": 4,
+   "publish_time": "2026-04-28 17:00:00",
+   "fetched_at": "2026-09-20 19:37:39",
+   "content_ok": 1,
+   "content_len": 1029,
+   "version_count": 1
+  },
+  {
+   "id": 20010028,
+   "title": "关于开展食品生鲜商品“品牌不一致”专项治理公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-04-27 17:08:34",
+   "fetched_at": "2026-09-20 18:18:33",
+   "content_ok": 1,
+   "content_len": 1250,
+   "version_count": 1
+  },
+  {
+   "id": 20010020,
+   "title": "关于规范生鲜照明设备宣传规范的公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-04-27 10:10:50",
+   "fetched_at": "2026-09-20 18:19:11",
+   "content_ok": 1,
+   "content_len": 559,
+   "version_count": 1
+  },
+  {
+   "id": 20009993,
+   "title": "关于变更禁售商品保障的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-04-24 16:01:17",
+   "fetched_at": "2026-09-20 19:38:12",
+   "content_ok": 1,
+   "content_len": 1860,
+   "version_count": 1
+  },
+  {
+   "id": 20009988,
+   "title": "关于变更《飞猪旅行集市门票业务管理标准》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-04-24 15:35:37",
+   "fetched_at": "2026-09-20 19:38:30",
+   "content_ok": 1,
+   "content_len": 536,
+   "version_count": 1
+  },
+  {
+   "id": 20009986,
+   "title": "关于酒店商品发布规范修订的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-04-24 15:29:34",
+   "fetched_at": "2026-09-20 19:42:30",
+   "content_ok": 1,
+   "content_len": 1467,
+   "version_count": 1
+  },
+  {
+   "id": 20009977,
+   "title": "淘宝网赠品管理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-04-23 20:00:00",
+   "fetched_at": "2026-09-20 19:42:44",
+   "content_ok": 1,
+   "content_len": 2365,
+   "version_count": 1
+  },
+  {
+   "id": 20009953,
+   "title": "关于变更《淘宝网市场管理与违规处理规范》、《淘宝网关于无货源店铺实施细则》等规则的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 6,
+   "publish_time": "2026-04-21 19:57:56",
+   "fetched_at": "2026-09-20 19:43:14",
+   "content_ok": 1,
+   "content_len": 6989,
+   "version_count": 1
+  },
+  {
+   "id": 20009954,
+   "title": "关于变更《淘宝网市场管理与违规处理规范》、《淘宝网关于无货源店铺实施细则》等规则的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 4,
+   "publish_time": "2026-04-21 19:56:32",
+   "fetched_at": "2026-09-20 19:43:34",
+   "content_ok": 1,
+   "content_len": 344,
+   "version_count": 1
+  },
+  {
+   "id": 20009943,
+   "title": "关于变更《二手奢侈品行业管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-04-20 14:11:44",
+   "fetched_at": "2026-09-20 19:43:51",
+   "content_ok": 1,
+   "content_len": 4379,
+   "version_count": 1
+  },
+  {
+   "id": 20009942,
+   "title": "关于变更《二手奢侈品行业管理规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-04-20 14:04:59",
+   "fetched_at": "2026-09-20 19:44:07",
+   "content_ok": 1,
+   "content_len": 183,
+   "version_count": 1
+  },
+  {
+   "id": 20009940,
+   "title": "关于变更《淘宝网安装服务管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-04-20 11:25:10",
+   "fetched_at": "2026-09-20 19:44:16",
+   "content_ok": 1,
+   "content_len": 255,
+   "version_count": 1
+  },
+  {
+   "id": 20009939,
+   "title": "关于变更《淘宝网安装服务管理规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-04-20 11:21:38",
+   "fetched_at": "2026-09-20 19:44:28",
+   "content_ok": 1,
+   "content_len": 208,
+   "version_count": 1
+  },
+  {
+   "id": 20009934,
+   "title": "坚决执行监管要求，守护舌尖上的安全",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-04-17 22:08:11",
+   "fetched_at": "2026-09-20 19:44:47",
+   "content_ok": 1,
+   "content_len": 101,
+   "version_count": 1
+  },
+  {
+   "id": 20009928,
+   "title": "关于调整“包车”“接送”商品发布范围的通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-04-17 14:28:36",
+   "fetched_at": "2026-09-20 19:44:56",
+   "content_ok": 1,
+   "content_len": 1101,
+   "version_count": 1
+  },
+  {
+   "id": 20009915,
+   "title": "关于新增《淘宝网赠品管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-04-15 20:03:06",
+   "fetched_at": "2026-09-20 19:45:35",
+   "content_ok": 1,
+   "content_len": 2533,
+   "version_count": 1
+  },
+  {
+   "id": 20009913,
+   "title": "安全码扣分抵扣卡使用实施细则",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 4,
+   "publish_time": "2026-04-15 17:31:38",
+   "fetched_at": "2026-09-20 19:45:49",
+   "content_ok": 1,
+   "content_len": 1289,
+   "version_count": 1
+  },
+  {
+   "id": 20009906,
+   "title": "关于变更《淘宝网超时说明》特殊商品付款时效细则的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-04-14 18:53:04",
+   "fetched_at": "2026-09-20 19:46:04",
+   "content_ok": 1,
+   "content_len": 278,
+   "version_count": 1
+  },
+  {
+   "id": 20009905,
+   "title": "关于变更《淘宝网超时说明》特殊商品付款时效细则的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-04-14 18:49:50",
+   "fetched_at": "2026-09-20 19:49:08",
+   "content_ok": 1,
+   "content_len": 288,
+   "version_count": 1
+  },
+  {
+   "id": 20009900,
+   "title": "关于规范淘宝网跨境商品宣传规范的公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "跨境出海",
+   "content_type": "出海情报",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-04-14 09:50:00",
+   "fetched_at": "2026-09-20 18:19:24",
+   "content_ok": 1,
+   "content_len": 631,
+   "version_count": 1
+  },
+  {
+   "id": 20009883,
+   "title": "关于变更《“淘宝企业购”（淘天供应链）市场管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 12,
+   "publish_time": "2026-04-10 10:35:20",
+   "fetched_at": "2026-09-20 19:49:40",
+   "content_ok": 1,
+   "content_len": 4774,
+   "version_count": 1
+  },
+  {
+   "id": 20009882,
+   "title": "关于变更《“淘宝企业购”（淘天供应链）市场管理规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 10,
+   "publish_time": "2026-04-10 10:29:49",
+   "fetched_at": "2026-09-20 19:49:54",
+   "content_ok": 1,
+   "content_len": 246,
+   "version_count": 1
+  },
+  {
+   "id": 20009875,
+   "title": "关于变更飞猪旅行集市手工电子票规则的通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-04-09 13:49:20",
+   "fetched_at": "2026-09-20 19:50:06",
+   "content_ok": 1,
+   "content_len": 2271,
+   "version_count": 1
+  },
+  {
+   "id": 10000177,
+   "title": "淘宝网发货管理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 4,
+   "publish_time": "2026-04-09 10:10:28",
+   "fetched_at": "2026-09-20 19:50:24",
+   "content_ok": 1,
+   "content_len": 7908,
+   "version_count": 1
+  },
+  {
+   "id": 20009859,
+   "title": "关于《主播合规安全码实施规则》变更的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-04-08 17:59:53",
+   "fetched_at": "2026-09-20 19:50:37",
+   "content_ok": 1,
+   "content_len": 2522,
+   "version_count": 1
+  },
+  {
+   "id": 20009871,
+   "title": "关于变更《主播合规安全码实施规则》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-04-08 17:52:22",
+   "fetched_at": "2026-09-20 19:50:48",
+   "content_ok": 1,
+   "content_len": 156,
+   "version_count": 1
+  },
+  {
+   "id": 192,
+   "title": "淘宝网关于危及交易或账户安全实施细则",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 12,
+   "publish_time": "2026-04-08 14:53:48",
+   "fetched_at": "2026-09-20 19:51:00",
+   "content_ok": 1,
+   "content_len": 1549,
+   "version_count": 1
+  },
+  {
+   "id": 20009857,
+   "title": "淘宝平台商家使用“其他物流公司”发货的治理公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 4,
+   "publish_time": "2026-04-03 19:02:43",
+   "fetched_at": "2026-09-20 18:19:37",
+   "content_ok": 1,
+   "content_len": 721,
+   "version_count": 1
+  },
+  {
+   "id": 20007611,
+   "title": "淘宝平台“商家配送”治理公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-04-02 16:28:54",
+   "fetched_at": "2026-09-20 18:19:56",
+   "content_ok": 1,
+   "content_len": 702,
+   "version_count": 1
+  },
+  {
+   "id": 20009839,
+   "title": "关于变更《淘宝网发货管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 6,
+   "publish_time": "2026-04-02 10:16:17",
+   "fetched_at": "2026-09-20 19:51:19",
+   "content_ok": 1,
+   "content_len": 1403,
+   "version_count": 1
+  },
+  {
+   "id": 20009836,
+   "title": "关于变更《淘宝网关于危及交易或账户安全实施细则》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-04-01 17:01:51",
+   "fetched_at": "2026-09-20 19:51:30",
+   "content_ok": 1,
+   "content_len": 397,
+   "version_count": 1
+  },
+  {
+   "id": 20009835,
+   "title": "关于变更《淘宝网关于危及交易或账户安全实施细则》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-04-01 16:56:11",
+   "fetched_at": "2026-09-20 19:51:50",
+   "content_ok": 1,
+   "content_len": 161,
+   "version_count": 1
+  },
+  {
+   "id": 20009799,
+   "title": "热浪引擎平台预约商品结算细则",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 12,
+   "publish_time": "2026-03-27 15:00:23",
+   "fetched_at": "2026-09-20 19:52:21",
+   "content_ok": 1,
+   "content_len": 1935,
+   "version_count": 1
+  },
+  {
+   "id": 20009788,
+   "title": "关于变更《淘宝网鲜花园艺行业管理规范》、《淘宝网保证金类目阶梯档位额度标准》等规则的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 12,
+   "publish_time": "2026-03-26 14:08:45",
+   "fetched_at": "2026-09-20 19:54:55",
+   "content_ok": 1,
+   "content_len": 1533,
+   "version_count": 1
+  },
+  {
+   "id": 20009787,
+   "title": "关于变更《淘宝网鲜花园艺行业管理规范》、《淘宝网保证金类目阶梯档位额度标准》等规则的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 10,
+   "publish_time": "2026-03-26 13:47:16",
+   "fetched_at": "2026-09-20 19:55:12",
+   "content_ok": 1,
+   "content_len": 188,
+   "version_count": 1
+  },
+  {
+   "id": 20009783,
+   "title": "关于变更《品牌直播大场活动资费规则》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-03-25 17:57:25",
+   "fetched_at": "2026-09-20 19:55:31",
+   "content_ok": 1,
+   "content_len": 9273,
+   "version_count": 1
+  },
+  {
+   "id": 20009782,
+   "title": "关于变更《品牌直播大场活动资费规则》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-03-25 12:54:21",
+   "fetched_at": "2026-09-20 19:55:49",
+   "content_ok": 1,
+   "content_len": 153,
+   "version_count": 1
+  },
+  {
+   "id": 20009666,
+   "title": "关于淘宝直播类目调整带来规则变更的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-03-20 18:19:56",
+   "fetched_at": "2026-09-20 19:55:58",
+   "content_ok": 1,
+   "content_len": 2531,
+   "version_count": 1
+  },
+  {
+   "id": 20009665,
+   "title": "关于部分行业发布类目调整同步变更直播相关规则的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-03-20 13:08:22",
+   "fetched_at": "2026-09-20 19:56:10",
+   "content_ok": 1,
+   "content_len": 1251,
+   "version_count": 1
+  },
+  {
+   "id": 20009663,
+   "title": "关于新增《热浪引擎平台预约商品结算细则》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 12,
+   "publish_time": "2026-03-20 12:54:37",
+   "fetched_at": "2026-09-20 19:56:28",
+   "content_ok": 1,
+   "content_len": 2980,
+   "version_count": 1
+  },
+  {
+   "id": 20009671,
+   "title": "关于部分行业发布类目调整同步变更直播相关规则的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-03-20 12:33:29",
+   "fetched_at": "2026-09-20 19:56:40",
+   "content_ok": 1,
+   "content_len": 147,
+   "version_count": 1
+  },
+  {
+   "id": 20009670,
+   "title": "关于新增《热浪引擎平台预约商品结算细则》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 4,
+   "acquire_score": 10,
+   "publish_time": "2026-03-20 12:30:28",
+   "fetched_at": "2026-09-20 19:56:53",
+   "content_ok": 1,
+   "content_len": 147,
+   "version_count": 1
+  },
+  {
+   "id": 20009648,
+   "title": "关于变更《淘宝网保证金类目阶梯档位额度标准》、《淘宝网商品发布数量限制规范》等的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 12,
+   "publish_time": "2026-03-19 16:37:20",
+   "fetched_at": "2026-09-20 19:57:04",
+   "content_ok": 1,
+   "content_len": 1427,
+   "version_count": 1
+  },
+  {
+   "id": 20009647,
+   "title": "关于变更《淘宝网保证金类目阶梯档位额度标准》、《淘宝网商品发布数量限制规范》等的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 10,
+   "publish_time": "2026-03-19 16:34:59",
+   "fetched_at": "2026-09-20 19:57:17",
+   "content_ok": 1,
+   "content_len": 162,
+   "version_count": 1
+  },
+  {
+   "id": 20009645,
+   "title": "关于变更《淘宝网模玩行业管理规范》、《淘宝网保证金类目阶梯档位额度标准》等规则的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 12,
+   "publish_time": "2026-03-19 10:42:49",
+   "fetched_at": "2026-09-20 19:57:32",
+   "content_ok": 1,
+   "content_len": 3096,
+   "version_count": 1
+  },
+  {
+   "id": 20009644,
+   "title": "关于变更《淘宝网模玩行业管理规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-03-19 10:32:57",
+   "fetched_at": "2026-09-20 19:57:52",
+   "content_ok": 1,
+   "content_len": 166,
+   "version_count": 1
+  },
+  {
+   "id": 20009636,
+   "title": "关于飞猪旅行集市门票商品服务考核标准的通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 4,
+   "acquire_score": 6,
+   "publish_time": "2026-03-18 10:48:40",
+   "fetched_at": "2026-09-20 19:58:10",
+   "content_ok": 1,
+   "content_len": 562,
+   "version_count": 1
+  },
+  {
+   "id": 20009623,
+   "title": "关于珠宝行业新增“珍玩”一级类目及相关规则变更的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-03-16 17:51:07",
+   "fetched_at": "2026-09-20 19:58:27",
+   "content_ok": 1,
+   "content_len": 1720,
+   "version_count": 1
+  },
+  {
+   "id": 20009622,
+   "title": "关于珠宝行业新增“珍玩”一级类目及相关规则变更的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-03-16 17:22:38",
+   "fetched_at": "2026-09-20 20:03:14",
+   "content_ok": 1,
+   "content_len": 194,
+   "version_count": 1
+  },
+  {
+   "id": 20009614,
+   "title": "关于变更《淘宝网珠宝饰品行业管理规范》、《淘宝网“先鉴后发”服务规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-03-13 17:21:01",
+   "fetched_at": "2026-09-20 20:03:23",
+   "content_ok": 1,
+   "content_len": 3400,
+   "version_count": 1
+  },
+  {
+   "id": 20009613,
+   "title": "关于变更《淘宝网珠宝饰品行业管理规范》、《淘宝网“先鉴后发”服务规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-03-13 17:11:35",
+   "fetched_at": "2026-09-20 20:03:35",
+   "content_ok": 1,
+   "content_len": 150,
+   "version_count": 1
+  },
+  {
+   "id": 20009611,
+   "title": "淘宝直播金牌主播商品管理规则",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 12,
+   "publish_time": "2026-03-13 14:03:21",
+   "fetched_at": "2026-09-20 18:18:42",
+   "content_ok": 1,
+   "content_len": 1497,
+   "version_count": 1
+  },
+  {
+   "id": 20009588,
+   "title": "淘宝网安装服务管理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-03-09 13:48:06",
+   "fetched_at": "2026-09-20 20:03:48",
+   "content_ok": 1,
+   "content_len": 2193,
+   "version_count": 1
+  },
+  {
+   "id": 20009584,
+   "title": "关于变更《淘宝直播机构管理规范》《机构及主播/商家绑定关系管理规则》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 6,
+   "publish_time": "2026-03-09 10:43:17",
+   "fetched_at": "2026-09-20 20:04:06",
+   "content_ok": 1,
+   "content_len": 7409,
+   "version_count": 1
+  },
+  {
+   "id": 20009580,
+   "title": "关于变更《淘宝直播机构管理规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-03-09 10:38:54",
+   "fetched_at": "2026-09-20 20:04:17",
+   "content_ok": 1,
+   "content_len": 143,
+   "version_count": 1
+  },
+  {
+   "id": 20009579,
+   "title": "关于变更《机构及主播/商家绑定关系管理规则》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-03-09 10:32:16",
+   "fetched_at": "2026-09-20 20:04:37",
+   "content_ok": 1,
+   "content_len": 183,
+   "version_count": 1
+  },
+  {
+   "id": 20009570,
+   "title": "告别材质虚标从规范宣传开始  淘宝携手商家共制服饰材质宣传规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "选品案例",
+   "content_type": "商家案例",
+   "score": 4,
+   "acquire_score": 8,
+   "publish_time": "2026-03-06 12:23:14",
+   "fetched_at": "2026-09-20 20:04:48",
+   "content_ok": 1,
+   "content_len": 508,
+   "version_count": 1
+  },
+  {
+   "id": 20009569,
+   "title": "电动车续航虚标乱象终有解 淘宝联合头部品牌首创续航标准",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "国内品牌",
+   "content_type": "品牌案例",
+   "score": 4,
+   "acquire_score": 6,
+   "publish_time": "2026-03-06 11:36:22",
+   "fetched_at": "2026-09-20 20:04:57",
+   "content_ok": 1,
+   "content_len": 613,
+   "version_count": 1
+  },
+  {
+   "id": 20009575,
+   "title": "关于新增《淘宝直播金牌主播商品管理规则》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 12,
+   "publish_time": "2026-03-06 11:16:27",
+   "fetched_at": "2026-09-20 20:05:18",
+   "content_ok": 1,
+   "content_len": 1636,
+   "version_count": 1
+  },
+  {
+   "id": 20009574,
+   "title": "关于新增《淘宝直播金牌主播商品管理规则》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-03-06 11:12:21",
+   "fetched_at": "2026-09-20 20:05:29",
+   "content_ok": 1,
+   "content_len": 147,
+   "version_count": 1
+  },
+  {
+   "id": 20009539,
+   "title": "关于新增《淘宝网赠品管理规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 4,
+   "acquire_score": 4,
+   "publish_time": "2026-02-27 10:13:14",
+   "fetched_at": "2026-09-20 20:05:45",
+   "content_ok": 1,
+   "content_len": 311,
+   "version_count": 1
+  },
+  {
+   "id": 20009536,
+   "title": "关于修订酒店用品类目邀约制规则的通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-02-26 16:35:15",
+   "fetched_at": "2026-09-20 20:06:05",
+   "content_ok": 1,
+   "content_len": 576,
+   "version_count": 1
+  },
+  {
+   "id": 20009533,
+   "title": "关于变更《淘宝直播管理规则》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-02-25 21:42:31",
+   "fetched_at": "2026-09-20 20:06:23",
+   "content_ok": 1,
+   "content_len": 1649,
+   "version_count": 1
+  },
+  {
+   "id": 20009532,
+   "title": "关于变更《淘宝直播管理规则》的意见征集反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-02-25 21:37:05",
+   "fetched_at": "2026-09-20 20:10:03",
+   "content_ok": 1,
+   "content_len": 127,
+   "version_count": 1
+  },
+  {
+   "id": 20009528,
+   "title": "关于变更《淘宝网发货管理规范》的意见征集反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 4,
+   "publish_time": "2026-02-25 14:15:22",
+   "fetched_at": "2026-09-20 20:10:13",
+   "content_ok": 1,
+   "content_len": 154,
+   "version_count": 1
+  },
+  {
+   "id": 20009516,
+   "title": "关于变更《淘宝平台店铺真实体验分规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-02-18 22:05:23",
+   "fetched_at": "2026-09-20 20:10:32",
+   "content_ok": 1,
+   "content_len": 2865,
+   "version_count": 1
+  },
+  {
+   "id": 20009515,
+   "title": "关于变更《淘宝平台店铺真实体验分规范》的意见征集反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-02-18 22:01:35",
+   "fetched_at": "2026-09-20 20:10:48",
+   "content_ok": 1,
+   "content_len": 201,
+   "version_count": 1
+  },
+  {
+   "id": 20009512,
+   "title": "淘宝网海鲜水产行业管理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-02-14 16:31:26",
+   "fetched_at": "2026-09-20 20:10:59",
+   "content_ok": 1,
+   "content_len": 3338,
+   "version_count": 1
+  },
+  {
+   "id": 20009508,
+   "title": "淘宝网随身WIFI行业管理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 10,
+   "publish_time": "2026-02-13 16:20:44",
+   "fetched_at": "2026-09-20 20:11:18",
+   "content_ok": 1,
+   "content_len": 1557,
+   "version_count": 1
+  },
+  {
+   "id": 20009505,
+   "title": "《飞猪旅行集市租车商品消费者保障标准》的变更通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-02-13 11:16:11",
+   "fetched_at": "2026-09-20 20:11:27",
+   "content_ok": 1,
+   "content_len": 1387,
+   "version_count": 1
+  },
+  {
+   "id": 20009503,
+   "title": "关于变更《飞猪旅行集市租车商品消费者保障标准》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-02-13 09:55:23",
+   "fetched_at": "2026-09-20 20:11:46",
+   "content_ok": 1,
+   "content_len": 232,
+   "version_count": 1
+  },
+  {
+   "id": 20009499,
+   "title": "《淘宝网基本功能隐私政策》（2026年2月版）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-02-12 14:02:59",
+   "fetched_at": "2026-09-20 20:11:55",
+   "content_ok": 1,
+   "content_len": 18920,
+   "version_count": 1
+  },
+  {
+   "id": 20009486,
+   "title": "淘宝网服饰行业管理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-02-10 14:10:25",
+   "fetched_at": "2026-09-20 20:12:11",
+   "content_ok": 1,
+   "content_len": 2761,
+   "version_count": 1
+  },
+  {
+   "id": 11004673,
+   "title": "淘宝网保证金类目阶梯档位额度标准",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 12,
+   "publish_time": "2026-02-09 17:35:19",
+   "fetched_at": "2026-09-20 20:12:21",
+   "content_ok": 1,
+   "content_len": 11225,
+   "version_count": 1
+  },
+  {
+   "id": 20009479,
+   "title": "关于新增《淘宝网海鲜水产行业管理规范》、变更《淘宝网生鲜行业管理规范》《淘宝平台生鲜类商品争议处理规范》、下线《淘宝网梭子蟹行业管理规范》的意见征集反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-02-07 18:38:01",
+   "fetched_at": "2026-09-20 20:12:30",
+   "content_ok": 1,
+   "content_len": 232,
+   "version_count": 1
+  },
+  {
+   "id": 20009478,
+   "title": "关于新增《淘宝网海鲜水产行业管理规范》、变更《淘宝网生鲜行业管理规范》《淘宝平台生鲜类商品争议处理规范》、下线《淘宝网梭子蟹行业管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-02-07 14:04:12",
+   "fetched_at": "2026-09-20 20:12:42",
+   "content_ok": 1,
+   "content_len": 5012,
+   "version_count": 1
+  },
+  {
+   "id": 20009474,
+   "title": "关于下线《淘宝通讯行业管理规范》《“淘宝电场”市场管理规范》等规则的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-02-06 15:55:51",
+   "fetched_at": "2026-09-20 20:12:58",
+   "content_ok": 1,
+   "content_len": 258,
+   "version_count": 1
+  },
+  {
+   "id": 20009472,
+   "title": "关于门票因商家原因导致下单失败新增兜底规则的通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 10,
+   "publish_time": "2026-02-06 13:54:41",
+   "fetched_at": "2026-09-20 20:13:17",
+   "content_ok": 1,
+   "content_len": 622,
+   "version_count": 1
+  },
+  {
+   "id": 20009465,
+   "title": "关于新增《淘宝网随身WIFI行业管理规范》的意见征集反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 4,
+   "acquire_score": 4,
+   "publish_time": "2026-02-06 08:54:41",
+   "fetched_at": "2026-09-20 20:17:27",
+   "content_ok": 1,
+   "content_len": 146,
+   "version_count": 1
+  },
+  {
+   "id": 20009464,
+   "title": "《淘宝网基本功能隐私政策》更新公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 6,
+   "publish_time": "2026-02-05 17:26:07",
+   "fetched_at": "2026-09-20 20:17:41",
+   "content_ok": 1,
+   "content_len": 19229,
+   "version_count": 1
+  },
+  {
+   "id": 20009461,
+   "title": "关于新增《淘宝网安装服务管理规范》、变更《淘宝平台大家电类商品争议处理规范》等规则的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-02-05 15:50:13",
+   "fetched_at": "2026-09-20 20:17:54",
+   "content_ok": 1,
+   "content_len": 4603,
+   "version_count": 1
+  },
+  {
+   "id": 20009460,
+   "title": "关于新增《淘宝网安装服务管理规范》、变更《淘宝平台大家电类商品争议处理规范》等规则的意见征集反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-02-05 15:48:23",
+   "fetched_at": "2026-09-20 20:18:11",
+   "content_ok": 1,
+   "content_len": 159,
+   "version_count": 1
+  },
+  {
+   "id": 20009463,
+   "title": "关于新增《淘宝网随身WIFI行业管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 10,
+   "publish_time": "2026-02-05 15:01:18",
+   "fetched_at": "2026-09-20 20:18:25",
+   "content_ok": 1,
+   "content_len": 1715,
+   "version_count": 1
+  },
+  {
+   "id": 506,
+   "title": "淘宝网关于出售假冒商品实施细则",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-02-05 15:00:00",
+   "fetched_at": "2026-09-20 20:18:35",
+   "content_ok": 1,
+   "content_len": 3542,
+   "version_count": 1
+  },
+  {
+   "id": 20009455,
+   "title": "关于变更境外酒店基础信息保障的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-02-04 16:08:46",
+   "fetched_at": "2026-09-20 20:18:50",
+   "content_ok": 1,
+   "content_len": 2937,
+   "version_count": 1
+  },
+  {
+   "id": 20009454,
+   "title": "关于变更飞猪旅行集市境外酒店基础信息保障的意见征集反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-02-04 16:06:26",
+   "fetched_at": "2026-09-20 20:19:05",
+   "content_ok": 1,
+   "content_len": 270,
+   "version_count": 1
+  },
+  {
+   "id": 20009431,
+   "title": "淘宝平台“发货时间协商工具”升级公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 4,
+   "publish_time": "2026-02-04 13:41:28",
+   "fetched_at": "2026-09-20 18:20:13",
+   "content_ok": 1,
+   "content_len": 988,
+   "version_count": 1
+  },
+  {
+   "id": 20009421,
+   "title": "关于新增《淘宝网服饰行业管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-02-03 14:10:00",
+   "fetched_at": "2026-09-20 20:19:31",
+   "content_ok": 1,
+   "content_len": 2973,
+   "version_count": 1
+  },
+  {
+   "id": 20009417,
+   "title": "关于新增《淘宝网服饰行业管理规范》的意见征集反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 4,
+   "acquire_score": 4,
+   "publish_time": "2026-02-03 14:00:00",
+   "fetched_at": "2026-09-20 20:19:43",
+   "content_ok": 1,
+   "content_len": 236,
+   "version_count": 1
+  },
+  {
+   "id": 20009406,
+   "title": "淘宝网手表商品品质抽检规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-02-02 20:00:00",
+   "fetched_at": "2026-09-20 20:20:02",
+   "content_ok": 1,
+   "content_len": 3964,
+   "version_count": 1
+  },
+  {
+   "id": 20009403,
+   "title": "关于变更《淘宝网保证金类目阶梯档位额度标准》、《淘宝网商品发布数量限制规范》等的意见征集反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 10,
+   "publish_time": "2026-02-02 18:02:19",
+   "fetched_at": "2026-09-20 20:20:19",
+   "content_ok": 1,
+   "content_len": 266,
+   "version_count": 1
+  },
+  {
+   "id": 20009404,
+   "title": "关于变更《淘宝网保证金类目阶梯档位额度标准》、《淘宝网商品发布数量限制规范》等的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 12,
+   "publish_time": "2026-02-02 17:58:00",
+   "fetched_at": "2026-09-20 20:20:38",
+   "content_ok": 1,
+   "content_len": 3531,
+   "version_count": 1
+  },
+  {
+   "id": 20009379,
+   "title": "关于变更《淘宝网关于出售假冒商品实施细则》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-01-29 15:15:03",
+   "fetched_at": "2026-09-20 20:20:52",
+   "content_ok": 1,
+   "content_len": 3729,
+   "version_count": 1
+  },
+  {
+   "id": 20009377,
+   "title": "关于变更《淘宝网关于出售假冒商品实施细则》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-01-29 15:12:43",
+   "fetched_at": "2026-09-20 20:24:32",
+   "content_ok": 1,
+   "content_len": 312,
+   "version_count": 1
+  },
+  {
+   "id": 20009376,
+   "title": "坚持科技向善-让每一位商家安心使用“AI生图”",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "选品案例",
+   "content_type": "商家案例",
+   "score": 4,
+   "acquire_score": 4,
+   "publish_time": "2026-01-29 15:02:50",
+   "fetched_at": "2026-09-20 20:24:42",
+   "content_ok": 0,
+   "content_len": 0,
+   "version_count": 1
+  },
+  {
+   "id": 20009367,
+   "title": "关于变更《热浪引擎平台资费规则》、《品牌直播大场活动资费规则》通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-01-28 21:45:58",
+   "fetched_at": "2026-09-20 20:24:59",
+   "content_ok": 1,
+   "content_len": 1240,
+   "version_count": 1
+  },
+  {
+   "id": 20009359,
+   "title": "关于变更《淘宝网超时说明》特殊商品付款时效细则的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-01-27 22:00:00",
+   "fetched_at": "2026-09-20 20:25:19",
+   "content_ok": 1,
+   "content_len": 353,
+   "version_count": 1
+  },
+  {
+   "id": 20009358,
+   "title": "关于变更《淘宝网超时说明》特殊商品付款时效细则的意见征集",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-01-27 22:00:00",
+   "fetched_at": "2026-09-20 20:25:38",
+   "content_ok": 1,
+   "content_len": 314,
+   "version_count": 1
+  },
+  {
+   "id": 20009347,
+   "title": "2026年淘宝网春节发货物流、售后及服务流程调整公告",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 4,
+   "publish_time": "2026-01-27 16:06:57",
+   "fetched_at": "2026-09-20 18:20:28",
+   "content_ok": 1,
+   "content_len": 6753,
+   "version_count": 1
+  },
+  {
+   "id": 20009350,
+   "title": "关于调整《淘宝赔付红包使用细则》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-01-27 15:50:42",
+   "fetched_at": "2026-09-20 20:25:53",
+   "content_ok": 1,
+   "content_len": 1223,
+   "version_count": 1
+  },
+  {
+   "id": 20009336,
+   "title": "关于新增《淘宝网手表类商品品质抽检规范》、变更《淘宝网化妆品商品品质抽检规范》等规则的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-01-26 11:15:31",
+   "fetched_at": "2026-09-20 20:26:08",
+   "content_ok": 1,
+   "content_len": 27754,
+   "version_count": 1
+  },
+  {
+   "id": 20009335,
+   "title": "关于新增《淘宝网手表类商品品质抽检规范》、变更《淘宝网化妆品商品品质抽检规范》等规则的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-01-26 11:07:14",
+   "fetched_at": "2026-09-20 20:26:22",
+   "content_ok": 1,
+   "content_len": 337,
+   "version_count": 1
+  },
+  {
+   "id": 8506,
+   "title": "淘宝网大家电行业管理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 8,
+   "publish_time": "2026-01-26 10:12:12",
+   "fetched_at": "2026-09-20 20:26:35",
+   "content_ok": 1,
+   "content_len": 2102,
+   "version_count": 1
+  },
+  {
+   "id": 20009327,
+   "title": "关于境外用车商品订单及包车订单的发票保障调整的通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-01-23 16:15:17",
+   "fetched_at": "2026-09-20 20:26:48",
+   "content_ok": 1,
+   "content_len": 588,
+   "version_count": 1
+  },
+  {
+   "id": 20009334,
+   "title": "关于变更《飞猪旅行集市旅行用车商品消费者保障标准》和《飞猪旅行集市包车商品消费者保障标准》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-01-23 16:00:00",
+   "fetched_at": "2026-09-20 20:27:02",
+   "content_ok": 1,
+   "content_len": 251,
+   "version_count": 1
+  },
+  {
+   "id": 20009273,
+   "title": "关于变更《淘宝网商品评价、销量特殊计算逻辑说明》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-01-16 17:23:15",
+   "fetched_at": "2026-09-20 20:27:31",
+   "content_ok": 1,
+   "content_len": 4097,
+   "version_count": 1
+  },
+  {
+   "id": 20009272,
+   "title": "关于变更《淘宝网商品评价、销量特殊计算逻辑说明》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-01-16 17:18:48",
+   "fetched_at": "2026-09-20 20:27:39",
+   "content_ok": 1,
+   "content_len": 312,
+   "version_count": 1
+  },
+  {
+   "id": 20009270,
+   "title": "关于变更《淘宝网大家电行业管理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-01-16 15:03:04",
+   "fetched_at": "2026-09-20 20:27:54",
+   "content_ok": 1,
+   "content_len": 909,
+   "version_count": 1
+  },
+  {
+   "id": 20009269,
+   "title": "关于变更《淘宝网大家电行业管理规范》的意见征集反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-01-16 14:53:13",
+   "fetched_at": "2026-09-20 20:32:20",
+   "content_ok": 1,
+   "content_len": 205,
+   "version_count": 1
+  },
+  {
+   "id": 20009247,
+   "title": "关于变更《淘宝网商品发布数量规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-01-12 19:08:33",
+   "fetched_at": "2026-09-20 20:32:35",
+   "content_ok": 1,
+   "content_len": 372,
+   "version_count": 1
+  },
+  {
+   "id": 20009246,
+   "title": "关于变更《淘宝网商品发布数量限制规范》的意见征集结果反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-01-12 19:03:01",
+   "fetched_at": "2026-09-20 20:32:44",
+   "content_ok": 1,
+   "content_len": 315,
+   "version_count": 1
+  },
+  {
+   "id": 20009242,
+   "title": "关于变更境内跟团游稀缺资源二确失败考核及度假商品考核规则结构相关规则的通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 4,
+   "publish_time": "2026-01-12 11:52:08",
+   "fetched_at": "2026-09-20 20:33:00",
+   "content_ok": 1,
+   "content_len": 685,
+   "version_count": 1
+  },
+  {
+   "id": 11002618,
+   "title": "（十五）涉及欺诈、盗窃、作弊、骚扰他人等商品或服务类",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-01-09 16:05:41",
+   "fetched_at": "2026-09-20 20:33:16",
+   "content_ok": 1,
+   "content_len": 7237,
+   "version_count": 1
+  },
+  {
+   "id": 11002623,
+   "title": "（二十一）封建迷信或传播价值导向偏差类",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "转化利润",
+   "content_type": "经营方法",
+   "score": 6,
+   "acquire_score": 6,
+   "publish_time": "2026-01-09 16:04:16",
+   "fetched_at": "2026-09-20 20:33:25",
+   "content_ok": 1,
+   "content_len": 770,
+   "version_count": 1
+  },
+  {
+   "id": 20009222,
+   "title": "关于变更《淘宝网关于扰乱市场秩序实施细则》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-01-07 18:05:08",
+   "fetched_at": "2026-09-20 20:33:34",
+   "content_ok": 1,
+   "content_len": 2544,
+   "version_count": 1
+  },
+  {
+   "id": 20009221,
+   "title": "关于变更《淘宝网关于扰乱市场秩序实施细则》的意见征集反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-01-07 18:03:46",
+   "fetched_at": "2026-09-20 20:33:53",
+   "content_ok": 1,
+   "content_len": 208,
+   "version_count": 1
+  },
+  {
+   "id": 20009219,
+   "title": "关于变更《淘宝网“坏单包退”服务规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-01-07 16:54:32",
+   "fetched_at": "2026-09-20 20:34:11",
+   "content_ok": 1,
+   "content_len": 1141,
+   "version_count": 1
+  },
+  {
+   "id": 20009218,
+   "title": "关于变更《淘宝网“坏单包退”服务规范》的意见征集反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 8,
+   "acquire_score": 4,
+   "publish_time": "2026-01-07 16:50:48",
+   "fetched_at": "2026-09-20 20:34:27",
+   "content_ok": 1,
+   "content_len": 172,
+   "version_count": 1
+  },
+  {
+   "id": 20009212,
+   "title": "关于变更飞猪旅行集市【引导站外交易】规则的通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-01-06 14:56:01",
+   "fetched_at": "2026-09-20 20:34:47",
+   "content_ok": 1,
+   "content_len": 750,
+   "version_count": 1
+  },
+  {
+   "id": 20009232,
+   "title": "淘宝网基本功能隐私政策（2026年1月版）",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-01-06 10:35:04",
+   "fetched_at": "2026-09-20 20:35:05",
+   "content_ok": 1,
+   "content_len": 23465,
+   "version_count": 1
+  },
+  {
+   "id": 11004304,
+   "title": "淘宝平台食品类商品争议处理规范",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 6,
+   "publish_time": "2026-01-06 10:28:17",
+   "fetched_at": "2026-09-20 20:35:21",
+   "content_ok": 1,
+   "content_len": 4092,
+   "version_count": 1
+  },
+  {
+   "id": 6073,
+   "title": "须提供一级授权的白酒品牌清单",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "国内品牌",
+   "content_type": "品牌案例",
+   "score": 9,
+   "acquire_score": 7,
+   "publish_time": "2026-01-06 10:18:00",
+   "fetched_at": "2026-09-20 20:35:41",
+   "content_ok": 1,
+   "content_len": 2088,
+   "version_count": 1
+  },
+  {
+   "id": 20009192,
+   "title": "关于变更飞猪旅行集市门票商品服务考核标准的通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-01-04 16:24:11",
+   "fetched_at": "2026-09-20 20:36:01",
+   "content_ok": 1,
+   "content_len": 5665,
+   "version_count": 1
+  },
+  {
+   "id": 20009187,
+   "title": "关于变更《淘宝平台违禁信息管理规则》、《淘宝网市场管理与违规处理规范》的公示通知",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 8,
+   "publish_time": "2026-01-02 10:37:39",
+   "fetched_at": "2026-09-20 20:39:40",
+   "content_ok": 1,
+   "content_len": 2586,
+   "version_count": 1
+  },
+  {
+   "id": 20009186,
+   "title": "关于变更《淘宝平台违禁信息管理规则》、《淘宝网市场管理与违规处理规范》的意见征集反馈",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 14,
+   "acquire_score": 4,
+   "publish_time": "2026-01-02 10:35:36",
+   "fetched_at": "2026-09-20 20:39:50",
+   "content_ok": 1,
+   "content_len": 219,
+   "version_count": 1
+  },
+  {
+   "id": 1687,
+   "title": "淘宝网超时说明",
+   "boards": [
+    "规则中心"
+   ],
+   "cluster": "平台新规",
+   "content_type": "规则更新",
+   "score": 10,
+   "acquire_score": 8,
+   "publish_time": "2026-01-02 10:00:00",
+   "fetched_at": "2026-09-20 20:40:10",
+   "content_ok": 1,
+   "content_len": 10530,
+   "version_count": 1
+  }
+ ]
+}

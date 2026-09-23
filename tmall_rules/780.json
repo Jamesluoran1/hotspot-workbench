@@ -1,0 +1,28 @@
+{
+ "id": 780,
+ "title": "淘宝网商品发布数量限制规范",
+ "boards": [
+  "规则中心"
+ ],
+ "cluster": "转化利润",
+ "content_type": "经营方法",
+ "score": 6,
+ "acquire_score": 4,
+ "publish_time": "2026-06-22 10:00:00",
+ "fetched_at": "2026-09-20 19:13:14",
+ "content_ok": 1,
+ "content_len": 132,
+ "version_count": 1,
+ "content": "适用于淘宝网卖家。\n\n自2026年6月22日最新修订，修订后详情请查看下表：\n\n注：\n\n1. 后续新增一级类目的商品发布数量默认为50。\n\n2. 《淘宝网商品发布数量限制规范》仅适用于淘宝网（域名为 taobao.com），不适用于天猫（域名为tmall.com）",
+ "all_urls": [
+  "https://rulechannel.taobao.com/?type=detail&ruleId=780&cId=81"
+ ],
+ "versions": [
+  {
+   "title": "淘宝网商品发布数量限制规范",
+   "board": "规则中心",
+   "publish_time": "2026-06-22 10:00:00",
+   "url": "https://rulechannel.taobao.com/?type=detail&ruleId=780&cId=81"
+  }
+ ]
+}

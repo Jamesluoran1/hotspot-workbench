@@ -766,6 +766,12 @@
           <h1>电商经营选题 · 服务获客</h1>
           <p>面向品牌商 / 工厂老板 / 电商商家：围绕选品、流量、转化、利润、团队问题生产内容，引导潜在客户咨询。六类：平台新规 · 流量投放 · 转化利润 · 选品案例 · 国内品牌 · 跨境出海（独立 Tab，默认不参与国内精选）。双评分：新闻价值 + 获客价值，精选按获客价值排序。促销/优惠券、纯融资开店关店、公司人事消息不入精选。</p>
         </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 2px;" id="lib-tabs">
+          <button id="lib-tab-pdd" data-lib="pdd" class="lib-tab" style="padding:8px 16px;border-radius:8px;border:1px solid var(--green);background:var(--green);color:#fff;font-size:13px;cursor:pointer;">拼多多规则库</button>
+          <button id="lib-tab-tmall" data-lib="tmall" class="lib-tab" style="padding:8px 16px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:13px;cursor:pointer;">淘宝规则库</button>
+          <button id="lib-tab-news" data-lib="news" class="lib-tab" style="padding:8px 16px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:13px;cursor:pointer;">其他新闻库</button>
+        </div>
+        <div id="lib-panel-news">
         <div class="panel">
           <div class="panel-head" id="ecom-scan-head"><strong>今日扫描结果 · 自动精选</strong><span id="ecom-scan-count">加载中…</span></div>
           <div class="panel-body">
@@ -806,6 +812,8 @@
           </div>
         </div>
 
+        </div>
+        <div id="lib-panel-pdd">
         <!-- 拼多多完整规则库 -->
         <div class="panel">
           <div class="panel-head"><strong>拼多多完整规则库</strong><span id="pdd-stat">加载中…</span></div>
@@ -834,6 +842,38 @@
             <div id="pdd-list" style="display:flex;flex-direction:column;gap:10px;"></div>
             <div id="pdd-pager" style="display:flex;gap:8px;justify-content:center;margin-top:14px;align-items:center;"></div>
           </div>
+        </div>
+        </div>
+        <div id="lib-panel-tmall">
+        <!-- 淘宝完整规则库 -->
+        <div class="panel">
+          <div class="panel-head"><strong>淘宝完整规则库</strong><span id="tmall-stat">加载中…</span></div>
+          <div class="panel-body">
+            <div id="tmall-banner" style="margin-bottom:14px;padding:10px 14px;background:#f0f7f4;border-radius:8px;font-size:13px;color:#334;"></div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;align-items:center;">
+              <input id="tmall-kw" placeholder="搜索规则标题…" style="flex:1;min-width:200px;padding:7px 12px;border:1px solid var(--line);border-radius:8px;font-size:13px;">
+              <select id="tmall-board" style="padding:7px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff;">
+                <option value="">全部栏目</option>
+              </select>
+              <select id="tmall-content-filter" style="padding:7px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff;">
+                <option value="">全部状态</option>
+                <option value="has">正文已抓取</option>
+                <option value="none">正文待补</option>
+              </select>
+              <select id="tmall-year" style="padding:7px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff;">
+                <option value="2026" selected>2026年</option>
+                <option value="all">全部</option>
+                <option value="history">历史规则</option>
+              </select>
+              <select id="tmall-month" style="padding:7px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff;">
+                <option value="">全部月份</option>
+              </select>
+              <span id="tmall-count" style="font-size:12px;color:var(--muted);"></span>
+            </div>
+            <div id="tmall-list" style="display:flex;flex-direction:column;gap:10px;"></div>
+            <div id="tmall-pager" style="display:flex;gap:8px;justify-content:center;margin-top:14px;align-items:center;"></div>
+          </div>
+        </div>
         </div>
       </div>
 
@@ -1849,6 +1889,165 @@
   document.getElementById('pdd-content-filter').addEventListener('change', e => { pddState.content = e.target.value; pddState.page = 1; renderPddList(); });
   document.getElementById('pdd-month').addEventListener('change', e => { pddState.month = e.target.value; pddState.page = 1; renderPddList(); });
   document.getElementById('pdd-year').addEventListener('change', e => { pddState.year = e.target.value; pddState.page = 1; renderPddList(); });
+  // ===== 淘宝完整规则库 =====
+  const TMALL_PAGE_SIZE = 20;
+  let tmallData = null;
+  let tmallState = { kw:'', board:'', content:'', month:'', year:'2026', page: 1 };
+
+  async function loadTmallRules(){
+    try{
+      const r = await fetch('tmall_rules_index.json?t=' + Date.now(), {cache:'no-store'});
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      tmallData = await r.json();
+      renderTmallBanner();
+      fillTmallFilters();
+      renderTmallList();
+    }catch(e){
+      const el = document.getElementById('tmall-stat');
+      if(el) el.textContent = '规则库加载失败：'+e.message;
+    }
+  }
+
+  function renderTmallBanner(){
+    if(!tmallData) return;
+    const d = tmallData;
+    const today = new Date().toLocaleDateString('sv-SE');
+    const monthNew = (d.items||[]).filter(i => (i.publish_time||'').slice(0,7) === today.slice(0,7)).length;
+    document.getElementById('tmall-banner').innerHTML =
+      '<strong>2026年已抓取：'+d.in_2026+' 条</strong> · 正文完整 '+d.has_content+' 条 · 正文待补 '+d.no_content+' 条 · 本月新增 '+monthNew+' 条 · 进入精选 '+d.selected_count+' 条 · 更新于 '+d.updated;
+    document.getElementById('tmall-stat').textContent = '共 '+d.total+' 条 · 正文完整 '+d.has_content;
+  }
+
+  function fillTmallFilters(){
+    if(!tmallData) return;
+    const boards = new Set();
+    const months = new Set();
+    tmallData.items.forEach(i => {
+      (i.boards||[]).forEach(b => boards.add(b));
+      if(i.publish_time) months.add(i.publish_time.slice(0,7));
+    });
+    const bs = document.getElementById('tmall-board');
+    [...boards].sort().forEach(b => {
+      const o = document.createElement('option'); o.value = b; o.textContent = b; bs.appendChild(o);
+    });
+    const ms = document.getElementById('tmall-month');
+    [...months].sort().reverse().forEach(m => {
+      const o = document.createElement('option'); o.value = m; o.textContent = m; ms.appendChild(o);
+    });
+  }
+
+  function tmallFiltered(){
+    if(!tmallData) return [];
+    const kw = tmallState.kw.trim().toLowerCase();
+    return tmallData.items.filter(i => {
+      if(kw && !(i.title||'').toLowerCase().includes(kw)) return false;
+      if(tmallState.board && !(i.boards||[]).includes(tmallState.board)) return false;
+      if(tmallState.content==='has' && !(i.content_ok===1 && i.content_len>50)) return false;
+      if(tmallState.content==='none' && (i.content_ok===1 && i.content_len>50)) return false;
+      if(tmallState.month && (i.publish_time||'').slice(0,7) !== tmallState.month) return false;
+      if(tmallState.year==='2026' && (i.publish_time||'').slice(0,4) !== '2026') return false;
+      if(tmallState.year==='history' && (i.publish_time||'').slice(0,4) === '2026') return false;
+      return true;
+    }).sort((a,b) => (b.publish_time||'').localeCompare(a.publish_time||''));
+  }
+
+  function renderTmallList(){
+    if(!tmallData) return;
+    const list = tmallFiltered();
+    const totalPages = Math.max(1, Math.ceil(list.length / TMALL_PAGE_SIZE));
+    if(tmallState.page > totalPages) tmallState.page = totalPages;
+    const start = (tmallState.page-1) * TMALL_PAGE_SIZE;
+    const pageItems = list.slice(start, start+TMALL_PAGE_SIZE);
+    document.getElementById('tmall-count').textContent = list.length + ' 条';
+    const box = document.getElementById('tmall-list');
+    if(!pageItems.length){ box.innerHTML = '<div class="tip-box">没有匹配的规则</div>'; }
+    else{
+      box.innerHTML = pageItems.map(i => {
+        const hasC = i.content_ok===1 && i.content_len>50;
+        const g = i.acquire_score>=9 ? {c:'A',bg:'#d63a2f'} : i.acquire_score>=7 ? {c:'B',bg:'#0a7a50'} : i.acquire_score>=6 ? {c:'C',bg:'#2f6fd6'} : {c:'-',bg:'#999'};
+        const boards = (i.boards||[]).join(' / ');
+        const vCount = i.version_count>1 ? '<span style="background:#e8e0f0;color:#6b3fa0;">'+i.version_count+'个版本</span>' : '';
+        const cTag = hasC ? '<span style="background:#e0f0e8;color:#0a7a50;">正文已抓取</span>' : '<span style="background:#fde8e8;color:#c0392b;">正文待补</span>';
+        return '<article class="write-card" data-tmall-id="'+i.id+'" style="cursor:pointer;">'
+          + '<div class="write-top"><h3 style="font-size:14px;">'+esc(i.title)+'</h3>'
+          + '<span class="hot-label" style="background:'+g.bg+';color:#fff;">'+g.c+'级</span></div>'
+          + '<div class="write-tags">'
+          + '<span>'+esc(boards||'')+'</span>'
+          + '<span>'+esc(i.publish_time||'')+'</span>'
+          + '<span style="background:#eef2f7;color:#334;">获客 '+i.acquire_score+'</span>'
+          + cTag + vCount
+          + (hasC ? '<button class="copy-btn" data-title="'+esc(i.title)+'" style="margin-left:auto;">查看正文</button>' : '')
+          + '</div></article>';
+      }).join('');
+      // 点击查看正文
+      box.querySelectorAll('[data-tmall-id]').forEach(card => {
+        card.addEventListener('click', async (e) => {
+          if(e.target.classList.contains('copy-btn')) return;
+          const id = card.dataset.tmallId;
+          await showTmallDetail(id, card);
+        });
+      });
+    }
+    // 分页
+    const pg = document.getElementById('tmall-pager');
+    let html = '';
+    if(totalPages > 1){
+      html += '<button onclick="tmallGoPage('+(tmallState.page-1)+')" style="padding:5px 12px;border:1px solid var(--line);border-radius:6px;cursor:pointer;'+(tmallState.page<=1?'opacity:.4;':'')+'">上一页</button>';
+      html += '<span style="font-size:13px;">'+tmallState.page+' / '+totalPages+'</span>';
+      html += '<button onclick="tmallGoPage('+(tmallState.page+1)+')" style="padding:5px 12px;border:1px solid var(--line);border-radius:6px;cursor:pointer;'+(tmallState.page>=totalPages?'opacity:.4;':'')+'">下一页</button>';
+    }
+    pg.innerHTML = html;
+  }
+
+  window.tmallGoPage = function(p){ tmallState.page = p; renderTmallList(); };
+
+  async function showTmallDetail(id, card){
+    const existing = card.querySelector('.tmall-detail');
+    if(existing){ existing.remove(); return; }
+    try{
+      const r = await fetch('tmall_rules/'+id+'.json?t='+Date.now(), {cache:'no-store'});
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      const d = await r.json();
+      const hasC = d.content_ok===1 && (d.content||'').length>50;
+      const div = document.createElement('div');
+      div.className = 'tmall-detail';
+      div.style.cssText = 'margin-top:10px;padding:12px;background:#f8f9fa;border-radius:8px;font-size:13px;line-height:1.7;white-space:pre-wrap;max-height:400px;overflow-y:auto;';
+      let html = '';
+      if(hasC){
+        html += '<div style="margin-bottom:8px;color:#0a7a50;">✓ 正文已抓取（'+(d.content||'').length+'字）</div>';
+        html += '<div>'+esc(d.content||'')+'</div>';
+      } else {
+        html += '<div style="color:#c0392b;">⚠ 正文待补，不可直接写作</div>';
+      }
+      if(d.versions && d.versions.length>1){
+        html += '<div style="margin-top:10px;padding-top:8px;border-top:1px solid #ddd;"><strong>版本链：</strong><br>';
+        d.versions.forEach(v => {
+          html += '<div style="font-size:12px;color:#666;">['+esc(v.board||'')+'] '+esc(v.title)+' ('+esc(v.publish_time||'')+')'+(v.content_ok===1?'':' [无正文]')+'</div>';
+        });
+        html += '</div>';
+      }
+      if(d.all_urls && d.all_urls.length){
+        html += '<div style="margin-top:8px;"><a href="'+d.all_urls[0]+'" target="_blank" rel="noopener" style="color:#2f6fd6;">查看官方原文 ↗</a></div>';
+      }
+      div.innerHTML = html;
+      card.appendChild(div);
+      div.scrollIntoView({behavior:'smooth', block:'nearest'});
+    }catch(e){
+      const div = document.createElement('div');
+      div.style.cssText = 'margin-top:10px;padding:10px;background:#fde8e8;border-radius:8px;color:#c0392b;font-size:13px;';
+      div.textContent = '正文加载失败：'+e.message;
+      card.appendChild(div);
+    }
+  }
+
+  // 筛选事件
+  document.getElementById('tmall-kw').addEventListener('input', e => { tmallState.kw = e.target.value; tmallState.page = 1; renderTmallList(); });
+  document.getElementById('tmall-board').addEventListener('change', e => { tmallState.board = e.target.value; tmallState.page = 1; renderTmallList(); });
+  document.getElementById('tmall-content-filter').addEventListener('change', e => { tmallState.content = e.target.value; tmallState.page = 1; renderTmallList(); });
+  document.getElementById('tmall-month').addEventListener('change', e => { tmallState.month = e.target.value; tmallState.page = 1; renderTmallList(); });
+  document.getElementById('tmall-year').addEventListener('change', e => { tmallState.year = e.target.value; tmallState.page = 1; renderTmallList(); });
+  loadTmallRules();
+
 
   document.getElementById('ecom-keyword').addEventListener('input', e=>{ ecomState.kw = e.target.value; renderEcom(); });
   document.querySelectorAll('#ecom-src button').forEach(b=>{
@@ -1873,6 +2072,23 @@
       renderEcom();
     });
   });
+
+  // ===== 07 三库 Tab（拼多多规则库 / 淘宝规则库 / 其他新闻库） =====
+  function switchLib(lib){
+    ['pdd','tmall','news'].forEach(k => {
+      const el = document.getElementById('lib-panel-'+k);
+      if(el) el.style.display = (k===lib) ? '' : 'none';
+      const tab = document.getElementById('lib-tab-'+k);
+      if(tab){
+        tab.style.background = (k===lib) ? 'var(--green)' : '#fff';
+        tab.style.color = (k===lib) ? '#fff' : 'var(--ink)';
+        tab.style.borderColor = (k===lib) ? 'var(--green)' : 'var(--line)';
+      }
+    });
+  }
+  document.querySelectorAll('#lib-tabs .lib-tab').forEach(b => b.addEventListener('click', () => switchLib(b.dataset.lib)));
+  switchLib('pdd');
+
   loadEcom();
   bindXhsFilter('xhs-filter-ecom', ecomState);
   // 多平台报道筛选（05）

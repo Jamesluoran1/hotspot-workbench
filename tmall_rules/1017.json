@@ -1,0 +1,28 @@
+{
+ "id": 1017,
+ "title": "淘宝网抽检标准（饰品）",
+ "boards": [
+  "规则中心"
+ ],
+ "cluster": "转化利润",
+ "content_type": "经营方法",
+ "score": 6,
+ "acquire_score": 4,
+ "publish_time": "2026-08-07 10:00:00",
+ "fetched_at": "2026-09-20 18:50:23",
+ "content_ok": 1,
+ "content_len": 278,
+ "version_count": 1,
+ "content": "返回淘宝网抽检类目列表\n\n大类\n\n分类\n\n检测项目\n\n检测依据/强制性标准\n\n违规处理\n\n饰品\n\n饰品\n\n标识标志\n\nFZ/T 73044-2012\n\n描述或品质不符-情节一般\n\n材质鉴定\n\n描述或品质不符-情节一般\n\n仿真饰品\n\n标识标志\n\nGB 28480\n\n描述或品质不符-情节一般\n\n镍释出量  (GB/T 19719、GB/T 28485)\n\n描述或品质不符-情节严重\n\n有害元素总含量测试-砷、铬（六价、汞、铅、镉\n\n(GB/T 28020)\n\n描述或品质不符-情节严重\n\n8重重金属含量测试(GB/T 28021)\n\n描述或品质不符-情节严重",
+ "all_urls": [
+  "https://rulechannel.taobao.com/?type=detail&ruleId=1017&cId=81"
+ ],
+ "versions": [
+  {
+   "title": "淘宝网抽检标准（饰品）",
+   "board": "规则中心",
+   "publish_time": "2026-08-07 10:00:00",
+   "url": "https://rulechannel.taobao.com/?type=detail&ruleId=1017&cId=81"
+  }
+ ]
+}

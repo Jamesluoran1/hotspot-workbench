@@ -1,0 +1,28 @@
+{
+ "id": 8303,
+ "title": "淘宝网抽检标准（商用厨房电器类）",
+ "boards": [
+  "规则中心"
+ ],
+ "cluster": "转化利润",
+ "content_type": "经营方法",
+ "score": 6,
+ "acquire_score": 4,
+ "publish_time": "2026-08-07 10:00:00",
+ "fetched_at": "2026-09-20 18:49:06",
+ "content_ok": 0,
+ "content_len": 11,
+ "version_count": 1,
+ "content": "返回淘宝网抽检类目列表",
+ "all_urls": [
+  "https://rulechannel.taobao.com/?type=detail&ruleId=8303&cId=81"
+ ],
+ "versions": [
+  {
+   "title": "淘宝网抽检标准（商用厨房电器类）",
+   "board": "规则中心",
+   "publish_time": "2026-08-07 10:00:00",
+   "url": "https://rulechannel.taobao.com/?type=detail&ruleId=8303&cId=81"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "id": 1028,
+ "title": "淘宝网抽检标准（汽配）",
+ "boards": [
+  "规则中心"
+ ],
+ "cluster": "转化利润",
+ "content_type": "经营方法",
+ "score": 6,
+ "acquire_score": 4,
+ "publish_time": "2026-08-07 10:00:00",
+ "fetched_at": "2026-09-20 18:50:39",
+ "content_ok": 1,
+ "content_len": 274,
+ "version_count": 1,
+ "content": "返回\n\n《抽检项目及对应处罚明细表》\n\n大类\n\n分类\n\n检测项目（具体包括但不限于以下项目）\n\n检验依据\n\n违规处理\n\n汽配\n\n1、真皮座垫\n\n标识标志\n\nGB/T 22843\n   GB 2912.1\n   GB/T 19942\n   GB 20400\n\n描述或品质不符-情节一般\n\n材质鉴定\n\n描述或品质不符-情节一般\n\n甲醛含量\n\n描述或品质不符-情节严重\n\n偶氮染料\n\n描述或品质不符-情节严重\n\n2、冰丝坐垫黑心棉\n\n标识标志\n\nQB/T 2262\n   GB18383\n\n描述或品质不符-情节一般\n\n材质鉴定\n\n描述或品质不符-情节一般",
+ "all_urls": [
+  "https://rulechannel.taobao.com/?type=detail&ruleId=1028&cId=81"
+ ],
+ "versions": [
+  {
+   "title": "淘宝网抽检标准（汽配）",
+   "board": "规则中心",
+   "publish_time": "2026-08-07 10:00:00",
+   "url": "https://rulechannel.taobao.com/?type=detail&ruleId=1028&cId=81"
+  }
+ ]
+}
