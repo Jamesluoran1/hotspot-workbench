@@ -1662,7 +1662,7 @@
   let ecomItems = [];
   function heatTag(i){
     const src = i['来源']||'';
-    const h = String(i['热度']||'').trim();
+    const h = String(i['热度']||'').trim().replace(/热度/g,'').replace(/\s+/g,' ');
     if(src==='拼多多规则'||src==='淘宝规则'||!h) return '';
     return '<span style="background:#fde9e7;color:#c0392b;">热度 '+esc(h)+'</span>';
   }
