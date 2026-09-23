@@ -1690,7 +1690,9 @@
     const items = ecomItems || [];
     const todayStr = new Date().toLocaleDateString('sv-SE');
     const todayItems = items.filter(i => !i['跨境'] && (i['抓取时间']||'').slice(0,10) === todayStr);
-    const base = (todayItems.length ? todayItems : items.filter(i => !i['跨境']));
+    const src = ecomState.src;
+    const srcOk = i => (!src || (src==='other' ? !['拼多多规则','淘宝规则'].includes(i['来源']||'') : (i['来源']||'')===src));
+    const base = (todayItems.length ? todayItems : items.filter(i => !i['跨境'])).filter(srcOk);
     const pool = base.slice().sort((a,b)=> (Number(b['获客价值']||0)-Number(a['获客价值']||0)) || (Number(b['新闻价值']||0)-Number(a['新闻价值']||0))).slice(0,6);
     const head = document.getElementById('ecom-scan-head');
     const cnt = document.getElementById('ecom-scan-count');
@@ -2078,6 +2080,7 @@
     ['pdd','tmall','news'].forEach(k => {
       const el = document.getElementById('lib-panel-'+k);
       if(el) el.style.display = (k===lib) ? '' : 'none';
+      if(k==='news' && lib==='news' && typeof ecomState !== 'undefined') applyEcomSrc('other');
       const tab = document.getElementById('lib-tab-'+k);
       if(tab){
         tab.style.background = (k===lib) ? 'var(--green)' : '#fff';
@@ -2087,6 +2090,16 @@
     });
   }
   document.querySelectorAll('#lib-tabs .lib-tab').forEach(b => b.addEventListener('click', () => switchLib(b.dataset.lib)));
+  function applyEcomSrc(val){
+    ecomState.src = val;
+    document.querySelectorAll('#ecom-src button').forEach(x => {
+      const on = (x.dataset.src === val);
+      x.style.background = on ? 'var(--green)' : '#fff';
+      x.style.color = on ? '#fff' : 'var(--ink)';
+    });
+    renderEcomScan();
+    renderEcom();
+  }
   switchLib('pdd');
 
   loadEcom();
