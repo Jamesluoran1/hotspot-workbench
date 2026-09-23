@@ -777,6 +777,12 @@
           <div class="panel-body">
             <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;">
               <input id="ecom-keyword" placeholder="关键词：规则 / 佣金 / 投放 / 出海 / 品类…" style="flex:1;min-width:220px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);">
+              <div id="ecom-src" style="display:flex;gap:6px;flex-wrap:wrap;">
+                <button data-src="" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:var(--green);color:#fff;font-size:12px;cursor:pointer;">全部平台</button>
+                <button data-src="拼多多规则" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:12px;cursor:pointer;">拼多多</button>
+                <button data-src="淘宝规则" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:12px;cursor:pointer;">淘宝</button>
+                <button data-src="other" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:12px;cursor:pointer;">其他来源</button>
+              </div>
               <div id="ecom-cluster" style="display:flex;gap:6px;flex-wrap:wrap;">
                 <button data-cluster="" data-only="in" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:var(--green);color:#fff;font-size:12px;cursor:pointer;">国内精选</button>
                 <button data-cluster="平台新规" data-only="in" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:12px;cursor:pointer;">平台新规</button>
@@ -1612,7 +1618,7 @@
   loadBriefings();
 
   // ===== 07 电商/跨境选题 =====
-  const ecomState = { kw: '', day: '', xhs: '', cluster: '', onlyDomestic: 'in' };
+  const ecomState = { kw: '', day: '', xhs: '', cluster: '', src: '', onlyDomestic: 'in' };
   let ecomItems = [];
   function ecomGrade(i){
     const g = Number(i['获客价值']||0);
@@ -1627,6 +1633,7 @@
     const list = ecomItems.filter(i =>
       (!kw || (i['标题']||'').toLowerCase().includes(kw)) &&
       (!ecomState.cluster || (i['问题簇']||'') === ecomState.cluster) &&
+      (!ecomState.src || (ecomState.src==='other' ? !['拼多多规则','淘宝规则'].includes(i['来源']||'') : (i['来源']||'') === ecomState.src)) &&
       (onlyIn ? !i['跨境'] : i['跨境']) &&
       (!ecomState.day || isToday(i['抓取时间'])) &&
       (!ecomState.xhs || (ecomState.xhs==='yes') === xhsHas(i['链接']))
@@ -1844,6 +1851,13 @@
   document.getElementById('pdd-year').addEventListener('change', e => { pddState.year = e.target.value; pddState.page = 1; renderPddList(); });
 
   document.getElementById('ecom-keyword').addEventListener('input', e=>{ ecomState.kw = e.target.value; renderEcom(); });
+  document.querySelectorAll('#ecom-src button').forEach(b=>{
+    b.addEventListener('click', ()=>{
+      ecomState.src = b.dataset.src;
+      document.querySelectorAll('#ecom-src button').forEach(x=>{ x.style.background=(x===b)?'var(--green)':'#fff'; x.style.color=(x===b)?'#fff':'var(--ink)'; });
+      renderEcom();
+    });
+  });
   document.querySelectorAll('#ecom-cluster button').forEach(b=>{
     b.addEventListener('click', ()=>{
       ecomState.cluster = b.dataset.cluster;
