@@ -3,8 +3,8 @@
  "count": 287,
  "total": 287,
  "in_2026": 287,
- "has_content": 281,
- "no_content": 6,
+ "has_content": 282,
+ "no_content": 5,
  "selected_count": 174,
  "items": [
   {
@@ -18,9 +18,9 @@
    "score": 4,
    "acquire_score": 4,
    "publish_time": "2026-09-22",
-   "fetched_at": "2026-09-23 08:52:31",
-   "content_ok": 0,
-   "content_len": 0,
+   "fetched_at": "2026-09-23 13:40",
+   "content_ok": 1,
+   "content_len": 4817,
    "version_count": 1
   },
   {
