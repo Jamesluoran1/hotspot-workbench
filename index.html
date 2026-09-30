@@ -770,6 +770,8 @@
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 2px;" id="lib-tabs">
           <button id="lib-tab-pdd" data-lib="pdd" class="lib-tab" style="padding:8px 16px;border-radius:8px;border:1px solid var(--green);background:var(--green);color:#fff;font-size:13px;cursor:pointer;">拼多多规则库</button>
           <button id="lib-tab-tmall" data-lib="tmall" class="lib-tab" style="padding:8px 16px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:13px;cursor:pointer;">淘宝规则库</button>
+          <button id="lib-tab-wxshop" data-lib="wxshop" class="lib-tab" style="padding:8px 16px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:13px;cursor:pointer;">微信小店规则库</button>
+          <button id="lib-tab-douyin" data-lib="douyin" class="lib-tab" style="padding:8px 16px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:13px;cursor:pointer;">抖音规则库</button>
           <button id="lib-tab-news" data-lib="news" class="lib-tab" style="padding:8px 16px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:13px;cursor:pointer;">其他新闻库</button>
         </div>
         <div id="lib-panel-news">
@@ -788,6 +790,8 @@
                 <button data-src="" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:var(--green);color:#fff;font-size:12px;cursor:pointer;">全部平台</button>
                 <button data-src="拼多多规则" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:12px;cursor:pointer;">拼多多</button>
                 <button data-src="淘宝规则" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:12px;cursor:pointer;">淘宝</button>
+                <button data-src="微信小店规则" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:12px;cursor:pointer;">微信小店</button>
+                <button data-src="抖音电商规则" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:12px;cursor:pointer;">抖音</button>
                 <button data-src="other" style="padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:12px;cursor:pointer;">其他来源</button>
               </div>
               <div id="ecom-cluster" style="display:flex;gap:6px;flex-wrap:wrap;">
@@ -873,6 +877,68 @@
             </div>
             <div id="tmall-list" style="display:flex;flex-direction:column;gap:10px;"></div>
             <div id="tmall-pager" style="display:flex;gap:8px;justify-content:center;margin-top:14px;align-items:center;"></div>
+          </div>
+        </div>
+        </div>
+        <div id="lib-panel-wxshop">
+        <!-- 微信小店完整规则库 -->
+        <div class="panel">
+          <div class="panel-head"><strong>微信小店完整规则库</strong><span id="wxshop-stat">加载中…</span></div>
+          <div class="panel-body">
+            <div id="wxshop-banner" style="margin-bottom:14px;padding:10px 14px;background:#f0f7f4;border-radius:8px;font-size:13px;color:#334;"></div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;align-items:center;">
+              <input id="wxshop-kw" placeholder="搜索规则标题…" style="flex:1;min-width:200px;padding:7px 12px;border:1px solid var(--line);border-radius:8px;font-size:13px;">
+              <select id="wxshop-board" style="padding:7px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff;">
+                <option value="">全部栏目</option>
+              </select>
+              <select id="wxshop-content-filter" style="padding:7px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff;">
+                <option value="">全部状态</option>
+                <option value="has">正文已抓取</option>
+                <option value="none">正文待补</option>
+              </select>
+              <select id="wxshop-year" style="padding:7px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff;">
+                <option value="2026" selected>2026年</option>
+                <option value="all">全部</option>
+                <option value="history">历史规则</option>
+              </select>
+              <select id="wxshop-month" style="padding:7px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff;">
+                <option value="">全部月份</option>
+              </select>
+              <span id="wxshop-count" style="font-size:12px;color:var(--muted);"></span>
+            </div>
+            <div id="wxshop-list" style="display:flex;flex-direction:column;gap:10px;"></div>
+            <div id="wxshop-pager" style="display:flex;gap:8px;justify-content:center;margin-top:14px;align-items:center;"></div>
+          </div>
+        </div>
+        </div>
+        <div id="lib-panel-douyin">
+        <!-- 抖音完整规则库 -->
+        <div class="panel">
+          <div class="panel-head"><strong>抖音完整规则库</strong><span id="douyin-stat">加载中…</span></div>
+          <div class="panel-body">
+            <div id="douyin-banner" style="margin-bottom:14px;padding:10px 14px;background:#f0f7f4;border-radius:8px;font-size:13px;color:#334;"></div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;align-items:center;">
+              <input id="douyin-kw" placeholder="搜索规则标题…" style="flex:1;min-width:200px;padding:7px 12px;border:1px solid var(--line);border-radius:8px;font-size:13px;">
+              <select id="douyin-board" style="padding:7px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff;">
+                <option value="">全部栏目</option>
+              </select>
+              <select id="douyin-content-filter" style="padding:7px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff;">
+                <option value="">全部状态</option>
+                <option value="has">正文已抓取</option>
+                <option value="none">正文待补</option>
+              </select>
+              <select id="douyin-year" style="padding:7px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff;">
+                <option value="2026" selected>2026年</option>
+                <option value="all">全部</option>
+                <option value="history">历史规则</option>
+              </select>
+              <select id="douyin-month" style="padding:7px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:#fff;">
+                <option value="">全部月份</option>
+              </select>
+              <span id="douyin-count" style="font-size:12px;color:var(--muted);"></span>
+            </div>
+            <div id="douyin-list" style="display:flex;flex-direction:column;gap:10px;"></div>
+            <div id="douyin-pager" style="display:flex;gap:8px;justify-content:center;margin-top:14px;align-items:center;"></div>
           </div>
         </div>
         </div>
@@ -1680,7 +1746,7 @@
   function heatTag(i){
     const src = i['来源']||'';
     const h = String(i['热度']||'').trim().replace(/热度/g,'').replace(/\s+/g,' ');
-    if(src==='拼多多规则'||src==='淘宝规则'||!h) return '';
+    if((src||'').indexOf('规则')>=0||!h) return '';
     return '<span style="background:#fde9e7;color:#c0392b;">热度 '+esc(h)+'</span>';
   }
   function ecomGrade(i){
@@ -1696,7 +1762,7 @@
     const list = ecomItems.filter(i =>
       (!kw || (i['标题']||'').toLowerCase().includes(kw)) &&
       (!ecomState.cluster || (i['问题簇']||'') === ecomState.cluster) &&
-      (!ecomState.src || (ecomState.src==='other' ? !['拼多多规则','淘宝规则'].includes(i['来源']||'') : (i['来源']||'') === ecomState.src)) &&
+      (!ecomState.src || (ecomState.src==='other' ? !['拼多多规则','淘宝规则','微信小店规则','抖音电商规则'].includes(i['来源']||'') : (i['来源']||'') === ecomState.src)) &&
       (onlyIn ? !i['跨境'] : i['跨境']) &&
       (!ecomState.day || isToday(i['抓取时间'])) &&
       (!ecomState.xhs || (ecomState.xhs==='yes') === xhsHas(i['链接']))
@@ -1714,7 +1780,7 @@
     const todayStr = new Date().toLocaleDateString('sv-SE');
     const todayItems = items.filter(i => !i['跨境'] && (i['抓取时间']||'').slice(0,10) === todayStr);
     const src = ecomState.src;
-    const srcOk = i => (!src || (src==='other' ? !['拼多多规则','淘宝规则'].includes(i['来源']||'') : (i['来源']||'')===src));
+    const srcOk = i => (!src || (src==='other' ? !['拼多多规则','淘宝规则','微信小店规则','抖音电商规则'].includes(i['来源']||'') : (i['来源']||'')===src));
     const base = (todayItems.length ? todayItems : items.filter(i => !i['跨境'])).filter(srcOk);
     const pool = base.slice().sort((a,b)=> (Number(b['获客价值']||0)-Number(a['获客价值']||0)) || (Number(b['新闻价值']||0)-Number(a['新闻价值']||0))).slice(0,6);
     const head = document.getElementById('ecom-scan-head');
@@ -2073,6 +2139,121 @@
   document.getElementById('tmall-year').addEventListener('change', e => { tmallState.year = e.target.value; tmallState.page = 1; renderTmallList(); });
   loadTmallRules();
 
+  // ===== 微信小店 / 抖音完整规则库（通用实现，正文内嵌于 index JSON） =====
+  function buildRuleLib(name, jsonFile, label){
+    const P = name, CAP = name.toUpperCase(), PAGE_SIZE = 20;
+    window[CAP+'_PAGE_SIZE'] = PAGE_SIZE;
+    window[P+'Data'] = null;
+    window[P+'State'] = { kw:'', board:'', content:'', month:'', year:'2026', page: 1 };
+    window['load'+CAP+'Rules'] = async function(){
+      try{
+        const r = await fetch(jsonFile+'?t='+Date.now(), {cache:'no-store'});
+        if(!r.ok) throw new Error('HTTP '+r.status);
+        window[P+'Data'] = await r.json();
+        renderBanner(); fillFilters(); renderList();
+      }catch(e){
+        const el = document.getElementById(P+'-stat');
+        if(el) el.textContent = label+'加载失败：'+e.message;
+      }
+    };
+    function renderBanner(){
+      const d = window[P+'Data']; if(!d) return;
+      const today = new Date().toLocaleDateString('sv-SE');
+      const monthNew = (d.items||[]).filter(i => (i.publish_time||'').slice(0,7) === today.slice(0,7)).length;
+      document.getElementById(P+'-banner').innerHTML =
+        '<strong>2026年已抓取：'+d.in_2026+' 条</strong> · 正文完整 '+d.has_content+' 条 · 正文待补 '+d.no_content+' 条 · 本月新增 '+monthNew+' 条 · 更新于 '+d.updated;
+      document.getElementById(P+'-stat').textContent = '共 '+d.total+' 条 · 正文完整 '+d.has_content;
+    }
+    function fillFilters(){
+      const d = window[P+'Data']; if(!d) return;
+      const boards = new Set(), months = new Set();
+      d.items.forEach(i => { (i.boards||[]).forEach(b=>boards.add(b)); if(i.publish_time) months.add(i.publish_time.slice(0,7)); });
+      [...boards].sort().forEach(b => { const o = document.createElement('option'); o.value=b; o.textContent=b; document.getElementById(P+'-board').appendChild(o); });
+      [...months].sort().reverse().forEach(m => { const o = document.createElement('option'); o.value=m; o.textContent=m; document.getElementById(P+'-month').appendChild(o); });
+    }
+    function filtered(){
+      const d = window[P+'Data']; if(!d) return [];
+      const st = window[P+'State']; const kw = st.kw.trim().toLowerCase();
+      return d.items.filter(i => {
+        if(kw && !(i.title||'').toLowerCase().includes(kw)) return false;
+        if(st.board && !(i.boards||[]).includes(st.board)) return false;
+        if(st.content==='has' && !(i.content_ok===1 && i.content_len>50)) return false;
+        if(st.content==='none' && (i.content_ok===1 && i.content_len>50)) return false;
+        if(st.month && (i.publish_time||'').slice(0,7) !== st.month) return false;
+        if(st.year==='2026' && (i.publish_time||'').slice(0,4) !== '2026') return false;
+        if(st.year==='history' && (i.publish_time||'').slice(0,4) === '2026') return false;
+        return true;
+      }).sort((a,b) => (b.publish_time||'').localeCompare(a.publish_time||''));
+    }
+    function renderList(){
+      const d = window[P+'Data']; if(!d) return;
+      const st = window[P+'State'];
+      const list = filtered();
+      const totalPages = Math.max(1, Math.ceil(list.length / PAGE_SIZE));
+      if(st.page > totalPages) st.page = totalPages;
+      const start = (st.page-1) * PAGE_SIZE;
+      const pageItems = list.slice(start, start+PAGE_SIZE);
+      document.getElementById(P+'-count').textContent = list.length + ' 条';
+      const box = document.getElementById(P+'-list');
+      if(!pageItems.length){ box.innerHTML = '<div class="tip-box">没有匹配的规则</div>'; }
+      else{
+        box.innerHTML = pageItems.map(i => {
+          const hasC = i.content_ok===1 && i.content_len>50;
+          const g = i.acquire_score>=9 ? {c:'A',bg:'#d63a2f'} : i.acquire_score>=7 ? {c:'B',bg:'#0a7a50'} : i.acquire_score>=6 ? {c:'C',bg:'#2f6fd6'} : {c:'-',bg:'#999'};
+          const boards = (i.boards||[]).join(' / ');
+          const cTag = hasC ? '<span style="background:#e0f0e8;color:#0a7a50;">正文已抓取</span>' : '<span style="background:#fde8e8;color:#c0392b;">正文待补</span>';
+          return '<article class="write-card" data-'+P+'-id="'+i.id+'" style="cursor:pointer;">'
+            + '<div class="write-top"><h3 style="font-size:14px;">'+esc(i.title)+'</h3>'
+            + '<span class="hot-label" style="background:'+g.bg+';color:#fff;">'+g.c+'级</span></div>'
+            + '<div class="write-tags">'
+            + '<span>'+esc(boards||'')+'</span>'
+            + '<span>'+esc(i.publish_time||'')+'</span>'
+            + '<span style="background:#eef2f7;color:#334;">获客 '+i.acquire_score+'</span>'
+            + cTag
+            + '</div></article>';
+        }).join('');
+        box.querySelectorAll('[data-'+P+'-id]').forEach(card => {
+          card.addEventListener('click', () => {
+            const id = card.dataset[P+'Id'];
+            const existing = card.querySelector('.'+P+'-detail');
+            if(existing){ existing.remove(); return; }
+            const it = (window[P+'Data'].items||[]).find(x => x.id === id);
+            const div = document.createElement('div');
+            div.className = P+'-detail';
+            div.style.cssText = 'margin-top:10px;padding:12px;background:#f8f9fa;border-radius:8px;font-size:13px;line-height:1.7;white-space:pre-wrap;max-height:400px;overflow-y:auto;';
+            let html = '';
+            if(it && it.content_ok===1 && (it.content||'').length>50){
+              html += '<div style="margin-bottom:8px;color:#0a7a50;">✓ 正文已抓取（'+it.content.length+'字）</div>';
+              html += '<div>'+esc(it.content)+'</div>';
+            } else {
+              html += '<div style="color:#c0392b;">⚠ 正文待补，不可直接写作</div>';
+            }
+            div.innerHTML = html;
+            card.appendChild(div);
+            div.scrollIntoView({behavior:'smooth', block:'nearest'});
+          });
+        });
+      }
+      const pg = document.getElementById(P+'-pager');
+      let html = '';
+      if(totalPages > 1){
+        html += '<button onclick="'+P+'GoPage('+(st.page-1)+')" style="padding:5px 12px;border:1px solid var(--line);border-radius:6px;cursor:pointer;'+(st.page<=1?'opacity:.4;':'')+'">上一页</button>';
+        html += '<span style="font-size:13px;">'+st.page+' / '+totalPages+'</span>';
+        html += '<button onclick="'+P+'GoPage('+(st.page+1)+')" style="padding:5px 12px;border:1px solid var(--line);border-radius:6px;cursor:pointer;'+(st.page>=totalPages?'opacity:.4;':'')+'">下一页</button>';
+      }
+      pg.innerHTML = html;
+    }
+    window[P+'GoPage'] = function(p){ window[P+'State'].page = p; renderList(); };
+    document.getElementById(P+'-kw').addEventListener('input', e => { window[P+'State'].kw = e.target.value; window[P+'State'].page = 1; renderList(); });
+    document.getElementById(P+'-board').addEventListener('change', e => { window[P+'State'].board = e.target.value; window[P+'State'].page = 1; renderList(); });
+    document.getElementById(P+'-content-filter').addEventListener('change', e => { window[P+'State'].content = e.target.value; window[P+'State'].page = 1; renderList(); });
+    document.getElementById(P+'-month').addEventListener('change', e => { window[P+'State'].month = e.target.value; window[P+'State'].page = 1; renderList(); });
+    document.getElementById(P+'-year').addEventListener('change', e => { window[P+'State'].year = e.target.value; window[P+'State'].page = 1; renderList(); });
+    window['load'+CAP+'Rules']();
+  }
+  buildRuleLib('wxshop', 'wxshop_rules_index.json', '微信小店规则库');
+  buildRuleLib('douyin', 'douyin_rules_index.json', '抖音规则库');
+
 
   document.getElementById('ecom-keyword').addEventListener('input', e=>{ ecomState.kw = e.target.value; renderEcom(); });
   document.querySelectorAll('#ecom-src button').forEach(b=>{
@@ -2098,9 +2279,9 @@
     });
   });
 
-  // ===== 07 三库 Tab（拼多多规则库 / 淘宝规则库 / 其他新闻库） =====
+  // ===== 07 五库 Tab（拼多多 / 淘宝 / 微信小店 / 抖音 / 其他新闻） =====
   function switchLib(lib){
-    ['pdd','tmall','news'].forEach(k => {
+    ['pdd','tmall','wxshop','douyin','news'].forEach(k => {
       const el = document.getElementById('lib-panel-'+k);
       if(el) el.style.display = (k===lib) ? '' : 'none';
       if(k==='news' && lib==='news' && typeof ecomState !== 'undefined') applyEcomSrc('other');
